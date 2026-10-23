@@ -11,7 +11,7 @@
 
 사용 (저장소 루트에서)
   python3 publish.py add  <briefing.json> [--index <index.json>] [--push]   # ArtifactData out_dir로 받은 briefings/<id>.json (+ index/<id>.json: 용어집/시사점)
-  python3 publish.py mail <id> --out mail.html [--full] [--extra extra.html]   # 메일 본문 HTML 생성
+  python3 publish.py mail <id> [extra_id ...] [--full] [--note 문구] --out mail.html [--zip out.zip]   # 메일 본문(이미지) + 첨부 zip
   python3 publish.py index [--push]                    # 목록만 재생성
 <id> = index 문서 id (일간은 YYYY-MM-DD, 리포트는 weekly-YYYY-MM-DD 등)
 """
@@ -192,25 +192,53 @@ q.addEventListener('input',render);mo.addEventListener('change',render);render()
 # ---------------------------------------------------------------- mail body
 F = "font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;"
 
-def mail_body(bid, full=False, extra_html=''):
-    """이미지 본문. full=False 면 참조 페이지(8 언급 기업, 9 기본 개념)는 빼고 링크로 안내.
-    extra_html: 과거 미발송분 요약, 리포트 요약 등 덧붙일 HTML (발송 작업이 만들어 넘김)."""
-    m = json.load(open(os.path.join(ROOT, 'b', bid, 'meta.json'), encoding='utf-8'))
+def _meta(bid):
+    return json.load(open(os.path.join(ROOT, 'b', bid, 'meta.json'), encoding='utf-8'))
+
+def _img(url, file, alt):
+    return (f'<div style="margin:0 0 10px"><a href="{url}" style="text-decoration:none"><img src="{url}{file}" width="680" alt="{H.escape(alt)}" '
+            f'style="display:block;width:680px;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:6px"></a></div>')
+
+def mail_body(bid, full=False, extras=(), note_html=''):
+    """이미지 본문.
+    bid: 메인 문서(가장 최근 일간). full=False 면 참조 페이지(8 언급 기업, 9 기본 개념)는 빼고 링크로 안내.
+    extras: 같은 메일에 묶는 다른 문서 id들(지난 비영업일 생성분, 주간/월간 리포트). 각각 1쪽(헤더 + 한눈에) 이미지 + 원문 링크.
+    note_html: 맨 위 안내 띠 아래 한 줄(예: '오늘분 생성 실패, 미발송분 발송')."""
+    m = _meta(bid)
     url = f'{BASE_URL}b/{bid}/'
     pages = m['pages'] if full else [p for p in m['pages'] if not p['ref']]
-    imgs = ''.join(
-        f'<div style="margin:0 0 10px"><a href="{url}" style="text-decoration:none"><img src="{url}{p["file"]}" width="680" alt="{H.escape(m["title"])} {i}/{len(pages)}쪽" '
-        f'style="display:block;width:680px;max-width:100%;height:auto;border:1px solid #e5e7eb;border-radius:6px"></a></div>'
-        for i, p in enumerate(pages, 1))
+    imgs = ''.join(_img(url, p['file'], f"{m['title']} {i}/{len(pages)}쪽") for i, p in enumerate(pages, 1))
     skipped = len(m['pages']) - len(pages)
-    note = (f'8 언급 기업, 9 기본 개념(용어 정리, 계산 예시, 문제) {skipped}쪽은 원문에서: ' if skipped else '인쇄용 원문: ')
     top = (f'<div style="{F}font-size:13px;color:#374151;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:8px 12px;margin:0 0 12px">'
            f'<b>{H.escape(m["date"])} {KIND.get(m["kind"], m["kind"])}</b> {"전체판" if full else "요약판"} &nbsp;|&nbsp; '
-           f'<a href="{url}" style="color:#0f3b66;font-weight:700">원문 열기(인쇄)</a> &nbsp;|&nbsp; <a href="{BASE_URL}" style="color:#0f3b66">지난 브리핑</a>'
-           f'<div style="font-size:12px;color:#6b7280;margin-top:2px">이미지가 안 보이면 메일 상단의 "이미지 표시"를 누르거나 원문 열기를 눌러주세요. 첨부 zip은 원문 html(오프라인용).</div></div>')
+           f'<a href="{url}" style="color:#0f3b66;font-weight:700">원문 열기(인쇄)</a> &nbsp;|&nbsp; <a href="{BASE_URL}" style="color:#0f3b66">지난 브리핑</a> &nbsp;|&nbsp; <a href="{BASE_URL}glossary.html" style="color:#0f3b66">용어집</a>'
+           f'<div style="font-size:12px;color:#6b7280;margin-top:2px">이미지가 안 보이면 메일 상단의 "이미지 표시"를 누르거나 원문 열기를 눌러주세요. 첨부 zip은 원문 html(오프라인용).</div>'
+           + (f'<div style="font-size:12px;color:#b45309;margin-top:2px">{note_html}</div>' if note_html else '') + '</div>')
+    ex = ''
+    for eid in extras:
+        try:
+            em = _meta(eid)
+        except Exception:
+            continue
+        eu = f'{BASE_URL}b/{eid}/'
+        ex += (f'<div style="{F}font-size:14px;font-weight:800;margin:22px 0 6px;padding-top:12px;border-top:2px solid #111827">'
+               f'{H.escape(em["date"])} {KIND.get(em["kind"], em["kind"])} <span style="font-size:12px;color:#6b7280;font-weight:500">'
+               f'{"리포트" if em["kind"] != "daily" else "비영업일 생성분"} 요약, 전체는 <a href="{eu}" style="color:#0f3b66">원문</a></span></div>'
+               + _img(eu, em['pages'][0]['file'], f"{em['title']} 1쪽"))
+    note = (f'8 언급 기업, 9 기본 개념(용어 정리, 계산 예시, 문제) {skipped}쪽은 원문에서: ' if skipped else '인쇄용 원문: ')
     foot = (f'<div style="{F}font-size:12px;color:#6b7280;margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb">{note}'
             f'<a href="{url}" style="color:#0f3b66">{H.escape(url)}</a><br>요약과 링크만 제공, 기사 원문 복사 없음. 계산치=작성자 산출, 추정/보도 기준=미확인.</div>')
-    return f'<div style="max-width:680px;margin:0 auto">{top}{imgs}{extra_html}{foot}</div>'
+    return f'<div style="max-width:680px;margin:0 auto">{top}{imgs}{ex}{foot}</div>'
+
+def make_zip(bid, out_path):
+    """원문 html을 zip으로 (메일 첨부용, 약 20~25KB). 반환: zip 경로."""
+    import zipfile
+    src = os.path.join(ROOT, 'b', bid, 'index.html')
+    h = open(src, encoding='utf-8').read()
+    h = re.sub(r'\n\s+', '\n', h); h = re.sub(r'/\*.*?\*/', '', h, flags=re.S); h = re.sub(r'\n+', '\n', h)
+    with zipfile.ZipFile(out_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        z.writestr(f'briefing_{bid}.html', h)
+    return out_path
 
 # ---------------------------------------------------------------- git
 def git_push(msg):
@@ -236,7 +264,12 @@ if __name__ == '__main__':
         build_index(); build_glossary()
         if '--push' in a: git_push('목록/용어집 재생성')
     elif a[0] == 'mail':
-        bid = a[1]; out = a[a.index('--out') + 1] if '--out' in a else 'mail.html'
-        extra = open(a[a.index('--extra') + 1], encoding='utf-8').read() if '--extra' in a else ''
-        open(out, 'w', encoding='utf-8').write(mail_body(bid, full='--full' in a, extra_html=extra))
+        # publish.py mail <id> [extra_id ...] [--full] [--note "문구"] [--out mail.html] [--zip out.zip]
+        ids = [x for x in a[1:] if not x.startswith('--') and x not in (a[a.index('--out') + 1] if '--out' in a else '', a[a.index('--note') + 1] if '--note' in a else '', a[a.index('--zip') + 1] if '--zip' in a else '')]
+        bid, extras = ids[0], ids[1:]
+        out = a[a.index('--out') + 1] if '--out' in a else 'mail.html'
+        note = a[a.index('--note') + 1] if '--note' in a else ''
+        open(out, 'w', encoding='utf-8').write(mail_body(bid, full='--full' in a, extras=extras, note_html=note))
         print('mail', out)
+        if '--zip' in a:
+            zp = make_zip(bid, a[a.index('--zip') + 1]); print('zip', zp, os.path.getsize(zp), 'bytes')
