@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-10-19</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body>
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-10-19</b><span>월요일</span></div>
+  </div>
+<div class="note">영업일(월) 생성분. 수집 창은 일요일 하루라 PE 신규 딜, 국내 기업 동향, 글로벌 트렌드 모두 기사 수가 적음(섹션별 1~2건). 리포트는 업계 매체 분석으로 대체. 언급 기업 중 국내사는 모두 DART corp_code 미등록, 해외사는 P&G만 SEC 조회.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s2"><div class="hl-main"><b>안국약품</b><span class="act">사옥 취득</span><b>과천 업무시설</b></div><div class="hl-cond">1,630억 (80%는 2032년)</div><div class="hl-mean">총자산의 52%짜리 자산을 계약금 5%만 내고 잔금은 6년 뒤 치르는 구조.<br>향남공장 증설 485억까지 합치면 올해 투자 결정 2,115억 = 2025 매출의 69%.</div></div><div class="hl s1"><div class="hl-main"><b>차바이오텍</b><span class="act">합병</span><b>차헬스케어 + 차케어스</b></div><div class="hl-cond">IPO 전 재편 (유료 기사)</div><div class="hl-mean">10년 끈 자회사 IPO 의무를 FI 재편으로 풀고 회수 부담이 모회사로 옮겨간 뒤, 오너 개인 지분이 걸린 합병이 다음 단계.<br>FI 조건이 그룹 구조조정을 끌고 가는 사례.</div></div><div class="hl s1"><div class="hl-main"><b>삼성바이오로직스</b><span class="act">추가 응모 개시</span><b>PolyPeptide</b></div><div class="hl-cond">응모 87.88%, 10/19~30</div><div class="hl-mean">최소 조건 66.7%를 크게 넘어 불발 위험은 사라졌다.<br>남은 변수는 유럽, 인도, 호주, 브라질 기업결합 승인, 11월 말 완료 목표.</div></div><div class="hl s4"><div class="hl-main"><b>Anuh Pharma</b><span class="act">API 공장 인수</span><b>Vanquest Tarapur</b></div><div class="hl-cond">Rs 72.9 crore (약 117억, 환산 추정)</div><div class="hl-mean">신축 대신 가동 중인 공장을 사서 시간을 산다.<br>인수대금 전액을 Rs 75 crore 차입 한도로 조달, 525톤/년 API 캐파 추가.</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사/고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">DART 공시</div><div>
+      <div class="t">안국약품, 과천 사옥 1,630억 취득 계약, 잔금 80%는 2032년</div><ul><li>10/15 과천 공공주택지구 특별계획구역3 업무시설(토지 3,737.95㎡, 건물 33,058㎡) <a class="kw" href="#t-asset-transfer" title="Asset Transfer Agreement, 주식이 아니라 토지, 건물, 설비 등 자산 자체를 사고파는 계약 - 클릭하면 기본 개념으로 이동">자산양수도</a> 계약.<br>양수가액 <span class="num">1,630억</span>은 2025년 말 연결 총자산 3,109억의 52.42%라 <a class="kw" href="#t-material-facts" title="Report on Material Facts, 자산총액 10% 이상 자산양수 등 중요 사실을 공시하는 보고서 - 클릭하면 기본 개념으로 이동">주요사항보고서</a> 대상.</li><li><a class="kw" href="#t-installment" title="Deposit / Interim / Balance Payment, 매매대금을 시점별로 나눠 내는 분할 지급 - 클릭하면 기본 개념으로 이동">계약금/중도금/잔금</a> 구조: 10/29 계약금 81.5억(5%)<br><span class="arr">→</span> 2028.10 81.5억, 2031.10 163억 → 2032.6 잔금 1,304억(80%).<br>6월 말 현금성자산 약 603억 대비 계약금은 14.5%.</li><li>→ 향남공장 증설 484.8억(2027.12 완공), 9월 발표한 액상 신공장, 정제 증설 1,299억(5년)까지 더하면 올해 투자 결정만 2,114.8억, 2025 매출(3,069억)의 69%.<br>상반기 매출 1,908억(+25%), 영업이익 247억으로 실적은 뒷받침되나 잔금 시점의 자금조달 계획이 핵심 변수.</li></ul>
+      <div class="src"><a href="https://www.dailypharm.com/user/news/343518">데일리팜</a>, 2026-10-18 12:24</div></div></div>
+    <div class="empty">경쟁사, 고객사 동향, 약가정책: 수집 창 내 신규 기사 없음(일요일). 복지부 적응증별 약가제 의견수렴(10/15), 명인제약 공급가 인상(10/15), P-CAB 염변경 급여(10/16)는 창 밖이라 제외.</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-19 (월요일) · 수집 창 2026-10-18 06:30 ~ 2026-10-19 06:30 KST</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>PE 투자, 회수, 블록딜, 인수금융, M&A</small></div>
+    <div class="item"><div class="tag ">FI/Exit</div><div>
+      <div class="t">차바이오텍, 차헬스케어 IPO 전 차케어스 합병 (오너 지분 쟁점)</div><ul><li>차바이오그룹은 2024년 말부터 병원 운영 자회사 차헬스케어와 차케어스의 합병을 추진 중이며, 이 합병은 차광렬 회장과 차원태 부회장이 개인 명의로 보유한 차케어스 지분 처리와 직결(유료 기사, 공개 요약 기준).</li><li>앞선 시리즈(10/15~16, 창 밖 맥락)에 따르면 차바이오텍은 2027년 <a class="kw" href="#t-ipo" title="Initial Public Offering, 기업공개(상장) - 클릭하면 기본 개념으로 이동">IPO</a> 의무를 신규 <a class="kw" href="#t-fi" title="Financial Investor, 경영보다 투자수익 회수가 목적인 투자자(PE, 펀드) - 클릭하면 기본 개념으로 이동">재무적 <span class="nb">투자자(FI)</span></a> 유치와 기존 FI 재편으로 없앴고, FI 회수 부담은 모회사가 떠안았으며 승계 축인 KH그린의 차바이오텍 지분은 전량 담보로 잡혀 있다.</li><li>→ FI가 걸어둔 IPO 조건이 그룹 재편과 <a class="kw" href="#t-merger-ratio" title="Merger Ratio, 합병 시 소멸회사 주식 1주를 존속회사 주식 몇 주로 바꿔주는지 - 클릭하면 기본 개념으로 이동">합병비율</a> 산정까지 좌우하는 구조.<br>지분율, 합병비율, 밸류 등 핵심 수치는 유료 본문에 있어 미확인.</li></ul>
+      <div class="src"><a href="https://pharm.edaily.co.kr/News/Read?newsId=01679366645614560&mediaCodeNo=257">팜이데일리 [차바이오 딥시크③]</a>, 2026-10-19 06:00</div></div></div>
+    <div class="item"><div class="tag ">M&A 진행</div><div>
+      <div class="t">삼성바이오로직스, PolyPeptide 공개매수 응모 87.88%, 추가 응모 10/19 개시</div><ul><li>10/13 예비 집계 기준 <a class="kw" href="#t-tender-offer" title="Tender Offer, 불특정 다수 주주에게 공개적으로 주식을 사겠다고 제안 - 클릭하면 기본 개념으로 이동">공개매수</a> 응모율 <span class="num">87.88%</span>(29,014,418주), 최대주주 Drauf Nyr Holding 보유 18,375,000주 전량 포함.<br>주당 CHF 44.31, 총 약 2.7조원 규모로 국내 제약바이오 최대 M&A.</li><li><a class="kw" href="#t-min-acceptance" title="Minimum Acceptance Condition, 이만큼 응모가 안 되면 공개매수를 철회할 수 있는 하한선 - 클릭하면 기본 개념으로 이동">최소 응모 조건</a> 66.7%를 넘어 거래 불발 위험은 해소.<br>추가 응모기간은 10/19~30, 유럽, 인도, 호주, 브라질 <a class="kw" href="#t-merger-review" title="Merger Review, 경쟁당국이 인수가 시장 경쟁을 해치지 않는지 심사 - 클릭하면 기본 개념으로 이동">기업결합 승인</a>이 남았고 11월 말 완료 목표(주간 정리 기사, 완료 예정일은 전일 브리핑 기준 12/31로 연기 보도 있음).</li><li>→ 항체 CDMO가 <span class="nb">펩타이드<sup class="fn">1</sup></span> 합성 CDMO로 영역을 넓히는 거래.<br>케미컬 합성 영역에서 대형사와 당사의 접점이 생긴다.</li></ul>
+      <div class="src"><a href="https://pharm.edaily.co.kr/News/Read?newsId=01180806645614232&mediaCodeNo=257">이데일리 (주간 정리)</a>, 2026-10-18 08:00</div></div></div>
+    <div class="empty">해외 PE 신규 투자, 회수, 블록딜, 인수금융: 수집 창(일요일) 내 해당 없음. PE Hub, PitchBook 최신 게시물은 10/15 이전.</div>
+<ol class="footnotes"><li><b>펩타이드</b> 아미노산 수십 개가 연결된 중간 크기 분자. GLP-1 비만약의 주성분, 화학 합성으로 생산</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>최근 1~2주 발행분, 발행일 명시</small></div>
+    <div class="item"><div class="tag ">분석 (대체)</div><div>
+      <div class="t">NutraIngredients: 건기식 $1B 메가딜, 기준이 되나 (발행 10/15)</div><ul><li>P&G-Thorne $3.8B, Kirin-Jamieson 약 $1.8B(부채 포함), Bain Capital-Vitabiotics 약 $1.2B, Yellow Wood-Nestlé 브랜드 $1B, Unilever-Grüns 80% 약 $890M, IM8 $1B 성장금융(<a class="kw" href="#t-non-dilutive" title="비희석 자금조달, 지분을 내주지 않고(희석 없이) 받는 자금 - 클릭하면 기본 개념으로 이동">Non-dilutive Financing</a>).</li><li>PitchBook 인용: 2025년 글로벌 M&A 약 $5T 중 $1B 이상 <a class="kw" href="#t-megadeal" title="Megadeal, 통상 $1B 이상 대형 거래 - 클릭하면 기본 개념으로 이동">메가딜</a> 비중 <span class="num">57%</span>(10년 내 최고), $5B 이상 거래 76건→122건.<br>그러나 자문사들은 건기식에서 $1B 딜은 "소수 브랜드 한정"이라 본다.</li><li>→ 매수 조건은 글로벌 인지도, 양(+) EBITDA, 넓은 시장.<br>GLP-1 복용자 수요(단백질, 장건강)와 대기업의 레거시 식품 매각, 현금 보유가 드라이버.<br>밸류 멀티플은 미공개.</li></ul>
+      <div class="src"><a href="https://www.nutraingredients.com/Article/2026/10/15/are-billion-dollar-supplement-deals-becoming-the-new-benchmark/">NutraIngredients</a>, 2026-10-15</div></div></div>
+    <div class="empty">MBB, Big 4, IQVIA, L.E.K.: 최근 2주 내 헬스케어/CDMO/PE 신규 발행물 미확인(McKinsey 10/6 Medtech 투자자 보고서는 범위 밖, L.E.K. 페이지 접속 실패). 위 1건은 업계 매체 분석 기사로 대체.</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-19 (월요일) · 수집 창 2026-10-18 06:30 ~ 2026-10-19 06:30 KST</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">API 설비</div><div>
+      <div class="t">Anuh Pharma, Vanquest Tarapur API 공장 Rs 72.9 crore에 인수</div><ul><li>인도 Anuh Pharma가 Vanquest Pharma의 Tarapur(마하라슈트라) 공장 토지, 건물, 설비를 <a class="kw" href="#t-asset-transfer" title="Asset Transfer Agreement, 주식이 아니라 토지, 건물, 설비 등 자산 자체를 사고파는 계약 - 클릭하면 기본 개념으로 이동">자산양수도</a>(Asset Transfer Agreement)로 인수.<br>가격 <span class="num">Rs 72.9 crore</span>(세금 별도, 약 117억원 환산 추정), 전액 현금, 신주 발행 없음.</li><li><span class="nb">API<sup class="fn">1</sup></span>, 중간체 생산 <span class="num">525톤/년</span> 추가.<br>이사회는 앞서 최대 Rs 75 crore <a class="kw" href="#t-debt-financing" title="차입 조달, 은행 대출, 회사채로 인수, 투자 자금을 마련 - 클릭하면 기본 개념으로 이동">Debt Financing</a> 한도를 승인, 사실상 인수대금 전액을 차입으로 조달.</li><li>→ 신축(그린필드) 대신 <a class="kw" href="#t-brownfield" title="Brownfield Acquisition, 이미 지어져 가동 중인 공장을 사는 것(신축=그린필드) - 클릭하면 기본 개념으로 이동">브라운필드 인수</a>로 시장 진입 시간을 단축한다는 논리.<br>소형이지만 "가동 중 공장을 사는 것이 짓는 것보다 빠르다"는 CDMO 설비 확장의 전형.</li></ul>
+      <div class="src"><a href="https://www.indianpharmapost.com/ma/lite/anuh-pharma-to-buy-vanquest-tarapur-plant-for-rs-7290-crore-to-boost-api-capacity-by-525-mtpa-22182">Indian Pharma Post</a>, 2026-10-18</div></div></div>
+    <div class="empty">케미컬 CDMO, 주사제 M&A/설비, 화장품 ODM, 건기식 OEM: 수집 창 내 추가 기사 없음. Galderma-ZO Skin Health $1.5B(10/14 발표), Curia 무균 API 증설 $28M(10/5), SK팜테코 미국 $200M(9/30)은 창 밖.</div>
+<ol class="footnotes"><li><b>API</b> Active Pharmaceutical Ingredient, 원료의약품. 완제의약품의 주성분</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">안국약품, 과천 사옥 1,630억 자산양수: 계약금 5%, 잔금 80%는 6년 뒤<small>자산양수도 + 장기 분할 지급, 투자 총액 2,115억(매출의 69%)</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>안국약품(코스닥 상장 중견 제약사, 2025 연결 매출 3,069억, 대표 박인철)</dd>
+          <dt>무엇을</dt><dd>과천 공공주택지구 특별계획구역3 자족1 업무시설, 토지 3,737.95㎡ + 건물 33,058㎡(약 1만평). 양수가액 1,630억 = 연결 총자산 3,109억의 52.42%</dd>
+          <dt>왜</dt><dd>2024년 본사 과천 이전과 R&D센터 개소에 이어 거점 확보. "모두가 줄일 때 투자" 기조, 상반기 매출 +25%, 영업이익 247억(2025 연간 98억 초과)으로 실적이 뒷받침</dd>
+        </dl>
+        <ol class="steps"><li>10/15 계약 체결, 10/29 계약금 81.5억(5%) 납입. 공시상 매도자 미명시</li><li>중도금 2028.10 81.5억, 2031.10 163억 → 잔금 전 누적 326억(20%)</li><li>2032.6 잔금 1,304억(80%) 납입, 소유권 이전(예정 거래가 유지 전제)</li><li>별도로 향남공장 증설 484.8억(2027.12 완공), 액상 신공장, 정제 증설 1,299억(5년) 진행</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">안국약품<small>매수자, 6월 말 현금성 약 603억</small></div><div class="arrow"><i></i><span>계약금 <b>81.5억(5%)</b> 2026.10.29</span></div><div class="node">매도자(미명시)<small>과천지구 업무시설 토지+건물</small></div><div class="arrow"><i></i><span>중도금 <b>244.5억(15%)</b> 2028~2031</span></div><div class="node">잔금 <b>1,304억(80%)</b><small>2032.6 납입 후 소유권 이전</small></div><div class="arrow"><i></i><span>자금원: 영업현금흐름(상반기 227억) + 차입 여부 미공개</span></div></div>
+        <div class="point"><b>포인트</b> 지금 내는 돈은 현금의 14.5%지만, 2032년 잔금 1,304억은 연 영업현금흐름(상반기 227억 기준 연 450억 내외 가정)의 약 3년치. 향남 증설, 신공장과 겹치면 차입 없이는 어렵다. 중견 제약사가 사옥, 공장에 동시 투자하는 Capex 사이클의 자금조달 계획이 관전 포인트.</div>
+        <div class="src"><a href="https://www.dailypharm.com/user/news/343518">데일리팜, 2026-10-18 12:24</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-19 (월요일) · 수집 창 2026-10-18 06:30 ~ 2026-10-19 06:30 KST</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">자산양수도 <span>Asset Transfer / Asset Purchase</span></div><div class="d">회사 주식이 아니라 토지, 건물, 설비 같은 자산 자체를 사고파는 것. 주식양수도와 달리 부채, 소송 등 숨은 책임이 따라오지 않아 깔끔하지만, 인허가, 고용은 다시 받아야 할 수 있다. 자산총액 10% 이상이면 주요사항보고서 공시.</div><div class="ex">예: 안국약품 과천 사옥 1,630억 = 연결 총자산 3,109억의 52.4% → 주요사항보고서 제출</div></div><div class="term"><div class="k">브라운필드 인수 <span>Brownfield Acquisition</span></div><div class="d">이미 지어져 가동 중인 공장을 사는 것. 땅부터 새로 짓는 그린필드(Greenfield)보다 빠르고 인허가 리스크가 적지만, 설비가 낡았거나 내 공정에 안 맞을 수 있다. Anuh Pharma가 Tarapur 공장을 산 논리.</div><div class="ex">예: Anuh Pharma가 Rs 72.9 crore에 Tarapur 가동 공장 인수, 신축 2~3년 대비 수개월 내 가동(가정)</div></div><div class="term"><div class="k">합병비율 <span>Merger Ratio</span></div><div class="d">두 회사가 합칠 때 없어지는 회사 주식 1주를 남는 회사 주식 몇 주로 바꿔주는지 정한 비율. 비율이 유리하면 그쪽 주주가 합병 후 지분을 더 갖는다. 차헬스케어, 차케어스 합병에서 오너 개인 지분이 쟁점인 이유.</div><div class="ex">예: 차케어스 1주 = 차헬스케어 0.5주(가정)면 차케어스 100만주 보유 주주는 합병 후 50만주</div></div><div class="term"><div class="k">잉여현금흐름 <span>FCF, Free Cash Flow</span></div><div class="d">영업에서 번 현금(영업현금흐름)에서 설비투자(Capex)를 빼고 실제로 남는 돈. 배당, 차입 상환, M&A에 쓸 수 있는 "진짜 여유 현금". 투자가 많은 해엔 흑자여도 FCF가 마이너스가 된다.</div><div class="ex">예: OCF 450억(가정, 상반기 227억 × 2) - Capex 281.5억(가정) = FCF 168.5억</div></div><div class="term"><div class="k">Capex 집약도 <span>Capex Intensity</span></div><div class="d">매출 대비 설비투자 비율. 안국약품은 올해 투자 결정 2,115억 / 2025 매출 3,069억 = 69%. 높을수록 성장 투자 국면이지만 FCF가 줄고 차입이 늘어난다. 제약, CDMO는 공장 때문에 구조적으로 높다.</div><div class="ex">예: 안국약품 투자 결정 2,114.8억 ÷ 2025 매출 3,069억 = 68.9%, 올해 현금 집행 기준은 약 9%(가정)</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>설비투자 / Exit</em></div><ol><li><b>설비투자, 가동률:</b> 잠재 고객이자 Pharma사업부 비교군인 안국약품이 사옥 1,630억, 향남 증설 485억, 액상 신공장 1,299억을 동시에 벌여 <a class="kw" href="#t-capex-intensity" title="Capex Intensity, 매출 대비 설비투자 비율 - 클릭하면 기본 개념으로 이동">Capex 집약도</a>가 매출의 69%까지 올라갔다. 자체 생산을 늘리는 중견 제약사는 외부 수탁 물량을 내재화할 수 있으므로 증설 중인 고객사 품목의 수탁 지속성을 점검하고, 당사 동결건조 라인 증설 판단에는 "매출 대비 투자와 <a class="kw" href="#t-fcf" title="Free Cash Flow, 영업현금흐름에서 설비투자를 빼고 남는 현금 - 클릭하면 기본 개념으로 이동">잉여현금흐름</a>으로 자금 여력을 먼저 본다"는 안국약품식 체크를 적용. Anuh Pharma의 <a class="kw" href="#t-brownfield" title="Brownfield Acquisition, 이미 지어져 가동 중인 공장을 사는 것(신축=그린필드) - 클릭하면 기본 개념으로 이동">브라운필드 인수</a>는 신축 대안으로 가동 중 공장 인수를 병행 검토하라는 소형 사례.</li><li><b>Exit:</b> 차바이오텍은 FI가 걸어둔 2027년 IPO 의무를 FI 재편으로 풀었지만 회수 부담이 모회사로 옮겨가고 오너 지분이 걸린 합병이 뒤따랐다. 맥쿼리 Exit 시나리오에서도 IPO 기한, 드래그얼롱 등 FI 계약 조항이 당사 운영과 그룹 구조를 제약할 수 있으므로 주주간계약의 Exit 관련 조항을 정리해 두는 것이 선행 과제. 삼성바이오-PolyPeptide 거래는 응모 87.88%로 성사가 확실해져 케미컬 합성(펩타이드) CDMO 경쟁 구도의 변화가 확정 단계.</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-19 (월요일) · 수집 창 2026-10-18 06:30 ~ 2026-10-19 06:30 KST</span></div>
+<div class="refband">여기부터 참조 영역 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">안국약품</div><div class="cm">한국 · 코스닥 · 제약</div></th><td>1959년 설립 중견 제약사. 진해거담제(시네츄라), 순환기, 소화기 제네릭 중심. 향남공장 보유, 과천 본사, R&D센터.</td><td class="sz">DART 코드 미등록, 공시 미조회<div class="szsrc">dart_corpcodes.md 미등록 (기사 수치 사용 안 함)</div></td><td>2 국내, 5 오늘의 딜: 과천 사옥 1,630억 자산양수, 향남 증설</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">차바이오텍</div><div class="cm">한국 · 코스닥 · 세포치료제/병원 지주</div></th><td>차병원그룹 상장 지주 성격. 세포치료제 R&D와 차헬스케어(국내외 병원 운영) 등 자회사 보유.</td><td class="sz">DART 코드 미등록, 공시 미조회<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 PE/Deal: 차헬스케어 IPO 의무 해소, 차케어스 합병</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">차헬스케어 / 차케어스</div><div class="cm">한국 · 비상장 · 병원 운영</div></th><td>차바이오텍 자회사. 국내외 병원, 헬스케어 시설 운영. 차케어스는 오너 개인 지분이 있는 계열사.</td><td class="sz">비공개<div class="szsrc">비상장, IR 자료 없음</div></td><td>1 PE/Deal: 합병 대상, FI 회수 구조</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">삼성바이오로직스</div><div class="cm">한국 · 코스피 · 바이오 CDMO</div></th><td>항체의약품 CDMO 세계 최대 캐파. PolyPeptide 인수로 펩타이드 합성 CDMO 진출.</td><td class="sz">DART 코드 미등록, 공시 미조회<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 PE/Deal: PolyPeptide 공개매수 응모 87.88%</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">PolyPeptide Group</div><div class="cm">스위스 · SIX 상장 · 펩타이드 CDMO</div></th><td>치료용 펩타이드 원료 CDMO. 유럽, 미국, 인도 생산거점. 삼성바이오로직스 공개매수 대상(CHF 44.31/주).</td><td class="sz">회사 IR 미조회<div class="szsrc">연차보고서 미확인</div></td><td>1 PE/Deal: 공개매수 대상</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">Drauf Nyr Holding</div><div class="cm">스위스 · 비상장 · 지주</div></th><td>PolyPeptide 최대주주(18,375,000주). 공개매수에 전량 응모.</td><td class="sz">비공개<div class="szsrc"></div></td><td>1 PE/Deal: 매도 주주</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Anuh Pharma</div><div class="cm">인도 · BSE 상장 · API</div></th><td>뭄바이 기반 API 제조사. 항생제, 항결핵제 등 범용 API. Tarapur 공장 인수로 525톤/년 추가.</td><td class="sz">회사 IR 미조회<div class="szsrc">BSE 공시 미확인</div></td><td>4 글로벌: Vanquest 공장 Rs 72.9 crore 인수</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">Vanquest Pharma</div><div class="cm">인도 · 비상장 · API</div></th><td>Tarapur 제약단지 내 API, 중간체 공장 보유. 공장 자산을 Anuh에 매각.</td><td class="sz">비공개<div class="szsrc"></div></td><td>4 글로벌: 매도자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">P&G (Thorne)</div><div class="cm">미국 · NYSE · 소비재</div></th><td>글로벌 소비재. Thorne HealthTech를 $3.8B에 인수해 프리미엄 건기식 진출.</td><td class="sz">매출 $87.0B (FY2026, 2026-06-30 결산)<div class="szsrc">SEC 10-K · filed 2026-08-04</div></td><td>3 리포트: 건기식 메가딜 사례</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Kirin Holdings (Jamieson)</div><div class="cm">일본 · TSE · 음료/헬스사이언스</div></th><td>맥주, 음료 그룹. 캐나다 건기식 Jamieson Wellness 약 $1.8B 인수로 헬스사이언스 확대.</td><td class="sz">회사 IR 미조회<div class="szsrc"></div></td><td>3 리포트: 건기식 메가딜 사례</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Bain Capital (Vitabiotics)</div><div class="cm">미국 · PE</div></th><td>글로벌 PE. 영국 건기식 Vitabiotics 약 $1.2B 인수, 헬스케어, 소비 포트폴리오 보유.</td><td class="sz">AUM 공식 사이트 미조회<div class="szsrc"></div></td><td>3 리포트: 건기식 PE 딜</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Unilever (Grüns)</div><div class="cm">영국 · LSE/NYSE · 소비재</div></th><td>글로벌 소비재. 그린 거미 젤리형 건기식 Grüns 80% 약 $890M 인수.</td><td class="sz">회사 IR 미조회<div class="szsrc"></div></td><td>3 리포트: 건기식 메가딜 사례</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-19 (월요일) · 수집 창 2026-10-18 06:30 ~ 2026-10-19 06:30 KST</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-asset-transfer"><div class="k">자산양수도 <span>Asset Transfer Agreement</span></div><div class="d">주식이 아니라 토지, 건물, 설비 자체를 사고파는 계약. 오늘: 안국약품 과천 사옥, Anuh Pharma Tarapur 공장 모두 자산 인수. 매도자의 부채, 소송은 안 따라오지만 인허가, 고용 승계는 별도.</div><div class="u">▸ 공장, 부동산 인수, 카브아웃</div><div class="ex">예: 과천 사옥 토지 3,738㎡ + 건물 33,058㎡를 1,630억에 양수, 매도자 부채는 승계 없음</div></div><div class="bt" id="t-installment"><div class="k">계약금/중도금/잔금 <span>Deposit / Interim / Balance Payment</span></div><div class="d">매매대금을 시점별로 나눠 내는 분할 지급. 오늘: 안국약품 5% → 15% → 80%(2032). 계약금은 해지 시 위약금 성격, 잔금 시점에 소유권 이전.</div><div class="u">▸ 부동산, 대형 설비 매매</div><div class="ex">예: 계약금 81.5억(5%) → 중도금 244.5억(15%, 2028~2031) → 잔금 1,304억(80%, 2032.6)</div></div><div class="bt" id="t-material-facts"><div class="k">주요사항보고서 <span>Report on Material Facts</span></div><div class="d">자산총액 10% 이상 자산 양수도, 유상증자, 합병 등 중요 사실을 금감원에 제출하는 공시. 오늘: 안국약품 양수가액이 총자산의 52.42%.</div><div class="u">▸ DART 공시 모니터링</div><div class="ex">예: 양수가액 1,630억 ÷ 총자산 3,109억 = 52.42%, 기준 10% 초과 → 주요사항보고서 제출</div></div><div class="bt" id="t-tender-offer"><div class="k">공개매수 <span>Tender Offer</span></div><div class="d">불특정 다수 주주에게 기간, 가격을 공개하고 주식을 사겠다고 제안하는 것. 오늘: 삼성바이오로직스가 PolyPeptide 주주에게 CHF 44.31/주 제안.</div><div class="u">▸ 상장사 경영권 인수</div><div class="ex">예: CHF 44.31/주 × 응모 1,000만주(가정) = 매수대금 CHF 4.43억</div></div><div class="bt" id="t-min-acceptance"><div class="k">최소 응모 조건 <span>Minimum Acceptance Condition</span></div><div class="d">응모 주식이 이 비율에 못 미치면 매수자가 공개매수를 철회할 수 있는 하한선. 오늘: 66.7% 조건 대비 87.88% 응모로 충족.</div><div class="u">▸ 공개매수 성사 여부 판단</div><div class="ex">예: 조건 66.7% vs 실제 응모 87.88% → 21.2%p 여유로 철회 조건 미발동</div></div><div class="bt" id="t-merger-review"><div class="k">기업결합 승인 <span>Merger Review / Antitrust Clearance</span></div><div class="d">경쟁당국이 인수가 시장 경쟁을 해치는지 심사해 허가하는 절차. 오늘: 유럽, 인도, 호주, 브라질 승인이 PolyPeptide 거래 완료의 남은 조건.</div><div class="u">▸ 크로스보더 M&A 일정 관리</div><div class="ex">예: 유럽, 인도, 호주, 브라질 4개국 중 3개만 승인되면 미완료, 4/4 승인 후 대금 결제</div></div><div class="bt" id="t-merger-ratio"><div class="k">합병비율 <span>Merger Ratio</span></div><div class="d">소멸회사 주식 1주를 존속회사 주식 몇 주로 바꿔주는지. 비상장사는 자산, 수익가치로 평가해 산정. 오늘: 차헬스케어, 차케어스 합병에서 오너 개인 지분의 가치가 걸린 변수.</div><div class="u">▸ 합병형 구조조정, 계열사 재편</div><div class="ex">예: 소멸회사 주당 가치 5,000원, 존속회사 10,000원(가정)이면 합병비율 1:0.5</div></div><div class="bt" id="t-fi"><div class="k">재무적 투자자(FI) <span>Financial Investor</span></div><div class="d">경영권보다 투자 수익 회수가 목적인 투자자(PE, 펀드). 보통 IPO 기한, 풋옵션 등 회수 조건을 계약에 넣는다. 오늘: 차헬스케어 FI 재편으로 IPO 의무 해소.</div><div class="u">▸ Exit 구조, 주주간계약</div><div class="ex">예: FI가 100억 투자, IPO 미달 시 연 8% 복리 풋옵션(가정) → 2년 후 회수액 116.6억</div></div><div class="bt" id="t-ipo"><div class="k">IPO <span>Initial Public Offering</span></div><div class="d">처음으로 주식을 증시에 상장하는 것. FI 투자 시 "몇 년 내 IPO" 의무가 붙는 경우가 많다. 오늘: 차헬스케어 2027년 IPO 의무.</div><div class="u">▸ Exit 수단</div><div class="ex">예: 차헬스케어 2027년 IPO 의무: 2026.10 기준 약 1년 남은 상태에서 FI 재편으로 해소</div></div><div class="bt" id="t-ocf"><div class="k">영업현금흐름 <span>Operating Cash Flow, OCF</span></div><div class="d">영업활동에서 실제로 들어온 현금(이익과 달리 외상, 감가상각 효과를 뺀 값). 오늘: 안국약품 상반기 227억(전년 290억).</div><div class="u">▸ 투자 여력, FCF 계산의 출발점</div><div class="ex">예: 안국약품 상반기 OCF 227억, 전년 동기 290억 대비 63억(21.7%) 감소</div></div><div class="bt" id="t-fcf"><div class="k">잉여현금흐름 <span>Free Cash Flow, FCF</span></div><div class="d">OCF에서 Capex를 뺀 값. 배당, 차입 상환, M&A에 쓸 수 있는 여유 현금. 오늘: 안국약품처럼 투자가 많으면 흑자여도 FCF 마이너스 가능.</div><div class="u">▸ PE 매수자의 밸류, 레버리지 판단</div><div class="ex">예: OCF 450억(가정) - Capex 281.5억(가정) = 168.5억, 잔금 1,304억 해엔 마이너스 전환 가능</div></div><div class="bt" id="t-capex-intensity"><div class="k">Capex 집약도 <span>Capex Intensity</span></div><div class="d">매출 대비 설비투자 비율. 오늘: 안국약품 2,114.8억/3,069억 = 69%. B. 심화 참조.</div><div class="u">▸ 설비투자 적정성, 산업 비교</div><div class="ex">예: 안국약품 2,114.8억 ÷ 3,069억 = 68.9%. 당사 매출 2,000억에 증설 300억이면 15%(가정)</div></div><div class="bt" id="t-brownfield"><div class="k">브라운필드 인수 <span>Brownfield Acquisition</span></div><div class="d">가동 중인 기존 공장을 사는 것. 신축(그린필드)보다 빠르고 인허가 리스크가 적다. 오늘: Anuh Pharma의 Tarapur 공장 인수 논리.</div><div class="u">▸ 캐파 확장 방식 선택</div><div class="ex">예: 기존 공장 Rs 72.9 crore vs 그린필드 신축 Rs 120 crore + 3년(가정) → 비용, 시간 모두 절감</div></div><div class="bt" id="t-debt-financing"><div class="k">Debt Financing <span>차입 조달</span></div><div class="d">은행 대출, 회사채로 인수, 투자 자금을 마련. 지분 희석은 없지만 이자, 상환 부담. 오늘: Anuh Pharma가 Rs 75 crore 대출 한도로 Rs 72.9 crore 인수 조달.</div><div class="u">▸ 인수금융, 설비투자 자금</div><div class="ex">예: 대출 한도 Rs 75 crore 중 Rs 72.9 crore 사용, 금리 9%(가정)면 연 이자 약 Rs 6.6 crore</div></div><div class="bt" id="t-megadeal"><div class="k">메가딜 <span>Megadeal</span></div><div class="d">통상 $1B 이상 대형 거래. 오늘: 2025년 글로벌 M&A 중 $1B 이상 비중 57%(PitchBook), 건기식에서도 P&G-Thorne $3.8B 등 등장.</div><div class="u">▸ M&A 시장 온도 판단</div><div class="ex">예: P&amp;G-Thorne $3.8B는 $1B 기준선의 3.8배, 2025년 글로벌 M&amp;A 거래액의 57%가 이런 $1B 이상 딜</div></div><div class="bt" id="t-non-dilutive"><div class="k">Non-dilutive Financing <span>비희석 자금조달</span></div><div class="d">지분을 내주지 않고 받는 자금(매출채권 기반 금융, 보조금 등). 오늘: IM8의 General Catalyst $1B 성장금융은 인수가 아니라 비희석 조달.</div><div class="u">▸ 지분 희석 없는 성장 자금</div><div class="ex">예: IM8 $1B를 지분 매각으로 조달 시 기업가치 $5B(가정) 기준 20% 희석, 성장금융은 희석 0%</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concept">
+      <div class="ch"><div><b>Capex 집약도<span>Capex Intensity, 매출 대비 설비투자</span></b><div class="quote">"향남공장 증설을 포함한 올해 투자 결정 금액은 2,114억8,000만원으로 2025년 연결 매출 3,069억원의 약 69% (기사 요약 기준)" <em>- 데일리팜, 2026-10-18</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>한 해 설비투자(Capex: 공장, 설비, 건물 등 유형자산 취득)가 매출의 몇 %인지. 회사가 번 돈 대비 얼마나 공격적으로 미래 생산능력에 돈을 묻고 있는지 보여준다. 제약, CDMO는 공장 때문에 평균 5~15%, 증설기에는 30% 이상으로 뛴다.</p><h5>계산식</h5><div class="formula">Capex 집약도 = 당기 설비투자액 ÷ 매출액</div><h5>오늘 수치로</h5><div class="calc">안국약품: 2,114.8억(사옥 1,630 + 향남 484.8) ÷ 3,069억 = <b>68.9%</b>. 단, 사옥 잔금 1,304억은 2032년 지급이므로 올해 현금 지출 기준 집약도는 훨씬 낮다(계약금 81.5 + 향남 집행분).</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>M&A 실사: 타깃의 과거 5년 Capex 집약도로 "유지보수 Capex"와 "성장 Capex"를 분리, 정상화 FCF 산출</li><li>투자 심의: 당사 동결건조 라인 증설안을 매출 대비 비율, 재투자 비율, 회수기간 3개로 동시 평가</li><li>Exit 준비: 매수자(PE)는 EBITDA에서 유지보수 Capex를 빼서 레버리지 여력을 계산, 증설 직후 매각은 "성장 Capex 완료 = 다음 소유주가 투자 없이 수확" 스토리</li><li>고객사 분석: 안국약품처럼 자체 증설하는 고객은 수탁 물량 내재화 가능성 → 장기 계약, 최소 물량 조항 검토</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 안국약품식 Capex 집약도 산정: 결정액 vs 현금 집행 기준 (가정)</h5><div class="exnote">수치는 기사 공시액에서 출발한 가정이며, 연도별 집행 스케줄, 감가상각비, OCF는 설명용 단순화 모델</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 투자 결정액 분해</td><td>사옥 1,630억 + 향남 증설 484.8억</td><td class="f">1,630 + 484.8</td><td class="r">2,114.8억</td><td>공시, 기사 기준 올해 투자 결정 총액</td></tr><tr><td class="st">② 결정액 기준 집약도</td><td>결정액 2,114.8억 / 2025 매출 3,069억</td><td class="f">2,114.8 ÷ 3,069</td><td class="r">68.9%</td><td>기사가 말한 69%. 결정액을 한 해 매출로 나눈 값</td></tr><tr><td class="st">③ 2026년 현금 집행액(가정)</td><td>계약금 81.5억 + 향남 집행 200억(484.8억 중 약 41%)</td><td class="f">81.5 + 200</td><td class="r">281.5억</td><td>잔금 1,304억은 2032년이라 올해 현금 지출은 일부만</td></tr><tr><td class="st">④ 집행 기준 집약도</td><td>281.5억 / 매출 3,069억</td><td class="f">281.5 ÷ 3,069</td><td class="r">9.2%</td><td>실제 현금 기준은 제약업 평균(5~15%) 범위</td></tr><tr><td class="st">⑤ 재투자 비율</td><td>집행 281.5억 / 감가상각비 150억(가정)</td><td class="f">281.5 ÷ 150</td><td class="r">1.9배</td><td>1배 초과 = 유지보수 넘어 확장 투자 국면</td></tr><tr><td class="st">⑥ 2026년 FCF 영향</td><td>OCF 450억(가정, 상반기 227억 × 2) - 집행 281.5억</td><td class="f">450 - 281.5</td><td class="r">+168.5억</td><td>올해는 투자해도 FCF 흑자, 차입 불필요</td></tr><tr><td class="st">⑦ 2032년 잔금 해 집약도</td><td>잔금 1,304억 + 기타 Capex 150억(가정) / 매출 4,000억(가정)</td><td class="f">1,454 ÷ 4,000</td><td class="r">36.4%</td><td>잔금 몰리는 해에 집약도 급등</td></tr><tr class="total"><td class="st">⑧ 2032년 FCF, 차입 필요액</td><td>OCF 600억(가정) - Capex 1,454억</td><td class="f">600 - 1,454</td><td class="r">-854억</td><td>흑자여도 FCF 마이너스 → 약 850억 차입 또는 현금 소진 필요</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>당사 동결건조 라인 증설 결정액과 연도별 집행 스케줄</li><li>당사 연 매출, 감가상각비, OCF(최근 3개년)</li><li>잔금, 중도금 집중 연도의 매출 전망</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 설비투자 강도, 자금 여력 지표 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>Capex 집약도</th><td class="f">Capex ÷ 매출</td><td>투자 국면 비교(동종사, 연도별)</td><td class="lim">투자 "결정액"과 "집행액"이 다르면 왜곡. 분할 납입은 연도별로 나눠 봐야</td></tr><tr><th>재투자 비율</th><td class="f">Capex ÷ 감가상각비</td><td>1배 미만=유지, 2배 이상=확장 투자</td><td class="lim">감가상각 정책(내용연수) 차이에 민감</td></tr><tr><th>자산 대비 투자</th><td class="f">투자액 ÷ 총자산</td><td>공시 기준(10% 이상 주요사항보고서), 재무 부담</td><td class="lim">자산 규모가 작은 회사는 작은 투자도 큰 비율</td></tr><tr><th>잉여현금흐름(FCF)</th><td class="f">OCF − Capex</td><td>투자 후 실제 남는 현금, 차입 필요액 판단</td><td class="lim">일시 투자로 한 해만 마이너스일 수 있음, 3~5년 누적으로</td></tr><tr><th>회수기간</th><td class="f">투자액 ÷ 연간 증분 현금흐름</td><td>투자 심의에서 "몇 년이면 뽑나"</td><td class="lim">화폐 시간가치 무시, 회수 이후 수익 무시</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 안국약품의 2025 매출 3,069억, 올해 투자 결정액 2,114.8억이다. Capex 집약도는? 사옥 잔금 1,304억을 제외한 "올해 집행 가능 투자(계약금 81.5억 + 향남 484.8억)" 기준으로는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">전체 결정액 기준 2,114.8 ÷ 3,069 = <b>68.9%</b>. 올해 집행 기준 (81.5 + 484.8) ÷ 3,069 = 566.3 ÷ 3,069 = <b>18.5%</b>. 해설: 결정액과 현금 집행액을 구분해야 한다. 분할 납입 구조는 집약도를 연도별로 분산시키며, 재무 부담은 잔금 연도(2032)에 몰린다.</div></details></div><div class="q"><b>Q2.</b> 어느 CDMO A는 매출 1,000억, Capex 300억, 감가상각 100억, OCF 250억이다. 재투자 비율과 FCF를 구하고, 이 회사가 "확장 국면"인지 판단하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">재투자 비율 = 300 ÷ 100 = <b>3.0배</b>(확장 투자), FCF = 250 − 300 = <b>−50억</b>. 해설: 재투자 비율 1배는 낡은 설비를 교체하는 수준, 3배면 캐파를 늘리는 국면이다. FCF가 마이너스이므로 그 해 차입이나 현금 소진이 필요하고, 매수자는 "이 투자가 끝나면 FCF가 얼마나 회복되나"를 본다.</div></details></div><div class="q"><b>Q3.</b> (가정) 제뉴원사이언스 매출 2,000억, 동결건조 라인 증설 400억(2년 집행), 감가상각 150억, OCF 300억/년. 증설로 연 증분 현금흐름 80억이 기대된다. Capex 집약도(연평균), 재투자 비율, 단순 회수기간을 구하고 투자 심의에서 지적될 점을 말하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">연평균 Capex 200억 → 집약도 <b>10%</b>, 재투자 비율 200 ÷ 150 = <b>1.3배</b>, 회수기간 400 ÷ 80 = <b>5년</b>. 지적 포인트: ① 회수 5년은 설비 내용연수(10~15년) 대비 양호하나 증분 80억이 "가동률 몇 %"를 전제하는지 ② 2년간 FCF = 300 − 200 = 100억으로 플러스 유지 가능하나 다른 투자와 겹치면 차입 ③ Exit 시점이 증설 직후라면 매수자에게 "투자 완료, 수확 단계"로 보일 수 있다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> (가정) 투자 심의: CMO사업부가 동결건조 2호 라인 증설 450억을 올렸다. 현재 1호 라인 가동률 85%, 고객 2곳이 3년 LOI를 냈다. 전략기획팀은 Capex 집약도 관점에서 어떤 자료를 요구하고 어떤 결론을 내야 하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: ① 집행 연도별 Capex(2026~27 분할)와 매출 전망으로 연도별 집약도 산출, 동종 CDMO 증설기(20~30%)와 비교 ② OCF 전망에서 Capex를 뺀 FCF가 각 연도 플러스인지, 마이너스면 차입 규모, 금리 ③ LOI 2건의 물량으로 2호 라인 가동률이 몇 년 차에 70%를 넘는지(회수기간) ④ 안국약품처럼 고객사가 자체 증설 중이면 LOI 물량의 내재화 리스크. 결론은 "가동률 85%는 증설 신호, 다만 LOI를 최소 물량 보장(Take-or-pay) 계약으로 바꾸는 조건부 승인". <b>실무 체크포인트:</b> 결정액 아닌 연도별 집행액으로 집약도 계산 / FCF 3년 누적 / LOI의 구속력.</div></details></div><div class="q"><b>P2.</b> (가정) Exit 준비: 맥쿼리가 2027년 매각을 검토하며 "향후 3년 Capex 계획을 보수적으로 잡아 FCF를 키우라"고 요청했다. 매수자 입장에서 Capex 집약도와 FCF를 어떻게 읽을지 설명하고, 전략기획팀이 준비할 자료를 제시하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: PE 매수자는 EBITDA − 유지보수 Capex = "레버리지 가능 현금"으로 인수금융 한도를 정하고, 성장 Capex는 "자기가 투자해서 가져갈 업사이드"로 본다. 따라서 Capex를 무조건 줄이기보다 ① 유지보수 Capex(설비 교체, GMP 대응)와 성장 Capex(라인 증설)를 분리한 5년 표 ② 과거 집약도 추이와 동종사 비교 ③ 증설이 완료된 라인의 가동률 상승 실적(투자 효과 증명)을 준비한다. 유지보수 Capex를 과소 계상하면 실사에서 역산되어 밸류가 깎인다. <b>실무 체크포인트:</b> 유지/성장 Capex 분리 / 감가상각 대비 재투자 비율 1배 이상 유지 / 증설 라인의 가동률 트랙레코드.</div></details></div><div class="q"><b>P3.</b> (가정) 고객사 협상: 안국약품이 향남 증설(2027.12 완공) 전까지 당사에 정제 2품목 수탁을 요청했다. 고객의 Capex 집약도 69%라는 사실이 협상 전략에 주는 시사점은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 고객이 자체 캐파를 늘리는 중이므로 수탁은 "증설 완공까지의 브릿지 물량"일 가능성이 크다. ① 계약 기간을 2028년 이후까지 연장하거나 최소 물량 조항을 넣어 내재화 시 공백을 막고 ② 고객의 FCF가 투자로 빠듯한 시기이므로 단가 인상보다 선급금, 결제 조건에서 이익을 확보하며 ③ 증설 후에도 남길 품목(동결건조 주사제 등 고객이 못 만드는 제형)을 제안해 관계를 장기화한다. <b>실무 체크포인트:</b> 고객 증설 일정과 계약 종료일 정합성 / 최소 물량, 위약 조항 / 고객이 내재화 못 하는 제형 식별.</div></details></div></div>
+      </div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 복붙용, 클릭해서 펼치기)</summary>
+<pre>### 2026-10-19
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 자산양수도(Asset Transfer / Asset Purchase) | 회사 주식이 아니라 토지, 건물, 설비 같은 자산 자체를 사고파는 것. 주식양수도와 달리 부채, 소송 등 숨은 책임이 따라오지 않아 깔끔하지만, 인허가, 고용은 다시 받아야 할 수 있다. 자산총액 10% 이상이면 주요사항보고서 공시. | 공장 인수 검토 시 주식 vs 자산 인수 구조 선택 |
+| 브라운필드 인수(Brownfield Acquisition) | 이미 지어져 가동 중인 공장을 사는 것. 땅부터 새로 짓는 그린필드(Greenfield)보다 빠르고 인허가 리스크가 적지만, 설비가 낡았거나 내 공정에 안 맞을 수 있다. Anuh Pharma가 Tarapur 공장을 산 논리. | 동결건조 라인 증설 시 신축 vs 인수 비교 |
+| 합병비율(Merger Ratio) | 두 회사가 합칠 때 없어지는 회사 주식 1주를 남는 회사 주식 몇 주로 바꿔주는지 정한 비율. 비율이 유리하면 그쪽 주주가 합병 후 지분을 더 갖는다. 차헬스케어, 차케어스 합병에서 오너 개인 지분이 쟁점인 이유. | Exit 시 합병형 거래 구조 이해 |
+| 잉여현금흐름(FCF, Free Cash Flow) | 영업에서 번 현금(영업현금흐름)에서 설비투자(Capex)를 빼고 실제로 남는 돈. 배당, 차입 상환, M&A에 쓸 수 있는 "진짜 여유 현금". 투자가 많은 해엔 흑자여도 FCF가 마이너스가 된다. | 설비투자 판단과 PE 매수자의 핵심 지표 |
+| Capex 집약도(Capex Intensity) | 매출 대비 설비투자 비율. 안국약품은 올해 투자 결정 2,115억 / 2025 매출 3,069억 = 69%. 높을수록 성장 투자 국면이지만 FCF가 줄고 차입이 늘어난다. 제약, CDMO는 공장 때문에 구조적으로 높다. | 당사 증설 규모가 적정한지 보는 잣대 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>

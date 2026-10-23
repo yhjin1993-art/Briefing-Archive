@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-10-14</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body>
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-10-14</b><span>수요일</span></div>
+  </div>
+<div class="note">수집 창: 2026-10-13 06:00 ~ 2026-10-14 06:00 KST (24시간). 영업일(수). 더벨/인베스트조선/마켓인사이트/링크드인 미수집. 글로벌 케미컬 CDMO/건기식은 창 내 신규 기사 미확인.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s2"><div class="hl-main"><b>삼성바이오로직스</b><span class="act">공개매수 응모 87.88%</span><b>폴리펩타이드그룹</b></div><div class="hl-cond">CHF 1.46B (약 2.7조원)</div><div class="hl-mean"><a class="kw" href="#t-min-acceptance" title="이 비율 이상 응모해야 공개매수가 성립하는 조건 - 클릭하면 기본 개념으로 이동">최소 응모 조건</a> 66.7%를 넘겨 인수가 사실상 확정.<br>국내 제약바이오 M&A 사상 최대 규모(보도 기준), 11월 말 종결 목표.</div></div><div class="hl s2"><div class="hl-main"><b>심평원</b><span class="act">기준 제시</span><b>약가 재평가 차수 전환(1차→2차)</b></div><div class="hl-cond">자료 10/31 제출</div><div class="hl-mean">2014년 최고가 대비 약 45%까지 내려간 품목 + 안정공급 필요성 인정 시 2차(2030.10)로 연기.<br>주사제 위주 전환 관측.</div></div><div class="hl s1"><div class="hl-main"><b>JKL파트너스</b><span class="act">SPA 체결</span><b>롯데손보 77.04% → 신한금융</b></div><div class="hl-cond">6,933억원</div><div class="hl-mean">7년 보유 후 <a class="kw" href="#t-exit" title="PE가 보유 회사를 팔아 투자금을 회수하는 것 - 클릭하면 기본 개념으로 이동">Exit</a>.<br>투입 7,296억원보다 적은 금액에 매각(보도 기준)<br><span class="arr">→</span> PE 회수가 항상 이익은 아님.</div></div><div class="hl s1"><div class="hl-main"><b>맥쿼리자산운용/어펄마</b><span class="act">인수</span><b>화성코스메틱 70% / 나우코스 100%</b></div><div class="hl-cond">약 3,000억원</div><div class="hl-mean">당사 대주주 맥쿼리가 K뷰티 ODM 2곳을 묶어 인수(9월 체결, 10/14 기획기사).<br>국내 수탁제조 플랫폼에 대한 PE 관심 확인.</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약/바이오</h2><small>경쟁사/고객사, 약가정책, 공시</small></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">삼성바이오로직스, 폴리펩타이드 공개매수 응모 87.88%</div><ul><li>9/15~10/12 본 공개매수 잠정 결과 응모율 <span class="num">87.88%</span>(매수 대상 기준, 전체 발행주식 기준 87.59%).<br><a class="kw" href="#t-min-acceptance" title="이 비율 이상 응모해야 공개매수가 성립하는 조건 - 클릭하면 기본 개념으로 이동">최소 응모 조건</a> 66.7% 충족.</li><li><a class="kw" href="#t-spc" title="인수만을 목적으로 세운 서류상 회사(특수목적법인) - 클릭하면 기본 개념으로 이동">SPC</a> 삼성펩타이드가 <a class="kw" href="#t-treasury" title="회사가 보유한 자기 주식 - 클릭하면 기본 개념으로 이동">자사주</a> 제외 발행주식 3,301만 6,411주 전량을 주당 CHF 44.31에 매수.<br>총 CHF 1.46B(약 2.7조원).<br>추가 응모 10/19~30, EU/인도/호주/브라질 승인 후 11월 말 종결 목표.</li><li>재원은 주주배정 <a class="kw" href="#t-rights-issue" title="새 주식을 발행해 돈을 받는 자금조달 - 클릭하면 기본 개념으로 이동">유상증자</a>: 1차 발행가 117만 4,000원 × 227만주 = 2조 6,650억(최초 3조 900억에서 축소).<br>환율 CHF당 1,600원 가정 시 전량 취득 대금 2조 3,407억(보도 기준).<br>펩타이드<span class="nb">펩타이드<sup class="fn">1</sup></span> CDMO로 포트폴리오 확장.</li></ul>
+      <div class="src"><a href="https://www.fnnews.com/news/202610131456249404">파이낸셜뉴스</a>, 10-13</div></div></div>
+    <div class="item"><div class="tag ">약가</div><div>
+      <div class="t">약가 재평가 1차→2차 전환, 인하율보다 "안정공급 필요성"</div><ul><li>심평원이 약가 재평가<span class="nb">약가 재평가<sup class="fn">2</sup></span> 차수 변경 기준 제시: 2014년 동일제제 최고가 대비 약 <span class="num">45%</span> 수준까지 인하된 품목이면서 환자 진료상 안정적 공급 필요성이 인정되는 품목(보도 기준).</li><li>1차 대상 1만 3,958품목 중 1만 1,953품목이 내년 4월 인하 시작.<br>2차 전환 시 2030년 10월로 3년 6개월 연기.<br>차수 변경은 신청 품목이 아닌 동일제제 전체에 적용.</li><li>입증자료 10/31까지 제출, 12월 약제급여평가위원회 결정.<br>업계는 주사제 위주 전환을 예상<br><span class="arr">→</span> 해당 품목이 많으면 16% 인하 기준 자체가 상향될 수 있다는 우려.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/343318">데일리팜</a>, 10-13</div></div></div>
+    <div class="item"><div class="tag ">CDMO</div><div>
+      <div class="t">국내 CDMO 3사, World ADC에서 수주 경쟁</div><ul><li>삼성바이오로직스/롯데바이오로직스/SK팜테코가 10/12~15 샌디에이고 World ADC에서 수주 영업.<br>ADC<span class="nb">ADC<sup class="fn">3</sup></span> CDMO 시장 $14.5B(2025)<br><span class="arr">→</span> $32.1B(2033) <span class="nb">전망(Grand View Research)</span>.</li><li>삼성은 지난해 ADC 개발 계약 5건 체결, 생산 수주 전환 여부가 관심.<br>롯데는 시러큐스 공장에 약 $100M 투자한 ADC 전용 설비 홍보.<br>SK팜테코는 링커/페이로드(저분자) 개발/생산 역량 제안.</li><li>→ 바이오 CDMO 3사 모두 저분자(페이로드/링커) 역량을 전면에 내세움.<br>합성 공정이 바이오 CDMO의 보완 영역으로 편입되는 흐름.</li></ul>
+      <div class="src"><a href="https://en.sedaily.com/finance/2026/10/13/korean-cdmos-compete-for-orders-in-32-billion-adc-market">서울경제(영문)</a>, 10-13</div></div></div>
+    <div class="item"><div class="tag ">CMO 수주</div><div>
+      <div class="t">삼일제약, CPHI Milan에서 점안제 CMO 텀시트 협상 진행</div><ul><li>밀라노 CPHI 2026에서 유럽/일본/북미 안과 제약사들과 점안제 <span class="nb">위탁생산(CMO/CDMO)</span> 협력 논의.<br>일부 해외사와는 주요 거래 조건을 담은 텀시트 작성 후 세부 협상 <span class="nb">중(NDA로 상대방 비공개)</span>.</li><li>베트남 점안제 전용 공장을 아시아-북미 공급 기지로 포지셔닝.<br>절차가 순조로우면 연내 추가 점안제 CMO 계약 체결 가능하다고 회사가 밝힘.<br>계약 규모/생산능력 수치는 미공개.</li><li>→ 국내 중견 제약사가 해외 전용 공장을 앞세워 무균 제제(점안제) 수탁을 따내는 모델.<br>당사 무균 주사제 수탁 영업과 비교군.</li></ul>
+      <div class="src"><a href="https://insightkorea.co.kr/news/articleView.html?idxno=256384">인사이트코리아</a>, 10-13</div></div></div>
+    <div class="item"><div class="tag ">국감</div><div>
+      <div class="t">식약처 재평가 지연 질타: 비급여 3개 약제 연 2,300억</div><ul><li>국회 복지위 국감에서 김윤 의원이 싸이모신알파1/비스쿰알붐/이뮤노시아닌 단일제 재평가 공고가 12일에야 나온 점을 지적.<br>사용량 1년 새 1.6배, 오프라벨 비율 90% 이상(보도 기준).</li><li>연간 비급여 진료비 약 2,300억원.<br>임상 재평가 시 3~5년 소요<br><span class="arr">→</span> 5년이면 약 2.3조 낭비 가능 주장.<br>허가 외 사용 평가는 NECA 위탁에 식약처장 동의.</li><li>→ 재평가/급여 정책이 특정 주사제 품목 매출을 단기간에 바꿀 수 있음.<br>고객사 품목 포트폴리오 점검 시 참고.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/343358">데일리팜</a>, 10-13</div></div></div>
+<ol class="footnotes"><li><b>펩타이드</b> 아미노산 수십 개가 연결된 분자. 화학 합성으로 만드는 경우가 많아 케미컬 CDMO 영역과 겹침(비만약 GLP-1 등)</li><li><b>약가 재평가</b> 기존 등재 의약품의 보험 약가를 기준에 따라 다시 산정해 인하하는 제도. 1차(2027.4 인하 시작)와 2차(2030.10)로 나눠 진행</li><li><b>ADC</b> 항체-약물 접합체. 항체(바이오)에 저분자 약물(페이로드)을 링커로 붙인 항암제. 접합/충전 공정이 별도 필요</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-14 (수요일)</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>국내외 PE 헬스케어 투자/회수, 블록딜, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">롯데손보 7년 투자 종료: 6,933억에 신한금융으로</div><ul><li>JKL파트너스(빅튜라)가 롯데손해보험 지분 77.04%를 <span class="num">6,933억원</span>에 신한금융지주에 넘기는 <a class="kw" href="#t-spa" title="주식 매매의 본계약 - 클릭하면 기본 개념으로 이동"><span class="nb">주식매매계약(SPA)</span></a>을 13일 체결.</li><li>2019년 지분 53% 인수 3,734억 + <a class="kw" href="#t-rights-issue" title="새 주식을 발행해 돈을 받는 자금조달 - 클릭하면 기본 개념으로 이동">유상증자</a> 참여 3,562억 = 총 투입 7,296억원<br><span class="arr">→</span> 매각가가 원금보다 약 360억 적음(보도 기준).<br><a class="kw" href="#t-acq-fin" title="인수 대금을 빌린 빚 - 클릭하면 기본 개념으로 이동">인수금융</a> 상환 고려 시 실제 회수는 더 낮을 전망.</li><li>희망가 2조원대→9,000억원대로 하향.<br>2023년 JP모간 주관 매각 무산 후 삼정KPMG로 <a class="kw" href="#t-sell-side-advisor" title="매각 절차를 대행하는 자문사(IB/회계법인) - 클릭하면 기본 개념으로 이동">매각 주관사</a> 교체.<br>롯데손보는 3월 <a class="kw" href="#t-pca" title="건전성 기준 미달 금융사에 감독당국이 내리는 단계별 시정 명령 - 클릭하면 기본 개념으로 이동">적기시정조치</a> 2단계(경영개선요구)를 받아 인수자의 추가 증자 부담이 가격에 반영.<br>신한은 3월/9월 <a class="kw" href="#t-hybrid" title="만기가 매우 길어 회계/감독상 자본으로 인정받는 채권 - 클릭하면 기본 개념으로 이동">신종자본증권</a> 각 4,000억으로 재원 마련(보도 기준).</li></ul>
+      <div class="src"><a href="https://www.fnnews.com/news/202610131239008074">파이낸셜뉴스</a>, 10-13</div></div></div>
+    <div class="item"><div class="tag ">PE</div><div>
+      <div class="t">맥쿼리/어펄마, K뷰티 ODM 2곳 3,000억 인수 (기획기사)</div><ul><li>맥쿼리자산운용이 어펄마캐피탈과 함께 색조 <span class="nb">ODM<sup class="fn">1</sup></span> 화성코스메틱 지분 70%와 기초 ODM 나우코스 100%를 약 <span class="num">3,000억원</span>에 인수(9월 체결, 보도 기준).<br>두 회사 매출은 각 약 1,100억/695억(보도 기준).</li><li>같은 기사: 태광산업은 2025.10 티투PE/유안타인베스트먼트와 <a class="kw" href="#t-consortium" title="여러 투자자가 돈을 모아 공동 인수 - 클릭하면 기본 개념으로 이동">컨소시엄</a>으로 애경산업 63.13%를 약 4,700억에, 2026.1 동성제약을 인수.<br>효성은 북미 K뷰티 커머스 이공이공 <a class="kw" href="#t-cb" title="나중에 주식으로 바꿀 수 있는 회사채 - 클릭하면 기본 개념으로 이동">전환사채</a> 300억 인수.</li><li>9월 화장품 수출 $1.51B로 월간 첫 $15억 돌파, 1~7월 누적 $6.88B(+26.7%)<br><span class="arr">→</span> 대기업/PE 자금이 ODM 제조 플랫폼으로 유입.<br>기사 송고 10/14 06:00(수집 창 종료 시각).</li></ul>
+      <div class="src"><a href="https://www.newspim.com/news/view/20261012001339">뉴스핌</a>, 10-14</div></div></div>
+    <div class="item"><div class="tag ">대주주 Exit</div><div>
+      <div class="t">폴리펩타이드 최대주주 드라우프니르, 공개매수에 전량 응모</div><ul><li>폴리펩타이드그룹 최대주주 드라우프니르 홀딩이 보유 1,837만 5,000주 전량을 삼성바이오로직스의 <a class="kw" href="#t-tender-offer" title="상장사 주식을 장외에서 정해진 가격으로 불특정 다수 주주에게서 사들이는 절차 - 클릭하면 기본 개념으로 이동">공개매수</a>에 응모.<br>전체 응모 2,901만 4,418주 중 63%가 대주주 물량.</li><li>매수가 CHF 44.31/주로 대주주는 일괄 현금화.<br>소수주주는 추가 응모 기간(10/19~30) 또는 90%/98% <a class="kw" href="#t-squeeze-out" title="일정 지분 이상 확보한 대주주가 잔여 소수주주 지분을 강제로 정리하는 절차 - 클릭하면 기본 개념으로 이동">스퀴즈아웃</a> 단계에서 정리.</li><li>→ 상장사 대주주의 Exit 경로 중 "전략적 인수자 대상 공개매수"의 전형.<br>블록딜(할인)과 달리 경영권 프리미엄을 받고 전량 처분.<br>세부 구조는 [오늘의 딜].</li></ul>
+      <div class="src"><a href="https://bloter.net/news/articleView.html?idxno=675577">블로터</a>, 10-13</div></div></div>
+    <div class="empty">그 외 국내외 헬스케어 PE 신규 투자/인수금융 기사: 해당 없음 (수집 창 내 미확인. 미국 10/12 발표 건은 창 밖)</div>
+<ol class="footnotes"><li><b>ODM</b> 제조업자 개발생산. 처방/제형 개발까지 맡아 브랜드사에 완제품 공급</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>최근 1~2주 신규 발행분, 발행일 명시</small></div>
+    <div class="item"><div class="tag ">IB</div><div>
+      <div class="t">Bourne Partners: CDMO 매출 +11.0%, 제조사 25.7%가 캐파 제약</div><ul><li>Contract Pharma 컨퍼런스 테이크어웨이(발행 2026-09-29).<br>CDMO 2026년 매출 성장 <span class="num">11.0%</span>, 스폰서 아웃소싱 지출 +10.3%<br><span class="arr">→</span> IQVIA 글로벌 의약품 지출 성장 전망(연 5~8%)을 상회.</li><li>자체 설비가 <span class="nb">제약(constrained)</span>이라는 제조사 비율 25.7%(2011년 9.1%, 2021년 팬데믹 피크 28.0%).<br>CDMO 78.3%가 2027년 성장 개선 기대.</li><li>스폰서 불만: 공급 비상계획을 만족스럽게 하는 CDMO가 많다는 응답 31%, 가격 모델/일정 준수는 약 15%.<br>58%가 공급 지속 실적 증명을 원하나 제시 가능 CDMO는 13%.<br>사례로 GSK 록빌 공장<br><span class="arr">→</span> 삼성, Sanofi 리지필드 필-피니시<span class="nb">필-피니시<sup class="fn">1</sup></span> → Thermo Fisher 매각.</li></ul>
+      <div class="src"><a href="https://bourne-partners.com/wp-content/uploads/2026/09/Bourne-Brief-Contract-Pharma-Conf-Takeaways-Sept-2026.pdf">Bourne Partners (PDF)</a>, 발행 09-29</div></div></div>
+    <div class="item"><div class="tag ">MBB</div><div>
+      <div class="t">McKinsey: 메드테크, 시장 순환만으로는 투자자 못 돌려세운다</div><ul><li>발행 2026-10-06. 메드테크 업종 성과가 정체되면서 투자자 신뢰 회복에는 새 전략과 실행력이 필요하다는 진단.</li><li>제약 CDMO 직접 언급은 없음.<br>다만 "업황 반등 기대만으로 밸류에이션 회복은 어렵다"는 메시지는 헬스케어 전반에 적용.</li><li>→ Exit 준비 관점: 시장 멀티플 회복을 기다리는 대신 자체 실행 지표(가동률, 수주 전환)를 보여주는 것이 밸류 방어의 핵심.</li></ul>
+      <div class="src"><a href="https://www.mckinsey.com/industries/life-sciences/our-insights/medtech-needs-more-than-a-market-rotation-to-win-back-investors">McKinsey Life Sciences</a>, 발행 10-06</div></div></div>
+    <div class="item"><div class="tag ">IQVIA</div><div>
+      <div class="t">IQVIA Life Science Models 출시: 임상 결과 예측 85% 적중 (뉴스룸)</div><ul><li>발행 2026-10-07(리포트가 아닌 제품 발표).<br>임상시험 결과 예측용 생명과학 특화 모델군을 TechIQ 2026에서 공개.<br>NVIDIA Nemotron 기반, AWS 구동.</li><li>초기 평가 50개 임상/270개 평가지표에서 <span class="num">85%</span>가 적중 또는 임상적으로 근접.<br>스터디 시뮬레이션, 디지털 트윈, 합성 대조군 지원.</li><li>→ 스폰서의 임상 설계 효율화 → 개발 단계 CDMO 수요(임상용 원료/완제) 타이밍 예측에도 간접 영향.</li></ul>
+      <div class="src"><a href="https://www.iqvia.com/newsroom/2026/10/iqvia-launches-iqvia-life-science-models-to-help-life-sciences-companies">IQVIA Newsroom</a>, 발행 10-07</div></div></div>
+    <div class="empty">MBB/Big 4 헬스케어 PE/CDMO 신규 리포트(최근 2주): Bain/KPMG/Deloitte는 1월 발행분으로 제외</div>
+<ol class="footnotes"><li><b>필-피니시</b> 주사제를 바이알/시린지에 충전/포장하는 최종 공정</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-14 (수요일)</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 의약품 CDMO/제네릭/주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">화장품</div><div>
+      <div class="t">K뷰티 수출 월 $1.5B 돌파, ODM 3사 증설 러시</div><ul><li>9월 화장품 수출 <span class="num">$1.51B</span>(약 2조 200억)으로 월간 기준 처음 $15억 상회.<br>1~7월 누적 $6.88B, +26.7%(산업부 통계, 보도 인용).</li><li>코스메카코리아 1,360억 신규 <a class="kw" href="#t-capex" title="공장/설비 등 장기 자산에 쓰는 돈 - 클릭하면 기본 개념으로 이동"><span class="nb">설비투자(CAPEX)</span></a> 공시, 한국콜마 베이징 공장 국내 이전에 약 1,733억 투자(보도 기준).<br>범용 섬유/화학 대기업(효성, 태광)도 화장품으로 사업 다변화.</li><li>후발 대기업 뷰티 사업은 수익성 과제: 애경산업 2Q 매출 1,942억(+13.3%)이나 영업이익 45억(-59.4%), 영업이익률 2.3%(보도 기준)<br><span class="arr">→</span> <span class="nb">제조(ODM)</span>는 호황, 브랜드는 양극화.</li></ul>
+      <div class="src"><a href="https://www.newspim.com/news/view/20261012001339">뉴스핌</a>, 10-14</div></div></div>
+    <div class="empty">케미컬 의약품 CDMO/제네릭/주사제 / 건강기능식품: 해당 없음 (수집 창 내 신규 M&A/설비투자/규제 기사 미확인. 美 Par Health 주사제 리콜(10/12 09:04 EDT)/Viatris-Pacira(10/8)는 창 밖, ADC CDMO 시장 리포트는 바이오로직스 범위로 제외)</div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">삼성바이오로직스 → 폴리펩타이드그룹 공개매수 (Tender Offer)<small>스위스 상장 펩타이드 CDMO 100% 인수를 위한 SPC + 공개매수 + 유상증자 조달 구조</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>삼성바이오로직스(인수 <a class="kw" href="#t-spc" title="인수만을 목적으로 세운 서류상 회사(특수목적법인) - 클릭하면 기본 개념으로 이동">SPC</a> 삼성펩타이드 통해)</dd>
+          <dt>무엇을</dt><dd>폴리펩타이드그룹(SIX 상장) <a class="kw" href="#t-treasury" title="회사가 보유한 자기 주식 - 클릭하면 기본 개념으로 이동">자사주</a> 제외 발행주식 3,301만주 전량, 주당 CHF 44.31, 총 CHF 1.46B(약 2.7조원)</dd>
+          <dt>왜</dt><dd>항체 중심 CDMO를 펩타이드(비만/당뇨 GLP-1 수요)로 확장. 신설 대신 인수로 개발/생산 기술과 고객을 한 번에 확보</dd>
+        </dl>
+        <ol class="steps"><li>7월 인수 계약 체결 → 9/15~10/12 본 <a class="kw" href="#t-tender-offer" title="상장사 주식을 장외에서 정해진 가격으로 불특정 다수 주주에게서 사들이는 절차 - 클릭하면 기본 개념으로 이동">공개매수</a>.<br>잠정 응모 87.88%(10/16 확정 발표).</li><li><a class="kw" href="#t-acting-in-concert" title="공개매수자와 공동으로 행동하는 것으로 간주되는 주주 - 클릭하면 기본 개념으로 이동">공동행위자</a> 포함 합산 87.92%.<br>90%까지 68만 8,<span class="nb">609주(CHF 3,051만)</span>, 98%까지 333만 8,609주(추가 CHF 1억 4,793만) 필요(보도 기준).</li><li>90% 이상: 주총 승인 후 합병 방식 <a class="kw" href="#t-squeeze-out" title="일정 지분 이상 확보한 대주주가 잔여 소수주주 지분을 강제로 정리하는 절차 - 클릭하면 기본 개념으로 이동">스퀴즈아웃</a>(소수주주가 보상액을 법원에 다툴 수 있음).<br>98% 초과: 법원에 잔여 주식 취소 신청(공개매수가가 보상액, 재심사 범위 좁음).</li><li>재원은 <a class="kw" href="#t-rights-issue" title="새 주식을 발행해 돈을 받는 자금조달 - 클릭하면 기본 개념으로 이동">유상증자</a>.<br>최초 3조 900억<br><span class="arr">→</span> 1차 발행가(117만 4,000원) 기준 2조 6,650억으로 축소.<br>환율 1,600원 가정 시 취득 대금 2조 3,407억(보도 기준).</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">삼성바이오로직스<small>주주배정 유상증자 2조 6,650억(1차 발행가 기준)</small></div><div class="arrow"><i></i><span>출자</span></div><div class="node">삼성펩타이드 (SPC)<small>인수 목적 특수목적법인</small></div><div class="arrow"><i></i><span>공개매수 CHF 44.31/주, 최소 응모 조건 66.7%</span></div><div class="node">폴리펩타이드 주주<small>드라우프니르 1,837만주 전량 + 소수주주 → 응모 87.88%</small></div><div class="arrow"><i></i><span>추가 응모(10/19~30) → 90%/98% 소수주주 정리</span></div><div class="node">100% 자회사화<small>규제 승인 후 10거래일 내 대금 지급, 11월 말 종결</small></div></div>
+        <div class="point"><b>포인트</b> 스위스 선례 2건은 추가 응모로 90%는 넘겼지만 98%는 못 미침 → 11월 종결 후에도 합병형 스퀴즈아웃 절차가 남을 가능성. 당사 관점: 상장사 인수는 "인수가 × 지분율"이 아니라 소수주주 정리 비용/기간까지 보는 총 비용(All-in Cost) 개념이 필요. 또 매도자(드라우프니르)는 블록딜 할인 없이 <a class="kw" href="#t-control-premium" title="경영권이 딸려오는 지분에 시가 위에 더 얹어주는 값 - 클릭하면 기본 개념으로 이동">경영권 프리미엄</a>가 반영된 가격에 전량 Exit.</div>
+        <div class="src"><a href="https://bloter.net/news/articleView.html?idxno=675577">블로터 / 파이낸셜뉴스 / 서울경제 (10-13)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-14 (수요일)</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">공개매수 <span>Tender Offer</span></div><div class="d">상장사 주식을 장내 매매가 아닌 "정해진 가격/기간"으로 모든 주주에게서 사들이겠다고 공개 제안하는 것. 경영권 인수나 상장폐지 전 단계로 쓰임. 오늘: 삼성바이오로직스가 폴리펩타이드 주주에게 CHF 44.31 제안.</div><div class="ex">예: 폴리펩타이드 3,301만주에 주당 CHF 44.31 제안, 100% 응모 시 CHF 1.46B(약 2.7조)</div></div><div class="term"><div class="k">스퀴즈아웃 <span>Squeeze-out</span></div><div class="d">대주주가 법정 비율(스위스 90%/98%, 한국 95%) 이상 확보하면 남은 소수주주 지분을 강제로 사들여 100%로 만드는 절차. 응모하지 않은 주주를 정리해 상장폐지/완전 자회사화를 끝냄.</div><div class="ex">예: 87.92% 확보 후 98%까지 333만주를 더 사야 하고, 추가 비용은 CHF 1.48억(약 2,730억)</div></div><div class="term"><div class="k">특수목적법인 <span>SPC, Special Purpose Company</span></div><div class="d">특정 거래(인수, 자금조달)만을 위해 세운 서류상 회사. 인수 대상 지분과 빚을 모회사와 분리해 담는 그릇. 오늘: 삼성펩타이드.</div><div class="ex">예: 삼성펩타이드가 공개매수 주체가 되어 폴리펩타이드 지분 87.92%와 인수 자금을 보유</div></div><div class="term"><div class="k">신종자본증권 <span>Hybrid Capital Securities</span></div><div class="d">만기 30년 이상 또는 영구이고 이자 지급을 미룰 수 있어 회계/감독상 "자본"으로 인정되는 채권. 금융사가 자본비율을 지키면서 돈을 모을 때 발행. 오늘: 신한금융이 롯데손보 인수 재원 8,000억 조달.</div><div class="ex">예: 신한금융이 3월/9월 각 4,000억, 총 8,000억 발행해 롯데손보 인수 6,933억의 재원으로 활용</div></div><div class="term"><div class="k">적기시정조치 <span>Prompt Corrective Action</span></div><div class="d">금융사의 건전성 지표가 기준에 미달하면 감독당국이 단계별(권고→요구→명령)로 내리는 시정 명령. 받으면 증자/자산 매각 등을 강제. 오늘: 롯데손보 2단계(경영개선요구) → 인수자 증자 부담이 매각가에 반영.</div><div class="ex">예: 롯데손보 경영개선요구 단계 → 인수 후 증자 수천억(가정)이 필요해 매각가 6,933억에 반영</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit 구조 / M&A</em></div><ol><li>JKL의 롯데손보 Exit(7년, 원금 미달): 보유 장기화 + 인수자가 떠안을 규제/증자 부담이 그대로 가격 할인으로 전가됨. 맥쿼리의 당사 Exit 검토 시 인수자가 부담할 <a class="kw" href="#t-capex" title="공장/설비 등 장기 자산에 쓰는 돈 - 클릭하면 기본 개념으로 이동">설비투자(CAPEX)</a>(동결건조 라인 증설 등)과 가동률 공백은 할인 요인 → 설비투자는 "회수 논리(수주 확정분, 가동률 목표)"를 문서화해 두는 것이 밸류 방어.</li><li>삼성바이오의 펩타이드(합성) CDMO 2.7조 인수와 맥쿼리의 K뷰티 ODM <a class="kw" href="#t-bolt-on" title="보유 회사에 동종 회사를 붙여 키우는 추가 인수 - 클릭하면 기본 개념으로 이동">볼트온</a> 인수는 모두 "대형 자본이 수탁제조 플랫폼을 사서 영역을 넓히는" 흐름. 당사 M&A(소형 합성/주사제 CDMO 볼트온)와 Exit(전략적 인수자 대상 매각) 양쪽의 비교 사례로 축적.</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-14 (수요일)</span></div>
+<div class="refband">여기부터 참조 영역 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">삼성바이오로직스</div><div class="cm">한국, KRX 상장(207940), 바이오 CDMO</div></th><td>항체의약품 위탁생산 중심 CDMO. 인천 송도 1~5공장. mRNA/ADC에 이어 펩타이드로 확장 중. 글로벌 상위 20개 제약사 중 17곳과 계약(회사 발표).</td><td class="sz">미기재<div class="szsrc">DART 코드 미등록(corp_code 표에 없음) → 조회 불가</div></td><td>1, 2, 5번: 폴리펩타이드 공개매수 87.88%</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">폴리펩타이드그룹</div><div class="cm">스위스, SIX 상장(PPGN), 펩타이드 CDMO</div></th><td>치료용 펩타이드/올리고 원료(API) 위탁개발생산. 유럽/미국/인도 공장. 최대주주 드라우프니르 홀딩(Ferring 창업가 계열, 보도 기준).</td><td class="sz">비공개(IR 미조회)<div class="szsrc">비상장 아님. 회사 IR 연차보고서 수동 확인 필요</div></td><td>1, 2, 5번: 공개매수 대상</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">드라우프니르 홀딩</div><div class="cm">비상장 투자지주, 스위스/유럽</div></th><td>폴리펩타이드그룹 최대주주(1,837만 5,000주). 공개매수에 전량 응모.</td><td class="sz">비공개<div class="szsrc">공식 공시 원천 없음</div></td><td>1번: 대주주 Exit</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">JKL파트너스</div><div class="cm">한국, 사모펀드 운용사(PEF)</div></th><td>국내 바이아웃 PE. 2019년 롯데손보 경영권 인수(빅튜라 유한회사 통해), 2026년 신한금융에 매각.</td><td class="sz">비공개(운용사 공식 AUM 미조회)<div class="szsrc">운용사 사이트 수동 확인 필요</div></td><td>1번: 롯데손보 Exit</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">신한금융지주</div><div class="cm">한국, KRX 상장(055550), 금융지주</div></th><td>은행/카드/증권/보험 금융그룹. 2019년 오렌지라이프, 2022년 BNP파리바카디프손보 인수 이력. 롯데손보 77.04% 인수 SPA 체결.</td><td class="sz">미기재<div class="szsrc">DART 코드 미등록 → 조회 불가</div></td><td>1번: 인수자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">롯데손해보험</div><div class="cm">한국, KRX 상장(000400), 손해보험</div></th><td>손보사. 2019년 롯데그룹에서 JKL로 경영권 이동. 2026.3 적기시정조치 2단계(경영개선요구).</td><td class="sz">미기재<div class="szsrc">DART 코드 미등록 → 조회 불가</div></td><td>1번: 매각 대상</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">맥쿼리자산운용</div><div class="cm">호주, 인프라/PE 운용사(Macquarie Asset Management)</div></th><td>인프라/실물자산 중심 글로벌 운용사. 국내에서 제뉴원사이언스 대주주. 2026.9 어펄마캐피탈과 화성코스메틱/나우코스 인수(보도 기준).</td><td class="sz">비공개(공식 AUM 미조회)<div class="szsrc">운용사 사이트 AUM 수동 확인 필요</div></td><td>1번: K뷰티 ODM 인수</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">화성코스메틱 / 나우코스</div><div class="cm">한국, 비상장, 화장품 ODM</div></th><td>화성코스메틱은 색조 ODM, 나우코스는 기초 ODM. 맥쿼리/어펄마가 각 70%/100% 인수. 매출 약 1,100억/695억(보도 기준, 규모 열 미반영).</td><td class="sz">비공개<div class="szsrc">비상장. 회사 IR 수치 없음</div></td><td>1번: 인수 대상</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">롯데바이오로직스</div><div class="cm">한국, 비상장, 바이오 CDMO</div></th><td>롯데그룹 바이오 CDMO. 미국 시러큐스(구 BMS) 공장, ADC 전용 설비(약 $100M 투자). 송도 신공장 건설 중.</td><td class="sz">비공개<div class="szsrc">비상장. 회사 IR 공표 수치 미확인</div></td><td>2번: World ADC 수주 경쟁</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">SK팜테코</div><div class="cm">한국/미국, 비상장(SK㈜ 자회사), 합성/CGT CDMO</div></th><td>SK㈜의 CDMO 자회사. 합성 원료(API)와 세포/유전자치료제. ADC 링커/페이로드(저분자) 역량 제안.</td><td class="sz">비공개<div class="szsrc">비상장. 모회사 SK㈜ DART 코드 미등록</div></td><td>2번: World ADC</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">코스메카코리아 / 한국콜마</div><div class="cm">한국, KRX 상장(241710 / 161890), 화장품 ODM</div></th><td>국내 화장품 ODM. 코스메카 1,360억 신규 시설투자 공시, 한국콜마 베이징 공장 국내 이전(약 1,733억, 보도 기준).</td><td class="sz">미기재<div class="szsrc">DART 코드 미등록 → 조회 불가</div></td><td>4번: ODM 증설</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">삼일제약</div><div class="cm">한국, KRX 상장(000520), 제약</div></th><td>안과(점안제) 중심 중견 제약사. 베트남 호치민 점안제 전용 공장으로 해외 CMO/CDMO 확대 추진.</td><td class="sz">미기재<div class="szsrc">DART 코드 미등록 → 조회 불가</div></td><td>2번: CPHI 점안제 CMO 텀시트</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">IQVIA</div><div class="cm">미국, NYSE 상장(IQV), 데이터/CRO</div></th><td>임상 CRO + 의약품 데이터/분석. Life Science Models(임상 결과 예측 모델) 출시.</td><td class="sz">미확인<div class="szsrc">SEC XBRL 조회 시도: Revenues 태그는 2017년까지만, 현행 태그 값 미반환 → 미기재</div></td><td>3번: 제품 발표</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-14 (수요일)</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-tender-offer"><div class="k">공개매수 <span>Tender Offer</span></div><div class="d">상장사 주식을 정해진 가격/기간에 모든 주주에게서 사겠다고 공개 제안. 오늘: 삼성바이오로직스가 폴리펩타이드에 CHF 44.31 제안, 응모 87.88%.</div><div class="u">▸ 상장사 경영권 인수, 상장폐지 전 단계, 적대적 M&A</div><div class="ex">예: 주당 CHF 44.31 × 응모 29,023,892주 = CHF 1,286M(약 2.38조)이 1차 지급액</div></div><div class="bt" id="t-min-acceptance"><div class="k">최소 응모 조건 <span>Minimum Acceptance Condition</span></div><div class="d">이 비율 이상 응모가 없으면 공개매수를 철회할 수 있는 조건. 오늘: 66.7%(스위스 특별결의 요건과 연동), 87.88%로 충족.</div><div class="u">▸ 공개매수 성립 여부 판단, 인수자 리스크 관리</div><div class="ex">예: 조건 66.7%는 3,301만주 중 2,201만주, 실제 응모 87.88%는 2,901만주로 약 700만주 초과 충족</div></div><div class="bt" id="t-acting-in-concert"><div class="k">공동행위자 <span>Persons Acting in Concert</span></div><div class="d">공개매수자와 사전에 뜻을 맞춘 것으로 간주되는 주주. 지분을 합산해 신고/임계치 계산. 오늘: 삼성펩타이드 + 공동행위자 합산 87.92%.</div><div class="u">▸ 공개매수 공시, 5% 룰(대량보유 보고)</div><div class="ex">예: 공개매수 응모 87.88% + 공동행위자 보유 0.04% = 합산 87.92%로 임계치 계산</div></div><div class="bt" id="t-squeeze-out"><div class="k">스퀴즈아웃 <span>Squeeze-out</span></div><div class="d">대주주가 법정 비율 이상 확보하면 잔여 소수주주 지분을 강제로 매수해 100%로 만드는 절차. 오늘: 스위스 90%(합병형)/98%(주식 취소형).</div><div class="u">▸ 상장사 100% 인수, 상장폐지</div><div class="ex">예: 90%까지 68.9만주(CHF 30.6M), 98%까지 333만주(CHF 147.6M)가 추가로 필요</div></div><div class="bt" id="t-spc"><div class="k">특수목적법인 <span>SPC, Special Purpose Company</span></div><div class="d">특정 거래만을 위해 세운 서류상 회사. 인수 지분과 빚을 담는 그릇. 오늘: 삼성펩타이드(인수용), 빅튜라(JKL의 롯데손보 보유용).</div><div class="u">▸ LBO, 공개매수, 자산유동화</div><div class="ex">예: 빅튜라가 롯데손보 77.04%를 보유했다가 6,933억에 신한금융으로 매각</div></div><div class="bt" id="t-treasury"><div class="k">자사주 <span>Treasury Shares</span></div><div class="d">회사가 보유한 자기 주식. 의결권/배당 없음. 공개매수 대상에서 제외. 오늘: 폴리펩타이드 자사주 제외 3,301만주가 매수 대상.</div><div class="u">▸ 지분율 계산, 공개매수 대상 산정</div><div class="ex">예: 폴리펩타이드 총 발행주식 중 자사주를 뺀 33,016,411주만 CHF 44.31 매수 대상</div></div><div class="bt" id="t-rights-issue"><div class="k">유상증자 <span>Rights Issue / Paid-in Capital Increase</span></div><div class="d">새 주식을 발행해 투자자에게서 돈을 받는 자금조달. 주주배정(기존 주주 우선)/일반공모/제3자배정. 오늘: 삼성바이오 주주배정 2조 6,650억(1차 발행가 기준).</div><div class="u">▸ 대형 인수 재원, 재무구조 개선, 바이오 자금조달</div><div class="ex">예: 삼성바이오 주주배정 2조 6,650억 중 1,000만원어치 보유 주주는 비율대로 신주 배정(가정)</div></div><div class="bt" id="t-spa"><div class="k">주식매매계약 <span>SPA, Share Purchase Agreement</span></div><div class="d">주식 매매의 본계약. 가격/조건/진술보증/종결 조건을 담음. 오늘: JKL(빅튜라)-신한금융, 롯데손보 77.04%.</div><div class="u">▸ M&A 본계약, 클로징 조건 협상</div><div class="ex">예: 롯데손보 77.04%를 6,933억에 매매, 종결 조건으로 금융위 대주주 변경 승인 포함(가정)</div></div><div class="bt" id="t-exit"><div class="k">Exit <span>Exit / 투자회수</span></div><div class="d">PE가 보유 회사를 팔아 투자금을 회수하는 것. 매각/IPO/리캡 등. 오늘: JKL의 롯데손보(7년), 드라우프니르의 폴리펩타이드.</div><div class="u">▸ PE 펀드 운용, 당사 대주주 전략</div><div class="ex">예: JKL 7년 보유 후 7,296억 투입, 6,933억 회수로 Gross 0.95x에 Exit</div></div><div class="bt" id="t-acq-fin"><div class="k">인수금융 <span>Acquisition Financing</span></div><div class="d">인수 대금 중 빌린 돈. 피인수사 현금흐름/배당으로 상환. 오늘: JKL의 롯데손보 인수금융 상환 고려 시 실제 회수액 더 낮을 전망(보도 기준).</div><div class="u">▸ LBO, 리파이낸싱, 회수 계산</div><div class="ex">예: 투입 7,296억 중 인수금융 1,500억(가정)이면 매각대금 6,933억에서 먼저 1,500억 상환</div></div><div class="bt" id="t-sell-side-advisor"><div class="k">매각 주관사 <span>Sell-side Advisor</span></div><div class="d">매각 절차(티저/IM 배포, 입찰, 협상)를 대행하는 IB/회계법인. 오늘: JKL이 JP모간 → 삼정KPMG로 교체.</div><div class="u">▸ 매각 프로세스 설계, 인수 후보 접촉</div><div class="ex">예: JKL이 JP모간에서 삼정KPMG로 교체 후 신한금융과 6,933억 SPA 체결</div></div><div class="bt" id="t-hybrid"><div class="k">신종자본증권 <span>Hybrid Capital Securities</span></div><div class="d">만기 30년 이상/영구이고 이자 지급 유예가 가능해 "자본"으로 인정되는 채권. 오늘: 신한금융 3월/9월 각 4,000억 발행(보도 기준).</div><div class="u">▸ 금융사 자본비율 관리, 인수 재원</div><div class="ex">예: 4,000억 발행, 금리 4.5%(가정)면 연 이자 180억, 전액 자본으로 인정되어 자본비율 유지</div></div><div class="bt" id="t-pca"><div class="k">적기시정조치 <span>Prompt Corrective Action</span></div><div class="d">건전성 지표 미달 금융사에 감독당국이 단계별로 내리는 시정 명령(권고→요구→명령). 오늘: 롯데손보 2단계 → 인수자 증자 부담.</div><div class="u">▸ 금융 규제, 피인수사 리스크 평가</div><div class="ex">예: 경영개선요구 받은 롯데손보, 인수자가 증자 3,000억(가정) 부담하면 실질 인수가는 약 9,900억</div></div><div class="bt" id="t-control-premium"><div class="k">경영권 프리미엄 <span>Control Premium</span></div><div class="d">경영권이 함께 넘어가는 지분에 시가 위에 더 얹어주는 값. 오늘: 공개매수가 CHF 44.31에 반영, 블루엠텍 류 거래에서도 등장.</div><div class="u">▸ 경영권 지분 가격 협상, 블록딜과 비교</div><div class="ex">예: 시가 CHF 35(가정)에 CHF 44.31 제안이면 프리미엄 약 27%, 금액으로 CHF 300M</div></div><div class="bt" id="t-cb"><div class="k">전환사채 <span>CB, Convertible Bond</span></div><div class="d">나중에 정해진 가격으로 주식으로 바꿀 수 있는 회사채. 오늘: 효성이 이공이공 CB 300억 인수.</div><div class="u">▸ 성장기업 자금조달, 소수지분 투자</div><div class="ex">예: 효성이 이공이공 CB 300억 인수, 전환가 1만원(가정)이면 주식 300만주로 전환 가능</div></div><div class="bt" id="t-consortium"><div class="k">컨소시엄 <span>Consortium</span></div><div class="d">여러 투자자가 돈을 모아 공동으로 인수. 오늘: 태광산업 + 티투PE + 유안타인베스트먼트(애경산업), 맥쿼리 + 어펄마(화성코스메틱).</div><div class="u">▸ 대형 딜 자금 분담, SI+FI 결합</div><div class="ex">예: 애경산업 인수에 태광산업 + 티투PE + 유안타인베스트먼트가 자금을 나누어 투입</div></div><div class="bt" id="t-bolt-on"><div class="k">볼트온 <span>Bolt-on Acquisition</span></div><div class="d">이미 보유한 회사에 동종/인접 회사를 붙여 규모를 키우는 추가 인수. 오늘: 맥쿼리의 색조+기초 ODM 동시 인수.</div><div class="u">▸ PE 가치 제고, 플랫폼 전략</div><div class="ex">예: 맥쿼리가 색조 ODM 인수 후 기초 ODM 화성코스메틱을 추가 인수해 포트폴리오 결합</div></div><div class="bt" id="t-capex"><div class="k">설비투자 <span>CAPEX, Capital Expenditure</span></div><div class="d">공장/설비 등 장기 자산에 쓰는 돈. 오늘: 코스메카 1,360억, 한국콜마 1,733억(보도 기준).</div><div class="u">▸ 투자 심의, 감가상각/EBITDA 연결</div><div class="ex">예: 코스메카 1,360억, 한국콜마 1,733억 투자, 매출 5,000억(가정) 대비 각 27%/35% 수준</div></div><div class="bt" id="t-moic"><div class="k">회수배수 <span>MOIC, Multiple on Invested Capital</span></div><div class="d">회수금 ÷ 투입금. 1.0x 미만이면 원금 손실. 오늘: JKL 롯데손보 6,933 ÷ 7,296 ≈ 0.95x(총액 기준 계산치, 인수금융 제외).</div><div class="u">▸ PE 성과 측정, Exit 판단</div><div class="ex">예: JKL 롯데손보 6,933 ÷ 7,296 = 0.95x, 7년 보유라 IRR은 약 -0.7%/년</div></div><div class="bt" id="t-equity-value"><div class="k">지분가치 <span>Equity Value</span></div><div class="d">주식 100% 기준 가격. 기업가치(EV)에서 순차입금을 뺀 값. 오늘: 롯데손보 77.04% 6,933억 → 100% 환산 약 9,000억(보도 기준).</div><div class="u">▸ 매각가 비교, EV와 구분</div><div class="ex">예: 롯데손보 77.04%가 6,933억이면 100% 환산 6,933 ÷ 0.7704 ≈ 9,000억</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concepts"><div class="concept">
+      <div class="ch"><div><b>공개매수 응모율과 스퀴즈아웃 임계치<span>Tender Offer Acceptance & Squeeze-out Thresholds</span></b><div class="quote">"90%까지는 68만 8,609주, 98% 초과까지는 333만 8,609주가 더 필요하다" <em>- 블로터 2026-10-13</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>공개매수는 "몇 % 모였나"로 성패가 갈린다. 최소 응모 조건(성립), 90%(합병형 스퀴즈아웃), 98%(주식 취소형)처럼 단계별 임계치가 있고, 각 단계마다 소수주주 정리 방식과 비용/기간이 달라진다.</p><h5>계산식</h5><div class="formula">응모율 = 응모 주식 ÷ 매수 대상 주식<br>추가 필요 주식 = 임계치 × 발행주식 − 현재 확보 주식<br>추가 비용 = 추가 필요 주식 × 공개매수가</div><h5>오늘 수치로</h5><div class="calc">발행주식(자사주 제외) 33,016,411주 × 90% = 29,714,770주. 확보 29,023,892주(공동행위자 합산) → 부족 690,878주 ≈ 보도 68만 8,609주(소수 차이는 집계 기준). 비용 = 688,609 × CHF 44.31 ≈ CHF 3,051만(계산치, 보도와 일치).</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>상장사 인수 총 비용 = 공개매수 대금 + 스퀴즈아웃 추가 대금 + 법률비용/지연 기간. "87.88% 확보"가 "2.7조에 끝났다"를 뜻하지 않음.</li><li>당사 M&A 검토: 상장 타깃이면 비상장 타깃 대비 "소수주주 정리 리스크" 항목을 실사 체크리스트에 추가.</li><li>당사 Exit: 맥쿼리가 당사를 상장 후 매각하는 시나리오라면, 인수자는 위 임계치 비용을 가격에서 뺀다 → 상장 Exit의 숨은 할인 요인.</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 폴리펩타이드식 임계치별 추가 매수 비용 산정 (보도 수치 기반, 환율은 가정)</h5><div class="exnote">주식 수와 공개매수가는 보도 기준, 환율(CHF 1 = 1,850원)과 반올림은 가정. 법률비용/지연 기간은 제외한 단순화 모델.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 매수 대상 주식</td><td>발행주식 33,016,411주 (자사주 제외)</td><td class="f">-</td><td class="r">33,016,411주</td><td>자사주는 공개매수 대상에서 빠지므로 분모는 자사주 제외 기준</td></tr><tr><td class="st">② 현재 확보 주식</td><td>응모 + 공동행위자 합산 87.92%</td><td class="f">33,016,411 × 87.92%</td><td class="r">29,023,892주</td><td>공개매수 종료 시점에 삼성펩타이드가 지배하는 주식 수(보도 기준)</td></tr><tr><td class="st">③ 90% 임계치 부족분</td><td>합병형 스퀴즈아웃 기준 90%</td><td class="f">33,016,411 × 90% − 29,023,892</td><td class="r">690,878주</td><td>보도 68만 8,609주와 소수 차이, 집계 기준 차이</td></tr><tr><td class="st">④ 90% 도달 추가 비용</td><td>690,878주 × CHF 44.31</td><td class="f">690,878 × 44.31</td><td class="r">CHF 30.6M (약 566억)</td><td>장내 매수나 추가 공개매수로 사야 하는 최소 금액</td></tr><tr><td class="st">⑤ 98% 임계치 부족분</td><td>주식 취소형 스퀴즈아웃 기준 98%</td><td class="f">33,016,411 × 98% − 29,023,892</td><td class="r">3,332,191주</td><td>98%를 넘겨야 법원에 잔여 주식 취소 신청 가능</td></tr><tr><td class="st">⑥ 98% 도달 추가 비용</td><td>3,332,191주 × CHF 44.31</td><td class="f">3,332,191 × 44.31</td><td class="r">CHF 147.6M (약 2,731억)</td><td>보도 CHF 1.48억과 일치, 90%까지의 약 5배</td></tr><tr><td class="st">⑦ 확보 지분 대금</td><td>29,023,892주 × CHF 44.31</td><td class="f">29,023,892 × 44.31</td><td class="r">CHF 1,286M (약 2.38조)</td><td>지금까지 응모분에 지급할 공개매수 대금</td></tr><tr class="total"><td class="st">⑧ 100% 완료 총 매수 대금</td><td>33,016,411주 전량 × CHF 44.31</td><td class="f">1,286 + 147.6 + 2% 잔여 29.3</td><td class="r">CHF 1,463M (약 2.71조)</td><td>헤드라인 2.7조는 100% 기준 금액, 87.92% 시점 지급액은 2.38조</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>타깃 발행주식 수 (자사주 제외)</li><li>확보 지분율 (응모 + 공동행위자 합산)</li><li>적용 법정 임계치 (한국 95%, 스위스 90%/98%)</li><li>공개매수가 및 환율</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 지분율 임계치 패밀리: 몇 %를 가지면 무엇이 되나</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>50%+1주</th><td class="f">발행주식 과반</td><td>이사 선임 등 보통결의 단독 통과 = 경영권</td><td class="lim">특별결의(정관 변경, 합병)는 막힘</td></tr><tr><th>66.7% (2/3)</th><td class="f">스위스 특별결의 요건, 오늘 최소 응모 조건</td><td>합병/정관 변경 등 특별결의 단독 통과</td><td class="lim">소수주주 지분 정리는 불가</td></tr><tr><th>90%</th><td class="f">스위스 합병형 스퀴즈아웃</td><td>주총 승인 후 합병으로 잔여 지분 현금 보상</td><td class="lim">소수주주가 법원에 보상액 적정성 다툼 가능 → 기간/비용 변동</td></tr><tr><th>95%</th><td class="f">한국 상법 지배주주 매도청구권</td><td>국내 상장사 100% 인수 시 기준</td><td class="lim">스위스 사례와 비율 상이, 국내 딜에서 혼동 주의</td></tr><tr><th>98%</th><td class="f">스위스 주식 취소형 스퀴즈아웃</td><td>법원에 잔여 주식 취소 신청, 공개매수가가 보상액</td><td class="lim">추가 매수 비용 큼. 오늘 사례 추가 CHF 1.48억</td></tr><tr><th>100%</th><td class="f">완전 자회사</td><td>상장폐지, 이익 전액 귀속, 구조 재편 자유</td><td class="lim">전 단계 비용/기간이 모두 누적</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 발행주식(자사주 제외) 3,301만 6,411주인 회사에서 90% 스퀴즈아웃 요건을 채우려면 몇 주가 필요한가? 공개매수가 CHF 44.31일 때 현재 2,902만 3,892주 확보 상태에서 추가 비용은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">필요 주식 = 33,016,411 × 0.9 = 29,714,770주. 부족 = 29,714,770 − 29,023,892 = 690,878주. 비용 ≈ 690,878 × 44.31 ≈ CHF 3,061만(보도치 CHF 3,051만과 집계 기준 차이). 공개매수가가 그대로 적용된다는 가정.</div></details></div><div class="q"><b>Q2.</b> 같은 회사가 98%까지 가려면 추가로 얼마가 드는가? 90% 달성 비용과 비교해 어느 단계가 "비용 대비 효과"가 큰지 설명하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">98% 필요 = 33,016,411 × 0.98 = 32,356,083주 → 부족 3,332,191주 × 44.31 ≈ CHF 1억 4,765만(보도 1억 4,793만). 90%→98% 구간 비용이 90% 도달 비용의 약 5배. 그러나 98%는 법원 재심사 없이 종결되므로 "기간/소송 리스크"를 사는 비용. 남은 소수주주가 소송 성향이 높다면 98%가 합리적일 수 있음.</div></details></div><div class="q"><b>Q3.</b> (가정) 맥쿼리가 당사를 코스닥 상장 후 전략적 인수자에게 매각한다. 인수자가 공개매수로 80%를 확보했다면 국내 법상 어떤 단계가 남고, 이것이 매각가 협상에 어떻게 반영되는가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">국내 지배주주 매도청구권은 95% 기준이므로 추가 15%p 확보 비용 + 상장폐지 절차(정리매매 등) + 기간이 남는다. 인수자는 이 비용과 지연을 "총 인수 비용"에 포함해 공개매수가를 낮추려 함 → 매도자(맥쿼리) 입장에선 상장 Exit의 숨은 할인. 비상장 상태에서 100% 매각하면 이 비용이 없다는 점이 비교 포인트.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> (가정, M&A 검토) 당사가 코스닥 상장 소형 주사제 CDMO를 인수 검토 중이다. 대주주 지분 55%를 SPA로 사고 나머지는 공개매수하려 한다. 이 개념을 어디에 어떻게 쓰나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 인수 총액을 "55% SPA 대금 + 공개매수 예상 응모분 + 95% 미달 시 잔여 정리 비용 + 상장폐지 기간 비용"으로 시나리오별(응모 70%/85%/95%) 산출한다. 체크포인트: ① 소수주주 구성(기관 vs 개인 비중, 소송 성향) ② 공개매수가의 경영권 프리미엄 수준과 55% SPA 단가의 정합성 ③ 95% 미달 시 Plan B(잔류 소수주주와 공존 가능한 지배구조인지).</div></details></div><div class="q"><b>P2.</b> (가정, Exit 준비) 맥쿼리가 IPO 후 매각 vs 비상장 100% 매각을 비교하라고 한다. 이 개념으로 두 경로의 차이를 한 장에 어떻게 정리하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 비상장 100% 매각은 임계치 비용이 0이고 종결이 한 번에 끝남. IPO 후 매각은 공모 자금 유입/밸류 가시성이 장점이나 인수자는 95%까지의 추가 비용/기간을 가격에서 차감 → "상장 프리미엄 − 소수주주 정리 할인"의 순효과를 수치화해 비교. 체크포인트: ① 상장 시 맥쿼리 잔여 지분율(공모 후 몇 %인가) ② 락업 기간과 매각 가능 시점 ③ 인수자가 선호하는 경로(글로벌 전략적 인수자는 보통 100% 선호).</div></details></div><div class="q"><b>P3.</b> (가정, 고객사 협상) 고객사 A가 상장 CDMO 인수설(공개매수 진행 중)로 흔들리고 있다. 당사 영업팀이 이 개념을 어떻게 활용하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 공개매수 중인 경쟁 CDMO는 응모율/스퀴즈아웃 단계에 따라 수개월간 경영권/투자 결정이 보류될 수 있음 → 고객사에 "공급 연속성(Tech Transfer 일정, 품질 책임자 유지)"을 명시한 계약 조건을 제안하며 전환 수요를 흡수. 체크포인트: ① 경쟁사 종결 예상 시점(규제 승인 일정) ② 고객 품목의 전환 리드타임(동결건조 밸리데이션 기간) ③ 전환 비용 분담 조건.</div></details></div></div>
+      </div></div><div class="concept">
+      <div class="ch"><div><b>회수배수와 실질 회수<span>MOIC & Net Proceeds</span></b><div class="quote">"지분 인수와 유상증자에 투입한 금액은 총 7,296억원… 이번 매각대금은 이보다 약 360억원 적다" <em>- 뉴스핌 2026-10-13</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>회수배수(MOIC)는 "넣은 돈 대비 몇 배를 돌려받았나". 1.0x 미만은 원금 손실. 다만 총액 기준(Gross)과 인수금융 상환/수수료를 뺀 실질(Net) 기준이 다르고, 보유 기간이 길어지면 같은 MOIC라도 IRR은 급락한다.</p><h5>계산식</h5><div class="formula">MOIC = 총 회수금 ÷ 총 투입금<br>Net 회수 = 매각대금 − 인수금융 잔액 − 수수료<br>IRR ≈ MOIC^(1/년수) − 1 (단일 투입/단일 회수 근사)</div><h5>오늘 수치로</h5><div class="calc">JKL 롯데손보: 6,933 ÷ 7,296 = 0.95x(Gross, 계산치). 7년 보유 → IRR ≈ 0.95^(1/7) − 1 ≈ −0.7%/년(근사 계산치). 인수금융 상환 후 Net MOIC는 더 낮음(금액 비공개).</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>Exit 뉴스를 볼 때 "매각가"만 보지 말고 투입 원금/보유 기간/인수금융을 함께 보아야 PE의 실제 성적을 알 수 있음.</li><li>당사 대주주 맥쿼리의 인수 시점/투입 규모(공시 기준)와 보유 연수를 알면, 목표 MOIC/IRR에서 역산한 "맥쿼리가 원하는 매각가 하한"을 추정할 수 있음(가정 시나리오).</li><li>투자 심의: 설비투자도 MOIC/IRR로 평가. 단 CDMO 설비는 수주 전환 지연(Tech Transfer)으로 회수 시점이 밀리면 IRR이 급락 → 가동률 램프업 가정을 보수적으로.</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: JKL식 롯데손보 Gross/Net MOIC와 IRR 산정 (인수금융/수수료는 가정)</h5><div class="exnote">투입액 7,296억, 매각대금 6,933억, 보유 7년은 보도 기준. 인수금융 잔액 1,500억과 수수료 1%는 가정이며, 단일 투입/단일 회수 근사 모델.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 총 투입금</td><td>지분 인수 + 유상증자</td><td class="f">보도 기준</td><td class="r">7,296억</td><td>2019년 인수 후 증자 포함 누적 투입 원금</td></tr><tr><td class="st">② 총 회수금 (매각대금)</td><td>77.04% 지분 매각</td><td class="f">보도 기준</td><td class="r">6,933억</td><td>신한금융이 지급할 주식 매매 대금</td></tr><tr><td class="st">③ Gross MOIC</td><td>6,933 ÷ 7,296</td><td class="f">6,933 ÷ 7,296</td><td class="r">0.95x</td><td>1.0x 미만, 총액 기준으로 약 363억 원금 손실</td></tr><tr><td class="st">④ Gross IRR (근사)</td><td>보유 7년</td><td class="f">0.95^(1/7) − 1</td><td class="r">-0.7%/년</td><td>같은 손실이라도 7년에 걸쳐 나뉘면 연율은 완만</td></tr><tr><td class="st">⑤ Net 회수금</td><td>인수금융 잔액 1,500억(가정), 수수료 1% 69억(가정)</td><td class="f">6,933 − 1,500 − 69</td><td class="r">5,364억</td><td>대출 상환과 자문 수수료를 빼고 펀드 계좌로 들어오는 현금</td></tr><tr><td class="st">⑥ 자기자본 출자금</td><td>7,296 − 인수금융 1,500(가정)</td><td class="f">7,296 − 1,500</td><td class="r">5,796억</td><td>LP가 실제 넣은 에쿼티, Net MOIC의 분모</td></tr><tr><td class="st">⑦ Net MOIC / Net IRR</td><td>5,364 ÷ 5,796</td><td class="f">5,364 ÷ 5,796, 0.93^(1/7) − 1</td><td class="r">0.93x / -1.1%/년</td><td>레버리지가 손실 딜에서는 배수를 더 낮추는 방향으로 작용</td></tr><tr class="total"><td class="st">⑧ 참고: 통상 목표치</td><td>목표 2.0x, 5년</td><td class="f">2.0^(1/5) − 1</td><td class="r">14.9%/년</td><td>맥쿼리가 당사 Exit 시 비슷한 목표를 둔다면 매각가 하한 역산의 출발점(가정)</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>대주주 총 투입금 (인수가 + 추가 증자, 공시 기준)</li><li>인수금융 잔액과 수수료율</li><li>보유 연수 (인수 시점부터 예상 Exit까지)</li><li>목표 MOIC 또는 IRR</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: PE 성과 지표 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>MOIC (Gross)</th><td class="f">회수 ÷ 투입</td><td>딜 단위 배수 비교, 빠른 판단</td><td class="lim">시간 가치 무시, 레버리지/수수료 반영 안 됨</td></tr><tr><th>Net MOIC</th><td class="f">(회수 − 부채 상환 − 수수료) ÷ 출자금</td><td>LP가 실제 받는 배수</td><td class="lim">부채 구조 공개 안 되면 계산 불가</td></tr><tr><th>IRR</th><td class="f">현금흐름 현재가치 = 0 되는 할인율</td><td>시간 가치 반영, 펀드 간 비교</td><td class="lim">중간 배당/리캡으로 왜곡 가능, 소규모 조기 회수에 과민</td></tr><tr><th>DPI</th><td class="f">누적 분배금 ÷ 납입 출자금</td><td>펀드가 LP에 실제 돌려준 현금</td><td class="lim">미실현 가치 무시</td></tr><tr><th>TVPI</th><td class="f">(분배금 + 잔여 평가액) ÷ 납입 출자금</td><td>펀드 전체 가치(실현+미실현)</td><td class="lim">잔여 평가액은 추정치</td></tr><tr><th>EV vs 지분가치</th><td class="f">EV = 지분가치 + 순차입금</td><td>인수가 비교(EV), 매도자 수령액(지분가치)</td><td class="lim">기사 헤드라인 금액이 어느 쪽인지 확인 필수</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 투입 7,296억, 회수 6,933억이면 MOIC는? 2.0x를 달성하려면 매각가가 얼마여야 했나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">MOIC = 6,933 ÷ 7,296 ≈ 0.95x. 2.0x = 14,592억이 필요. 보도된 초기 희망가 2조원대는 약 2.7x 수준이었다는 뜻.</div></details></div><div class="q"><b>Q2.</b> 같은 1.5x를 3년에 달성한 경우와 7년에 달성한 경우 IRR 근사치를 비교하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">3년: 1.5^(1/3) − 1 ≈ 14.5%. 7년: 1.5^(1/7) − 1 ≈ 6.0%. 보유 기간이 두 배 넘게 길어지면 IRR은 절반 이하로 떨어짐 → PE가 보유 5~7년차에 Exit를 서두르는 이유.</div></details></div><div class="q"><b>Q3.</b> (가정) 맥쿼리가 당사를 X원에 인수해 5년 보유, 목표 IRR 15%라면 요구 MOIC는? 인수금융이 인수가의 40%였다면 Net 기준에선 무엇이 더 필요한가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">요구 MOIC = 1.15^5 ≈ 2.0x. 인수금융 40%는 매각 시 먼저 상환되므로 출자금(60%) 기준 2.0x를 맞추려면 매각가는 "출자금 × 2.0 + 인수금융 잔액"이어야 함. 레버리지가 있으면 매각가 하락에 출자금 회수가 더 민감(손실 확대)하다는 점이 핵심.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> (가정, Exit 준비) 맥쿼리가 "우리 목표 수익률에 맞는 당사 가치"를 묻는다. 이 개념으로 무엇을 어떻게 준비하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 공시로 확인 가능한 인수 시점/금액, 보유 연수, 알려진 인수금융 규모를 모아 목표 IRR(예: 15~20%) 시나리오별 요구 매각가(지분가치)와 그에 상응하는 EV/EBITDA 배수를 역산 → 현재 EBITDA 기준 "필요 배수"가 동종 CDMO 거래 배수 범위 안인지 점검. 체크포인트: ① 수치는 모두 "가정"으로 표시 ② 배당/리캡으로 이미 회수한 금액 반영 ③ 비교 거래 배수의 기준 시점(2021~22 피크 제외).</div></details></div><div class="q"><b>P2.</b> (가정, 투자 심의) 동결건조 라인 증설 300억을 심의한다. MOIC/IRR 관점에서 심의 자료에 꼭 들어가야 할 것은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 연도별 현금흐름(수주 확정분 vs 파이프라인), 가동률 램프업 가정(1년차 40% → 3년차 80% 등), 회수 기간, IRR과 당사 자본비용(허들) 비교, 그리고 Tech Transfer 지연 6개월/12개월 시 IRR 민감도. 체크포인트: ① 수주 확정 비중이 낮으면 IRR 할인 ② 감가상각이 EBITDA에 미치는 영향 분리 ③ Exit 시점 인수자가 이 설비를 "미래 수익"으로 볼지 "가동률 공백"으로 볼지.</div></details></div><div class="q"><b>P3.</b> (가정, M&A 검토) 매물로 나온 비상장 소형 CDMO의 매도자(PE)가 "최소 1.8x는 받아야 한다"고 한다. 협상에 이 개념을 어떻게 쓰나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 매도자 투입 원금/보유 연수/인수금융을 파악해 매도자 요구 MOIC가 암시하는 가격을 역산하고, 당사가 볼 때의 EV/EBITDA/DCF 가치와 간극을 구조(어닝아웃, 분할 지급)로 좁힌다. 체크포인트: ① 매도자가 Gross인지 Net인지 확인 ② 보유 연수가 길면 매도자 IRR 압박 → 가격 양보 여지 ③ 인수금융 잔액이 크면 "채권자 동의" 일정이 거래 속도를 좌우.</div></details></div></div>
+      </div></div></div>
+    </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 복붙용, 클릭해서 펼치기)</summary>
+<pre>### 2026-10-14
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 공개매수(Tender Offer) | 상장사 주식을 장내 매매가 아닌 "정해진 가격/기간"으로 모든 주주에게서 사들이겠다고 공개 제안하는 것. 경영권 인수나 상장폐지 전 단계로 쓰임. 오늘: 삼성바이오로직스가 폴리펩타이드 주주에게 CHF 44.31 제안. | 당사 Exit가 상장사 매각/IPO 후 매각 형태라면 인수자가 쓰는 도구 |
+| 스퀴즈아웃(Squeeze-out) | 대주주가 법정 비율(스위스 90%/98%, 한국 95%) 이상 확보하면 남은 소수주주 지분을 강제로 사들여 100%로 만드는 절차. 응모하지 않은 주주를 정리해 상장폐지/완전 자회사화를 끝냄. | 상장사 인수 시 "100%까지 드는 추가 비용/기간" 산정 요소 |
+| 특수목적법인(SPC, Special Purpose Company) | 특정 거래(인수, 자금조달)만을 위해 세운 서류상 회사. 인수 대상 지분과 빚을 모회사와 분리해 담는 그릇. 오늘: 삼성펩타이드. | 맥쿼리의 당사 인수도 SPC 구조. 인수금융은 보통 SPC가 빌림 |
+| 신종자본증권(Hybrid Capital Securities) | 만기 30년 이상 또는 영구이고 이자 지급을 미룰 수 있어 회계/감독상 "자본"으로 인정되는 채권. 금융사가 자본비율을 지키면서 돈을 모을 때 발행. 오늘: 신한금융이 롯데손보 인수 재원 8,000억 조달. | 인수자의 자금조달 여력(돈이 어디서 나오나) 판단 시 확인 |
+| 적기시정조치(Prompt Corrective Action) | 금융사의 건전성 지표가 기준에 미달하면 감독당국이 단계별(권고→요구→명령)로 내리는 시정 명령. 받으면 증자/자산 매각 등을 강제. 오늘: 롯데손보 2단계(경영개선요구) → 인수자 증자 부담이 매각가에 반영. | 규제 부담이 "가격 할인 요인"이 되는 사례. 제약은 GMP 적합판정 취소 등이 유사 역할 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>

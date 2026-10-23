@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Weekly Report | 2026-10-18</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{--ink:#111827;--sub:#6b7280;--line:#e5e7eb;--bg:#fff;--soft:#f9fafb;--navy:#0f3b66;--navy-soft:#e8f0f8;
+  --c1:#1d4ed8;--c1s:#e8eefc;--c2:#0f766e;--c2s:#e3f3f1;--c3:#6d28d9;--c3s:#efe9fb;--c4:#b45309;--c4s:#fdf1e0;
+  --hl:#fff3b0;--warn:#92400e;--warn-soft:#fef3c7}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s3 .act{background:var(--c3)} .hl.s4 .act{background:var(--c4)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+.hl-mean .d{font-size:8pt;color:var(--sub);margin-left:4px}
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center;background:var(--navy)}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.arr{color:var(--navy);font-weight:800}
+/* 표 */
+.tb{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.tb th,.tb td{border:1px solid var(--line);padding:5px 7px;text-align:left;vertical-align:top}
+.tb tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.tb td.dt{white-space:nowrap;color:var(--sub);font-size:8.5pt}
+.tb td.who b{font-weight:800}
+.tb .ex{display:inline-block;font-size:8pt;font-weight:700;padding:1px 6px;border-radius:999px;white-space:nowrap}
+.tb .ex.y{background:var(--c1s);color:var(--c1)} .tb .ex.n{background:#f3f4f6;color:#6b7280} .tb .ex.m{background:var(--c4s);color:var(--c4)}
+.tb .src{font-size:8pt;color:var(--sub)} .tb .src a{border:none;color:var(--navy)}
+.deals col.c1{width:8%}.deals col.c2{width:19%}.deals col.c3{width:21%}.deals col.c4{width:16%}.deals col.c5{width:22%}.deals col.c6{width:14%}
+.cotab col.c1{width:5%}.cotab col.c2{width:22%}.cotab col.c3{width:11%}.cotab col.c4{width:40%}.cotab col.c5{width:22%}
+.cotab td.cnt{font-weight:800;white-space:nowrap}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+/* 테마 */
+.theme{padding:10px 0;border-top:1px solid var(--line)}
+.theme:first-of-type{border-top:none}
+.theme .t{font-weight:800;font-size:11pt;margin-bottom:3px;letter-spacing:-0.02em}
+.theme .t span{font-size:8.5pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px;margin-right:6px}
+.theme ul{margin:0 0 4px;padding-left:16px;color:#374151}
+.theme li{margin:2px 0;text-wrap:pretty}
+.theme .src{font-size:8.5pt;color:var(--sub)} .theme .src a{border:none;color:var(--navy)}
+.theme .ours{margin-top:5px;font-size:9.5pt;background:var(--navy-soft);padding:5px 9px;border-radius:5px;border-left:3px solid var(--navy)}
+.theme .ours b{color:var(--navy)}
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+.term .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.term .d{font-size:9pt;color:#374151;margin-top:1px}
+.term .dd{font-size:8pt;color:var(--sub);margin-top:2px}
+.bh{margin:10px 0 6px;font-size:9.5pt;color:#4b5563;font-weight:800}
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:3px 0;text-wrap:pretty}
+.insight li b{color:var(--navy)}
+/* 주시 포인트 */
+.watch{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.w{display:grid;grid-template-columns:58px 1fr;gap:8px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.w .d{font-size:9pt;font-weight:800;color:var(--navy);white-space:nowrap}
+.w .b{font-size:9pt;color:#374151}
+.w .b b{color:var(--ink)}
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin:6px 0 0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px;break-inside:avoid}
+  section.long{break-inside:auto}
+  .hl,.theme,.term,.insight,.w,.tb tr,.headlines{break-inside:avoid}
+  .sh,.bh,.hl-title,.tb tr:first-child{break-after:avoid}
+  .fab{display:none!important}
+  a{border:none}
+}
+</style></head><body>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<div class="hd">
+  <div><h1>전략기획팀 Weekly Report</h1><div class="sub">기간: 2026-10-12 (월) ~ 2026-10-18 (일), 일간 브리핑 7건 종합, 전략기획팀</div></div>
+  <div class="date"><b>2026-10-18</b><span>일요일 생성, 기준일</span></div>
+</div>
+<div class="note">데이터 범위: 10/12(월)~10/18(일) 일간 브리핑 7건 전부 수록. 10/12는 수동 백필분(국내·글로벌 섹션 해당 없음), 10/17~18은 비영업일 생성분(글로벌 섹션 기사 소수)으로 PE/Deal과 국내 비중이 높음. 수치는 각 일간 브리핑의 표기(보도 기준/계산치)를 그대로 따름.</div>
+<section class="">
+<div class="sh"><div class="n">1</div><h2>주간 한눈에</h2><small>가장 중요한 딜 5건: 누가 → 누구를, 금액, 의미</small></div>
+<div class="headlines"><div class="hl-title">주간 한눈에: 가장 중요한 딜 5건</div><div class="hl s2"><div class="hl-main"><b>삼성바이오로직스</b><span class="act">공개매수 응모 87.88%</span><b>폴리펩타이드그룹(스위스 펩타이드 CDMO)</b></div><div class="hl-cond">CHF 1.46B (약 2.7조)</div><div class="hl-mean">최소 응모 조건 66.7%를 넘겨 인수 사실상 확정, 취득 예정일은 11/30에서 12/31로 연기. 국내 제약바이오 M&A 사상 최대(보도 기준)이며 바이오 CDMO가 합성(펩타이드) 영역으로 넓힌 사례.<span class="d">(10/14, 10/18)</span></div></div><div class="hl s1"><div class="hl-main"><b>맥쿼리자산운용/어펄마</b><span class="act">공동 인수</span><b>화성코스메틱 70% / 나우코스 100%</b></div><div class="hl-cond">약 3,000억 (보도 기준)</div><div class="hl-mean">당사 대주주 맥쿼리가 K뷰티 ODM 2곳을 묶어 사는 볼트온 인수. 국내 수탁제조 플랫폼에 대한 PE 관심이 당사 Exit 비교 사례로 바로 연결된다.<span class="d">(10/14)</span></div></div><div class="hl s1"><div class="hl-main"><b>Blackstone</b><span class="act">매각</span><b>ZO Skin Health → Galderma</b></div><div class="hl-cond">EV $1.5B 전액 현금</div><div class="hl-mean">PE가 2020년 인수 후 매출 2배로 키워 6년 만에 전략적 매수자에게 넘긴 Trade Sale. EV/Sales 4.5배(계산치)로 "성장률 + 채널 자산"이 가격을 설명했다.<span class="d">(10/15)</span></div></div><div class="hl s1"><div class="hl-main"><b>윤재승 CVO 측 / TPG</b><span class="act">매각 협상 결렬, 신규 후보</span><b>시지바이오 경영권</b></div><div class="hl-cond">희망 밸류 1.2조 (보도 기준)</div><div class="hl-mean">IMM PE에 이어 TA어소시에이츠와도 결렬, TPG가 후보로 부상. 매도자(51% 선매각 + 49% 단계 매각 + 풋옵션)와 매수자(70% 원샷 + 경업금지) 구조 충돌이 핵심 쟁점.<span class="d">(10/12)</span></div></div><div class="hl s1"><div class="hl-main"><b>농협</b><span class="act">PE 자금 공급 국감 지적</span><b>MBK 10년 24건</b></div><div class="hl-cond">2.66조 (미회수 9,131억)</div><div class="hl-mean">펀드 출자, 인수금융, 브릿지론이 한 운용사에 쌓인 구조가 국감에서 문제됐다. 국내 대주의 PE 인수금융 심사가 보수화될 신호로, 당사 매각 시 재무적 <span class="nb">인수자(FI)</span>의 레버리지 조달 변수.<span class="d">(10/17)</span></div></div></div>
+</section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<section class="long">
+<div class="sh"><div class="n">2</div><h2>딜 목록</h2><small>18건, 날짜순</small></div>
+<table class="tb deals"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup><tr><th>날짜</th><th>주체(매수/결성)</th><th>대상</th><th>금액</th><th>구조</th><th>Exit 관련</th></tr><tr><td class="dt">10/12</td><td class="who"><b>TPG(후보), 이전 IMM PE·TA어소시에이츠 결렬</b></td><td>시지바이오 경영권(1차 51% + 잔여 49%)</td><td>희망 EV 1.2조(보도), 51% 약 6,100억(계산치)</td><td>매도자: 51% 선매각 + 49% 단계 매각 + 3년 내 실적 달성 시 <span class="nb">풋옵션(Put Option)</span> / 매수자: 70% 원샷 + 경업금지<div class="src"><a href="https://m.sedaily.com/article/20100048">서울경제</a></div></td><td><span class="ex y">관련</span><div class="src">초기 투자 FI 회수 요구가 매각 동력, 두 차례 결렬</div></td></tr><tr><td class="dt">10/13</td><td class="who"><b>STERIS plc</b></td><td>Xodus Medical(수술실 소모품) 100%</td><td>$2.1B 현금(세무 효과 차감 시 $1.8B) + Earn-out 최대 $150M</td><td>Debt Financing, 실적 조건부 Earn-out, 2026-12-31 클로징 목표. EV/Sales 7.3~8.6x(계산치)<div class="src"><a href="https://finance.yahoo.com/healthcare/articles/steris-buys-surgical-products-maker-122212024.html">Reuters</a></div></td><td><span class="ex n">해당 없음</span><div class="src">매도 주주 비공개(비상장)</div></td></tr><tr><td class="dt">10/13</td><td class="who"><b>프리미어파트너스</b></td><td>삼영검사엔지니어링 100%</td><td>약 1,000억(보도)</td><td>SPA 체결, 공정위 기업결합 신고 완료, 이르면 11월 클로징<div class="src"><a href="https://m.sedaily.com/article/20100565">서울경제</a></div></td><td><span class="ex y">관련</span><div class="src">NH PE/오퍼스PE 2020년 200억 인수 → 세컨더리, MOIC 5.0x(계산치), IRR 약 33%(보도)</div></td></tr><tr><td class="dt">10/13</td><td class="who"><b>소지츠(Sojitz)</b></td><td>타세코에어스(베트남) 지분 27.64%</td><td>$40.5M(스틱 몫 $14.6M)</td><td>FI 2곳(스틱, PENM IV)이 SI에 일괄 매각, 주총에서 의무공개매수 면제<div class="src"><a href="https://www.fnnews.com/news/202610130938389830">파이낸셜뉴스</a></div></td><td><span class="ex y">관련</span><div class="src">스틱 2019년 투자 7년 만에 회수, 동화 기준 +34%</div></td></tr><tr><td class="dt">10/14</td><td class="who"><b>삼성바이오로직스(SPC 삼성펩타이드)</b></td><td>폴리펩타이드그룹(SIX 상장, 펩타이드 CDMO)</td><td>CHF 1.46B(약 2.7조), 주당 CHF 44.31</td><td><span class="nb">공개매수(Tender Offer)</span> 응모 87.88% + 추가 응모 10/19~30 + 주주배정 유상증자 2조 6,650억 + 스퀴즈아웃. 취득 예정일 12/31로 연기<div class="src"><a href="https://www.fnnews.com/news/202610131456249404">파이낸셜뉴스</a></div></td><td><span class="ex m">간접</span><div class="src">최대주주 드라우프니르 홀딩 전량 응모(대주주 Exit)</div></td></tr><tr><td class="dt">10/14</td><td class="who"><b>신한금융지주</b></td><td>롯데손해보험 77.04%</td><td>6,933억(100% 환산 약 9,000억, 보도)</td><td>SPA, 재원 신종자본증권 8,000억(보도)<div class="src"><a href="https://www.fnnews.com/news/202610131239008074">파이낸셜뉴스</a></div></td><td><span class="ex y">관련</span><div class="src">JKL파트너스 7년 보유 후 Exit, 투입 7,296억 대비 원금 미달(보도)</div></td></tr><tr><td class="dt">10/14</td><td class="who"><b>맥쿼리자산운용 + 어펄마캐피탈</b></td><td>화성코스메틱 70% / 나우코스 100%</td><td>약 3,000억(보도)</td><td>PE 공동 바이아웃, 색조 + 기초 ODM 볼트온(9월 체결, 10/14 기획기사)<div class="src"><a href="https://www.newspim.com/news/view/20261012001339">뉴스핌</a></div></td><td><span class="ex n">해당 없음</span><div class="src">신규 투자(당사 대주주의 수탁제조 플랫폼 인수)</div></td></tr><tr><td class="dt">10/15</td><td class="who"><b>Galderma</b></td><td>ZO Skin Health 100%</td><td>EV $1.5B 전액 현금</td><td>보유 현금 + Bank Financing, 1년차 Core EPS neutral, 2026 4Q~2027 초 종결<div class="src"><a href="https://www.galderma.com/news/galderma-signs-agreement-acquire-zo-skin-health">Galderma</a></div></td><td><span class="ex y">관련</span><div class="src">Blackstone 2020년 인수 → 6년 만에 Trade Sale</div></td></tr><tr><td class="dt">10/15</td><td class="who"><b>ArchiMed</b></td><td>MED IV 헬스케어 바이아웃 펀드 결성</td><td>€1.5B(목표 €1.2B 초과)</td><td>유럽 스몰캡 헬스케어 인수용 펀드<div class="src"><a href="https://www.pehub.com/archimed-puts-e1-5bn-med-iv-fund-to-work-as-ai-reshapes-healthcare/">PE Hub</a></div></td><td><span class="ex m">간접</span><div class="src">유럽 제약 서비스 매물 수요 유지 신호(잠재 매수자)</div></td></tr><tr><td class="dt">10/15</td><td class="who"><b>Lone Star Funds</b></td><td>Lonza 캡슐·건강원료 사업</td><td>$3B, 연내 종결</td><td>Lonza 순수 CDMO <span class="nb">전환(Pure-play)</span>, 매각 대금은 Bolt-on 인수 재원<div class="src"><a href="https://kfgo.com/2026/10/14/lonza-sets-new-mid-term-targets-confirms-2026-outlook">Reuters</a></div></td><td><span class="ex n">해당 없음</span><div class="src">카브아웃(Carve-out), Lonza 중기 목표 유기적 성장 10~13%</div></td></tr><tr><td class="dt">10/16</td><td class="who"><b>OrbiMed(GP) / LP</b></td><td>헬스케어 PE 10호 + 아시아 전용 펀드 결성</td><td>$3B(PE X $1.9B + Asia $1B+, 보도)</td><td>출자약정 → 캐피탈 콜 → 투자기간 5년 내 집행<div class="src"><a href="https://endpoints.news/orbimed-raises-3b-in-new-life-sciences-funds-including-1b-for-asia/">Endpoints</a></div></td><td><span class="ex m">간접</span><div class="src">당사 Exit 시 세컨더리 매수자 후보(아시아 펀드)</div></td></tr><tr><td class="dt">10/16</td><td class="who"><b>안국약품</b></td><td>과천 업무시설 토지·건물(메디파크원PFV)</td><td>1,630억(자산총액 52.42%)</td><td>선매입, 계약금 81.5억 + 중도금 2회 + 준공(2032.6) 후 잔금, 외부평가 생략<div class="src"><a href="https://www.chickstockfi.com/disclosures/20261015000374">DART</a></div></td><td><span class="ex n">해당 없음</span><div class="src">해당 없음(관계사 거래, 본업 외 투자)</div></td></tr><tr><td class="dt">10/16</td><td class="who"><b>Buenavista Equity Partners</b></td><td>Tiryaq Medical Group(스페인) 71%</td><td>비공개</td><td>바이아웃<div class="src"><a href="https://www.pehub.com/buenavista-strikes-deal-for-71-stake-in-spanish-trauma-care-group-tiryaq/">PE Hub</a></div></td><td><span class="ex n">해당 없음</span><div class="src">신규 투자</div></td></tr><tr><td class="dt">10/17</td><td class="who"><b>농협중앙회 + 금융계열사 5곳(대주/LP)</b></td><td>MBK 펀드 출자, 인수금융, 브릿지론, ABL</td><td>약정 2조 6,643억, 미회수 9,131억(국감 자료)</td><td>LP 출자 + 인수금융 + 브릿지론 1.7조 → 리파이낸싱 6,000억×2 + ABL<div class="src"><a href="https://www.etoday.co.kr/news/view/2636606">이투데이</a></div></td><td><span class="ex m">간접</span><div class="src">대주 익스포저 이슈, 인수금융 심사 강화 신호</div></td></tr><tr><td class="dt">10/17</td><td class="who"><b>신동국 회장(한양정밀)</b></td><td>한미사이언스 지분 13.74%</td><td>약 4,000억(보도)</td><td>3회 장외 매입 계약(2월/7월/10월), 공개매수 의무 위반 의혹(금감원 인지)<div class="src"><a href="https://www.bloter.net/news/articleView.html?idxno=675910">블로터</a></div></td><td><span class="ex y">관련</span><div class="src">임종윤 측/DXVX 등 지분 매각</div></td></tr><tr><td class="dt">10/17</td><td class="who"><b>Vivify(Gryphon Investors) / LUX Infusion(Frazier)</b></td><td>AuNutra Industries(건기식 원료) / Suite Health</td><td>비공개</td><td>PE 플랫폼 <span class="nb">애드온(Add-on)</span> 2건, 창업자 지분 잔류<div class="src"><a href="https://www.pehub.com/gryphons-vivify-specialty-ingredients-acquires-botanical-extracts-supplier-aunutra-industries/">PE Hub</a></div></td><td><span class="ex n">해당 없음</span><div class="src">신규 투자</div></td></tr><tr><td class="dt">10/18</td><td class="who"><b>Hercules NewCo(Bain Capital 등) → Kailera</b></td><td>항서제약 GLP-1 후보 3개 중국 외 권리</td><td>잠재 약 $6B + 지분 20%(보도)</td><td>License-for-Equity NewCo: 업프론트/마일스톤 + 라이선서 지분 20%, 2026.4 NYSE IPO<div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=419502">메디파나</a></div></td><td><span class="ex y">관련</span><div class="src">PE·라이선서의 IPO 회수 경로, 시총 약 $1.4B(보도)</div></td></tr><tr><td class="dt">10/18</td><td class="who"><b>큐리언트 / 경남제약(발행사)</b></td><td>유상증자</td><td>1,058억 증액 / 191억 철회</td><td>주주배정 후 실권주 일반공모(큐리언트) / 주관사 인수계약 해지로 철회(경남제약)<div class="src"><a href="https://www.medipharmhealth.co.kr/news/article.html?no=120475">메디팜헬스</a></div></td><td><span class="ex n">해당 없음</span><div class="src">자금조달 양극화 사례</div></td></tr></table><div class="colegend"><span class="ex y" style="display:inline-block;font-size:8pt;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--c1s);color:var(--c1)">관련</span> PE·FI 회수가 직접 포함된 딜, <span style="display:inline-block;font-size:8pt;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--c4s);color:var(--c4)">간접</span> 당사 Exit 환경(매수자 자금, 인수금융, 구조 선례)에 영향, 금액은 각 일간 브리핑 표기(보도 기준/계산치) 그대로</div>
+</section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<section class="">
+<div class="sh"><div class="n">3</div><h2>주간 테마 3개</h2><small>CDMO 산업 구조 / 자금조달 환경 / 규제·정책, 각 3~4줄 + 당사 관점</small></div>
+<div class="theme"><div class="t"><span>테마 1</span>CDMO 산업 구조: 대형 자본이 수탁제조 플랫폼을 사고, 가동률 낮은 설비는 매물이 된다</div><ul><li>삼성바이오로직스의 폴리펩타이드 <span class="num">2.7조</span> 공개매수(응모 87.88%)와 맥쿼리/어펄마의 K뷰티 ODM 3,000억 볼트온은 같은 흐름. 자본력 있는 플레이어가 수탁제조 플랫폼을 사서 영역(바이오 → 합성 펩타이드, 인프라 → ODM)을 넓힌다.</li><li>Lonza는 캡슐사업 $3B를 Lone Star에 넘기고 순수 <span class="nb">CDMO(Pure-play)</span>로 전환, 남는 현금은 Bolt-on 인수에 쓰겠다고 선언. 반대편에서 롯데바이오 시러큐스 가동률 <span class="num">16%</span>, 하나제약 평택 주사제 공장 완료 12/31 연기처럼 캐파와 수주의 시차가 실적을 누른다.</li><li>LevinPro 집계 2026년 1~3분기 CRO/CDMO 딜 <span class="num">56건</span>(이미 2025년 연간 수준), Simon-Kucher는 2020~22년 빈티지 PE 보유 CDMO의 Exit 대기열(보유기간 +38%)을 지적. Bourne Partners는 CDMO 매출 +11.0%, 제조사 25.7%가 캐파 제약이라고 집계(9월 발행).</li></ul><div class="src"><a href="https://healthcare.levinassociates.com/2026/10/12/top-cro-cdmo-deals-of-2026-so-far/">LevinPro 10/12</a>, <a href="https://www.simon-kucher.com/en/insights/healthcare-private-equity-cdmo-and-cro-exit-queue-building">Simon-Kucher 10/15</a>, <a href="https://kfgo.com/2026/10/14/lonza-sets-new-mid-term-targets-confirms-2026-outlook">Reuters Lonza</a></div><div class="ours"><b>당사 관점</b> 당사(2020년 맥쿼리 인수)도 Exit 대기열 빈티지에 속한다. 매수자는 동시 매물을 비교하므로 동결건조 주사제 수주잔고, 가동률 추이, 단가 개선 실적을 연도별 수치로 지금부터 정리하는 것이 Exit 밸류 방어의 출발점. [연결: Exit, 설비투자·가동률]</div></div><div class="theme"><div class="t"><span>테마 2</span>자금조달 환경: 실탄은 쌓이는데(펀드 결성) 레버리지와 초기 자산은 좁아진다</div><ul><li>OrbiMed <span class="num">$3B</span>(아시아 전용 $1B+), ArchiMed €1.5B 등 헬스케어 전문 PE의 신규 펀드 결성이 이어져 한국 헬스케어 자산의 잠재 매수자 자금은 늘었다. 반면 PitchBook은 헬스케어 PE 2021~23년 빈티지 IRR 10.2%로 전체 PE(12%)를 하회한다고 집계.</li><li>국내는 농협-MBK 2.66조 국감 논란과 금감원 PEF 운용사 30곳 내부통제 점검이 겹쳐 <span class="nb">인수금융(Acquisition Financing)</span> 심사 보수화 신호. JKL의 롯데손보 Exit(7년, 투입 7,296억 대비 원금 미달)은 보유 장기화가 가격 할인으로 이어진 사례.</li><li>바이오 자금조달은 양극화: 큐리언트 유상증자 1,058억 증액 vs 경남제약 191억 철회, BIO-Europe 설문은 경영진 <span class="num">79%</span>가 투자자 위험회피를 최대 장벽으로 꼽았다. 항서제약-Bain <span class="nb">NewCo(Kailera)</span>처럼 업프론트 대신 지분을 섞는 License-for-Equity가 확산.</li></ul><div class="src"><a href="https://endpoints.news/orbimed-raises-3b-in-new-life-sciences-funds-including-1b-for-asia/">Endpoints OrbiMed</a>, <a href="https://pitchbook.com/news/articles/crowded-deals-peak-valuations-sink-healthcare-pes-edge">PitchBook</a>, <a href="https://www.pharmnews.com/news/articleView.html?idxno=306950">팜뉴스 BIO-Europe</a></div><div class="ours"><b>당사 관점</b> 당사 매각 시 FI의 레버리지 조달이 어려워지면 전략적 <span class="nb">인수자(SI)</span> 시나리오와 매각가 민감도를 같이 준비해야 한다. 신규 결성 펀드(OrbiMed Asia, ArchiMed MED IV)는 투자기간 5년 안에 당사 매각 시점이 들어오는지 대조해 "Exit 매수자 리스트"로 축적. [연결: Exit, M&A]</div></div><div class="theme"><div class="t"><span>테마 3</span>규제·정책: 제네릭 약가의 룰이 바뀌고, 공개매수·PE 감독은 강화된다</div><ul><li>제네릭 약가 2차 재평가 전환 신청 <span class="num">10/31 마감</span>(12월 결정): 2014년 최고가 대비 약 45%까지 내려간 품목 + 안정공급 필요성 인정 시 인하를 2030.10으로 연기, 주사제 위주 전환 관측. 국감에서는 혁신형 제약 60% 우대와 원료직접생산 68% 가산 적용 0건(계열사 생산 제외)이 지적됐다.</li><li>금감원은 PEF 운용사 30곳 내부통제 점검 착수, 신동국 회장의 한미사이언스 13.74% 장외 매입은 공개매수 의무 위반 의혹으로 금감원 인지. 식약처는 해외 인수 공장의 위탁생산 불인정 기준을 1년째 검토 중.</li><li>미국은 10/22부터 소액 <span class="nb">면세(de minimis)</span> 중단으로 해외 우편 의약품 반입 제한, 버지니아주가 Lilly·Merck·AZ 온쇼어링 투자 $12.6B를 유치. 식약처 eCTD v4.0 허가신청 서비스 개시.</li></ul><div class="src"><a href="https://dailypharm.com/user/news/343318">데일리팜 약가 재평가</a>, <a href="https://www.medipana.com/news/articleView.html?idxno=419477">메디파나 국감 약가</a>, <a href="https://www.fnnews.com/news/202610121037437529">파이낸셜뉴스 금감원 PEF</a></div><div class="ours"><b>당사 관점</b> Pharma사업부 고객 제네릭의 품목·단가는 약가 재평가 전환 결과(12월)와 혁신형 우대 요건 확정에 직결. 주사제 품목이 2030년으로 유예되면 CMO 물량이 안정되고, 내년 4월 인하 대상 고객은 수탁 단가 인하를 요구할 수 있어 품목별 영향표를 준비. [연결: 투자(설비·가동률), M&A 실사 리스크]</div></div></section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<section class="">
+<div class="sh"><div class="n">4</div><h2>언급 기업 TOP 10</h2><small>출현 일수 기준, 당사 관계</small></div>
+<table class="tb cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>#</th><th>회사</th><th>출현 일수 / 언급</th><th>출현 배경</th><th>당사 관계</th></tr><tr><td class="cnt">1</td><td class="who"><b>삼성바이오로직스</b></td><td class="cnt">3일 / 37회</td><td>폴리펩타이드 공개매수(10/14, 10/18 취득 연기), 아태 Top10 거래(10/12), World ADC 수주 경쟁</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><td class="cnt">2</td><td class="who"><b>한미약품 / 한미사이언스</b></td><td class="cnt">3일 / 15회</td><td>아태 Top10 거래(10/12), 비만약 허가 후 주가 하락(10/16), 신동국 13.74% 장외 매입 의혹(10/17)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><td class="cnt">3</td><td class="who"><b>폴리펩타이드그룹</b></td><td class="cnt">2일 / 26회</td><td>삼성바이오 공개매수 대상, 펩타이드(합성) CDMO. 취득 예정일 12/31</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><td class="cnt">4</td><td class="who"><b>Lifecore Biomedical</b></td><td class="cnt">2일 / 20회</td><td>무균 주사제 CDMO 비교군(10/15, 10/17 LevinPro·Simon-Kucher 리포트 인용)</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><td class="cnt">5</td><td class="who"><b>큐리언트</b></td><td class="cnt">2일 / 11회</td><td>Lonza 이중 페이로드 ADC 공동사업화(10/15), 유상증자 1,058억 증액(10/18)</td><td><span class="rel ref">참고</span></td></tr><tr><td class="cnt">6</td><td class="who"><b>Integer Holdings / KKR</b></td><td class="cnt">2일 / 11회</td><td>의료기기 수탁제조 PE 딜 비교군(10/15, 10/17)</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><td class="cnt">7</td><td class="who"><b>셀트리온</b></td><td class="cnt">2일 / 10회</td><td>3분기 잠정실적 매출 1.5조, 영업이익 5,100억(10/13), 10/18 공시 책갈피</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><td class="cnt">8</td><td class="who"><b>대웅제약</b></td><td class="cnt">2일 / 9회</td><td>시지바이오 관계(10/12), 마이크로니들 무균 임상시료 공장 건설(10/15)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><td class="cnt">9</td><td class="who"><b>ArchiMed</b></td><td class="cnt">2일 / 8회</td><td>MED IV €1.5B 결성(10/15), PE 헬스케어 딜 동향(10/17)</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><td class="cnt">10</td><td class="who"><b>롯데바이오로직스</b></td><td class="cnt">2일 / 6회</td><td>World ADC 수주 경쟁(10/14), 올해 수주 5건·시러큐스 가동률 16%(10/15)</td><td><span class="rel comp">경쟁/비교대상</span></td></tr></table><div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span></div><div class="colegend" style="display:block">기준: 10/12~10/18 일간 브리핑 [언급 기업] 표 수록 일수, 동률은 본문 언급 횟수(작성자 집계). 표 밖 참고: 맥쿼리자산운용(당사 대주주)은 10/14 K뷰티 ODM 인수 주체로 직접 등장, McKinsey 메드텍 리포트(10/06 발행)는 10/12~15 4일 연속 인용, Lonza는 10/15 하루 24회 언급(캡슐 매각·중기 목표·큐리언트 제휴).</div>
+</section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<section class="long">
+<div class="sh"><div class="n">5</div><h2>주간 추가 용어</h2><small>35개, glossary.md 미수록 신규분, 날짜별</small></div>
+<h4 class="bh">10/12</h4><div class="terms"><div class="term"><div class="k">풋옵션 <span>Put Option</span></div><div class="d">정해진 가격에 팔 수 있는 권리. 시지바이오 매도자 안은 3년 내 실적 달성 시 잔여 49%를 최대 2배에 팔 권리.</div><div class="dd">▸ Exit 구조 설계 시 업사이드 공유 장치</div></div><div class="term"><div class="k">경업금지 조항 <span>Non-compete Clause</span></div><div class="d">매도자가 일정 기간 같은 사업을 못 하게 하는 약정. 매수자 TPG 측 요구 조건.</div><div class="dd">▸ 매각 협상 변수</div></div><div class="term"><div class="k">단계적 매각 <span>Staged Sale</span></div><div class="d">지분을 한 번에 넘기지 않고 1차·2차로 나눠 파는 방식. 51% 선매각 + 49% 후속.</div></div><div class="term"><div class="k">일괄 인수 <span>One-shot Acquisition</span></div><div class="d">처음부터 경영권 지분(70% 등)을 한 번에 사는 방식.</div></div><div class="term"><div class="k">확정 지급액 <span>Firm Value vs Contingent</span></div><div class="d">라이선스 계약 총액 중 조건 없이 확정된 금액. 아태 Top10 라이선스 7건의 확정 지급액은 총액의 8.3%.</div><div class="dd">▸ 고객사 파이프라인 가시성 판단</div></div></div><h4 class="bh">10/13</h4><div class="terms"><div class="term"><div class="k">세무 효과 반영 순인수가 <span>Net Purchase Price after Tax Benefits</span></div><div class="d">인수로 얻는 세금 절감(자산 상향 상각)의 현재가치를 뺀 실질 인수가. STERIS $2.1B → $1.8B.</div><div class="dd">▸ 인수 가격 비교 시 조정</div></div><div class="term"><div class="k">잠정실적 <span>Preliminary Earnings</span></div><div class="d">감사 전 회사가 먼저 발표하는 분기 실적. 셀트리온 3Q.</div></div><div class="term"><div class="k">의무공개매수 <span>Mandatory Tender Offer</span></div><div class="d">일정 지분 이상 취득 시 나머지 주주에게도 같은 조건으로 매수 제안해야 하는 제도.</div><div class="dd">▸ 한미사이언스 사례와 연결</div></div><div class="term"><div class="k">기업결합 심사 <span>Merger Review</span></div><div class="d">공정위가 인수가 경쟁을 해치는지 심사. 삼영검사 승인 대기.</div></div><div class="term"><div class="k">SI / FI <span>Strategic / Financial Investor</span></div><div class="d">사업 시너지 목적 인수자 / 수익 목적 재무 투자자.</div><div class="dd">▸ 당사 Exit 매수자 두 유형</div></div></div><h4 class="bh">10/14</h4><div class="terms"><div class="term"><div class="k">공개매수 <span>Tender Offer</span></div><div class="d">불특정 주주에게 가격·기간을 공시하고 장외에서 주식을 사는 방식. 삼성바이오-폴리펩타이드.</div></div><div class="term"><div class="k">스퀴즈아웃 <span>Squeeze-out</span></div><div class="d">90~98% 확보 후 잔여 소수주주 지분을 강제 매수해 100% 만드는 절차.</div></div><div class="term"><div class="k">특수목적법인 <span>SPC, Special Purpose Company</span></div><div class="d">인수만을 위해 세운 회사. 삼성펩타이드 SPC.</div><div class="dd">▸ LBO 구조 기본 단위</div></div><div class="term"><div class="k">신종자본증권 <span>Hybrid Capital Securities</span></div><div class="d">회계상 자본으로 인정되는 영구채 성격 증권. 신한금융 롯데손보 재원.</div></div><div class="term"><div class="k">적기시정조치 <span>Prompt Corrective Action</span></div><div class="d">금융사 건전성 악화 시 감독당국이 내리는 개선 명령.</div></div></div><h4 class="bh">10/15</h4><div class="terms"><div class="term"><div class="k">트레이드 세일 <span>Trade Sale</span></div><div class="d">PE가 보유 회사를 전략적 <span class="nb">매수자(SI)</span>에게 파는 Exit. Blackstone → Galderma.</div><div class="dd">▸ 당사 Exit 시나리오</div></div><div class="term"><div class="k">EV/Sales 멀티플 <span>EV/Revenue Multiple</span></div><div class="d">기업가치를 매출로 나눈 배수. 이익이 작거나 성장 단계 회사 비교에 사용. ZO 4.5배(계산치).</div></div><div class="term"><div class="k">볼트온 인수 <span>Bolt-on Acquisition</span></div><div class="d">보유 회사에 작은 회사를 붙여 키우는 인수. Lonza 선언, 맥쿼리 ODM.</div><div class="dd">▸ 당사 M&A 유형</div></div><div class="term"><div class="k">퓨어플레이 <span>Pure-play</span></div><div class="d">한 사업만 하는 회사. Lonza 순수 CDMO 전환.</div></div><div class="term"><div class="k">EPS 중립/희석 <span>EPS Neutral / Accretive / Dilutive</span></div><div class="d">인수 후 주당순이익이 그대로/증가/감소하는지. Galderma 1년차 neutral.</div></div></div><h4 class="bh">10/16</h4><div class="terms"><div class="term"><div class="k">출자약정 <span>Capital Commitment</span></div><div class="d">LP가 펀드에 넣기로 약속한 금액. 실제 납입은 캐피탈 콜 때.</div></div><div class="term"><div class="k">캐피탈 콜 <span>Capital Call</span></div><div class="d">GP가 투자 건이 생길 때 LP에게 약정액 납입을 요청하는 것.</div></div><div class="term"><div class="k">GP / LP <span>General / Limited Partner</span></div><div class="d">펀드 운용사 / 출자자.</div><div class="dd">▸ 맥쿼리 = GP</div></div><div class="term"><div class="k">주요사항보고서 <span>Report on Material Facts</span></div><div class="d">자산 양수도 등 중요 사항 발생 시 내는 DART 공시. 안국약품 1,630억.</div></div><div class="term"><div class="k">선매입 <span>Forward Purchase</span></div><div class="d">준공 전 자산을 미리 계약해 사는 것. 계약금·중도금·잔금 구조.</div></div></div><h4 class="bh">10/17</h4><div class="terms"><div class="term"><div class="k">브릿지론 <span>Bridge Loan</span></div><div class="d">본 자금 조달 전 잠시 쓰는 단기 대출. 농협-MBK 고려아연 1.7조.</div></div><div class="term"><div class="k">리파이낸싱 <span>Refinancing</span></div><div class="d">기존 빚을 새 빚으로 바꾸는 차환. 금리·만기 조정.</div><div class="dd">▸ 인수금융 뉴스 = 대주주 자금 신호</div></div><div class="term"><div class="k">중복상장 <span>Parent-Subsidiary Dual Listing</span></div><div class="d">모회사와 자회사가 함께 상장되는 것. 엘앤씨바이오 자회사 IPO 논란.</div></div><div class="term"><div class="k">보유기간 <span>Holding Period</span></div><div class="d">PE가 회사를 사서 팔기까지 기간. Simon-Kucher: 2021→26 +38%.</div><div class="dd">▸ 당사 2020년 인수</div></div><div class="term"><div class="k">빈티지 <span>Vintage Year</span></div><div class="d">펀드가 첫 투자를 시작한 연도. 같은 빈티지 자산은 비슷한 시기에 매물.</div><div class="dd">▸ Exit 대기열</div></div></div><h4 class="bh">10/18</h4><div class="terms"><div class="term"><div class="k">뉴코 <span>NewCo</span></div><div class="d">특정 자산을 담기 위해 새로 세운 회사. Hercules → Kailera.</div><div class="dd">▸ 공장 없는 NewCo = 잠재 고객</div></div><div class="term"><div class="k">지분 결합 라이선싱 <span>License-for-Equity</span></div><div class="d">업프론트 대신 신설회사 지분을 받는 라이선스 구조. 항서 20%.</div><div class="dd">▸ Pharma사업부 계약 옵션</div></div><div class="term"><div class="k">바이오벅스 <span>Biobucks</span></div><div class="d">마일스톤까지 다 더한 계약 총액. 실제 수령과 다름.</div><div class="dd">▸ 보도 총액 ≠ 확정 수입</div></div><div class="term"><div class="k">추가 응모기간 <span>Additional Acceptance Period</span></div><div class="d">공개매수 1차 종료 후 응모 못 한 주주에게 주는 2차 기간. 10/19~30.</div></div><div class="term"><div class="k">불성실공시법인 <span>Unfaithful Disclosure Corporation</span></div><div class="d">공시 위반 시 거래소가 지정. 대화제약 예고.</div></div></div></section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Weekly Report</b></span><span>2026-10-12 (월) ~ 2026-10-18 (일), 기준일 2026-10-18</span></div>
+<section class="">
+<div class="sh"><div class="n">6</div><h2>제뉴원 시사점 종합</h2><small>연결 항목 명시</small></div>
+<div class="insight"><div class="link">연결 항목<em>Exit / M&A / 투자(설비·가동률)</em></div><ol><li><b>Exit:</b> 이번 주 Exit 사례는 세 갈래. 성장 궤적을 산 매수자(ZO Trade Sale 4.5x, 삼영검사 IRR 33%), 보유 장기화로 할인된 <span class="nb">매각(JKL 롯데손보 원금 미달)</span>, 구조 충돌로 깨진 협상(시지바이오 2차 결렬). 맥쿼리 Exit 자료는 "다음 소유주에게 남는 업사이드"를 수치(동결건조 주사제 수주잔고, 가동률, 단가 개선)로 보여주고, 지배권 일괄 이전과 업사이드 공유 장치(어닝아웃/풋옵션)를 분리해 설계.</li><li><b>Exit·인수금융:</b> 농협-MBK 국감과 금감원 PEF 점검으로 국내 FI의 레버리지 조달이 보수화될 수 있다. SI 매각(삼성바이오·Galderma형 전략적 매수자) 시나리오와 세컨더리(OrbiMed Asia·ArchiMed 신규 펀드) 시나리오의 매각가 민감도를 병행 준비.</li><li><b>M&A:</b> 삼성바이오의 펩타이드 CDMO 인수, 맥쿼리의 ODM 볼트온, Lonza의 Bolt-on 선언은 "현금 있는 플레이어가 수탁제조 플랫폼을 산다"는 같은 그림. 당사 소형 합성/주사제 CDMO 볼트온 검토 시 EV/Sales·EV/EBITDA 비교치로 축적.</li><li><b>투자(설비·가동률):</b> 롯데 시러큐스 16%, 하나제약 평택 연기, Par Health 반복 리콜은 설비투자 심의의 세 축(가동률 시나리오, 경쟁 캐파 캘린더, 품질 비용). 동결건조 라인 증설은 수주 확정분 대비 가동률 목표를 문서화해 Exit 실사에서 할인 요인이 되지 않게 한다.</li><li><b>약가·고객:</b> 제네릭 약가 2차 재평가 전환(10/31 마감)과 혁신형 우대 요건은 Pharma사업부 고객의 품목·단가에 직결. 주사제 유예 품목과 내년 4월 인하 품목을 나눠 수탁 물량·단가 영향표 작성.</li></ol></div>
+</section>
+<section class="">
+<div class="sh"><div class="n">7</div><h2>다음 주 주시 포인트</h2><small>10/19~10/25 및 이후</small></div>
+<div class="watch"><div class="w"><div class="d">10/19~30</div><div class="b"><b>폴리펩타이드 추가 응모기간</b>: 삼성바이오 최종 지분율, 결합 승인 일정(취득 12/31)</div></div><div class="w"><div class="d">10/22</div><div class="b"><b>미국 소액 면세 중단</b>: 해외 우편 의약품 반입 제한 시행, 제네릭 수출 채널 영향</div></div><div class="w"><div class="d">10/31</div><div class="b"><b>제네릭 약가 2차 재평가 전환 신청 마감</b>: 주사제 품목 신청 현황, 12월 결정 전 고객사 품목 점검</div></div><div class="w"><div class="d">11월</div><div class="b"><b>삼영검사 공정위 승인·클로징</b>, Lonza 캡슐사업 $3B 매각 연내 종결, 시지바이오-TPG 협상 진전 여부</div></div><div class="w"><div class="d">수시</div><div class="b"><b>금감원 PEF 30곳 내부통제 점검</b> 결과, 한미사이언스 공개매수 의무 위반 조사, 국감 후속(혁신형 60% 우대 요건)</div></div><div class="w"><div class="d">수시</div><div class="b"><b>3분기 실적 시즌</b>: 셀트리온 잠정실적 이후 국내 제약 3Q 발표, 롯데바이오·CDMO 가동률 언급 추적</div></div></div>
+</section>
+<details class="glossary-add"><summary>■ 이번 주 추가된 용어 (glossary.md 복붙용, 클릭해서 펼치기)</summary><pre>### 2026-10-12
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 풋옵션(Put Option) | 정해진 가격에 팔 수 있는 권리. 시지바이오 매도자 안은 3년 내 실적 달성 시 잔여 49%를 최대 2배에 팔 권리. | Exit 구조 설계 시 업사이드 공유 장치 |
+| 경업금지 조항(Non-compete Clause) | 매도자가 일정 기간 같은 사업을 못 하게 하는 약정. 매수자 TPG 측 요구 조건. | 매각 협상 변수 |
+| 단계적 매각(Staged Sale) | 지분을 한 번에 넘기지 않고 1차·2차로 나눠 파는 방식. 51% 선매각 + 49% 후속. |  |
+| 일괄 인수(One-shot Acquisition) | 처음부터 경영권 지분(70% 등)을 한 번에 사는 방식. |  |
+| 확정 지급액(Firm Value vs Contingent) | 라이선스 계약 총액 중 조건 없이 확정된 금액. 아태 Top10 라이선스 7건의 확정 지급액은 총액의 8.3%. | 고객사 파이프라인 가시성 판단 |
+
+### 2026-10-13
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 세무 효과 반영 순인수가(Net Purchase Price after Tax Benefits) | 인수로 얻는 세금 절감(자산 상향 상각)의 현재가치를 뺀 실질 인수가. STERIS $2.1B → $1.8B. | 인수 가격 비교 시 조정 |
+| 잠정실적(Preliminary Earnings) | 감사 전 회사가 먼저 발표하는 분기 실적. 셀트리온 3Q. |  |
+| 의무공개매수(Mandatory Tender Offer) | 일정 지분 이상 취득 시 나머지 주주에게도 같은 조건으로 매수 제안해야 하는 제도. | 한미사이언스 사례와 연결 |
+| 기업결합 심사(Merger Review) | 공정위가 인수가 경쟁을 해치는지 심사. 삼영검사 승인 대기. |  |
+| SI / FI(Strategic / Financial Investor) | 사업 시너지 목적 인수자 / 수익 목적 재무 투자자. | 당사 Exit 매수자 두 유형 |
+
+### 2026-10-14
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 공개매수(Tender Offer) | 불특정 주주에게 가격·기간을 공시하고 장외에서 주식을 사는 방식. 삼성바이오-폴리펩타이드. |  |
+| 스퀴즈아웃(Squeeze-out) | 90~98% 확보 후 잔여 소수주주 지분을 강제 매수해 100% 만드는 절차. |  |
+| 특수목적법인(SPC, Special Purpose Company) | 인수만을 위해 세운 회사. 삼성펩타이드 SPC. | LBO 구조 기본 단위 |
+| 신종자본증권(Hybrid Capital Securities) | 회계상 자본으로 인정되는 영구채 성격 증권. 신한금융 롯데손보 재원. |  |
+| 적기시정조치(Prompt Corrective Action) | 금융사 건전성 악화 시 감독당국이 내리는 개선 명령. |  |
+
+### 2026-10-15
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 트레이드 세일(Trade Sale) | PE가 보유 회사를 전략적 매수자(SI)에게 파는 Exit. Blackstone → Galderma. | 당사 Exit 시나리오 |
+| EV/Sales 멀티플(EV/Revenue Multiple) | 기업가치를 매출로 나눈 배수. 이익이 작거나 성장 단계 회사 비교에 사용. ZO 4.5배(계산치). |  |
+| 볼트온 인수(Bolt-on Acquisition) | 보유 회사에 작은 회사를 붙여 키우는 인수. Lonza 선언, 맥쿼리 ODM. | 당사 M&A 유형 |
+| 퓨어플레이(Pure-play) | 한 사업만 하는 회사. Lonza 순수 CDMO 전환. |  |
+| EPS 중립/희석(EPS Neutral / Accretive / Dilutive) | 인수 후 주당순이익이 그대로/증가/감소하는지. Galderma 1년차 neutral. |  |
+
+### 2026-10-16
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 출자약정(Capital Commitment) | LP가 펀드에 넣기로 약속한 금액. 실제 납입은 캐피탈 콜 때. |  |
+| 캐피탈 콜(Capital Call) | GP가 투자 건이 생길 때 LP에게 약정액 납입을 요청하는 것. |  |
+| GP / LP(General / Limited Partner) | 펀드 운용사 / 출자자. | 맥쿼리 = GP |
+| 주요사항보고서(Report on Material Facts) | 자산 양수도 등 중요 사항 발생 시 내는 DART 공시. 안국약품 1,630억. |  |
+| 선매입(Forward Purchase) | 준공 전 자산을 미리 계약해 사는 것. 계약금·중도금·잔금 구조. |  |
+
+### 2026-10-17
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 브릿지론(Bridge Loan) | 본 자금 조달 전 잠시 쓰는 단기 대출. 농협-MBK 고려아연 1.7조. |  |
+| 리파이낸싱(Refinancing) | 기존 빚을 새 빚으로 바꾸는 차환. 금리·만기 조정. | 인수금융 뉴스 = 대주주 자금 신호 |
+| 중복상장(Parent-Subsidiary Dual Listing) | 모회사와 자회사가 함께 상장되는 것. 엘앤씨바이오 자회사 IPO 논란. |  |
+| 보유기간(Holding Period) | PE가 회사를 사서 팔기까지 기간. Simon-Kucher: 2021→26 +38%. | 당사 2020년 인수 |
+| 빈티지(Vintage Year) | 펀드가 첫 투자를 시작한 연도. 같은 빈티지 자산은 비슷한 시기에 매물. | Exit 대기열 |
+
+### 2026-10-18
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 뉴코(NewCo) | 특정 자산을 담기 위해 새로 세운 회사. Hercules → Kailera. | 공장 없는 NewCo = 잠재 고객 |
+| 지분 결합 라이선싱(License-for-Equity) | 업프론트 대신 신설회사 지분을 받는 라이선스 구조. 항서 20%. | Pharma사업부 계약 옵션 |
+| 바이오벅스(Biobucks) | 마일스톤까지 다 더한 계약 총액. 실제 수령과 다름. | 보도 총액 ≠ 확정 수입 |
+| 추가 응모기간(Additional Acceptance Period) | 공개매수 1차 종료 후 응모 못 한 주주에게 주는 2차 기간. 10/19~30. |  |
+| 불성실공시법인(Unfaithful Disclosure Corporation) | 공시 위반 시 거래소가 지정. 대화제약 예고. |  |
+
+</pre></details>
+<div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 본 리포트는 10/12~10/18 일간 브리핑 아카이브(DB briefings)에서 재구성했으며 신규 검색은 하지 않음. 회사 규모 수치는 일간 브리핑 [언급 기업] 표 참조.</div>
+</div>
+<div class="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+</body></html>

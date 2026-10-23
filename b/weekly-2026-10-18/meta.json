@@ -1,0 +1,330 @@
+{
+ "id": "weekly-2026-10-18",
+ "date": "2026-10-18",
+ "kind": "weekly",
+ "title": "전략기획팀 Weekly Report | 2026-10-18",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 702,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 2004,
+   "ref": true
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 1070,
+   "ref": false
+  },
+  {
+   "file": "p4.png",
+   "w": 720,
+   "h": 714,
+   "ref": false
+  },
+  {
+   "file": "p5.png",
+   "w": 720,
+   "h": 2038,
+   "ref": true
+  },
+  {
+   "file": "p6.png",
+   "w": 720,
+   "h": 968,
+   "ref": false
+  }
+ ],
+ "terms": [
+  {
+   "term": "풋옵션(Put Option)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "경업금지 조항(Non-compete Clause)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "단계적 매각(Staged Sale)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "일괄 인수(One-shot Acquisition)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "확정 지급액(Firm Value vs Contingent)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "세무 효과 반영 순인수가(Net Purchase Price after Tax Benefits)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "잠정실적(Preliminary Earnings)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "의무공개매수(Mandatory Tender Offer)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "기업결합 심사(Merger Review)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "SI / FI(Strategic / Financial Investor)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "공개매수(Tender Offer)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "스퀴즈아웃(Squeeze-out)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "특수목적법인(SPC, Special Purpose Company)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "신종자본증권(Hybrid Capital Securities)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "적기시정조치(Prompt Corrective Action)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "트레이드 세일(Trade Sale)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "EV/Sales 멀티플(EV/Revenue Multiple)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "볼트온 인수(Bolt-on Acquisition)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "퓨어플레이(Pure-play)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "EPS 중립/희석(EPS Neutral / Accretive / Dilutive)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "출자약정(Capital Commitment)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "캐피탈 콜(Capital Call)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "GP / LP(General / Limited Partner)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "주요사항보고서(Report on Material Facts)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "선매입(Forward Purchase)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "브릿지론(Bridge Loan)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "리파이낸싱(Refinancing)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "중복상장(Parent-Subsidiary Dual Listing)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "보유기간(Holding Period)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "빈티지(Vintage Year)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "뉴코(NewCo)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "지분 결합 라이선싱(License-for-Equity)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "바이오벅스(Biobucks)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "추가 응모기간(Additional Acceptance Period)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "불성실공시법인(Unfaithful Disclosure Corporation)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  }
+ ],
+ "insight": "Exit: 이번 주 Exit 사례는 세 갈래. 성장 궤적을 산 매수자(ZO Trade Sale 4.5x, 삼영검사 IRR 33%), 보유 장기화로 할인된 매각(JKL 롯데손보 원금 미달), 구조 충돌로 깨진 협상(시지바이오 2차 결렬). 맥쿼리 Exit 자료는 \"다음 소유주에게 남는 업사이드\"를 수치(동결건조 주사제 수주잔고, 가동률, 단가 개선)로 보여주고, 지배권 일괄 이전과 업사이드 공유 장치(어닝아웃/풋옵션)를 분리해 설계. Exit·인수금융: 농협-MBK 국감과 금감원 PEF 점검으로 국내 FI의 레버리지 조달이 보수화될 수 있다. SI 매각(삼성바이오·Galderma형 전략적 매수자) 시나리오와 세컨더리(OrbiMed Asia·ArchiMed 신규 펀드) 시나리오의 매각가 민감도를 병행 준비. M&A: 삼성바이오의 펩타이드 CDMO 인수, 맥쿼리의 ODM 볼트온, Lonza의 Bolt-on 선언은 \"현금 있는 플레이어가 수탁제조 플랫폼을 산다\"는 같은 그림. 당사 소형 합성/주사제 CDMO 볼트온 검토 시 EV/Sales·EV/EBITDA 비교치로 축적. 투자(설비·가동률): 롯데 시러큐스 16%, 하나제약 평택 연기, Par Health 반복 리콜은 설비투자 심의의 세 축(가동률 시나리오, 경쟁 캐파 캘린더, 품질 비용). 동결건조 라인 증설은 수주 확정분 대비 가동률 목표를 문서화해 Exit 실사에서 할인 요인이 되지 않게 한다. 약가·고객: 제네릭 약가 2차 재평가 전환(10/31 마감)과 혁신형 우대 요건은 Pharma사업부 고객의 품목·단가에 직결. 주사제 유예 품목과 내년 4월 인하 품목을 나눠 수탁 물량·단가 영향표 작성.",
+ "headlines": [
+  {
+   "act": "공개매수 응모 87.88%",
+   "cond": "CHF 1.46B (약 2.7조)",
+   "meaning": "최소 응모 조건 66.7%를 넘겨 인수 사실상 확정, 취득 예정일은 11/30에서 12/31로 연기. 국내 제약바이오 M&A 사상 최대(보도 기준)이며 바이오 CDMO가 합성(펩타이드) 영역으로 넓힌 사례.",
+   "target": "폴리펩타이드그룹(스위스 펩타이드 CDMO)",
+   "who": "삼성바이오로직스"
+  },
+  {
+   "act": "공동 인수",
+   "cond": "약 3,000억 (보도 기준)",
+   "meaning": "당사 대주주 맥쿼리가 K뷰티 ODM 2곳을 묶어 사는 볼트온 인수. 국내 수탁제조 플랫폼에 대한 PE 관심이 당사 Exit 비교 사례로 바로 연결된다.",
+   "target": "화성코스메틱 70% / 나우코스 100%",
+   "who": "맥쿼리자산운용/어펄마"
+  },
+  {
+   "act": "매각",
+   "cond": "EV $1.5B 전액 현금",
+   "meaning": "PE가 2020년 인수 후 매출 2배로 키워 6년 만에 전략적 매수자에게 넘긴 Trade Sale. EV/Sales 4.5배(계산치)로 \"성장률 + 채널 자산\"이 가격을 설명했다.",
+   "target": "ZO Skin Health → Galderma",
+   "who": "Blackstone"
+  },
+  {
+   "act": "매각 협상 결렬, 신규 후보",
+   "cond": "희망 밸류 1.2조 (보도 기준)",
+   "meaning": "IMM PE에 이어 TA어소시에이츠와도 결렬, TPG가 후보로 부상. 매도자(51% 선매각 + 49% 단계 매각 + 풋옵션)와 매수자(70% 원샷 + 경업금지) 구조 충돌이 핵심 쟁점.",
+   "target": "시지바이오 경영권",
+   "who": "윤재승 CVO 측 / TPG"
+  },
+  {
+   "act": "PE 자금 공급 국감 지적",
+   "cond": "2.66조 (미회수 9,131억)",
+   "meaning": "펀드 출자, 인수금융, 브릿지론이 한 운용사에 쌓인 구조가 국감에서 문제됐다. 국내 대주의 PE 인수금융 심사가 보수화될 신호로, 당사 매각 시 재무적 인수자(FI)의 레버리지 조달 변수.",
+   "target": "MBK 10년 24건",
+   "who": "농협"
+  }
+ ],
+ "publishedAt": "2026-10-23T16:54+09:00"
+}

@@ -3,13 +3,14 @@
 
 구조 (저장소 루트 = Pages 루트)
   index.html            목록 페이지 (자동 재생성, noindex)
+  glossary.html         용어집 (모든 브리핑 termDefs 누적, 검색)
   b/<id>/index.html     브리핑 원문 (DB briefings.html 그대로 + noindex 메타)
   b/<id>/p1.jpg ...     페이지별 캡처 (메일 본문용, 폭 720px, 1.5배)
   b/<id>/meta.json      {id, date, kind, title, pages:[{file, w, h, ref}]}
   _tools/               이 스크립트와 폰트 캐시
 
 사용 (저장소 루트에서)
-  python3 publish.py add  <briefing.json>  [--push]   # ArtifactData out_dir로 받은 briefings/<id>.json
+  python3 publish.py add  <briefing.json> [--index <index.json>] [--push]   # ArtifactData out_dir로 받은 briefings/<id>.json (+ index/<id>.json: 용어집/시사점)
   python3 publish.py mail <id> --out mail.html [--full] [--extra extra.html]   # 메일 본문 HTML 생성
   python3 publish.py index [--push]                    # 목록만 재생성
 <id> = index 문서 id (일간은 YYYY-MM-DD, 리포트는 weekly-YYYY-MM-DD 등)
@@ -80,8 +81,9 @@ async def _shoot(render_path, out_dir):
     return pages
 
 # ---------------------------------------------------------------- add
-def add(json_path, push=False):
+def add(json_path, push=False, index_json=None):
     d = json.load(open(json_path, encoding='utf-8'))
+    idx = json.load(open(index_json, encoding='utf-8')) if index_json and os.path.exists(index_json) else {}
     bid = d.get('id') or os.path.splitext(os.path.basename(json_path))[0]
     html = d['html']
     date, kind = d.get('date', bid[-10:]), d.get('kind', 'daily')
@@ -96,10 +98,12 @@ def add(json_path, push=False):
     open(rp, 'w', encoding='utf-8').write(rendered)
     pages = asyncio.run(_shoot(rp, out))
     os.remove(rp)
-    meta = {'id': bid, 'date': date, 'kind': kind, 'title': title, 'pages': pages,
+    terms = idx.get('termDefs') or [{'term': t, 'en': '', 'def': '', 'note': '', 'ex': ''} for t in idx.get('terms', [])]
+    meta = {'id': bid, 'date': date, 'kind': kind, 'title': title, 'pages': pages, 'terms': terms,
+            'insight': idx.get('insight', ''), 'headlines': idx.get('headlines', []),
             'publishedAt': datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).isoformat(timespec='minutes')}
     json.dump(meta, open(os.path.join(out, 'meta.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    build_index()
+    build_index(); build_glossary()
     if push:
         git_push(f'{bid} 게시')
     print('published', bid, len(pages), 'pages')
@@ -139,9 +143,51 @@ def build_index():
         body += f'<div class="m">{mon}</div><div class="card">{rows}</div>'
     doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
 <title>Strategy Daily Briefing Archive</title><style>{INDEX_CSS}</style></head><body><div class="wrap">
-<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다.</div>
+<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="glossary.html" style="color:#0f3b66;font-weight:700">용어집 보기</a></div>
 {body}<div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div></body></html>"""
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(doc)
+
+
+GLOSS_CSS = INDEX_CSS + """
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 12px}
+input,select{font:inherit;font-size:13px;padding:7px 10px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;color:#111827}
+input{min-width:240px}
+.tr{display:grid;grid-template-columns:92px 1fr;gap:4px 12px;padding:10px 14px;border-top:1px solid #e5e7eb}.tr:first-child{border-top:none}
+.tr .dt{color:#9ca3af;font-size:12px;white-space:nowrap;padding-top:2px}
+.tr .k{font-weight:800;font-size:14px}.tr .k span{font-weight:500;color:#6b7280;font-size:12px;margin-left:6px}
+.tr .df{color:#374151;font-size:13px;margin-top:2px}.tr .nt{color:#0f3b66;font-size:12px;margin-top:2px}.tr .ex{color:#6b7280;font-size:12px;margin-top:2px}
+.tr .go{font-size:11px;color:#9ca3af;text-decoration:none;margin-left:6px}
+@media(max-width:600px){.tr{grid-template-columns:1fr}.tr .dt{padding:0}}
+"""
+
+def build_glossary():
+    """용어집 페이지: 모든 브리핑 meta.terms 를 모아 날짜순(최신 먼저). 검색/월 필터는 브라우저에서(정적)."""
+    rows = []
+    for m in all_meta():
+        if m.get('kind') != 'daily':
+            continue
+        for t in m.get('terms', []):
+            rows.append({'date': m['date'], 'id': m['id'], 'term': t.get('term', ''), 'en': t.get('en', ''),
+                         'def': t.get('def', ''), 'note': t.get('note', ''), 'ex': t.get('ex', '')})
+    months = sorted({r['date'][:7] for r in rows}, reverse=True)
+    data = json.dumps(rows, ensure_ascii=False).replace('</', '<\\/')
+    opts = ''.join(f'<option>{m}</option>' for m in months)
+    js = """
+const R=%s;const q=document.getElementById('q'),mo=document.getElementById('mo'),box=document.getElementById('list'),cnt=document.getElementById('cnt');
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function render(){const k=q.value.trim().toLowerCase(),m=mo.value;const rows=R.filter(r=>(!m||r.date.startsWith(m))&&(!k||[r.term,r.en,r.def,r.note,r.ex].join(' ').toLowerCase().includes(k)));
+cnt.textContent=rows.length+'개 (누적 '+R.length+'개)';
+box.innerHTML=rows.length?rows.map(r=>'<div class="tr"><div class="dt">'+esc(r.date)+'</div><div><div class="k">'+esc(r.term)+(r.en?'<span>'+esc(r.en)+'</span>':'')+'<a class="go" href="b/'+encodeURIComponent(r.id)+'/">브리핑</a></div>'+(r.def?'<div class="df">'+esc(r.def)+'</div>':'')+(r.note?'<div class="nt">당사 관점: '+esc(r.note)+'</div>':'')+(r.ex?'<div class="ex">예: '+esc(r.ex)+'</div>':'')+'</div></div>').join(''):'<div class="tr"><div></div><div style="color:#9ca3af">조건에 맞는 용어가 없습니다.</div></div>'}
+q.addEventListener('input',render);mo.addEventListener('change',render);render();
+""" % data
+    doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
+<title>Briefing Glossary</title><style>{GLOSS_CSS}</style></head><body><div class="wrap">
+<h1>용어집</h1><div class="sub">브리핑 [오늘의 용어] 누적 {len(rows)}개. 매일 자동 갱신. &nbsp;<a href="./" style="color:#0f3b66;font-weight:700">브리핑 목록</a></div>
+<div class="tools"><input id="q" placeholder="용어, 영문, 풀이 검색"><select id="mo"><option value="">전체 기간</option>{opts}</select><span class="n" id="cnt"></span></div>
+<div class="card" id="list"></div>
+<div class="ft">풀이는 비전공자 기준, 당사 관점은 작성 시점 의견. 정식 정의는 각 브리핑 원문과 프로젝트 glossary.md 기준.</div></div>
+<script>{js}</script></body></html>"""
+    open(os.path.join(ROOT, 'glossary.html'), 'w', encoding='utf-8').write(doc)
 
 # ---------------------------------------------------------------- mail body
 F = "font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;"
@@ -184,10 +230,11 @@ if __name__ == '__main__':
     if not a or a[0] not in ('add', 'mail', 'index'):
         print(__doc__); sys.exit(1)
     if a[0] == 'add':
-        add(a[1], push='--push' in a)
+        ij = a[a.index('--index') + 1] if '--index' in a else None
+        add(a[1], push='--push' in a, index_json=ij)
     elif a[0] == 'index':
-        build_index()
-        if '--push' in a: git_push('목록 재생성')
+        build_index(); build_glossary()
+        if '--push' in a: git_push('목록/용어집 재생성')
     elif a[0] == 'mail':
         bid = a[1]; out = a[a.index('--out') + 1] if '--out' in a else 'mail.html'
         extra = open(a[a.index('--extra') + 1], encoding='utf-8').read() if '--extra' in a else ''
