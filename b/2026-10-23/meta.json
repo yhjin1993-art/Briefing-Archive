@@ -1,0 +1,45 @@
+{
+ "id": "2026-10-23",
+ "date": "2026-10-23",
+ "kind": "daily",
+ "title": "전략기획팀 Daily Briefing | 2026-10-23",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 1660,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 1114,
+   "ref": false
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 1429,
+   "ref": false
+  },
+  {
+   "file": "p4.png",
+   "w": 720,
+   "h": 1042,
+   "ref": false
+  },
+  {
+   "file": "p5.png",
+   "w": 720,
+   "h": 1592,
+   "ref": true
+  },
+  {
+   "file": "p6.png",
+   "w": 720,
+   "h": 3523,
+   "ref": true
+  }
+ ],
+ "publishedAt": "2026-10-23T16:20+09:00"
+}

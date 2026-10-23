@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-10-23</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body>
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-10-23</b><span>금요일</span></div>
+  </div>
+<div class="note">수집 창 2026-10-22 06:30 ~ 2026-10-23 06:30 KST (24시간). 영업일. 리포트 카테고리는 최근 1~2주 발행분 허용. 더벨/인베스트조선/마켓인사이트/링크드인 미수집. "창 경계" 표시는 10/21(현지) 보도 참고 건.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s1"><div class="hl-main"><b>EQT</b><span class="act">공개매수</span><b>Qiagen (진단, 생명과학 툴)</b></div><div class="hl-cond">EV €10.8B, 프리미엄 40.3%</div><div class="hl-mean">유럽 상장사를 PE가 전액 현금으로 사들여 상장폐지하는 Take-private.<br>이사회 추천 + ADIA, CPP 공동투자, 종결은 2027년 중반.</div></div><div class="hl s2"><div class="hl-main"><b>셀트리온</b><span class="act">도입</span><b>카이진 APRIL 항체 KG013</b></div><div class="hl-cond">최대 $580.5M (7,695억)</div><div class="hl-mean">IgA신증 자가면역 후보물질의 글로벌 독점권. 총액은 마일스톤 포함이라 확정 수입이 아니다.</div></div><div class="hl s2"><div class="hl-main"><b>식약처</b><span class="act">SOP 개정 명령</span><b>전 완제의약품 제조소</b></div><div class="hl-cond">기한 2026-12-31</div><div class="hl-mean">위탁사가 제조 중단을 지시했는데 수탁사가 계속 생산해 허가가 취소된 사례<br><span class="arr">→</span> 위수탁 제조지시 절차를 기준서에 넣으라는 명령.</div></div><div class="hl s4"><div class="hl-main"><b>인도 CDMO 3사</b><span class="act">전환</span><b>저분자 → 펩타이드, 무균주사제</b></div><div class="hl-cond">Akums EBITDA +13.3%</div><div class="hl-mean">OneSource, Akums, Kilitch 경영진 공통 발언: 설비만으로는 수익이 안 나고, 밸리데이션 기간과 고객 승인이 병목.</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">라이선스</div><div>
+      <div class="t">셀트리온, 카이진 KG013 도입 최대 $580.5M</div><ul><li><a class="kw" href="#t-license-in" title="약물 권리를 사오는 계약 - 클릭하면 기본 개념으로 이동">License-in</a> 총액 <span class="num">최대 $580.5M(7,695억)</span>, <a class="kw" href="#t-upfront" title="계약 시 먼저 받는 돈 - 클릭하면 기본 개념으로 이동">업프론트</a>은 비공개, <a class="kw" href="#t-royalty" title="판매액의 일정 % - 클릭하면 기본 개념으로 이동">로열티</a> 별도.</li><li>대상은 <span class="nb">APRIL<sup class="fn">1</sup></span> 표적 항체로 <span class="nb">IgA신증(IgAN)<sup class="fn">2</sup></span> 등 자가면역질환이 주 적응증.<br>글로벌 독점 개발, 판매권, 카이진은 한국 공동판매권 보유.</li><li>작년 FcRn 저해제 <span class="nb">2종(KG006, KG002)</span>에 이어 3번째 도입<br><span class="arr">→</span> 셀트리온 자가면역 신약 파이프라인 3종 완성.<br>총액은 <a class="kw" href="#t-biobucks" title="마일스톤 포함 헤드라인 금액 - 클릭하면 기본 개념으로 이동">바이오벅스</a> 기준이라 확정액과 구분해 읽어야 한다.</li></ul>
+      <div class="src"><a href="https://www.etoday.co.kr/news/view/2638861">이투데이</a>, 2026-10-22 11:38</div></div></div>
+    <div class="item"><div class="tag ">실적</div><div>
+      <div class="t">보령, 3Q 누적 영업이익 694억, 작년 연간 초과</div><ul><li>9개월 누적 매출 <span class="num">8,494억(+10%)</span>, 영업이익 694억, <a class="kw" href="#t-op-margin" title="영업이익 ÷ 매출 - 클릭하면 기본 개념으로 이동">영업이익률</a> 8.2%.<br>카나브 약가소송 관련 <a class="kw" href="#t-provision" title="미래 지출 예상액을 미리 비용으로 쌓는 것 - 클릭하면 기본 개념으로 이동">충당금</a> 반영 후 수치.</li><li>항암제 누적 매출 2,214억(+24%), 매출총이익률 41.4%.<br>탁소텔 인수 후 첫 온전한 분기 매출 277억(해외 213억, 국내 64억).</li><li>젬자, 알림타의 액상 제형 확대와 자체 생산 전환으로 항암 수익성 개선 계획<br><span class="arr">→</span> 고객사의 주사제 내재화는 수탁 물량 이탈 신호.<br>당사 고객 포트폴리오에서 같은 움직임을 점검.</li></ul>
+      <div class="src"><a href="https://www.dailypharm.com/user/news/343696">데일리팜</a>, 2026-10-22 14:41</div></div></div>
+    <div class="item"><div class="tag ">규제</div><div>
+      <div class="t">식약처, 위수탁 제조지시 SOP 개정 명령, 기한 12/31</div><ul><li>위탁사가 제형 제조 중단 등을 이유로 생산 중단을 지시했는데 수탁사가 계속 생산<br><span class="arr">→</span> 해당 품목 허가 취소.<br>식약처는 전 완제 제조소에 위수탁 <span class="nb">기준서(SOP)<sup class="fn">3</sup></span> 개정을 명령.</li><li>위탁사의 제조 지시(중단 포함)와 수탁사의 이행 절차를 <span class="num">2026-12-31</span>까지 기준서에 명문화.<br>지방식약청이 정기, 기획 감시로 확인.</li><li>근거는 의약품 안전규칙 48조 14호, 별표1. 미이행 시 전 제조업무정지 15일 또는 해당 품목 1개월<br><span class="arr">→</span> CMO사업부는 고객사별 제조지시 접수, 중단 지시 이행 기록 체계를 연내 정비해야 한다.</li></ul>
+      <div class="src"><a href="https://www.dailypharm.com/user/news/343680">데일리팜</a>, 2026-10-22 11:59</div></div></div>
+    <div class="item"><div class="tag ">규제</div><div>
+      <div class="t">제약사 GMP 정기점검 위반율 28% → 8%</div><ul><li>대전식약청 자료: 제조소 정기 GMP 점검 위반율이 2023년 28%에서 2025년 <span class="num">8%</span>로 하락.<br>불시점검 도입 효과로 해석.</li><li>남은 주요 지적은 <span class="nb">데이터 완전성<sup class="fn">4</sup></span>, <span class="nb">OOS 처리<sup class="fn">5</sup></span>, 허가사항과 현장 관행의 불일치.</li><li>→ 위반율이 낮아질수록 남은 지적 항목이 <span class="nb">실사(DD)</span>에서 두드러진다.<br>매각 실사 대비 품질 지표 관리 항목으로 사용.</li></ul>
+      <div class="src"><a href="https://www.dailypharm.com/user/news/343694">데일리팜</a>, 2026-10-22 14:28</div></div></div>
+    <div class="item"><div class="tag ">IPO</div><div>
+      <div class="t">이노보테라퓨틱스, 코스닥 공모 440~528억</div><ul><li>증권신고서 10/21 제출(보도 10/22).<br>공모주식 220만주, <a class="kw" href="#t-price-band" title="공모가 희망 범위 - 클릭하면 기본 개념으로 이동">공모가 밴드</a> 20,000~24,000원, 조달액 <span class="num">440~528억</span>.<br>주관사 한국투자증권.</li><li><a class="kw" href="#t-book-building" title="기관 대상 사전 주문으로 공모가 확정 - 클릭하면 기본 개념으로 이동">수요예측</a> 11/26~12/2, 일반청약 12/7~8. 2019년 설립, AI 플랫폼 기반 합성 저분자 신약(면역, 염증, 섬유화, 항암).</li><li>INV-008(궤양성대장염)은 대웅제약에 라이선스, INV-001(흉터)은 국내 3상 승인<br><span class="arr">→</span> 합성 저분자 신약 벤처는 임상시약, 상업 생산 모두 외주이므로 Pharma사업부 잠재 고객 리스트에 추가.</li></ul>
+      <div class="src"><a href="https://www.yakup.com/news/?mode=view&cat=12&cat2=121&cat3=0&nid=334070">약업신문</a>, 2026-10-22</div></div></div>
+<ol class="footnotes"><li><b>APRIL</b> B세포 생존 신호 단백질. 차단하면 자가항체 생성이 줄어든다</li><li><b>IgA신증(IgAN)</b> 면역글로불린A가 신장에 쌓여 생기는 만성 신장질환</li><li><b>기준서(SOP)</b> Standard Operating Procedure. GMP상 작업 절차를 문서로 정한 것</li><li><b>데이터 완전성</b> Data Integrity. 기록의 생성, 수정, 보관이 추적 가능하고 조작되지 않았음</li><li><b>OOS 처리</b> Out of Specification. 시험 결과가 규격을 벗어났을 때의 조사 절차</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-23 (금요일)</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Take-private</div><div>
+      <div class="t">EQT, Qiagen 공개매수 EV €10.8B, 프리미엄 40.3%</div><ul><li>EQT XI 펀드가 세운 Crown NL Bidco가 주당 <span class="num">€46.50</span> 전액 현금 <a class="kw" href="#t-tender-offer" title="공개매수 - 클릭하면 기본 개념으로 이동">Tender Offer</a>.<br>보도 전 종가(7/8) €33.15 대비 <a class="kw" href="#t-premium" title="인수 프리미엄 - 클릭하면 기본 개념으로 이동">Takeover Premium</a> 40.3%, 3개월 <a class="kw" href="#t-vwap" title="거래량가중평균가격 - 클릭하면 기본 개념으로 이동">VWAP</a> 대비 46.9%.</li><li><a class="kw" href="#t-ev" title="기업가치 - 클릭하면 기본 개념으로 이동">Enterprise Value</a> 약 €10.<span class="nb">8B($12.1B)</span>, <a class="kw" href="#t-net-debt" title="순차입금 - 클릭하면 기본 개념으로 이동">Net Debt</a> 약 $1.1B 포함.<br>ADIA 자회사 Luxinva, CPP Investments가 <a class="kw" href="#t-co-invest" title="공동투자자 - 클릭하면 기본 개념으로 이동">Co-investor</a>.<br>이사회 만장일치 추천, <a class="kw" href="#t-bca" title="사업결합계약 - 클릭하면 기본 개념으로 이동">Business Combination Agreement</a> 체결.</li><li><a class="kw" href="#t-min-accept" title="최소 응모 조건 - 클릭하면 기본 개념으로 이동">Minimum Acceptance</a> 50%+1주, EGM 80% 찬성 시 <a class="kw" href="#t-squeeze-out" title="소수주주 강제매수 - 클릭하면 기본 개념으로 이동">Squeeze-out</a> 등 사후조치 의무 이행.<br>종결 2027년 중반, 10개월 내 미종결 시 주당 $0.47 중간배당 허용(가격 차감 없음).<br>2020년 Thermo Fisher $11.5B 제안은 주주가 거부한 전례.</li></ul>
+      <div class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001015820/000110465926117921/tm2628053d1_ex99-2.htm">SEC SC TO-C (Crown NL Bidco)</a>, 2026-10-22 접수 (발표 10/21 현지)</div></div></div>
+    <div class="item"><div class="tag ref">참고</div><div>
+      <div class="t">Savillex, Entegris 생명과학 유체관리 사업 Carve-out</div><ul><li>Thompson Street Capital 보유 Savillex가 Entegris의 생명과학 유체관리 사업(<span class="nb">싱글유즈 백<sup class="fn">1</sup></span> Aramus, PE 백)을 <a class="kw" href="#t-carve-out" title="대기업 사업부 분리 매각 - 클릭하면 기본 개념으로 이동">Carve-out</a>. 금액 비공개.</li><li>PE 플랫폼이 대기업 비핵심 사업부를 떼어 붙이는 <a class="kw" href="#t-bolt-on" title="플랫폼에 소형 인수 추가 - 클릭하면 기본 개념으로 이동">Bolt-on</a>의 전형.<br>Entegris 2025 매출 $3.<span class="nb">20B(SEC 10-K)</span> 대비 소형 사업.</li><li>→ 10/21(현지) 보도로 창 경계.<br>제약 설비, 소모품 분야에서 대기업 카브아웃이 PE 볼트온으로 소화되는 흐름 확인용.</li></ul>
+      <div class="src"><a href="https://www.privateequityinternational.com/thompson-street-backed-savillex-carves-out-entegris-life-sciences-fluid-management-business/">Private Equity International</a>, 2026-10-21 (창 경계)</div></div></div>
+    <div class="item"><div class="tag ref">참고</div><div>
+      <div class="t">Archimed, 캐나다 건기식 Organika 투자, MED IV 1호</div><ul><li>헬스케어 전문 PE Archimed가 밴쿠버 건강기능식품 기업 Organika(1990년 설립, 콜라겐, 단백질, 수면 등)에 투자.<br>지분율, 금액 비공개.</li><li>€1.5B 규모 MED IV 펀드(2026-09 결성, 보도 기준)의 첫 집행.<br>건기식이 헬스케어 PE의 투자 영역으로 다뤄지는 사례.</li><li>→ 10/21(현지) 보도로 창 경계.<br>당사 글로벌 스코프(건기식 OEM) 매수자군 파악용.</li></ul>
+      <div class="src"><a href="https://www.pehub.com/archimed-invests-in-canadas-organika-first-deal-from-med-iv/">PE Hub</a>, 2026-10-21 (창 경계)</div></div></div>
+<ol class="footnotes"><li><b>싱글유즈 백</b> 일회용 바이오공정 백. 세척, 멸균 없이 교체하는 플라스틱 용기</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="empty">해당 없음: MBB, Big 4, IQVIA Institute 홈페이지 기준 최근 2주 신규 발행 리포트 미확인 (IQVIA 최신은 2026-06 블로그, McKinsey 라이프사이언스 M&A 리포트는 2026-02-13 발행으로 기간 외).</div>
+    <div class="item"><div class="tag ref">참고</div><div>
+      <div class="t">BCG, McKinsey 수치 인용: 글로벌 CDMO $140B, 인도 점유 2~3%</div><ul><li>Business Standard(10/22)가 인용: 2024년 글로벌 CDMO 시장 <span class="num">$140B 초과</span>, 인도 CDMO 점유율 2~3%(BCG).<br>McKinsey는 2033년 인도 점유율 8~10% 전망.</li><li>2026년은 2024~25년 고성장 뒤의 "리셋 해"로 성장률 둔화 예상.<br>신규 발행 리포트가 아닌 기사 인용이므로 원 리포트 발행일 미확인.</li><li>→ 한국 CDMO의 글로벌 점유율 수치는 같은 틀로 비교 가능.<br>당사 Exit 자료의 시장 규모 인용은 원 리포트 확보 후 사용.</li></ul>
+      <div class="src"><a href="https://business-standard.com/companies/news/cdmo-players-bet-on-complex-products-such-as-biologics-peptides-for-growth-126102201723_1.html">Business Standard</a>, 2026-10-22 23:16 IST</div></div></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-23 (금요일)</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">CDMO</div><div>
+      <div class="t">인도 CDMO 3사, 저분자에서 펩타이드, 무균주사제로</div><ul><li>Akums FY26 매출 ₹4,359 crore(+5.9%), <a class="kw" href="#t-ebitda" title="영업이익+감가상각 - 클릭하면 기본 개념으로 이동">EBITDA</a> ₹522 crore(<span class="num">+13.3%</span>), 매출의 80%가 CDMO.<br>분기 CDMO 매출 ₹813 crore<br><span class="arr">→</span> ₹964 crore.<br>FY28부터 유럽 공급 계획.</li><li>OneSource FY26 매출 ₹1,421.6 crore, EBITDA -35%(₹304.2 crore)지만 4분기 매출 +47% 반등.<br>FY28 목표 매출 $400M, EBITDA 마진 40% 재확인.<br>Kilitch는 <span class="nb">세마글루타이드<sup class="fn">1</sup></span> 카트리지 충전 라인 증설.</li><li>경영진 공통 발언: "설비만으로 수익이 보장되지 않는다" - 밸리데이션 기간, 고객 승인, 가격 압박, 품질, 인력 비용이 변수.<br>펩타이드는 <span class="nb">원료(API)</span> 제조와 완제 충전이 다른 역량<br><span class="arr">→</span> 당사 무균 충전, 동결건조 역량은 완제 쪽 진입점.</li></ul>
+      <div class="src"><a href="https://business-standard.com/companies/news/cdmo-players-bet-on-complex-products-such-as-biologics-peptides-for-growth-126102201723_1.html">Business Standard</a>, 2026-10-22 23:16 IST</div></div></div>
+    <div class="empty">그 외 해당 없음: 케미컬 CDMO, 제네릭 주사제, 화장품, 건기식 영역에서 수집 창(10/22 06:30 ~ 10/23 06:30) 내 M&A, 설비투자, 규제 기사 추가 확인 못 함. (ESTEVE 중국 $80M 투자 기사는 발행일 미확인으로 제외, Sanofi 프랑크푸르트 인슐린 공장 착공은 10/19 발표로 창 밖, 바이오로직스 제외 대상)</div>
+<ol class="footnotes"><li><b>세마글루타이드</b> GLP-1 계열 비만, 당뇨 치료 펩타이드</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">EQT, Qiagen 공개매수로 상장폐지: EV €10.8B, 주당 €46.50<small>Take-private, 독일 WpÜG 공개매수 + 미국 Schedule TO, 공동투자자 ADIA, CPP</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>EQT Private Equity(EQT XI 펀드)가 세운 인수 SPC Crown NL Bidco B.V. 공동투자자 Luxinva(ADIA), CPP Investment Board Europe. EQT AUM €354B(2026-09-30 기준, 회사 발표)</dd>
+          <dt>무엇을</dt><dd>Qiagen N.V.(네덜란드 법인, 프랑크푸르트 + NYSE 상장, 분자진단, 샘플 처리 툴) 발행주식 전부. 주당 €46.50 현금, 지분가치 약 €9.9B(계산치) + 순차입금 약 $1.1B = EV 약 €10.8B($12.1B)</dd>
+          <dt>왜</dt><dd>Qiagen 이사회: 비상장 체제에서 더 빠른 의사결정과 유연한 자원 배분. EQT: 성장 둔화로 눌린 가격에 안정적 현금흐름 자산 확보. 2020년 Thermo Fisher $11.5B 제안을 주주가 거부한 뒤 6년 만의 재매각</dd>
+        </dl>
+        <ol class="steps"><li>7/8 보도 전 종가 €33.15 → 제안가 €46.50 = 프리미엄 40.3%.<br>3개월 VWAP €31.66 대비 46.9%.</li><li>10/21 Business Combination Agreement 체결, 양 이사회 만장일치 추천.<br>10/22 미국 SC TO-C 접수.</li><li>BaFin 승인 후 Offer Document 공표 → 응모기간 개시, 그 기간 중 EGM 개최.</li><li>조건: 최소 응모 50%+1주, EGM 결의, 기업결합, 외국인투자 심사.<br>자금조달 조건은 <span class="nb">없음(Certain Funds)</span>.</li><li>10개월 내 미종결 시 Qiagen이 주당 최대 $0.47 중간배당 가능, 제안가에서 차감 안 함(지연 보상).</li><li>보도 기준 EV/EBITDA 약 <span class="nb">15배(Benzinga)</span>.<br>SEC 20-F 2025 매출 $2.09B 기준 EV/Sales 약 5.8배(계산치).</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">EQT XI + ADIA + CPP<small>에쿼티 출자(Co-investment)</small></div><div class="arrow"><i></i><span><b>에쿼티</b> + 은행 6곳 인수금융(MS, Jefferies, DB, SMBC, CA, UniCredit), 자금조달 조건 없음</span></div><div class="node">Crown NL Bidco B.V.<small>인수 SPC</small></div><div class="arrow"><i></i><span><b>공개매수</b> 주당 €46.50, 최소 응모 50%+1주</span></div><div class="node">Qiagen 주주<small>응모 → 현금 수령</small></div><div class="arrow"><i></i><span><b>EGM 80% 찬성</b> → 사후조치(스퀴즈아웃 등) 의무 이행</span></div><div class="node">Qiagen 100% 비상장화<small>FSE, NYSE 상장폐지, 종결 2027년 중반</small></div></div>
+        <div class="point"><b>포인트</b> PE가 상장사를 살 때의 표준 패키지가 한 건에 다 들어 있다: 이사회 추천(BCA) + 프리미엄 40% + 최소 응모 조건 + 사후조치(스퀴즈아웃) + 공동투자자 + Certain Funds + 지연 보상. 맥쿼리가 당사를 상장 후 매각하거나, 당사가 상장사를 인수할 때 그대로 체크리스트가 된다. 가격은 "성장 둔화가 멀티플을 눌렀다"(15배, 보도 기준)는 평가 → 매각 시 성장 서사가 곧 멀티플.</div>
+        <div class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001015820/000110465926117921/tm2628053d1_ex99-2.htm">SEC SC TO-C ex99-2 (2026-10-22), BioWorld, GuruFocus, Benzinga(멀티플 보도 기준)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-23 (금요일)</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">사업결합계약 <span>Business Combination Agreement (BCA)</span></div><div class="d">공개매수 전에 매수자와 대상회사 이사회가 맺는 계약. 이사회의 지지와 추천, 매수 후 경영 약속(브랜드, R&D, 고용), 경쟁 제안 대응 방식, 일정을 미리 정한다. 공개매수가 "적대적"이 아니라 "추천형"이 되는 근거 문서.</div><div class="ex">예: Qiagen: 10/21 BCA 체결 → 양 이사회 만장일치 추천 → 주주에게 €46.50 응모 권고</div></div><div class="term"><div class="k">최소 응모 조건 <span>Minimum Acceptance Threshold</span></div><div class="d">공개매수에서 "이 비율 이상 응모가 안 되면 거래를 접는다"는 하한. 매수자가 경영권(50%+1주)이나 스퀴즈아웃 가능 비율(75~95%)을 확보 못 한 채 소수지분만 떠안는 위험을 막는다. 낮게 잡을수록 성사 확률은 높지만 100% 확보까지 추가 단계가 필요하다.</div><div class="ex">예: Qiagen: 50%+1주. 발행주식 약 2.1억주(가정)면 약 1.06억주 응모가 조건</div></div><div class="term"><div class="k">상장폐지 인수 <span>Take-private (Public-to-Private, P2P)</span></div><div class="d">PE가 상장사 주식 전부를 사서 비상장으로 만드는 거래. 분기 실적 압박 없이 구조조정, 투자, 재매각(Exit)을 준비할 수 있다. 공개매수 + 스퀴즈아웃, 또는 합병 방식으로 진행하고 보통 인수금융(LBO)을 쓴다.</div><div class="ex">예: Qiagen: 시가총액 약 $10.3B 상장사를 EV €10.8B에 PE가 인수, FSE와 NYSE 동시 상장폐지</div></div><div class="term"><div class="k">공동투자 <span>Co-investment</span></div><div class="d">PE 펀드가 큰 딜을 할 때 펀드 LP(국부펀드, 연기금 등)가 펀드 밖에서 같은 딜에 직접 추가로 돈을 넣는 것. 펀드는 한 건 집중 한도를 지키면서 대형 딜을 할 수 있고, LP는 운용보수 없이 지분을 얻는다.</div><div class="ex">예: Qiagen: EQT XI 펀드 + ADIA(Luxinva) + CPP Investments가 에쿼티를 나눠 출자, 비율 비공개</div></div><div class="term"><div class="k">충당금 <span>Provision</span></div><div class="d">아직 돈이 나가진 않았지만 소송, 반품, 보증처럼 미래에 지출할 가능성이 높고 금액을 추정할 수 있을 때 미리 비용으로 잡아 부채로 쌓는 것. 그 분기 영업이익을 깎지만 실제 현금은 나중에 나간다.</div><div class="ex">예: 보령: 카나브 약가소송 충당금 반영 후 9개월 영업이익 694억, 영업이익률 8.2%. 충당금이 50억(가정)이면 반영 전 744억</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit 구조 / 수율, 가동률(품질) / M&A</em></div><ol><li><b>Exit:</b> EQT의 Qiagen 인수는 이사회 추천형 Take-private의 표준 패키지(BCA, 프리미엄 40%, 최소 응모 50%+1주, 공동투자자, Certain Funds, 지연 보상)를 한 건에 보여준다. 가격은 "성장 둔화가 멀티플을 눌렀다"(15배, 보도 기준)는 평가이므로, 맥쿼리 Exit 자료에서 동결건조 증설 이후의 수주잔고와 가동률 상승 경로를 성장률 숫자로 먼저 제시해야 멀티플이 방어된다. 국부펀드, 연기금 공동투자를 끼고 들어오는 대형 PE가 매수 후보군이라는 점도 기록.</li><li><b>수율, 가동률(품질), M&A:</b> 식약처의 위수탁 제조지시 SOP 개정 명령(기한 12/31)은 CMO사업부가 연내 처리할 규제 과제. 고객사별 제조 지시와 중단 지시의 접수, 이행, 기록 절차를 기준서에 반영하고 품질 지표(위반 0건)를 Exit 실사 자료에 쓴다. 보령이 항암주사제를 자체 생산으로 돌리는 것처럼 고객사 내재화는 수탁 물량 리스크 → 수주 파이프라인에서 내재화 가능 고객을 표시하고, 인도 CDMO처럼 펩타이드 완제 충전으로 품목을 넓히는 선택지를 M&A, 설비투자 검토 항목에 추가.</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-23 (금요일)</span></div>
+<div class="refband">여기부터 참조 영역 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">셀트리온</div><div class="cm">한국, KOSPI 068270, 바이오</div></th><td>항체 바이오시밀러 세계 상위 기업. 램시마, 유플라이마 등. 신약은 ADC, 이중항체, 자가면역(FcRn, APRIL)으로 확장.</td><td class="sz">2025 매출 4.16조, 영업이익 1.17조<div class="szsrc">DART 사업보고서(연결) · rcept 20260316001415</div></td><td>1 국내: 카이진 KG013 도입 최대 $580.5M</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">카이진 (Kaigene)</div><div class="cm">미국 메릴랜드, 비상장, 바이오텍</div></th><td>병원성 자가항체 분해(PDEG) 플랫폼 기반 다중항체 치료제 개발사. 셀트리온에 KG006, KG002, KG013 3종 라이선스 아웃.</td><td class="sz">비공개<div class="szsrc">비상장, 회사 IR 수치 없음</div></td><td>1 국내: KG013 라이선스 매도자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">보령</div><div class="cm">한국, KOSPI 003850, 제약</div></th><td>고혈압 신약 카나브 패밀리, 항암제(탁소텔, 젬자, 알림타) 중심. 항암주사제 자체 생산 확대 중.</td><td class="sz">3Q 누적 매출 8,494억, 영업이익 694억 (잠정)<div class="szsrc">회사 잠정실적 공시 2026-10-22 (보도 기준) · DART 코드 미등록</div></td><td>1 국내: 3Q 누적 실적, 항암주사제 내재화</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">이노보테라퓨틱스</div><div class="cm">한국, 비상장(코스닥 공모 예정), 신약 벤처</div></th><td>2019년 설립. AI 플랫폼 DeepZema 기반 합성 저분자 신약(궤양성대장염, 흉터, 골관절염, 섬유화). INV-008은 대웅제약 라이선스.</td><td class="sz">공모 440~528억 (증권신고서)<div class="szsrc">증권신고서 2026-10-21 제출 · 매출 비공개</div></td><td>1 국내: 코스닥 IPO 공모 절차 개시</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">Qiagen N.V.</div><div class="cm">네덜란드/독일, FSE + NYSE QGEN, 분자진단, 생명과학 툴</div></th><td>샘플 전처리, 분자진단 키트, QuantiFERON(결핵 검사), 바이오인포매틱스. 직원 약 5,400명, 35개 이상 거점.</td><td class="sz">2025 매출 $2.09B<div class="szsrc">SEC 20-F · filed 2026-03-20</div></td><td>2 PE/Deal, 5 오늘의 딜: EQT 공개매수 대상</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">EQT Private Equity</div><div class="cm">스웨덴, 상장 운용사(EQT AB), PE</div></th><td>유럽 최대급 PE. 헬스케어, 테크, 인프라. EQT XI 펀드로 Qiagen 인수 SPC(Crown NL Bidco) 설립.</td><td class="sz">AUM €354B (2026-09-30)<div class="szsrc">EQT 발표(공동 보도자료) · 운용사 공식 수치</div></td><td>2 PE/Deal: Qiagen 인수 주체</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">ADIA / CPP Investments</div><div class="cm">UAE 국부펀드 / 캐나다 연기금</div></th><td>Luxinva(ADIA 자회사), CPP Investment Board Europe가 Qiagen 딜에 공동투자. 대형 PE 딜의 전형적 공동투자자.</td><td class="sz">미조회<div class="szsrc">운용사 공식 AUM 미조회</div></td><td>2 PE/Deal: 공동투자자</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Entegris</div><div class="cm">미국, NASDAQ ENTG, 반도체 소재, 생명과학</div></th><td>반도체 공정 소재, 여과 기업. 생명과학 유체관리(싱글유즈 백 Aramus, PE 백) 사업을 Savillex에 매각.</td><td class="sz">2025 매출 $3.20B<div class="szsrc">SEC 10-K · filed 2026-02-11</div></td><td>2 PE/Deal(참고): 카브아웃 매도자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Savillex / Thompson Street Capital</div><div class="cm">미국, 비상장 / PE</div></th><td>Savillex는 고순도 불소수지 용기, 유체 제품 제조사. Thompson Street Capital Partners(세인트루이스 중견 PE) 포트폴리오.</td><td class="sz">비공개<div class="szsrc">비상장, 운용사 AUM 미조회</div></td><td>2 PE/Deal(참고): 볼트온 매수자</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Archimed / Organika</div><div class="cm">프랑스 PE / 캐나다 비상장 건기식</div></th><td>Archimed는 헬스케어 전문 PE(MED IV €1.5B, 2026-09 결성). Organika는 1990년 설립 밴쿠버 건기식 브랜드(콜라겐, 단백질, 수면).</td><td class="sz">펀드 €1.5B (보도 기준) / Organika 비공개<div class="szsrc">Archimed 결성 발표 보도 기준</div></td><td>2 PE/Deal(참고): 건기식 투자</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Akums Drugs & Pharmaceuticals</div><div class="cm">인도, NSE/BSE 상장, 제형 CDMO</div></th><td>인도 최대 제형 CDMO. 매출의 80%가 CDMO, 규제시장 진출과 펩타이드 단계적 진입. FY28 유럽 공급 계획.</td><td class="sz">FY26 매출 ₹4,359 crore, EBITDA ₹522 crore<div class="szsrc">회사 발표치(Business Standard 인용, 인도 거래소 공시 미조회)</div></td><td>4 글로벌: 인도 CDMO 전략</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">OneSource Specialty Pharma / Kilitch Drugs</div><div class="cm">인도, 상장, 무균주사제 CDMO</div></th><td>OneSource(Strides 계열)는 바이오로직스, GLP-1 펩타이드, 무균주사제 CDMO, FY28 매출 $400M 목표. Kilitch는 무균 제조, 세마글루타이드 카트리지 충전 라인.</td><td class="sz">OneSource FY26 매출 ₹1,421.6 crore / Kilitch ₹235.5 crore<div class="szsrc">회사 발표치(보도 기준), 거래소 공시 미조회</div></td><td>4 글로벌: 무균주사제, 펩타이드 전환</td><td><span class="rel comp">경쟁/비교대상</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-10-23 (금요일)</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-tender-offer"><div class="k">공개매수 <span>Tender Offer</span></div><div class="d">상장사 주식을 정해진 가격과 기간에 모든 주주에게서 사겠다고 공개 제안하는 것. 오늘 EQT가 Qiagen 주주에게 €46.50 제안.</div><div class="u">▸ 상장사 경영권 인수, 상장폐지 전 단계</div><div class="ex">예: 주당 €46.50 × 2.1억주(가정) = 지분가치 약 €9.9B</div></div><div class="bt" id="t-premium"><div class="k">인수 프리미엄 <span>Takeover Premium</span></div><div class="d">제안가가 발표 직전(또는 보도 전) 주가보다 몇 % 높은지. 경영권 대가와 시너지, 입찰 경쟁이 반영. 오늘 40.3%.</div><div class="u">▸ 상장사 M&A 가격 적정성 평가</div><div class="ex">예: €33.15 → €46.50이면 (46.50/33.15 - 1) = 40.3%</div></div><div class="bt" id="t-vwap"><div class="k">VWAP <span>Volume Weighted Average Price, 거래량가중평균가격</span></div><div class="d">일정 기간 거래량으로 가중한 평균 주가. 하루 종가보다 조작, 급등락 영향이 적어 공개매수 기준가로 쓴다. 오늘 3개월 VWAP €31.66.</div><div class="u">▸ 공개매수 최저가 규제(독일 WpÜG), 블록딜 가격</div><div class="ex">예: 3개월 VWAP €31.66 대비 €46.50은 46.9% 프리미엄</div></div><div class="bt" id="t-ev"><div class="k">EV <span>Enterprise Value, 기업가치</span></div><div class="d">지분가치(시가총액) + 순차입금. 회사를 통째로 사는 데 드는 돈. Qiagen 딜은 EV €10.8B로 표기.</div><div class="u">▸ 멀티플 계산의 분자, 딜 규모 비교</div><div class="ex">예: 지분가치 €9.9B + 순차입금 €0.9B = EV €10.8B</div></div><div class="bt" id="t-net-debt"><div class="k">순차입금 <span>Net Debt</span></div><div class="d">차입금 - 현금. 플러스면 빚이 더 많고, 마이너스면 순현금. 지분가치에 더하면 EV. Qiagen 약 $1.1B.</div><div class="u">▸ EV 산정, 레버리지 판단</div><div class="ex">예: EV 1,000억 - 순차입금 200억 = 지분가치 800억</div></div><div class="bt" id="t-ebitda"><div class="k">EBITDA <span>Earnings Before Interest, Taxes, Depreciation and Amortization</span></div><div class="d">영업이익 + 감가상각비. 설비가 큰 회사의 현금 창출력 대용치. 오늘 Akums EBITDA ₹522 crore(+13.3%), Qiagen 15배(보도 기준).</div><div class="u">▸ CDMO 밸류에이션(EV/EBITDA), 커버넌트</div><div class="ex">예: 영업이익 100억 + 감가상각 60억 = EBITDA 160억</div></div><div class="bt" id="t-co-invest"><div class="k">공동투자 <span>Co-investment</span></div><div class="d">PE 펀드의 LP가 펀드 밖에서 같은 딜에 직접 추가 출자. 오늘 ADIA, CPP가 EQT와 공동투자.</div><div class="u">▸ 대형 바이아웃의 에쿼티 조달</div><div class="ex">예: 에쿼티 €5B 중 펀드 €3.5B + 공동투자 €1.5B(가정)</div></div><div class="bt" id="t-bca"><div class="k">사업결합계약 <span>Business Combination Agreement (BCA)</span></div><div class="d">공개매수 전 매수자와 대상회사 이사회가 맺는 지지, 추천, 경영 약속 계약. 오늘 10/21 체결.</div><div class="u">▸ 추천형(우호적) 공개매수</div><div class="ex">예: BCA 체결 → 이사회 만장일치 추천 → 응모 권고</div></div><div class="bt" id="t-min-accept"><div class="k">최소 응모 조건 <span>Minimum Acceptance Threshold</span></div><div class="d">이 비율 이상 응모되지 않으면 거래를 접는 하한. 오늘 50%+1주.</div><div class="u">▸ 공개매수 성사 조건</div><div class="ex">예: 발행주식 2.1억주(가정)의 50%+1주 = 약 1.06억주</div></div><div class="bt" id="t-squeeze-out"><div class="k">스퀴즈아웃 <span>Squeeze-out</span></div><div class="d">대주주가 법정 비율 이상 확보하면 남은 소수주주 지분을 강제 매수해 100%로 만드는 절차. 오늘 EGM 80% 찬성 시 사후조치 의무.</div><div class="u">▸ 상장폐지 마무리 단계</div><div class="ex">예: 95% 확보 후 남은 5%를 공개매수가로 강제 매수</div></div><div class="bt" id="t-license-in"><div class="k">라이선스 인 <span>License-in</span></div><div class="d">다른 회사의 약물 권리를 사오는 계약. 업프론트 + 마일스톤 + 로열티로 대가 지급. 오늘 셀트리온이 카이진 KG013 도입.</div><div class="u">▸ 제약사 파이프라인 확충</div><div class="ex">예: 총액 $580.5M = 업프론트 + 개발, 판매 마일스톤</div></div><div class="bt" id="t-upfront"><div class="k">업프론트 <span>Upfront Payment</span></div><div class="d">라이선스 계약 체결 시 먼저 지급하는 확정 금액. 오늘 셀트리온 딜은 비공개.</div><div class="u">▸ 라이선스 딜의 확정 수입 비중 판단</div><div class="ex">예: 총액 7,695억 중 업프론트 100억(가정)이면 확정 비중 1.3%</div></div><div class="bt" id="t-biobucks"><div class="k">바이오벅스 <span>Biobucks (Headline Deal Value)</span></div><div class="d">업프론트와 모든 마일스톤을 합한 계약 총액. 대부분 조건부. 오늘 "최대 7,695억"이 이것.</div><div class="u">▸ 기사 헤드라인 금액 해석</div><div class="ex">예: 총액 7,695억 중 확정은 업프론트뿐, 나머지는 성공 조건부</div></div><div class="bt" id="t-royalty"><div class="k">로열티 <span>Royalty</span></div><div class="d">상업화 후 순매출의 일정 %를 지급. 오늘 셀트리온 딜은 별도 지급 조건.</div><div class="u">▸ 라이선스 계약의 장기 수익</div><div class="ex">예: 순매출 1,000억 × 5% = 로열티 50억/년</div></div><div class="bt" id="t-op-margin"><div class="k">영업이익률 <span>Operating Margin</span></div><div class="d">영업이익 ÷ 매출. 본업 수익성. 오늘 보령 9개월 8.2%.</div><div class="u">▸ 제약사 수익성 비교</div><div class="ex">예: 매출 8,494억, 영업이익 694억 → 8.2%</div></div><div class="bt" id="t-provision"><div class="k">충당금 <span>Provision</span></div><div class="d">미래 지출 가능성이 높은 금액을 미리 비용, 부채로 반영. 오늘 보령 카나브 약가소송 충당금.</div><div class="u">▸ 소송, 반품, 보증 회계</div><div class="ex">예: 충당금 50억(가정) 반영 시 영업이익 744억 → 694억</div></div><div class="bt" id="t-price-band"><div class="k">공모가 밴드 <span>IPO Price Band</span></div><div class="d">IPO에서 제시하는 희망 공모가 범위. 수요예측 결과로 범위 안(또는 밖)에서 확정. 오늘 이노보 20,000~24,000원.</div><div class="u">▸ IPO 공모 구조</div><div class="ex">예: 220만주 × 20,000~24,000원 = 440~528억</div></div><div class="bt" id="t-book-building"><div class="k">수요예측 <span>Book Building</span></div><div class="d">기관투자자에게 사전 주문(가격, 수량)을 받아 공모가를 정하는 절차. 오늘 이노보 11/26~12/2.</div><div class="u">▸ IPO 가격 결정</div><div class="ex">예: 밴드 상단 24,000원에 주문 집중 시 상단 또는 초과 확정</div></div><div class="bt" id="t-carve-out"><div class="k">카브아웃 <span>Carve-out</span></div><div class="d">대기업이 사업부 하나를 떼어 파는 것. 오늘 Entegris 생명과학 유체관리 사업.</div><div class="u">▸ 비핵심 사업 정리, PE 볼트온 소스</div><div class="ex">예: 매출 $3.2B 기업이 $100M(가정) 사업부 매각</div></div><div class="bt" id="t-bolt-on"><div class="k">볼트온 <span>Bolt-on Acquisition</span></div><div class="d">PE 플랫폼 회사에 소형 회사를 덧붙이는 인수. 오늘 Savillex가 Entegris 사업부 인수.</div><div class="u">▸ PE 밸류업 전략</div><div class="ex">예: 플랫폼 EBITDA 100억 + 볼트온 20억 = 120억, 같은 멀티플이면 EV +20%</div></div><div class="bt" id="t-certain-funds"><div class="k">자금조달 확정 <span>Certain Funds (No Financing Condition)</span></div><div class="d">매수자가 "자금조달이 안 되면 거래를 접는다"는 조건을 걸지 않고, 에쿼티와 대출을 미리 확약받은 상태. 오늘 EQT 딜은 자금조달 조건 없음.</div><div class="u">▸ 유럽 공개매수 필수 요건, 매도자 보호</div><div class="ex">예: 에쿼티 커밋먼트 + 은행 6곳 대주단 확약 → 조건 없음</div></div><div class="bt" id="t-ticking"><div class="k">지연 보상 <span>Ticking Fee / Interim Dividend</span></div><div class="d">규제 승인 지연으로 종결이 늦어지면 매도자(주주)에게 보상하는 장치. 오늘 10개월 내 미종결 시 주당 $0.47 중간배당, 가격 차감 없음.</div><div class="u">▸ 장기 심사 딜의 주주 보호</div><div class="ex">예: 10개월 초과 시 2.1억주 × $0.47 = 약 $1억 배당(가정)</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concepts"><div class="concept">
+      <div class="ch"><div><b>인수 프리미엄과 EV/EBITDA로 보는 Take-private 가격<span>Takeover Premium, Enterprise Value, EV/EBITDA</span></b><div class="quote">"€46.50 per share in cash, a 40.3% premium to the €33.15 XETRA close on 8 July 2026 ... enterprise value of about €10.8 billion, including about $1.1 billion of net debt" <em>- Qiagen, EQT 공동 보도자료(SEC SC TO-C ex99-2, 2026-10-22)</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>상장사 인수 가격은 두 층으로 읽는다. 겉은 "주가 대비 몇 % 얹었나"(프리미엄), 속은 "그 가격이 회사 현금창출력의 몇 배인가"(EV/EBITDA). 프리미엄이 높아도 기준 주가가 눌려 있었다면 멀티플은 낮을 수 있고, Qiagen이 그 경우다(프리미엄 40%, 멀티플 15배, 보도 기준).</p><h5>계산식</h5><div class="formula">제안가 = 기준주가 × (1 + 프리미엄) / 지분가치 = 제안가 × 주식수 / EV = 지분가치 + 순차입금 / EV/EBITDA = EV ÷ EBITDA</div><h5>오늘 수치로</h5><div class="calc">€33.15 × 1.403 = €46.50 → 지분가치 약 €9.9B(주식수 가정) + 순차입금 약 €0.95B = EV €10.8B → EBITDA 약 €0.72B(15배 역산, 가정) / EV/Sales 6.0배(SEC 매출 $2.09B)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>Exit 준비: 맥쿼리 매각 자료의 첫 장은 "비교군 멀티플 × 당사 EBITDA"다. 동결건조 증설로 감가상각이 커진 해는 EV/Sales를 보조로 둔다</li><li>M&A 검토: 매도자가 부르는 "○배"가 어느 EBITDA(보고치 vs 조정치, LTM vs 전망)에 걸린 배수인지 먼저 확인</li><li>투자 심의: 설비투자로 늘어날 EBITDA × 비교군 멀티플 = EV 증가분. 투자액보다 크면 Exit 관점에서 정당화</li><li>고객사 협상: 고객사(보령 등)의 EBITDA 마진 압박은 수탁 단가 인하 요구로 이어지므로 고객 실적에서 마진 추이를 본다</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: Take-private 가격 분해: 프리미엄 → 지분가치 → EV → 멀티플 (Qiagen 수치 + 가정)</h5><div class="exnote">공시 수치(€33.15, €46.50, 40.3%, 순차입금 $1.1B, EV €10.8B)는 SEC SC TO-C, 매출 $2.09B는 SEC 20-F. 발행주식수, 환율, EBITDA는 가정. 설명용 단순화 모델.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 기준 주가</td><td>보도 전 종가(7/8) €33.15</td><td class="f">공시값</td><td class="r">€33.15</td><td>"사실상 아무도 몰랐던 때" 주가가 프리미엄의 분모</td></tr><tr><td class="st">② 제안가</td><td>프리미엄 40.3%</td><td class="f">33.15 × (1 + 0.403)</td><td class="r">€46.51 ≈ €46.50</td><td>공시 프리미엄으로 역산해도 제안가와 일치</td></tr><tr><td class="st">③ 지분가치</td><td>발행주식 2.12억주(가정)</td><td class="f">46.50 × 2.12억</td><td class="r">€9.86B</td><td>주주가 받는 돈의 총합(지분가치, Equity Value)</td></tr><tr><td class="st">④ 순차입금</td><td>$1.1B, 환율 1.16 $/€(가정)</td><td class="f">1.1 / 1.16</td><td class="r">€0.95B</td><td>매수자가 떠안는 빚. 현금이 더 많으면 마이너스</td></tr><tr class="total"><td class="st">⑤ EV</td><td>③ + ④</td><td class="f">9.86 + 0.95</td><td class="r">€10.81B</td><td>공시 EV "약 €10.8B"와 일치</td></tr><tr><td class="st">⑥ EBITDA(가정)</td><td>EV/EBITDA 15배(보도 기준)에서 역산</td><td class="f">10.81 / 15</td><td class="r">€0.72B</td><td>실제 EBITDA는 20-F 확인 필요. 15배는 Benzinga 보도</td></tr><tr><td class="st">⑦ EV/Sales</td><td>2025 매출 $2.09B → €1.80B(환율 가정)</td><td class="f">10.81 / 1.80</td><td class="r">6.0배</td><td>이익 기반 멀티플의 보조 지표</td></tr><tr><td class="st">⑧ VWAP 프리미엄</td><td>3개월 VWAP €31.66</td><td class="f">46.50 / 31.66 - 1</td><td class="r">46.9%</td><td>종가 1일보다 안정적인 기준. 공시값과 일치</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>① 기준 주가 → 당사는 비상장이므로 없음. 대신 "비교군 EV/EBITDA 중앙값 × 당사 EBITDA"로 EV를 먼저 구한다</li><li>④ 순차입금 → 당사 차입금 - 현금(가정 800억). 지분가치 = EV - 순차입금이므로 차입 축소가 곧 맥쿼리 회수액 증가</li><li>⑥ EBITDA → 당사 최근 12개월 EBITDA(가정 300억). 동결건조 증설 감가상각이 영업이익을 눌러도 EBITDA에는 가산되는 점을 활용</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 인수 가격을 재는 지표 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>인수 프리미엄</th><td class="f">제안가 / 직전 종가 - 1</td><td>상장사 M&A 발표 직후 "비싸게 샀나" 1차 판단</td><td class="lim">직전 주가가 눌려 있으면 과장. 보도로 이미 오른 주가면 축소</td></tr><tr><th>VWAP 프리미엄</th><td class="f">제안가 / n개월 VWAP - 1</td><td>규제상 최저가 산정(독일 3개월), 하루 급등락 제거</td><td class="lim">기간 선택에 따라 달라짐</td></tr><tr><th>EV/EBITDA</th><td class="f">(지분가치 + 순차입금) / EBITDA</td><td>설비, 차입이 다른 회사끼리 비교. CDMO 표준</td><td class="lim">성장률 차이를 반영 못 함. 조정 EBITDA 정의 분쟁</td></tr><tr><th>EV/Sales</th><td class="f">EV / 매출</td><td>이익이 작거나 변동 큰 회사, 증설 직후 CDMO</td><td class="lim">마진 무시. 적자 회사도 높게 나올 수 있음</td></tr><tr><th>P/E</th><td class="f">주가 / 주당순이익</td><td>상장사 일반 비교, 주주 관점</td><td class="lim">차입 구조, 감가상각 정책에 따라 왜곡</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 어떤 상장사의 보도 전 종가가 €30.00이고 PE가 35% 프리미엄을 제안했다. 제안가는? 발행주식이 2억주면 지분가치는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">제안가 = 30.00 × 1.35 = <b>€40.50</b>. 지분가치 = 40.50 × 2억주 = <b>€81억(€8.1B)</b>. 계산 예시 ②, ③과 같은 절차.</div></details></div><div class="q"><b>Q2.</b> 지분가치 €8.1B, 순차입금 €0.9B, EBITDA €600M인 회사의 EV와 EV/EBITDA는? Qiagen(15배, 보도 기준)보다 비싼가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">EV = 8.1 + 0.9 = <b>€9.0B</b>. EV/EBITDA = 9.0 / 0.6 = <b>15.0배</b>. Qiagen과 같은 배수. 프리미엄(35% vs 40.3%)만 보면 싸 보이지만 멀티플은 동일 → 프리미엄과 멀티플을 함께 봐야 하는 이유.</div></details></div><div class="q"><b>Q3.</b> 당사(가정): EBITDA 300억, 순차입금 800억. 비교군 CDMO 멀티플이 12배일 때 EV와 맥쿼리가 받을 지분가치는? 멀티플이 10배로 떨어지면 지분가치는 얼마나 줄어드나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">EV = 300 × 12 = <b>3,600억</b>, 지분가치 = 3,600 - 800 = <b>2,800억</b>. 10배면 EV 3,000억, 지분가치 2,200억 → <b>-600억(-21%)</b>. EV는 17% 줄지만 지분가치는 순차입금이 고정이라 21% 줄어든다(레버리지 효과). 계산 예시 "바꿔 넣을 입력값" 참고.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [Exit 준비, 가정] 맥쿼리가 18개월 뒤 매각을 목표로 IM(투자설명서) 초안을 요구했다. 당사는 동결건조 라인 증설 직후라 감가상각이 늘어 영업이익은 전년 대비 줄었고 EBITDA는 소폭 늘었다. 가격 지표를 어떻게 제시하겠는가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans"><b>모범답안:</b> ① 헤드라인은 EV/EBITDA(비교군 중앙값 × 당사 LTM EBITDA). 감가상각 증가는 EBITDA에 영향이 없음을 명시. ② 보조로 EV/Sales와 "증설 라인 램프업 완료 시점(가동률 80% 가정)의 Run-rate EBITDA"를 별도 표로 제시해 성장 서사를 숫자로 보여준다(Qiagen은 성장 둔화가 15배로 눌린 사례). ③ 순차입금은 매각 시점 전망치로 제시하고 차입 상환 계획을 붙인다.<br><b>실무 체크포인트:</b> 조정 EBITDA 항목(일회성 비용, 증설 관련 비용)의 근거 문서 확보 / 비교군 선정 기준(국내 CDMO, 아시아 주사제 CDMO) 사전 합의 / 수주잔고(Backlog)와 가동률 월별 추이 표 준비</div></details></div><div class="q"><b>P2.</b> [M&A 검토, 가정] 국내 소형 주사제 CDMO 매도자가 "글로벌 딜도 15배에 거래된다"며 EBITDA 40억에 15배, EV 600억을 요구한다. 어떻게 대응하겠는가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans"><b>모범답안:</b> ① Qiagen 15배는 글로벌 분자진단 툴 기업의 배수로 비교군이 아니다. 국내, 아시아 소형 CDMO 거래 배수(가정 8~10배)로 비교군을 다시 잡는다 → EV 320~400억. ② EBITDA 40억이 보고치인지 조정치인지, LTM인지 전망치인지 확인. ③ 갭이 크면 확정 대금 + 어닝아웃(실적 조건부)으로 구조를 바꿔 제안한다.<br><b>실무 체크포인트:</b> 매도자 제시 EBITDA의 일회성 항목 제거 / 설비 노후도와 추가 Capex를 EV에서 차감 / 고객 집중도(상위 3사 비중)에 따른 할인</div></details></div><div class="q"><b>P3.</b> [투자 심의, 가정] 동결건조 라인 1기 증설에 200억이 든다. 완전 가동 시 EBITDA가 연 30억 늘어난다고 추정된다. Exit 관점에서 이 투자는 정당화되는가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans"><b>모범답안:</b> 비교군 멀티플 12배 기준 EV 증가분 = 30억 × 12 = 360억 > 투자액 200억 → 가치 창출 160억(가정). 단, 매각 시점까지 램프업이 끝나 EBITDA 30억이 LTM 수치로 잡혀야 매수자가 인정한다. 램프업 1~2년을 감안해 매각 시점 역산. 멀티플 10배면 300억, 8배면 240억으로 여전히 플러스지만 EBITDA가 20억에 그치면 8배에서 160억으로 투자액 미달.<br><b>실무 체크포인트:</b> 램프업 기간과 고정비 선반영 / 수주 확정 물량 기준 EBITDA(계약 기반) vs 영업 목표 기준 구분 / 투자 중 순차입금 증가가 지분가치를 깎는 효과 병기</div></details></div></div>
+      </div></div></div>
+    </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-10-23
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 사업결합계약(Business Combination Agreement (BCA)) | 공개매수 전에 매수자와 대상회사 이사회가 맺는 계약. 이사회의 지지와 추천, 매수 후 경영 약속(브랜드, R&D, 고용), 경쟁 제안 대응 방식, 일정을 미리 정한다. 공개매수가 "적대적"이 아니라 "추천형"이 되는 근거 문서. | 맥쿼리 Exit이 상장사 매각 형태면 매수자가 당사 이사회에 먼저 요구하는 문서. 당사가 상장사를 살 때는 BCA 확보가 성사 확률의 핵심 |
+| 최소 응모 조건(Minimum Acceptance Threshold) | 공개매수에서 "이 비율 이상 응모가 안 되면 거래를 접는다"는 하한. 매수자가 경영권(50%+1주)이나 스퀴즈아웃 가능 비율(75~95%)을 확보 못 한 채 소수지분만 떠안는 위험을 막는다. 낮게 잡을수록 성사 확률은 높지만 100% 확보까지 추가 단계가 필요하다. | 상장사 인수 검토 시 최소 응모 비율과 그 뒤 100%까지 가는 비용, 기간을 함께 산정 |
+| 상장폐지 인수(Take-private (Public-to-Private, P2P)) | PE가 상장사 주식 전부를 사서 비상장으로 만드는 거래. 분기 실적 압박 없이 구조조정, 투자, 재매각(Exit)을 준비할 수 있다. 공개매수 + 스퀴즈아웃, 또는 합병 방식으로 진행하고 보통 인수금융(LBO)을 쓴다. | 맥쿼리의 당사 Exit이 IPO로 가면, 몇 년 뒤 다른 PE가 당사를 다시 Take-private 하는 경로도 Exit 시나리오에 포함 |
+| 공동투자(Co-investment) | PE 펀드가 큰 딜을 할 때 펀드 LP(국부펀드, 연기금 등)가 펀드 밖에서 같은 딜에 직접 추가로 돈을 넣는 것. 펀드는 한 건 집중 한도를 지키면서 대형 딜을 할 수 있고, LP는 운용보수 없이 지분을 얻는다. | 당사 매각 시 입찰 PE가 "공동투자자 확보"를 조건으로 걸면 자금 확약(에쿼티 커밋먼트) 주체가 둘 이상이 되어 확인 대상이 늘어난다 |
+| 충당금(Provision) | 아직 돈이 나가진 않았지만 소송, 반품, 보증처럼 미래에 지출할 가능성이 높고 금액을 추정할 수 있을 때 미리 비용으로 잡아 부채로 쌓는 것. 그 분기 영업이익을 깎지만 실제 현금은 나중에 나간다. | 고객사 실적에서 충당금이 크면 영업이익은 눌려도 현금흐름은 멀쩡할 수 있음. 실사에서는 충당금 내역(약가 소송, 반품)을 따로 본다 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
