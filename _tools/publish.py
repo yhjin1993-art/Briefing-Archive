@@ -144,7 +144,7 @@ def build_index():
         body += f'<div class="m">{mon}</div><div class="card">{rows}</div>'
     doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
 <title>Strategy Daily Briefing Archive</title><style>{INDEX_CSS}</style></head><body><div class="wrap">
-<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="glossary.html" style="color:#0f3b66;font-weight:700">용어집 보기</a></div>
+<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="glossary.html" style="color:#0f3b66;font-weight:700">용어집 보기</a> &nbsp;<a href="latest/" style="color:#0f3b66;font-weight:700">오늘 브리핑</a> &nbsp;<a href="setup/briefing_popup_on.reg" download style="color:#6b7280">PC 켤 때 자동으로 열기(설치 파일)</a></div>
 {body}<div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div></body></html>"""
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(doc)
     build_latest(ms)
