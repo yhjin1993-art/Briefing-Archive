@@ -3,6 +3,7 @@
 
 구조 (저장소 루트 = Pages 루트)
   index.html            목록 페이지 (자동 재생성, noindex)
+  latest/index.html     최신 일간 브리핑으로 바로 이동 (PC 시작 팝업용, 자동 재생성)
   glossary.html         용어집 (모든 브리핑 termDefs 누적, 검색)
   b/<id>/index.html     브리핑 원문 (DB briefings.html 그대로 + noindex 메타)
   b/<id>/p1.jpg ...     페이지별 캡처 (메일 본문용, 폭 720px, 1.5배)
@@ -146,6 +147,21 @@ def build_index():
 <h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="glossary.html" style="color:#0f3b66;font-weight:700">용어집 보기</a></div>
 {body}<div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div></body></html>"""
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(doc)
+    build_latest(ms)
+
+def build_latest(ms=None):
+    """latest/ = 가장 최근 일간 브리핑으로 즉시 이동. 시작 팝업 바로가기는 이 주소를 연다."""
+    ms = ms if ms is not None else all_meta()
+    d = [m for m in ms if m['kind'] == 'daily']
+    if not d:
+        return
+    href = '../b/' + d[0]['id'] + '/'
+    doc = (f'<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">{NOINDEX}'
+           f'<meta http-equiv="refresh" content="0;url={href}"><title>Latest Briefing</title>'
+           f'<script>location.replace("{href}")</script></head>'
+           f'<body><a href="{href}">최신 브리핑 열기</a></body></html>')
+    os.makedirs(os.path.join(ROOT, 'latest'), exist_ok=True)
+    open(os.path.join(ROOT, 'latest', 'index.html'), 'w', encoding='utf-8').write(doc)
 
 
 GLOSS_CSS = INDEX_CSS + """
