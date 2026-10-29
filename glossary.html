@@ -12,7 +12,7 @@ input,select{font:inherit;font-size:13px;padding:7px 10px;border:1px solid #e5e7
 input{min-width:240px}
 .tr{display:grid;grid-template-columns:92px 1fr;gap:4px 12px;padding:10px 14px;border-top:1px solid #e5e7eb}.tr:first-child{border-top:none}
 .tr .dt{color:#9ca3af;font-size:12px;white-space:nowrap;padding-top:2px}
-.tr .k{font-weight:800;font-size:14px}.tr .k span{font-weight:500;color:#6b7280;font-size:12px;margin-left:6px}
+.tr .tm{font-weight:800;font-size:14px;text-align:left}.tr .tm span{font-weight:500;color:#6b7280;font-size:12px;margin-left:6px}
 .tr .df{color:#374151;font-size:13px;margin-top:2px}.tr .nt{color:#0f3b66;font-size:12px;margin-top:2px}.tr .ex{color:#6b7280;font-size:12px;margin-top:2px}
 .tr .go{font-size:11px;color:#9ca3af;text-decoration:none;margin-left:6px}
 @media(max-width:600px){.tr{grid-template-columns:1fr}.tr .dt{padding:0}}
@@ -26,6 +26,6 @@ const R=[{"date": "2026-10-29", "id": "2026-10-29", "term": "물적분할", "en"
 const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function render(){const k=q.value.trim().toLowerCase(),m=mo.value;const rows=R.filter(r=>(!m||r.date.startsWith(m))&&(!k||[r.term,r.en,r.def,r.note,r.ex].join(' ').toLowerCase().includes(k)));
 cnt.textContent=rows.length+'개 (누적 '+R.length+'개)';
-box.innerHTML=rows.length?rows.map(r=>'<div class="tr"><div class="dt">'+esc(r.date)+'</div><div><div class="k">'+esc(r.term)+(r.en?'<span>'+esc(r.en)+'</span>':'')+'<a class="go" href="b/'+encodeURIComponent(r.id)+'/">브리핑</a></div>'+(r.def?'<div class="df">'+esc(r.def)+'</div>':'')+(r.note?'<div class="nt">당사 관점: '+esc(r.note)+'</div>':'')+(r.ex?'<div class="ex">예: '+esc(r.ex)+'</div>':'')+'</div></div>').join(''):'<div class="tr"><div></div><div style="color:#9ca3af">조건에 맞는 용어가 없습니다.</div></div>'}
+box.innerHTML=rows.length?rows.map(r=>'<div class="tr"><div class="dt">'+esc(r.date)+'</div><div><div class="tm">'+esc(r.term)+(r.en?'<span>'+esc(r.en)+'</span>':'')+'<a class="go" href="b/'+encodeURIComponent(r.id)+'/">브리핑</a></div>'+(r.def?'<div class="df">'+esc(r.def)+'</div>':'')+(r.note?'<div class="nt">당사 관점: '+esc(r.note)+'</div>':'')+(r.ex?'<div class="ex">예: '+esc(r.ex)+'</div>':'')+'</div></div>').join(''):'<div class="tr"><div></div><div style="color:#9ca3af">조건에 맞는 용어가 없습니다.</div></div>'}
 q.addEventListener('input',render);mo.addEventListener('change',render);render();
 </script></body></html>
