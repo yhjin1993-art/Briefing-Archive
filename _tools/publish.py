@@ -93,6 +93,7 @@ def add(json_path, push=False, index_json=None):
     out = os.path.join(ROOT, 'b', bid)
     os.makedirs(out, exist_ok=True)
     pub = html.replace('<head>', '<head>' + NOINDEX, 1)
+    pub = with_nav(pub, '../../', 'weekly' if kind == 'weekly' else 'monthly' if kind in ('monthly', 'quarterly', 'annual') else 'daily')
     open(os.path.join(out, 'index.html'), 'w', encoding='utf-8').write(pub)
     rendered = render_html(html)  # ensure_fonts()가 FONT_DIR을 만든다
     rp = os.path.join(FONT_DIR, f'_render_{bid}.html')
@@ -109,6 +110,36 @@ def add(json_path, push=False, index_json=None):
         git_push(f'{bid} 게시')
     print('published', bid, len(pages), 'pages')
     return meta
+
+
+# ---------------------------------------------------------------- nav (목록 탭: 일간/주간/월간/용어집)
+NAV_CSS = (".bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;"
+           "border-bottom:1px solid #e5e7eb;font-family:\"Pretendard Variable\",Pretendard,-apple-system,\"Apple SD Gothic Neo\",\"Malgun Gothic\",sans-serif;font-size:13px}"
+           ".bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}"
+           ".bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}"
+           ".bnav .td{color:#0f3b66}@media print{.bnav{display:none!important}}")
+NAV_TABS = [('daily', '일간'), ('weekly', '주간'), ('monthly', '월간'), ('glossary', '용어집')]
+
+def nav_html(prefix='', on=''):
+    """prefix: 루트까지 상대경로('' 또는 '../../'). on: 강조할 탭."""
+    tabs = ''.join(f'<a class="{"on" if on == k else ""}" href="{prefix}{"glossary.html" if k == "glossary" else "#" + k}">{v}</a>'
+                   for k, v in NAV_TABS)
+    return (f'<!--bnav--><style>{NAV_CSS}</style><nav class="bnav"><a class="home" href="{prefix or "./"}">Briefing Archive</a>{tabs}'
+            f'<span class="sp"></span><a class="td" href="{prefix}latest/">오늘 브리핑</a></nav><!--/bnav-->')
+
+def with_nav(html, prefix, on=''):
+    html = re.sub(r'<!--bnav-->.*?<!--/bnav-->', '', html, flags=re.S)
+    return re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + nav_html(prefix, on), html, count=1)
+
+def nav_all():
+    """기존 b/*/index.html 전부에 탭 바 적용(멱등)."""
+    for f in glob.glob(os.path.join(ROOT, 'b', '*', 'index.html')):
+        try:
+            k = json.load(open(os.path.join(os.path.dirname(f), 'meta.json'), encoding='utf-8')).get('kind', 'daily')
+        except Exception:
+            k = 'daily'
+        h = open(f, encoding='utf-8').read()
+        open(f, 'w', encoding='utf-8').write(with_nav(h, '../../', 'weekly' if k == 'weekly' else 'monthly' if k in ('monthly', 'quarterly', 'annual') else 'daily'))
 
 # ---------------------------------------------------------------- index
 def all_meta():
@@ -127,7 +158,7 @@ INDEX_CSS = """*{box-sizing:border-box}body{margin:0;background:#f3f4f6;color:#1
 .d{font-weight:700;white-space:nowrap}.k{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#e8f0f8;color:#0f3b66;text-align:center}.k.weekly{background:#e3f3f1;color:#0f766e}.k.monthly,.k.quarterly,.k.annual{background:#fdf1e0;color:#b45309}
 .t{color:#374151;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.n{color:#9ca3af;font-size:12px;white-space:nowrap}
 @media(max-width:600px){.row{grid-template-columns:84px 48px 1fr}.n{display:none}}
-.ft{margin-top:20px;color:#9ca3af;font-size:12px}"""
+.ft{margin-top:20px;color:#9ca3af;font-size:12px}.grp:first-of-type .m{margin-top:4px}"""
 
 def build_index():
     ms = all_meta()
@@ -137,15 +168,20 @@ def build_index():
     body = ''
     for mon in sorted(by, reverse=True):
         rows = ''.join(
-            f'<a class="row" href="b/{H.escape(m["id"])}/"><span class="d">{H.escape(m["date"])}</span>'
+            f'<a class="row" data-k="{"monthly" if m["kind"] in ("monthly", "quarterly", "annual") else H.escape(m["kind"])}" href="b/{H.escape(m["id"])}/"><span class="d">{H.escape(m["date"])}</span>'
             f'<span class="k {H.escape(m["kind"])}">{KIND.get(m["kind"], m["kind"])}</span>'
             f'<span class="t">{H.escape(m["title"].replace("전략기획팀 ", "").split(" | ")[0])}</span>'
             f'<span class="n">{len(m["pages"])}쪽</span></a>' for m in by[mon])
-        body += f'<div class="m">{mon}</div><div class="card">{rows}</div>'
+        body += f'<div class="grp"><div class="m">{mon}</div><div class="card">{rows}</div></div>'
     doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
-<title>Strategy Daily Briefing Archive</title><style>{INDEX_CSS}</style></head><body><div class="wrap">
-<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="glossary.html" style="color:#0f3b66;font-weight:700">용어집 보기</a> &nbsp;<a href="latest/" style="color:#0f3b66;font-weight:700">오늘 브리핑</a> &nbsp;<a href="setup/briefing_popup_on.reg" download style="color:#6b7280">PC 켤 때 자동으로 열기(설치 파일)</a></div>
-{body}<div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div></body></html>"""
+<title>Strategy Daily Briefing Archive</title><style>{INDEX_CSS}</style></head><body>{nav_html('', 'daily')}<div class="wrap">
+<h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="setup/briefing_popup_on.reg" download style="color:#6b7280">PC 켤 때 자동으로 열기(설치 파일)</a></div>
+{body}<div class="empty" id="empty" style="display:none;color:#9ca3af;padding:24px 4px">아직 발행된 문서가 없습니다.</div><div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div>
+<script>(function(){{function f(){{var k=(location.hash||'#daily').slice(1);if(['daily','weekly','monthly'].indexOf(k)<0)k='daily';
+document.querySelectorAll('.bnav a').forEach(function(a){{var h=a.getAttribute('href');a.classList.toggle('on',h==='#'+k);}});
+var n=0;document.querySelectorAll('.row').forEach(function(r){{var s=r.getAttribute('data-k')===k;r.style.display=s?'':'none';if(s)n++;}});
+document.querySelectorAll('.grp').forEach(function(g){{g.style.display=[].some.call(g.querySelectorAll('.row'),function(r){{return r.style.display!=='none';}})?'':'none';}});
+document.getElementById('empty').style.display=n?'none':'';}}window.addEventListener('hashchange',f);f();}})();</script></body></html>"""
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(doc)
     build_latest(ms)
 
@@ -197,7 +233,7 @@ box.innerHTML=rows.length?rows.map(r=>'<div class="tr"><div class="dt">'+esc(r.d
 q.addEventListener('input',render);mo.addEventListener('change',render);render();
 """ % data
     doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
-<title>Briefing Glossary</title><style>{GLOSS_CSS}</style></head><body><div class="wrap">
+<title>Briefing Glossary</title><style>{GLOSS_CSS}</style></head><body>{nav_html('./', 'glossary')}<div class="wrap">
 <h1>용어집</h1><div class="sub">브리핑 [오늘의 용어] 누적 {len(rows)}개. 매일 자동 갱신. &nbsp;<a href="./" style="color:#0f3b66;font-weight:700">브리핑 목록</a></div>
 <div class="tools"><input id="q" placeholder="용어, 영문, 풀이 검색"><select id="mo"><option value="">전체 기간</option>{opts}</select><span class="n" id="cnt"></span></div>
 <div class="card" id="list"></div>
@@ -251,6 +287,7 @@ def make_zip(bid, out_path):
     import zipfile
     src = os.path.join(ROOT, 'b', bid, 'index.html')
     h = open(src, encoding='utf-8').read()
+    h = re.sub(r'<!--bnav-->.*?<!--/bnav-->', '', h, flags=re.S)
     h = re.sub(r'\n\s+', '\n', h); h = re.sub(r'/\*.*?\*/', '', h, flags=re.S); h = re.sub(r'\n+', '\n', h)
     with zipfile.ZipFile(out_path, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         z.writestr(f'briefing_{bid}.html', h)
@@ -277,7 +314,7 @@ if __name__ == '__main__':
         ij = a[a.index('--index') + 1] if '--index' in a else None
         add(a[1], push='--push' in a, index_json=ij)
     elif a[0] == 'index':
-        build_index(); build_glossary()
+        nav_all(); build_index(); build_glossary()
         if '--push' in a: git_push('목록/용어집 재생성')
     elif a[0] == 'mail':
         # publish.py mail <id> [extra_id ...] [--full] [--note "문구"] [--out mail.html] [--zip out.zip]
