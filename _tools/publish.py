@@ -93,7 +93,7 @@ def add(json_path, push=False, index_json=None):
     out = os.path.join(ROOT, 'b', bid)
     os.makedirs(out, exist_ok=True)
     pub = html.replace('<head>', '<head>' + NOINDEX, 1)
-    pub = with_nav(pub, '../../', 'weekly' if kind == 'weekly' else 'monthly' if kind in ('monthly', 'quarterly', 'annual') else 'daily')
+    pub = with_nav(pub, '../../', kind)
     open(os.path.join(out, 'index.html'), 'w', encoding='utf-8').write(pub)
     rendered = render_html(html)  # ensure_fonts()가 FONT_DIR을 만든다
     rp = os.path.join(FONT_DIR, f'_render_{bid}.html')
@@ -118,7 +118,7 @@ NAV_CSS = (".bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-it
            ".bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}"
            ".bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}"
            ".bnav .td{color:#0f3b66}@media print{.bnav{display:none!important}}")
-NAV_TABS = [('daily', '일간'), ('weekly', '주간'), ('monthly', '월간'), ('glossary', '용어집')]
+NAV_TABS = [('daily', '일간'), ('weekly', '주간'), ('monthly', '월간'), ('quarterly', '분기'), ('annual', '연간'), ('glossary', '용어집')]
 
 def nav_html(prefix='', on=''):
     """prefix: 루트까지 상대경로('' 또는 '../../'). on: 강조할 탭."""
@@ -139,7 +139,7 @@ def nav_all():
         except Exception:
             k = 'daily'
         h = open(f, encoding='utf-8').read()
-        open(f, 'w', encoding='utf-8').write(with_nav(h, '../../', 'weekly' if k == 'weekly' else 'monthly' if k in ('monthly', 'quarterly', 'annual') else 'daily'))
+        open(f, 'w', encoding='utf-8').write(with_nav(h, '../../', k))
 
 # ---------------------------------------------------------------- index
 def all_meta():
@@ -155,7 +155,7 @@ INDEX_CSS = """*{box-sizing:border-box}body{margin:0;background:#f3f4f6;color:#1
 .wrap{max-width:860px;margin:0 auto;padding:24px 16px}h1{margin:0 0 4px;font-size:20px;font-weight:800;letter-spacing:-0.02em}.sub{color:#6b7280;font-size:12px;margin-bottom:16px}
 .m{margin:18px 0 6px;font-size:13px;font-weight:800;color:#6b7280}.card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}
 .row{display:grid;grid-template-columns:96px 52px 1fr auto;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid #e5e7eb;text-decoration:none;color:inherit}.row:first-child{border-top:none}.row:hover{background:#f9fafb}
-.d{font-weight:700;white-space:nowrap}.k{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#e8f0f8;color:#0f3b66;text-align:center}.k.weekly{background:#e3f3f1;color:#0f766e}.k.monthly,.k.quarterly,.k.annual{background:#fdf1e0;color:#b45309}
+.d{font-weight:700;white-space:nowrap}.k{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:#e8f0f8;color:#0f3b66;text-align:center}.k.weekly{background:#e3f3f1;color:#0f766e}.k.monthly{background:#fdf1e0;color:#b45309}.k.quarterly{background:#f3e8ff;color:#7e22ce}.k.annual{background:#fde8e8;color:#b91c1c}
 .t{color:#374151;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.n{color:#9ca3af;font-size:12px;white-space:nowrap}
 @media(max-width:600px){.row{grid-template-columns:84px 48px 1fr}.n{display:none}}
 .ft{margin-top:20px;color:#9ca3af;font-size:12px}.grp:first-of-type .m{margin-top:4px}"""
@@ -168,7 +168,7 @@ def build_index():
     body = ''
     for mon in sorted(by, reverse=True):
         rows = ''.join(
-            f'<a class="row" data-k="{"monthly" if m["kind"] in ("monthly", "quarterly", "annual") else H.escape(m["kind"])}" href="b/{H.escape(m["id"])}/"><span class="d">{H.escape(m["date"])}</span>'
+            f'<a class="row" data-k="{H.escape(m["kind"])}" href="b/{H.escape(m["id"])}/"><span class="d">{H.escape(m["date"])}</span>'
             f'<span class="k {H.escape(m["kind"])}">{KIND.get(m["kind"], m["kind"])}</span>'
             f'<span class="t">{H.escape(m["title"].replace("전략기획팀 ", "").split(" | ")[0])}</span>'
             f'<span class="n">{len(m["pages"])}쪽</span></a>' for m in by[mon])
@@ -177,7 +177,7 @@ def build_index():
 <title>Strategy Daily Briefing Archive</title><style>{INDEX_CSS}</style></head><body>{nav_html('', 'daily')}<div class="wrap">
 <h1>Daily Briefing Archive</h1><div class="sub">전략기획팀 딜 / PE / 제약 CDMO 브리핑 {len(ms)}건. 날짜를 누르면 원문(인쇄 가능)이 열립니다. &nbsp;<a href="setup/briefing_popup_on.reg" download style="color:#6b7280">PC 켤 때 자동으로 열기(설치 파일)</a></div>
 {body}<div class="empty" id="empty" style="display:none;color:#9ca3af;padding:24px 4px">아직 발행된 문서가 없습니다.</div><div class="ft">요약과 링크만 제공, 기사 원문 복사 없음. 계산치는 작성자 산출, 추정 및 보도 기준 수치는 미확인.</div></div>
-<script>(function(){{function f(){{var k=(location.hash||'#daily').slice(1);if(['daily','weekly','monthly'].indexOf(k)<0)k='daily';
+<script>(function(){{function f(){{var k=(location.hash||'#daily').slice(1);if(['daily','weekly','monthly','quarterly','annual'].indexOf(k)<0)k='daily';
 document.querySelectorAll('.bnav a').forEach(function(a){{var h=a.getAttribute('href');a.classList.toggle('on',h==='#'+k);}});
 var n=0;document.querySelectorAll('.row').forEach(function(r){{var s=r.getAttribute('data-k')===k;r.style.display=s?'':'none';if(s)n++;}});
 document.querySelectorAll('.grp').forEach(function(g){{g.style.display=[].some.call(g.querySelectorAll('.row'),function(r){{return r.style.display!=='none';}})?'':'none';}});
