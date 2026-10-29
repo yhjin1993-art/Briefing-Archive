@@ -4,6 +4,7 @@
 구조 (저장소 루트 = Pages 루트)
   index.html            목록 페이지 (자동 재생성, noindex)
   latest/index.html     최신 일간 브리핑으로 바로 이동 (PC 시작 팝업용, 자동 재생성)
+  search.html, search.json  아카이브 내부 검색 (본문 전문)
   glossary.html         용어집 (모든 브리핑 termDefs 누적, 검색)
   b/<id>/index.html     브리핑 원문 (DB briefings.html 그대로 + noindex 메타)
   b/<id>/p1.jpg ...     페이지별 캡처 (메일 본문용, 폭 720px, 1.5배)
@@ -105,7 +106,7 @@ def add(json_path, push=False, index_json=None):
             'insight': idx.get('insight', ''), 'headlines': idx.get('headlines', []),
             'publishedAt': datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).isoformat(timespec='minutes')}
     json.dump(meta, open(os.path.join(out, 'meta.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
-    build_index(); build_glossary()
+    build_index(); build_glossary(); build_search()
     if push:
         git_push(f'{bid} 게시')
     print('published', bid, len(pages), 'pages')
@@ -117,14 +118,15 @@ NAV_CSS = (".bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-it
            "border-bottom:1px solid #e5e7eb;font-family:\"Pretendard Variable\",Pretendard,-apple-system,\"Apple SD Gothic Neo\",\"Malgun Gothic\",sans-serif;font-size:13px}"
            ".bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}"
            ".bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}"
-           ".bnav .td{color:#0f3b66}@media print{.bnav{display:none!important}}")
+           ".bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}"".bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}")
 NAV_TABS = [('daily', '일간'), ('weekly', '주간'), ('monthly', '월간'), ('quarterly', '분기'), ('annual', '연간'), ('glossary', '용어집')]
 
 def nav_html(prefix='', on=''):
     """prefix: 루트까지 상대경로('' 또는 '../../'). on: 강조할 탭."""
     tabs = ''.join(f'<a class="{"on" if on == k else ""}" href="{prefix}{"glossary.html" if k == "glossary" else "#" + k}">{v}</a>'
                    for k, v in NAV_TABS)
-    return (f'<!--bnav--><style>{NAV_CSS}</style><nav class="bnav"><a class="home" href="{prefix or "./"}">Briefing Archive</a>{tabs}'
+    q = '<form action="' + prefix + 'search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form>'
+    return (f'<!--bnav--><style>{NAV_CSS}</style><nav class="bnav"><a class="home" href="{prefix or "./"}">Briefing Archive</a>{tabs}{q}'
             f'<span class="sp"></span><a class="td" href="{prefix}latest/">오늘 브리핑</a></nav><!--/bnav-->')
 
 def with_nav(html, prefix, on=''):
@@ -241,6 +243,60 @@ q.addEventListener('input',render);mo.addEventListener('change',render);render()
 <script>{js}</script></body></html>"""
     open(os.path.join(ROOT, 'glossary.html'), 'w', encoding='utf-8').write(doc)
 
+# ---------------------------------------------------------------- search (아카이브 내부 전문 검색, 정적)
+def _plain(h):
+    h = re.sub(r'<!--bnav-->.*?<!--/bnav-->', ' ', h, flags=re.S)
+    h = re.sub(r'<(script|style|head)\b.*?</\1>', ' ', h, flags=re.S | re.I)
+    h = re.sub(r'<br\s*/?>|</(p|div|li|tr|h\d|section)>', ' \n ', h, flags=re.I)
+    h = H.unescape(re.sub(r'<[^>]+>', ' ', h))
+    return re.sub(r'[ \t\u00a0]+', ' ', re.sub(r'\s*\n\s*', '\n', h)).strip()
+
+SEARCH_CSS = INDEX_CSS + """
+.tools{display:flex;gap:8px;align-items:center;margin:0 0 12px;flex-wrap:wrap}
+.tools input{font:inherit;font-size:14px;padding:8px 12px;border:1px solid #d1d5db;border-radius:8px;min-width:280px;flex:1;max-width:460px}
+.tools select{font:inherit;font-size:13px;padding:7px 10px;border:1px solid #d1d5db;border-radius:8px;background:#fff}
+.hit{display:block;padding:12px 14px;border-top:1px solid #e5e7eb;text-decoration:none;color:inherit}.hit:first-child{border-top:none}.hit:hover{background:#f9fafb}
+.hit .h{display:flex;gap:8px;align-items:center;margin-bottom:4px}.hit .c{color:#9ca3af;font-size:12px;margin-left:auto}
+.hit .sn{color:#374151;font-size:13px;margin-top:2px}.hit mark{background:#fef08a;color:inherit;padding:0 1px;border-radius:2px}
+"""
+
+def build_search():
+    docs = []
+    for m in all_meta():
+        f = os.path.join(ROOT, 'b', m['id'], 'index.html')
+        if not os.path.exists(f):
+            continue
+        docs.append({'id': m['id'], 'date': m['date'], 'kind': m['kind'],
+                     'title': m['title'].replace('전략기획팀 ', '').split(' | ')[0],
+                     'text': _plain(open(f, encoding='utf-8').read())})
+    json.dump(docs, open(os.path.join(ROOT, 'search.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
+    kinds = ''.join(f'<option value="{k}">{v}</option>' for k, v in KIND.items())
+    js = """
+var K=%s,D=[],q=document.getElementById('q'),kd=document.getElementById('kd'),box=document.getElementById('list'),cnt=document.getElementById('cnt');
+var esc=function(s){return String(s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+var rx=function(s){return s.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&');};
+function snip(t,ws){var lines=t.split('\\n'),out=[];for(var i=0;i<lines.length&&out.length<3;i++){var l=lines[i],lo=l.toLowerCase();if(ws.some(function(w){return lo.indexOf(w)>=0;})){
+var p=lo.indexOf(ws.find(function(w){return lo.indexOf(w)>=0;}));var a=Math.max(0,p-50);out.push((a>0?'… ':'')+l.slice(a,a+160)+(l.length>a+160?' …':''));}}
+var h=esc(out.join('\\n')).replace(/\\n/g,'<br>');ws.forEach(function(w){h=h.replace(new RegExp('('+rx(esc(w))+')','gi'),'<mark>$1</mark>');});return h;}
+function run(){var v=q.value.trim(),k=kd.value;var ws=v.toLowerCase().split(/\\s+/).filter(Boolean);
+try{history.replaceState(null,'','?q='+encodeURIComponent(v));}catch(e){}
+if(!ws.length){cnt.textContent='';box.innerHTML='<div class="hit" style="color:#9ca3af">검색어를 입력하세요. 회사명, 용어, 딜 이름 등 브리핑 본문 전체에서 찾습니다.</div>';return;}
+var r=D.filter(function(d){if(k&&d.kind!==k)return false;var t=(d.title+' '+d.text).toLowerCase();return ws.every(function(w){return t.indexOf(w)>=0;});})
+.map(function(d){var t=d.text.toLowerCase(),n=0;ws.forEach(function(w){var i=-1;while((i=t.indexOf(w,i+1))>=0)n++;});return [d,n];});
+cnt.textContent=r.length+'건';
+box.innerHTML=r.length?r.map(function(x){var d=x[0];return '<a class="hit" href="b/'+encodeURIComponent(d.id)+'/#:~:text='+encodeURIComponent(ws[0])+'"><div class="h"><span class="d">'+esc(d.date)+'</span><span class="k '+esc(d.kind)+'">'+(K[d.kind]||d.kind)+'</span><span class="t">'+esc(d.title)+'</span><span class="c">'+x[1]+'회 언급</span></div><div class="sn">'+snip(d.text,ws)+'</div></a>';}).join(''):'<div class="hit" style="color:#9ca3af">결과가 없습니다.</div>';}
+var u=new URLSearchParams(location.search);q.value=u.get('q')||'';
+fetch('search.json').then(function(r){return r.json();}).then(function(j){D=j;run();});
+q.addEventListener('input',run);kd.addEventListener('change',run);q.focus();
+""" % json.dumps(KIND, ensure_ascii=False)
+    doc = f"""<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">{NOINDEX}
+<title>Briefing Search</title><style>{SEARCH_CSS}</style></head><body>{nav_html('./', '')}<div class="wrap">
+<h1>검색</h1><div class="sub">아카이브에 게시된 브리핑과 리포트 본문 전체에서 찾습니다. 여러 단어는 모두 포함된 문서만 표시.</div>
+<div class="tools"><input id="q" type="search" placeholder="예: 셀트리온, 블록딜, 동결건조"><select id="kd"><option value="">전체 종류</option>{kinds}</select><span class="n" id="cnt"></span></div>
+<div class="card" id="list"></div></div>
+<script>{js}</script></body></html>"""
+    open(os.path.join(ROOT, 'search.html'), 'w', encoding='utf-8').write(doc)
+
 # ---------------------------------------------------------------- mail body
 F = "font-family:'Malgun Gothic','Apple SD Gothic Neo',Arial,sans-serif;"
 
@@ -314,7 +370,7 @@ if __name__ == '__main__':
         ij = a[a.index('--index') + 1] if '--index' in a else None
         add(a[1], push='--push' in a, index_json=ij)
     elif a[0] == 'index':
-        nav_all(); build_index(); build_glossary()
+        nav_all(); build_index(); build_glossary(); build_search()
         if '--push' in a: git_push('목록/용어집 재생성')
     elif a[0] == 'mail':
         # publish.py mail <id> [extra_id ...] [--full] [--note "문구"] [--out mail.html] [--zip out.zip]
