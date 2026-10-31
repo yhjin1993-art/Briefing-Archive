@@ -1,0 +1,122 @@
+{
+ "id": "monthly-2026-10-31",
+ "date": "2026-10-31",
+ "kind": "monthly",
+ "title": "전략기획팀 Monthly Report | 2026-10-31",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 902,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 691,
+   "ref": false
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 868,
+   "ref": false
+  },
+  {
+   "file": "p4.png",
+   "w": 720,
+   "h": 582,
+   "ref": false
+  }
+ ],
+ "terms": [
+  {
+   "term": "CVR(Contingent Value Right)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "Earn-out",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "롤오버(Rollover)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "Take-private",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "구주매출(OFS)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "Go-shop",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "LBO(Leveraged Buyout)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  }
+ ],
+ "insight": "[Exit] 준비 착수: 같은 빈티지 CDMO 매물과 비교된다(흐름 1, 핵심 2). 매각 18~24개월 전 Exit Readiness 패키지(동결건조 수주잔고, 가동률, 수율 연도별 추이)를 지금 만든다. [Exit] 구조 시뮬레이션: Lifecore CVR(대가의 약 35%), Bain 롤오버 39%, IPO 구주 88% 사례 기준으로 전액 매각 / 롤오버 / CVR·Earn-out / IPO별 맥쿼리 회수액과 당사 유입 자금을 한 표로. [Exit] 매수자 풀: 국내 PE 인수금융이 보수화되면 해외 헬스케어 PE(OrbiMed 아시아 $1B+, ArchiMed, EQT형 공동투자)와 SI(삼성바이오처럼 합성 CDMO로 확장하는 대형사)로 후보를 넓히고, 조정 EBITDA와 순차입금(리스 포함) 개선을 가격 방어 수단으로. [투자] 동결건조 증설: \"수주 확보 → 가동률 → 증설\" 순서와 경쟁 캐파(하나제약 평택 12/31)를 같이 놓고 심의. 신축 대안으로 가동 중 공장 인수(Anuh식 브라운필드)도 비교. [사업] 고객사 단가/품질: 12월 약가 2차 재평가 결과로 고객사 주사제 품목별 인하 유예 여부를 분류해 수탁 단가 협상에 대비하고, 위수탁 SOP 개정(12/31) 이행을 Exit 실사 항목으로 관리.",
+ "headlines": [
+  {
+   "who": "Webster Equity Partners",
+   "act": "PE 인수(현금 + CVR)",
+   "target": "Lifecore Biomedical(무균주사제 CDMO)",
+   "cond": "최대 $663.7M",
+   "meaning": "당사와 가장 가까운 자산의 PE 인수 선례. 대가의 약 35%(산출)를 미래 실적 조건부로 미뤄 가격 차이를 메웠고, 멀티플은 약 34배(산출)."
+  },
+  {
+   "who": "Simon-Kucher / OrbiMed, ArchiMed",
+   "act": "Exit 대기열 경고 / 펀드 결성",
+   "target": "PE 보유 CDMO, CRO",
+   "cond": "보유기간 +38%",
+   "meaning": "2020년 맥쿼리가 인수한 당사도 같은 빈티지. 동시 매물과 비교되는 구도이며, 아시아 전용 자금은 세컨더리 매수자 후보."
+  },
+  {
+   "who": "삼성바이오로직스",
+   "act": "공개매수 인수",
+   "target": "PolyPeptide Group(펩타이드 CDMO)",
+   "cond": "CHF 1.46B (약 2.7조)",
+   "meaning": "국내 제약바이오 M&A 사상 최대(보도 기준). 국내 대형사가 합성(케미컬) CDMO로 영역을 넓힌 첫 대형 선례로 합성 CDMO 밸류 기준점."
+  },
+  {
+   "who": "국회 / PEF운용사협의회",
+   "act": "LBO 규제 논의",
+   "target": "국내 PE 인수금융",
+   "cond": "LBO 한도 축소 법안 계류",
+   "meaning": "맥쿼리 Exit 시 국내 FI 매수자의 레버리지 여력이 줄면 매각가와 매수자 풀이 함께 줄어든다. 당사 조정 EBITDA와 순차입금이 곧 인수금융 한도."
+  },
+  {
+   "who": "심평원",
+   "act": "약가 재평가 차수 전환",
+   "target": "제네릭(주사제 위주)",
+   "cond": "10/31 신청 마감, 12월 결정",
+   "meaning": "고객사 주사제 품목 인하가 유예되면 CMO 물량이 안정되고, 인하 확정 품목 고객은 수탁 단가 인하를 요구할 가능성."
+  }
+ ],
+ "publishedAt": "2026-11-01T06:55+09:00"
+}
