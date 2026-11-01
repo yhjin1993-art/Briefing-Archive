@@ -1,0 +1,102 @@
+{
+ "id": "weekly-2026-11-01",
+ "date": "2026-11-01",
+ "kind": "weekly",
+ "title": "전략기획팀 Weekly Report | 2026-11-01",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 639,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 600,
+   "ref": false
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 833,
+   "ref": false
+  }
+ ],
+ "terms": [
+  {
+   "term": "롤오버(Rollover)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "어닝아웃(Earn-out)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "드래그얼롱(Drag-along)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "구주매출(Secondary Offering)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "공개매수(Tender Offer)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "LBO(Leveraged Buyout)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "Take-private",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  }
+ ],
+ "insight": "[Exit] 구조 선택지: Bain 롤오버 39%, TPG 구주 88%, MBK Drag-along 사례 기준으로 맥쿼리 회수 시나리오별 회수 현금과 지분 잔류 비율을 한 표로 정리하고, 당사 주주간계약 조항을 점검. [Exit] 매수자 여력: 국내 PE 차입 규제가 대상회사 상환능력 기준으로 가면 당사 조정 EBITDA 개선과 순차입금(리스 포함) 축소가 곧 매각가. 매수자 비교는 가격과 함께 금융조달 조건 없음, 해지 수수료 등 거래 확실성(Viatris 사례)도 본다. [M&amp;A/투자] 합성 CDMO 경쟁: 삼성바이오의 합성 CDMO 진입과 Cambrex 미국 증설로 합성/펩타이드 캐파가 늘어난다. 당사 동결건조 주사제 차별점(수율, 가동률, 품질 이력)을 수치로 정리해 증설 심의와 SI 매수자 대응 자료로 겸용.",
+ "headlines": [
+  {
+   "who": "HealthSpan (Bon Secours)",
+   "act": "Take-private",
+   "target": "Surgery Partners (Bain 39% 롤오버)",
+   "cond": "EV 약 $5.7B",
+   "meaning": "PE가 일부 지분을 남겨 매수자 현금 부담을 덜고 약 10.8배(산출)에 회수. SI + 부분 롤오버 Exit 선례."
+  },
+  {
+   "who": "금융당국/업계",
+   "act": "규제 논의",
+   "target": "PEF 차입 규제 (대상회사 상환능력 기준)",
+   "cond": "한도 400% → 200% 법안",
+   "meaning": "국내 PE 매수자의 인수금융 한도가 대상회사 EBITDA로 정해지면 당사 조정 EBITDA와 순차입금이 곧 매각가 변수."
+  },
+  {
+   "who": "삼성바이오로직스 / Cambrex",
+   "act": "자본 투입",
+   "target": "합성(펩타이드, API) CDMO",
+   "cond": "유증 3조 / $120M",
+   "meaning": "국내 최대 CDMO가 합성 CDMO로 진입하고 글로벌 합성 CDMO는 미국 증설. 당사 경쟁 구도와 SI 매수자 후보군 변화."
+  }
+ ],
+ "publishedAt": "2026-11-02T07:08+09:00"
+}
