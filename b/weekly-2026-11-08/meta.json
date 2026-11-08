@@ -1,0 +1,298 @@
+{
+ "id": "weekly-2026-11-08",
+ "date": "2026-11-08",
+ "kind": "weekly",
+ "title": "전략기획팀 Weekly Report | 2026-11-08",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 620,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 600,
+   "ref": false
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 891,
+   "ref": false
+  }
+ ],
+ "terms": [
+  {
+   "term": "부분납입 주식(Partly Paid-up Shares)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "바이앤빌드(Buy-and-Build)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "판매금지 가처분(Preliminary Injunction)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "CSO 수수료율(Contract Sales Organization Commission Rate)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "기저효과(Base Effect)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "하드캡(Hard Cap)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "정정공시(Amended Disclosure)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "단일판매·공급계약 공시(Single Sales/Supply Contract Disclosure)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "자발적 라이선스(Voluntary License)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "잠정 승인(Tentative Approval)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "리픽싱(Refixing (Conversion Price Adjustment))",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "후순위 출자(Subordinated Capital (Junior Tranche))",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "가치창출 분해(Value Creation Bridge)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "멀티플 확장/축소(Multiple Expansion / Contraction)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "상장적격성 실질심사(Substantive Review of Listing Eligibility)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "구속력 있는 양해각서(Binding MOU)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "지급보증(Payment Guarantee)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "중국 집중구매(Volume-Based Procurement, VBP)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "손상차손(Impairment Loss)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "순레버리지 비율(Net Leverage Ratio)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "우선심사권(Priority Review Voucher, PRV)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "권고 공개매수(Recommended Public Offer)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "공식조치지시(Official Action Indicated, OAI)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "피크 매출(Peak Sales)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "미생산/미청구 품목 급여 삭제(Delisting of Non-produced / Unclaimed Drugs)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "연결 편입(Consolidation (Full Consolidation))",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "턴어라운드(Turnaround)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "총액 상한 계약(Expenditure Cap Agreement)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "A8 조정최저가(Adjusted Lowest Price among A8 Countries)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "EBITDA 마진(EBITDA Margin)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "지분가치(Equity Value)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "블라인드 펀드 / 프로젝트 펀드(Blind Pool Fund / Project Fund)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "자사주 소각(Treasury Share Cancellation)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "지연공시(Delayed Disclosure)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "직접판매 채널(Direct-to-Consumer (DTC))",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  }
+ ],
+ "insight": "[Exit] 가격 근거 두 갈래: PolyPeptide(적자 CDMO, 매출 약 4배 산출)와 Theramex(EBITDA 약 2배 → 가치 약 86% 상승, 보도 기준)처럼 SI는 전략 가치, PE는 EBITDA로 값을 매긴다. 맥쿼리 Exit 자료는 현재 EBITDA 멀티플과 가동률 회복 후 EBITDA 두 근거, 그리고 가치창출 분해표(EBITDA 성장/멀티플/차입 축소)로 준비. [Exit/M&A] 매수자 풀과 계약 조항: 국내 중형 PE 컨소시엄(디앤티, 카리플렉스), 세컨더리 PE, SI(삼바)까지 후보군이 넓다. 골프존카운티 Drag-along 분쟁이 이어지는 만큼 당사 주주간계약의 IPO 기한, Drag/Tag-along 발동 요건을 점검하고, 볼트온 시 \"SI 소수 출자 + 동반매도권\" 구조를 검토. [투자/사업] 가동률이 곧 마진: Gland(EBITDA +53%), Viatris(OAI로 분기 -$100M) 사례 기준으로 동결건조 주사제 증설은 \"수주 확보 → 가동률 → 증설\" 순서로 심의하고, 삼바의 합성 CDMO 진입에 대해 당사 차별점(수율, 다품목 전환 속도, 품질 이력)을 수치로 정리.",
+ "headlines": [
+  {
+   "who": "삼성바이오로직스",
+   "act": "인수 확정",
+   "target": "PolyPeptide 97.98%",
+   "cond": "2조7,062억",
+   "meaning": "3년 적자 펩타이드 CDMO를 매출 약 4배(산출)에 산 SI 인수. 국내 최대 CDMO가 케미컬 CDMO 경쟁자이자 잠재 SI 매수자로."
+  },
+  {
+   "who": "Carlyle/PAI",
+   "act": "Secondary Exit",
+   "target": "Theramex → Cinven",
+   "cond": "€2.6B (보도 기준)",
+   "meaning": "EBITDA 약 2배 성장으로 매입가 대비 약 86% 상승(보도 기준). 가치창출 분해표로 Exit 자료를 준비해야 하는 선례."
+  },
+  {
+   "who": "하일랜드EP",
+   "act": "Secondary Exit",
+   "target": "디앤티 → 이음PE",
+   "cond": "EV 약 5,000억 (보도 기준)",
+   "meaning": "국내 중형 PE 3곳 경쟁 끝에 약 3배 회수, SI 동아에스티는 동반매도로 4배. 국내 PE 매수자 풀 확인."
+  }
+ ],
+ "publishedAt": "2026-11-09T07:08+09:00"
+}
