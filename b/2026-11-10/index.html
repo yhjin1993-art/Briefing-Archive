@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-10</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;
+  --c2:#0f766e; --c2s:#e3f3f1;
+  --c3:#6d28d9; --c3s:#efe9fb;
+  --c4:#b45309; --c4s:#fdf1e0;
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-10</b><span>화요일</span></div>
+  </div>
+<div class="note">수집 창 2026-11-09 06:30 ~ 2026-11-10 06:30 KST(24시간). 리포트는 최근 1~2주 발행분. 언급 기업 규모: 국내사는 DART 코드 미등록, 미국 상장사는 SEC API 이번 실행 접근 불가로 미조회.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s2"><div class="hl-main"><b>셀트리온제약</b><span class="act">3Q 최대 실적</span><b>PFS 위탁생산 404억</b></div><div class="hl-cond">영업익 239억 (+48%)</div><div class="hl-mean">프리필드시린지 라인 풀가동이 CMO 매출 482억(+26%)을 끌었다.<br>주사제 라인 가동률이 이익으로 직결된 사례.</div></div><div class="hl s1"><div class="hl-main"><b>CorMedix</b><span class="act">자산 인수</span><b>Heron 주사제 4품목</b></div><div class="hl-cond">선급 $222.6M + Earn-out $55M</div><div class="hl-mean">현금은 사모 <span class="nb">대출(Pharmakon)</span> $150M으로, 주식은 고정 수량으로 지급.<br>대가 구조가 여러 겹인 딜의 교본.</div></div><div class="hl s3"><div class="hl-main"><b>Sikich(PitchBook)</b><span class="act">집계</span><b>3Q 美 헬스케어 M&A</b></div><div class="hl-cond">EV/EBITDA 중앙값 11.6x</div><div class="hl-mean">2024년 14.5x, 2025년 13.0x에서 계속 하락.<br>매도 <span class="nb">측(PE Exit)</span> 가격 눈높이를 낮추는 환경.</div></div><div class="hl s4"><div class="hl-main"><b>Simtra</b><span class="act">가동</span><b>블루밍턴 Building H</b></div><div class="hl-cond">$250M+ 투자</div><div class="hl-mean">PE 보유 주사제 CDMO가 동결건조, PFS, 바이알 라인을 증설.<br>필링 라인 11개를 2027년 18개로.</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">실적</div><div>
+      <div class="t">셀트리온제약, 3Q 영업이익 239억 (+48.4%)</div><ul><li>3분기 매출 <span class="num">1,619억</span>(+17.2%), 영업이익 239억, 영업이익률 14.8%로 분기 최대.</li><li><span class="nb">위수탁생산(CMO)</span> 482억(+26.2%) 중 <span class="nb">PFS<sup class="fn">1</sup></span> 상업생산이 404억, 바이오 부문 452억(+40.2%).</li><li>→ 주사제 충전 라인 최대 가동이 비용 비중을 낮춰 이익률을 끌어올림.<br>누적 영업이익 561억이 이미 전년 연간 초과.</li></ul>
+      <div class="src"><a href="https://www.newspim.com/news/view/20261109001177">뉴스핌</a>, 2026-11-09</div></div></div>
+    <div class="item"><div class="tag ">IPO</div><div>
+      <div class="t">IPO 앞둔 마더스제약, 분기 매출 첫 700억</div><ul><li>3분기 매출 702억(+17.4%), 영업이익 <span class="num">93억</span>(+55.8%), 영업이익률 13.3%(+3.3%p).</li><li>10/7 코스닥 <a class="kw" href="#t-prelisting" title="거래소가 상장 요건을 미리 심사하는 절차 - 클릭하면 기본 개념으로 이동">상장예비심사</a> 통과, 1~9월 원외처방 1,631억(+17.1%)으로 순위 35위→29위.</li><li>→ <span class="nb">P-CAB<sup class="fn">2</sup></span> 신약 <a class="kw" href="#t-reimb" title="건강보험 적용 목록에 오르는 것 - 클릭하면 기본 개념으로 이동">급여 등재</a>를 앞뒀으나 다케다 특허 가처분이 출시 시점 변수.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/344335">데일리팜</a>, 2026-11-10 06:00</div></div></div>
+    <div class="item"><div class="tag ">약가</div><div>
+      <div class="t">원료 직접생산 약가우대, 허가권 이전 유인 논란</div><ul><li>정부가 국산 <span class="nb">API<sup class="fn">3</sup></span> 직접생산 약가 우대 기간을 1년에서 기본 5년으로 늘렸지만 신규 적용 품목은 아직 없음(보도 기준).</li><li>요건이 "허가권자 자기 공장 생산"이라 계열사가 만든 원료는 인정되지 않음.</li><li>→ 일부 업체는 공장 투자 대신 원료 생산 계열사로 허가권을 옮기는 방안을 검토.<br>실제 국내 생산 검증으로 바꾸자는 지적.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/344350">데일리팜 (기자의 눈)</a>, 2026-11-10 06:00</div></div></div>
+    <div class="item"><div class="tag ">약가</div><div>
+      <div class="t">ODT 급여 일반원칙 유지, 로수젯ODT 등재 수순</div><ul><li>약평위가 <span class="nb">ODT<sup class="fn">4</sup></span> 처방 대상을 연하곤란자로 제한하는 일반원칙 개정을 하지 않기로 정리.</li><li>전제는 "일반 정제보다 보험 재정 추가 부담 없음".<br>로수젯ODT에 개편 산정률 45% + 단일제 합산 방식 논의(보도 기준).</li><li>→ 업계 평가는 "약가 우대는 없지만 급여 제한은 피했다".<br>후속 ODT 품목 순차 등재 예정.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/344361">데일리팜</a>, 2026-11-10 06:00</div></div></div>
+<ol class="footnotes"><li><b>PFS</b> 프리필드시린지. 약물을 미리 채운 일회용 주사기. 바이알보다 공정·검사 난도가 높다</li><li><b>P-CAB</b> 칼륨경쟁적 위산분비차단제. PPI를 잇는 차세대 위산억제제 계열</li><li><b>API</b> 원료의약품(Active Pharmaceutical Ingredient)</li><li><b>ODT</b> 구강붕해정. 물 없이 입안에서 녹여 먹는 정제. 제형 개량 품목의 대표 유형</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-10</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">CorMedix, Heron 자산 인수: 선급 $222.6M</div><ul><li><a class="kw" href="#t-apa" title="주식이 아니라 자산과 일부 부채만 사는 계약 - 클릭하면 기본 개념으로 이동">Asset Purchase Agreement</a>로 Heron의 주사제 4품목 등 사실상 전 자산 인수.</li><li>현금 $145M + 주식 1,458만주(고정) + <a class="kw" href="#t-earnout" title="실적 목표 달성 시 추가 지급 - 클릭하면 기본 개념으로 이동">Earn-out</a> 최대 $55M + 2027~29년 로열티 5%.</li><li>→ 현금은 Pharmakon의 <a class="kw" href="#t-sstl" title="담보가 붙은 선순위 기간 대출 - 클릭하면 기본 개념으로 이동">Senior Secured Term Loan</a> $150M으로 조달, 2027년 1Q 종결 목표.</li></ul>
+      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/09/3398281/0/en/cormedix-therapeutics-to-acquire-substantially-all-assets-of-heron-therapeutics-expanding-its-portfolio-of-products-used-in-institutional-settings-of-care.html">GlobeNewswire (CorMedix 보도자료)</a>, 2026-11-09 07:15 ET</div></div></div>
+    <div class="item"><div class="tag ">상폐+분할</div><div>
+      <div class="t">Charles River, Frontage 일부 $470M 인수</div><ul><li>대주주 Tigermed, 회장과 컨소시엄을 꾸려 홍콩 상장 Frontage를 <a class="kw" href="#t-tp" title="상장사를 사서 비상장으로 만드는 거래 - 클릭하면 기본 개념으로 이동">Take-private</a>.</li><li>수단은 케이맨 법원 인가 <a class="kw" href="#t-scheme" title="주주총회 + 법원 인가로 지분 전부를 넘기는 절차 - 클릭하면 기본 개념으로 이동">Scheme of Arrangement</a>, CRL은 미국 <span class="nb">Bioanalysis/DMPK<sup class="fn">1</sup></span> 사업만 가져감.</li><li>→ 현금 <span class="num">$470M</span> + 조건부 최대 $75M.<br>대상 사업은 Frontage 2025 매출 $256.7M의 약 40%(CRL 발표치).</li></ul>
+      <div class="src"><a href="https://pharmasource.global/content/news/cro-news/charles-river-to-buy-frontages-bioanalysis-and-dmpk-units-for-470m/">PharmaSource</a>, 2026-11-09</div></div></div>
+    <div class="item"><div class="tag ">매각</div><div>
+      <div class="t">LG생건 해태htb 본입찰, SI vs PEF 2파전</div><ul><li>LG생활건강이 음료 자회사 해태htb 지분 100% 매각, <a class="kw" href="#t-sellside" title="파는 쪽 자문사 - 클릭하면 기본 개념으로 이동">매각 주관사</a> 삼정KPMG.</li><li><a class="kw" href="#t-bid" title="최종 가격을 써내는 입찰 단계 - 클릭하면 기본 개념으로 이동">본입찰</a>에 메가커피 운영사 <span class="nb">엠지씨글로벌(SI)</span>과 PEF 고도파트너스 참여, 거론 가격 약 3,000억(보도 기준).</li><li>→ 이르면 이달 우선협상대상자 선정.<br>PEF는 신제품 히트 여부가 밸류업 변수라는 평가.</li></ul>
+      <div class="src"><a href="https://www.etoday.co.kr/news/view/2645640">이투데이</a>, 2026-11-10 05:00</div></div></div>
+<ol class="footnotes"><li><b>Bioanalysis/DMPK</b> 약물 농도 분석, 체내 동태(흡수, 분포, 대사, 배설) 시험 서비스</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="item"><div class="tag ">Sikich</div><div>
+      <div class="t">3Q 美 헬스케어 M&A $66.5B, 멀티플 하락</div><ul><li>PitchBook 기준 3분기 헬스케어 M&A $66.5B(전분기 -48%, 전년 +17%), PE 딜 $27.5B / 198건.</li><li><a class="kw" href="#t-evebitda" title="기업가치를 EBITDA로 나눈 배수 - 클릭하면 기본 개념으로 이동">EV/EBITDA</a> 중앙값 2024년 14.5x<br><span class="arr">→</span> 2025년 13.0x → 2026년 YTD <span class="num">11.6x</span>.</li><li>→ 3분기 <a class="kw" href="#t-exit" title="PE 투자 회수 - 클릭하면 기본 개념으로 이동">PE Exit</a> 31건 $15.5B, 대형, 고수익 타깃만 프리미엄 유지.</li></ul>
+      <div class="src"><a href="https://www.sikich.com/insight/q3-2026-us-healthcare-ma-market-update-and-year-end-outlook/">Sikich Insights (PitchBook 데이터)</a>, 발행 2026-10-29</div></div></div>
+    <div class="item"><div class="tag ">Grant Thornton</div><div>
+      <div class="t">인도 제약·헬스케어 3Q 딜 87건 $4.3B</div><ul><li>3분기 87건 $4.3B로 분기 거래 건수 사상 최대(금액 전분기 +34%).</li><li>PE/VC 44건 $2.3B(상위 5건이 88%), M&A 37건 $0.5B로 소형, 역량 확보형 위주.</li><li>→ 제약 인수는 브랜드, IP, 제조 역량 확보 목적이 늘어나는 추세.</li></ul>
+      <div class="src"><a href="https://www.grantthornton.in/insights/thought-leadership/pharma-and-healthcare-dealtracker-q3-2026/">Grant Thornton Bharat Dealtracker</a>, 발행 2026-10-29 추정(파일명 기준)</div></div></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-10</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">주사제</div><div>
+      <div class="t">Simtra, 동결건조 라인 갖춘 Building H 가동</div><ul><li>美 블루밍턴 15.3만 sq ft 신공장에 <span class="num">$250M+</span> 투자, PFS, 바이알, <span class="nb">동결건조<sup class="fn">1</sup></span> 역량 추가.</li><li>독일 할레 $125M+, 블루밍턴 파크 캠퍼스 $150M+ 투자와 함께 필링 라인 11개<br><span class="arr">→</span> 2027년 18개.</li><li>→ Advent, Warburg Pincus가 2023년 Baxter에서 인수한 주사제 CDMO의 보유 중 증설.</li></ul>
+      <div class="src"><a href="https://www.prnewswire.com/news-releases/simtra-biopharma-solutions-celebrates-opening-of-250-million-bloomington-manufacturing-expansion-302933808.html">PR Newswire (Simtra)</a>, 2026-11-09 15:32 ET</div></div></div>
+    <div class="item"><div class="tag ">CDMO</div><div>
+      <div class="t">PharmaLogic, Lantheus CDMO 사업 인수</div><ul><li><span class="nb">방사성의약품<sup class="fn">2</sup></span> 전문 CDMO PharmaLogic이 Lantheus의 CDMO 사업과 뉴저지 공장 인수 확정계약.</li><li>인수 후 Lantheus용 <span class="nb">Lu-177 dotatate<sup class="fn">3</sup></span> 장기 공급계약, 금액 비공개.</li><li>→ 제약사의 비핵심 제조 <a class="kw" href="#t-carveout" title="사업부를 떼어내 파는 것 - 클릭하면 기본 개념으로 이동">Carve-out</a> + 장기 공급계약 결합 구조.<br>종결은 규제 검토 후.</li></ul>
+      <div class="src"><a href="https://lifestyle.middletownlifemagazine.com/story/818459/pharmalogic-to-acquire-lantheus-cdmo-business-and-springfield-new-jersey-manufacturing-facility/">PharmaLogic 보도자료</a>, 2026-11-09 (KST 11/10 06:21)</div></div></div>
+<ol class="footnotes"><li><b>동결건조</b> Lyophilization. 액체 약물을 얼린 뒤 수분을 승화시켜 분말로 만드는 공정</li><li><b>방사성의약품</b> Radiopharmaceutical. 방사성 동위원소를 결합한 진단·치료용 주사제</li><li><b>Lu-177 dotatate</b> 신경내분비종양 치료용 방사성 리간드 치료제</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">CorMedix ← Heron: 현금 + 고정 주식 + Earn-out + 로열티, 사모 대출로 조달<small>2026-11-09 발표, 2027년 1Q 종결 목표 (HSR, Heron 주총 승인 필요)</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>CorMedix(나스닥, 병원용 주사제 상업화사, 매수) / Heron Therapeutics(나스닥, 매도) / Pharmakon Advisors(대주, 인수금융)</dd>
+          <dt>무엇을</dt><dd>Heron의 사실상 전 자산(ZYNRELEF, APONVIE, CINVANTI, SUSTOL 4품목)과 일부 부채. TTM 순제품매출 약 $150M(CorMedix 발표치)</dd>
+          <dt>왜</dt><dd>병원 채널 품목군 확대 + 연 $45~60M 비용 시너지(2027년 말) + 즉시 EPS/FCF 증가(Accretive) 주장</dd>
+        </dl>
+        <ol class="steps"><li>주식 대가는 $105M ÷ $7.20 = 14,583,333주로 수량 고정.<br>서명 직전 종가 $5.32면 가치 $77.6M(산출).</li><li>Earn-out: 2028년 ZYNRELEF 순매출 $65M 달성 시 $25M, $95M 달성 시 추가 $30M.</li><li>로열티: CINVANTI, SUSTOL 등 합산 순매출이 연 $25M 넘는 부분의 5%(2027~2029).</li><li>Heron의 <a class="kw" href="#t-cb" title="주식으로 바꿀 수 있는 사채 - 클릭하면 기본 개념으로 이동">Convertible Notes</a> $35M은 Rubric Capital이 받은 CRMD 주식과 4분기에 걸쳐 교환.</li><li>금융조달 조건 없음. 선급 대가 ÷ TTM 매출 = 약 1.5x EV/Sales(산출).</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">Pharmakon<small>Senior Secured Term Loan $150M</small></div><div class="arrow"><i></i><span><b>$75M 종결 시 인출</b> + $75M 선택 인출(~2028.6)</span></div><div class="node">CorMedix (매수)<small>현금 $145M + 신주 1,458만주(고정)</small></div><div class="arrow"><i></i><span><b>선급 $222.6M</b>(주가 $5.32 기준) + Earn-out 최대 $55M + 로열티 5%</span></div><div class="node">Heron (매도 법인)<small>자산 매각 대금 수령 → Hercules 대출 상환</small></div><div class="arrow"><i></i><span><b>CB $35M + 이자 $37.8M</b> → 받은 CRMD 주식으로 교환(Rubric)</span></div><div class="node">Heron 주주<small>주총 승인(의결권 약정 22%)</small></div></div>
+        <div class="point"><b>포인트</b> 헤드라인 금액 하나로 보면 안 되는 딜. 매도자가 받는 가치는 ① 현금 ② 주가에 따라 변하는 주식 ③ 확률적인 Earn-out ④ 매출 연동 로열티로 쪼개져 있고, 매수자는 주식과 조건부 대가로 현금 부담을 낮춘다. 맥쿼리 Exit 입찰 비교 시 "총 대가의 기대값"으로 환산해야 하는 이유.</div>
+        <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/09/3398281/0/en/cormedix-therapeutics-to-acquire-substantially-all-assets-of-heron-therapeutics-expanding-its-portfolio-of-products-used-in-institutional-settings-of-care.html">GlobeNewswire, CorMedix 보도자료 (2026-11-09)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-10</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">고정 주식수 대가 <span>Fixed Share Consideration (Fixed Exchange Ratio)</span></div><div class="d">인수 대금 일부를 매수자 주식으로 줄 때 주식 "수"를 서명 시점에 고정하는 방식. 종결 전 매수자 주가가 떨어지면 매도자가 받는 가치도 같이 줄어든다. 반대는 금액을 고정하고 주식 수를 바꾸는 고정 금액(Fixed Value) 방식.</div><div class="ex">예: CorMedix 주식 1,458만주 고정: 기준가 $7.20이면 $105M, 서명 직전 종가 $5.32면 $77.6M</div></div><div class="term"><div class="k">이월결손금 <span>Net Operating Loss Carryforward (NOL)</span></div><div class="d">과거 적자를 장부에 쌓아 두었다가 이후 이익이 날 때 과세소득에서 빼 세금을 줄이는 세무 자산. 인수 구조(주식 vs 자산)와 지배주주 변경 규정에 따라 매수자가 쓸 수 있는 범위가 달라진다.</div><div class="ex">예: Heron의 연방, 주 NOL 약 $2.3B(9/30 기준, CorMedix 발표)</div></div><div class="term"><div class="k">스킴 오브 어레인지먼트 <span>Scheme of Arrangement</span></div><div class="d">영국, 홍콩, 케이맨 등 영연방 법계에서 회사가 주주총회 특별결의(통상 출석 주식 75%)와 법원 인가를 받아 지분 전부를 한 번에 넘기는 절차. 공개매수와 달리 반대 주주도 함께 구속돼 100%를 바로 확보한다.</div><div class="ex">예: Charles River 컨소시엄이 홍콩 상장 Frontage를 이 방식으로 비상장화, 2027년 상반기 종결 목표</div></div><div class="term"><div class="k">선순위 담보 기간대출 <span>Senior Secured Term Loan</span></div><div class="d">회사 자산을 담보로 잡고 다른 채무보다 먼저 상환받는 순위의 만기형 대출. 은행 외에 헬스케어 전문 사모 대출 펀드(Private Credit)가 품목 매출을 근거로 빌려주는 경우가 늘었다. 일부만 먼저 인출하고 나머지는 나중에 쓰는 지연 인출(Delayed Draw) 구조도 흔하다.</div><div class="ex">예: Pharmakon $150M 중 $75M 종결 시 인출, $75M은 2028년 6월까지 선택 인출</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit / 투자(설비) / 사업(가동률)</em></div><ol><li>[Exit] 美 헬스케어 EV/EBITDA 중앙값이 11.6x로 2년 연속 하락, CorMedix 딜처럼 매수자는 주식, Earn-out, 로열티로 현금 부담을 줄이는 구조를 쓴다. 맥쿼리 Exit 입찰은 헤드라인이 아니라 "총 대가 기대값"으로 비교하고, 당사는 가동률, 수주 근거로 멀티플 하락을 방어해야 한다.</li><li>[투자, 사업] 셀트리온제약 PFS 라인 풀가동으로 CMO 매출 +26%, 영업이익 +48%(영업레버리지), Simtra는 PE 보유 중 동결건조 라인을 증설. 당사 동결건조 증설 심의 시 "증설 후 가동률 곡선"과 비교군 투자 규모를 같은 표에 놓고 판단.</li></ol></div>
+  </section>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-10</span></div>
+<div class="refband">여기부터 참조 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">셀트리온제약</div><div class="cm">한국, 코스닥, 케미컬/바이오 의약품 제조</div></th><td>셀트리온 그룹의 케미컬 의약품 제조, 바이오시밀러 국내 판매사. 청주 공장에서 PFS 등 위수탁 생산.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md에 corp_code 없음</div></td><td>1 국내: 3Q 분기 최대 실적, CMO 482억</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">마더스제약</div><div class="cm">한국, 비상장(코스닥 예비심사 통과), 전문의약품</div></th><td>순환기 복합제 중심 전문의약품 제약사. 2026년 10월 코스닥 상장예비심사 통과.</td><td class="sz">비공개<div class="szsrc">비상장, DART 코드 미등록</div></td><td>1 국내: IPO 앞두고 분기 매출 700억 돌파</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">한미약품</div><div class="cm">한국, 유가증권, 전문의약품</div></th><td>로수젯 등 복합제와 개량신약 강자. 로수젯ODT는 제형 개량 품목.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md에 corp_code 없음</div></td><td>1 국내: ODT 일반원칙 유지로 로수젯ODT 등재 수순</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">CorMedix Therapeutics</div><div class="cm">미국, 나스닥(CRMD), 병원용 의약품</div></th><td>투석 카테터 잠금액 DefenCath 상업화사. Heron 인수로 병원용 주사제 포트폴리오 확대.</td><td class="sz">공시 원천 미조회<div class="szsrc">SEC EDGAR API 이번 실행에서 접근 불가(권한 대기 만료). 다음 실행에 재조회</div></td><td>2 PE/Deal, 5 오늘의 딜: Heron 자산 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Heron Therapeutics</div><div class="cm">미국, 나스닥(HRTX), 병원용 주사제</div></th><td>수술 후 통증(ZYNRELEF), 항구토 주사제(CINVANTI, APONVIE, SUSTOL) 판매사.</td><td class="sz">TTM 순제품매출 약 $150M<div class="szsrc">CorMedix 발표치(공시 아님), 9/30 기준</div></td><td>2 PE/Deal, 5 오늘의 딜: 자산 매각 측</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">Pharmakon Advisors</div><div class="cm">미국, 비상장, 헬스케어 사모 대출 운용사</div></th><td>제약, 바이오 기업에 매출 기반 선순위 대출을 제공하는 헬스케어 전문 크레딧 운용사.</td><td class="sz">미확인<div class="szsrc">운용사 공식 AUM 이번 실행 미조회</div></td><td>2 PE/Deal: CorMedix 인수 자금 $150M 대출</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Charles River Laboratories</div><div class="cm">미국, NYSE(CRL), CRO</div></th><td>전임상 안전성 평가, 연구 모델, 제조 지원 서비스 1위권 CRO.</td><td class="sz">공시 원천 미조회<div class="szsrc">SEC EDGAR API 이번 실행에서 접근 불가(권한 대기 만료). 다음 실행에 재조회</div></td><td>2 PE/Deal: Frontage 일부 사업 $470M 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Frontage Holdings</div><div class="cm">중국/미국, 홍콩 상장, CRO</div></th><td>약물 분석, DMPK, 임상 초기 서비스 CRO. 대주주 Hongkong Tigermed.</td><td class="sz">2025 매출 $256.7M<div class="szsrc">Charles River 발표치(공시 아님)</div></td><td>2 PE/Deal: Scheme 방식 비상장화</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">LG생활건강</div><div class="cm">한국, 유가증권, 화장품/생활용품/음료</div></th><td>화장품, 생활용품, 음료(코카콜라음료, 해태htb) 사업. 비핵심 음료 자회사 매각 중.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md에 corp_code 없음</div></td><td>2 PE/Deal: 해태htb 100% 매각 본입찰</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Simtra BioPharma Solutions</div><div class="cm">미국, 비상장(Advent, Warburg Pincus 보유), 주사제 CDMO</div></th><td>옛 Baxter BioPharma Solutions. 무균 충전, 동결건조, PFS 전문 CDMO. 미국 블루밍턴, 독일 할레 거점.</td><td class="sz">비공개<div class="szsrc">비상장, 회사 IR 매출 미공시</div></td><td>4 글로벌: Building H($250M+) 가동</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">PharmaLogic</div><div class="cm">미국, 비상장, 방사성의약품 CDMO</div></th><td>방사성의약품 전문 CDMO. 치료용 CDMO 브랜드 Agilera 보유.</td><td class="sz">비공개<div class="szsrc">비상장</div></td><td>4 글로벌: Lantheus CDMO 사업 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Lantheus Holdings</div><div class="cm">미국, 나스닥(LNTH), 방사성 진단/치료제</div></th><td>방사성 진단제(PET 조영제)와 치료제 상업화사. 비핵심 CDMO 사업을 매각.</td><td class="sz">공시 원천 미조회<div class="szsrc">SEC EDGAR API 이번 실행에서 접근 불가(권한 대기 만료). 다음 실행에 재조회</div></td><td>4 글로벌: CDMO 사업, 뉴저지 공장 매각</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-10</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-prelisting"><div class="k">상장예비심사 <span>Pre-listing Review</span></div><div class="d">거래소가 상장 신청 회사의 재무, 지배구조, 계속성을 미리 심사하는 절차. 통과 후 6개월 안에 증권신고서를 내고 공모를 해야 한다. 오늘 마더스제약이 10/7 통과로 언급.</div><div class="u">▸ IPO 일정표의 첫 관문. PE 보유사의 IPO Exit 착수 신호</div><div class="ex">예: 예: 10/7 통과 → 2027년 4월 초까지 공모 착수 필요(6개월 기준)</div></div><div class="bt" id="t-reimb"><div class="k">급여 등재 <span>Reimbursement Listing</span></div><div class="d">의약품이 건강보험 적용 목록에 올라 상한 약가가 정해지는 것. 사실상 국내 출시 시점. 오늘 마더스제약 P-CAB, 로수젯ODT 기사에 등장.</div><div class="u">▸ 고객사 신제품 출시와 수탁 물량 발생 시점 예측</div><div class="ex">예: 예: 등재 11월 → 첫 출하 12월이면 당사 수탁 생산은 10~11월 선행</div></div><div class="bt" id="t-apa"><div class="k">자산 양수도 계약 <span>Asset Purchase Agreement (APA)</span></div><div class="d">회사 주식 대신 특정 자산(품목, 설비, 계약)과 정해 둔 부채만 사는 계약. 숨은 부채 승계를 피하지만 인허가, 계약 이전 절차가 필요. 오늘 CorMedix-Heron 딜 구조.</div><div class="u">▸ 품목 양수도, 공장 인수, 사업부 카브아웃</div><div class="ex">예: 예: 자산 $222.6M에 사고 Heron 법인의 다른 부채는 승계 안 함</div></div><div class="bt" id="t-earnout"><div class="k">어닝아웃 <span>Earn-out</span></div><div class="d">인수 후 실적 목표를 달성하면 추가로 주는 조건부 대금. 매도자와 매수자의 가격 차이를 메우는 장치. 오늘 CorMedix(최대 $55M), Charles River(최대 $75M) 딜에 등장.</div><div class="u">▸ 밸류 갭이 큰 M&A, 신제품 의존도 높은 타깃</div><div class="ex">예: 예: ZYNRELEF 2028년 매출 $65M 달성 시 $25M, $95M 달성 시 추가 $30M</div></div><div class="bt" id="t-sstl"><div class="k">선순위 담보 기간대출 <span>Senior Secured Term Loan</span></div><div class="d">회사 자산을 담보로 다른 채무보다 먼저 상환받는 만기형 대출. 오늘 CorMedix가 Pharmakon에서 $150M 조달.</div><div class="u">▸ 인수금융, 볼트온 재원</div><div class="ex">예: 예: $150M 중 $75M 즉시 인출, 나머지 $75M은 2028년 6월까지 선택</div></div><div class="bt" id="t-cb"><div class="k">전환사채 <span>Convertible Notes (CB)</span></div><div class="d">정해진 가격에 주식으로 바꿀 수 있는 사채. 오늘 Heron의 2031년 만기 CB $35M이 CorMedix 주식과 교환됨.</div><div class="u">▸ 바이오, 중소형 상장사 자금조달</div><div class="ex">예: 예: CB $35M + 미지급이자 $37.8M = $72.8M을 주식으로 상환</div></div><div class="bt" id="t-tp"><div class="k">상장폐지 인수 <span>Take-private</span></div><div class="d">상장사 지분 전부를 사서 비상장으로 만드는 거래. 오늘 Charles River 컨소시엄의 Frontage 거래.</div><div class="u">▸ PE 바이아웃, 대주주 지배구조 정리</div><div class="ex">예: 예: 주가 대비 프리미엄 30%를 얹어 전 주식 매입 → 상장폐지</div></div><div class="bt" id="t-scheme"><div class="k">스킴 오브 어레인지먼트 <span>Scheme of Arrangement</span></div><div class="d">주총 특별결의 + 법원 인가로 지분 전부를 넘기는 영연방 법계 절차. 오늘 Frontage 비상장화 수단.</div><div class="u">▸ 홍콩, 영국, 호주 상장사 인수</div><div class="ex">예: 예: 출석 주식 75% 찬성 + 법원 인가 → 반대 주주 포함 100% 이전</div></div><div class="bt" id="t-sellside"><div class="k">매각 주관사 <span>Sell-side Advisor</span></div><div class="d">파는 쪽을 대리해 후보 발굴, 입찰 진행, 협상을 맡는 IB나 회계법인. 오늘 해태htb 매각의 삼정KPMG.</div><div class="u">▸ PE Exit, 대기업 비핵심 자산 매각</div><div class="ex">예: 예: 거래액 3,000억, 성공보수 1%면 30억</div></div><div class="bt" id="t-bid"><div class="k">본입찰 <span>Binding Bid</span></div><div class="d">예비입찰, 실사를 거친 후보가 구속력 있는 최종 가격과 조건을 써내는 단계. 이후 우선협상대상자 선정. 오늘 해태htb 2파전.</div><div class="u">▸ 경쟁 매각 절차의 마지막 가격 결정</div><div class="ex">예: 예: 예비입찰 5곳 → 숏리스트 3곳 → 본입찰 2곳 → 우협 1곳</div></div><div class="bt" id="t-evebitda"><div class="k">EV/EBITDA 배수 <span>EV/EBITDA Multiple</span></div><div class="d">기업가치를 EBITDA로 나눈 배수. 같은 업종 딜 가격 비교의 기본 잣대. 오늘 Sikich 리포트의 美 헬스케어 중앙값 11.6x.</div><div class="u">▸ Exit 가격, 비교군 평가</div><div class="ex">예: 예: EBITDA 600억 × 11.6x = EV 6,960억, 13.0x면 7,800억(차이 840억)</div></div><div class="bt" id="t-exit"><div class="k">PE Exit <span>Private Equity Exit</span></div><div class="d">PE가 투자 회사를 팔아 투자금을 회수하는 것. 매각, IPO, 리캡 등. 오늘 Sikich 리포트 3Q 美 헬스케어 Exit 31건 $15.5B.</div><div class="u">▸ 맥쿼리의 당사 회수 경로</div><div class="ex">예: 예: 3Q Exit 31건 $15.5B → 건당 평균 $500M(산출)</div></div><div class="bt" id="t-carveout"><div class="k">카브아웃 <span>Carve-out</span></div><div class="d">대기업이 사업부나 공장을 떼어 파는 것. 오늘 Lantheus가 CDMO 사업과 공장을 PharmaLogic에 매각하며 장기 공급계약 동시 체결.</div><div class="u">▸ 제약사 공장 매각 → CDMO 인수 기회</div><div class="ex">예: 예: 공장 매각 + 5년 최소 물량 공급계약 → 매수 CDMO는 첫날부터 가동률 확보</div></div><div class="bt" id="t-accretive"><div class="k">EPS 증가 <span>Accretive</span></div><div class="d">인수 후 매수자의 주당순이익이 늘어나는 것. 오늘 CorMedix가 "즉시 이익, FCF 증가"를 주장.</div><div class="u">▸ 상장 매수자의 인수 정당화 논리</div><div class="ex">예: 예: 순이익 +$20M, 신주 1,458만주 발행 후에도 EPS 상승이면 Accretive</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concepts"><div class="concept">
+      <div class="ch"><div><b>총 인수대가<span>Total Consideration (Cash + Stock + Contingent)</span></b><div class="quote">"$145.0 million in upfront cash … 14,583,333 shares … up to $55.0 million in potential earn-out payments" <em>- CorMedix 보도자료, 2026-11-09</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>매도자가 받는 대가 전체. 현금, 매수자 주식, 조건부 대가(Earn-out, CVR), 로열티처럼 성격이 다른 조각을 합친 것. 헤드라인 "최대 금액"과 매도자가 실제 기대할 수 있는 "기대값"은 다르다. 주식은 종결 시 주가, 조건부 대가는 달성 확률과 시간가치로 할인해야 비교가 된다.</p><h5>계산식</h5><div class="formula">총 대가(기대값) = 현금 + 주식수 × 종결 주가 + Σ(조건부 금액 × 확률 ÷ (1+r)^t) + 로열티 PV</div><h5>오늘 수치로</h5><div class="calc">현금 $145M + 1,458만주 × $5.32 = $77.6M → 선급 $222.6M. Earn-out 최대 $55M 더하면 $277.6M(+로열티 별도). 선급 ÷ TTM 매출 $150M = 약 1.5x(산출)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>맥쿼리 Exit 입찰 비교: 현금 100% 제안과 현금 + Earn-out 제안을 같은 기준(기대값, 현재가치)으로 환산</li><li>볼트온 인수 시 매도자 요구가와 당사 평가가의 차이를 Earn-out으로 메우는 설계</li><li>품목 양수도나 생산 이관 계약에서 일시금 대신 로열티로 지급해 초기 현금 부담 축소</li><li>상장 매수자가 주식으로 대가를 줄 때 칼라(주가 범위) 조항으로 위험 분담</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 상장 매수자 A가 주사제 품목사 B를 인수하는 경우</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델. 실제 평가에서는 항목별 가정을 실사 자료로 대체.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 현금</td><td>500억</td><td class="f">고정</td><td class="r">500억</td><td>종결 시 지급, 가격 조정(운전자본)은 생략</td></tr><tr><td class="st">② 주식(명목)</td><td>100만주, 서명 시 주가 30,000원</td><td class="f">100만 × 30,000</td><td class="r">300억</td><td>주식 "수" 고정 방식</td></tr><tr><td class="st">③ 주식(종결 시)</td><td>종결 주가 24,000원(-20%)</td><td class="f">100만 × 24,000</td><td class="r">240억</td><td>주가 하락 위험은 매도자 몫</td></tr><tr><td class="st">④ 선급 대가</td><td>①+③</td><td class="f">500 + 240</td><td class="r">740억</td><td>종결일에 실제로 받는 가치</td></tr><tr><td class="st">⑤ Earn-out 기대값</td><td>3년차 매출 400억 달성 시 100억(확률 60%), 500억 달성 시 추가 100억(확률 25%)</td><td class="f">100×0.6 + 100×0.25</td><td class="r">85억</td><td>확률 가중</td></tr><tr><td class="st">⑥ Earn-out 현재가치</td><td>할인율 10%, 3년 후 지급</td><td class="f">85 ÷ 1.1³</td><td class="r">63.9억</td><td>시간가치 반영</td></tr><tr><td class="st">⑦ 로열티 PV</td><td>초과매출 5%, 3년</td><td class="f">가정치</td><td class="r">20억</td><td>매출 시나리오 단순화</td></tr><tr class="total"><td class="st">⑧ 매도자 기대 총 대가</td><td>④+⑥+⑦</td><td class="f">740 + 63.9 + 20</td><td class="r">823.9억</td><td>헤드라인 "최대 1,000억+"와 약 180억 차이</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>현금 대 주식 비율과 주식 대가 방식(수량 고정 vs 금액 고정, 칼라 유무)</li><li>Earn-out 지표(매출/EBITDA)와 목표 수준, 달성 확률</li><li>할인율(당사 WACC 또는 매도자 요구수익률)과 지급 시점</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 인수대가를 구성하는 수단</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>현금(Cash)</th><td class="f">금액 그대로</td><td>매도자가 확실성을 원할 때, 매수자 자금 여력 충분</td><td class="lim">매수자 차입 부담, 금리 영향</td></tr><tr><th>고정 주식수(Fixed Share)</th><td class="f">주식수 × 종결 주가</td><td>매수자 주가가 안정적이거나 매도자가 업사이드 공유 원할 때</td><td class="lim">매도자가 주가 하락 위험 부담</td></tr><tr><th>고정 금액(Fixed Value)</th><td class="f">금액 ÷ 종결 주가 = 주식수</td><td>매도자가 금액 확정 원할 때</td><td class="lim">주가 하락 시 매수자 희석 확대</td></tr><tr><th>Earn-out / CVR</th><td class="f">목표 달성액 × 확률, 할인</td><td>밸류 갭이 클 때, 신제품 성과 불확실</td><td class="lim">지표 정의, 회계 조정 분쟁</td></tr><tr><th>로열티(Royalty)</th><td class="f">매출 × 요율 (구간 초과분)</td><td>장기 매출 업사이드 공유</td><td class="lim">측정, 감사 비용, 기간 제한</td></tr><tr><th>롤오버 지분(Rollover)</th><td class="f">재투자 지분 × 향후 Exit 가치</td><td>PE, 경영진이 일부 남을 때</td><td class="lim">유동성 없음, 다음 Exit 의존</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 예시 표에서 종결 주가가 27,000원이면 ③과 ④는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">③ 100만주 × 27,000 = 270억, ④ 500 + 270 = 770억. 주가가 10% 내리면 주식 대가가 30억 줄어든다.</div></details></div><div class="q"><b>Q2.</b> 같은 예시를 "금액 고정 300억" 방식으로 바꾸면, 종결 주가 24,000원일 때 발행 주식수와 매도자 가치는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">주식수 = 300억 ÷ 24,000 = 125만주, 매도자 가치는 300억 그대로. 대신 매수자는 25만주를 더 발행해 기존 주주 희석이 커진다. 위험이 매도자 → 매수자로 넘어감.</div></details></div><div class="q"><b>Q3.</b> 당사 Exit 가정: 입찰 A = 현금 4,000억. 입찰 B = 현금 3,600억 + 2년 후 Earn-out 최대 800억(달성 확률 40%). 할인율 10%면 어느 쪽이 큰가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">B 기대값 = 3,600 + 800 × 0.4 ÷ 1.1² = 3,600 + 264.5 = 3,864.5억 < A 4,000억. 헤드라인은 B(4,400억)가 크지만 기대값은 A가 135.5억 높다. B가 앞서려면 달성 확률이 (4,000 - 3,600) × 1.21 ÷ 800 = 60.5% 이상이어야 한다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [M&A 검토, 가정] 당사가 국내 동결건조 주사제 CDMO 인수를 검토. 매도자는 1,000억, 당사 평가는 800억. 타깃의 신규 고객 2곳 수주가 불확실해서 생긴 차이다. 어떤 대가 구조를 제안할까?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 선급 800억 + 2년 내 신규 고객 2곳 상업생산 개시 시 Earn-out 최대 200억(고객별 100억). 지표는 "상업 배치 출하"처럼 회계 조정 여지가 적은 것으로. <br><b>체크포인트</b> ① Earn-out 지표를 매출이 아닌 이벤트(출하, 계약)로 하면 분쟁이 줄어듦 ② 인수 후 당사가 영업 방식을 바꿀 때 Earn-out 달성 방해 시비 대비(운영 약정) ③ 인수금융 대주단이 조건부 대금을 부채로 보는지 확인</div></details></div><div class="q"><b>P2.</b> [Exit 준비, 가정] 맥쿼리의 당사 매각에서 상장 SI 매수자가 "현금 70% + 자사 주식 30%(수량 고정)"를 제안. 당사(경영진)가 맥쿼리에 제시할 검토 포인트는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 서명~종결 기간(기업결합 심사 4~6개월 가정) 동안 매수자 주가 변동이 맥쿼리 회수액을 바꾼다. 주가 ±15% 칼라, 받는 주식의 락업 기간, 매수자 주식 유동성(일평균 거래대금)을 확인. <br><b>체크포인트</b> ① 주식 30%의 기대값을 주가 시나리오 3개로 산정 ② 받은 주식 매각 시 블록딜 할인 반영 ③ 펀드 만기상 주식 대가 수령이 가능한지(LP 분배 형태)</div></details></div><div class="q"><b>P3.</b> [고객사 협상, 가정] 고객사가 당사 Pharma사업부 품목 1개를 인수하겠다며 일시금 50억 + 3년간 순매출 100억 초과분의 5% 로열티를 제안. 품목 매출 전망이 연 120억, 140억, 160억일 때 로열티 총액과 현재가치(할인율 10%)는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 초과분 20억, 40억, 60억 × 5% = 1억, 2억, 3억, 합계 6억. PV = 1/1.1 + 2/1.21 + 3/1.331 = 0.91 + 1.65 + 2.25 = 4.81억. 총 기대 대가 약 54.8억. <br><b>체크포인트</b> ① 순매출 정의(할인, 반품 차감)와 감사권 ② 고객사가 그 품목 생산을 당사에 계속 맡기는 공급계약을 함께 묶을지 ③ 로열티 기준선(100억)이 너무 높으면 사실상 일시금 딜</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-10
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 고정 주식수 대가(Fixed Share Consideration (Fixed Exchange Ratio)) | 인수 대금 일부를 매수자 주식으로 줄 때 주식 "수"를 서명 시점에 고정하는 방식. 종결 전 매수자 주가가 떨어지면 매도자가 받는 가치도 같이 줄어든다. 반대는 금액을 고정하고 주식 수를 바꾸는 고정 금액(Fixed Value) 방식. | 상장사가 당사(또는 당사 볼트온 대상)를 주식으로 사겠다고 하면 주가 변동 위험을 누가 지는지부터 확인. 칼라(가격 범위) 조항으로 위험 분담 가능 |
+| 이월결손금(Net Operating Loss Carryforward (NOL)) | 과거 적자를 장부에 쌓아 두었다가 이후 이익이 날 때 과세소득에서 빼 세금을 줄이는 세무 자산. 인수 구조(주식 vs 자산)와 지배주주 변경 규정에 따라 매수자가 쓸 수 있는 범위가 달라진다. | 적자 CDMO 인수 검토 시 결손금의 승계 가능 여부와 가치(절세액 현재가치)를 별도 산정. 국내는 합병 시 승계 요건이 엄격 |
+| 스킴 오브 어레인지먼트(Scheme of Arrangement) | 영국, 홍콩, 케이맨 등 영연방 법계에서 회사가 주주총회 특별결의(통상 출석 주식 75%)와 법원 인가를 받아 지분 전부를 한 번에 넘기는 절차. 공개매수와 달리 반대 주주도 함께 구속돼 100%를 바로 확보한다. | 해외 상장 CDMO, 원료사 인수나 합작 정리 시 공개매수 + 스퀴즈아웃보다 빠른 100% 확보 경로 |
+| 선순위 담보 기간대출(Senior Secured Term Loan) | 회사 자산을 담보로 잡고 다른 채무보다 먼저 상환받는 순위의 만기형 대출. 은행 외에 헬스케어 전문 사모 대출 펀드(Private Credit)가 품목 매출을 근거로 빌려주는 경우가 늘었다. 일부만 먼저 인출하고 나머지는 나중에 쓰는 지연 인출(Delayed Draw) 구조도 흔하다. | 당사 볼트온 인수 재원으로 은행 인수금융 외 헬스케어 사모 대출을 비교 대상에 넣을 수 있음. 금리, 담보 범위, 재무약정을 함께 비교 |
+</pre></details>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
