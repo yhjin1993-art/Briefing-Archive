@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-11</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-11</b><span>수요일</span></div>
+  </div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s1"><div class="hl-main"><b>PAG</b><span class="act">부분 Exit</span><b>Acme 경구제 사업 → BDR</b></div><div class="hl-cond">$250M (보도)</div><div class="hl-mean">PE가 회사를 통째로 팔지 않고 성숙한 경구제만 팔고 성장 중인 주사제 공장은 남겼다.<br>매각 범위 설계 사례.</div></div><div class="hl s2"><div class="hl-main"><b>마더스제약</b><span class="act">IPO 착수</span><b>코스닥 증권신고서</b></div><div class="hl-cond">공모 264~348억</div><div class="hl-mean">중견 제약사가 상장 후 시총 1,632~2,151억을 제시했다. 국내 제약 IPO 밸류 비교 기준.</div></div><div class="hl s3"><div class="hl-main"><b>Jefferies</b><span class="act">리포트</span><b>헬스케어 PE 시장 진단</b></div><div class="hl-cond">GP-led $115B</div><div class="hl-mean">Pharma Services가 미드마켓 최다 업종이지만, 매수자는 Exit 배수를 인수 배수 이하로 잡는다.</div></div><div class="hl s4"><div class="hl-main"><b>美 국방부</b><span class="act">목록 제외</span><b>WuXi AppTec (1260H)</b></div><div class="hl-cond">11/10 관보</div><div class="hl-mean">중국 CDMO 규제로 물량이 비중국으로 옮겨온다는 기대가 약해졌다.</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">IPO</div><div>
+      <div class="t">마더스제약, 증권신고서 제출: 공모 264~348억</div><ul><li>코스닥 상장을 위해 <a class="kw" href="#t-sec-reg" title="공모 전 금융위에 내는 투자설명 공시 - 클릭하면 기본 개념으로 이동">증권신고서</a>를 내고 240만주를 <a class="kw" href="#t-price-band" title="희망 공모가 범위 - 클릭하면 기본 개념으로 이동">공모가 밴드</a> 1만1,000~1만4,500원에 공모한다.</li><li>상장 후 <a class="kw" href="#t-mcap" title="주가 × 발행주식수 - 클릭하면 기본 개념으로 이동">시가총액</a>은 <span class="num">1,632~2,151억</span>(회사 제시), 11/27 기관 <a class="kw" href="#t-bookbuild" title="기관 주문을 받아 공모가를 정하는 절차 - 클릭하면 기본 개념으로 이동">수요예측</a>, 12월 상장 목표.</li><li>3Q 누적 매출 1,959억(+13.5%), 영업이익 197억(+53.4%)<br><span class="arr">→</span> 공모 자금은 익산 액상제 공장 신설과 R&D에 쓴다(구주매출 비중은 보도에 없음).</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=80666">히트뉴스</a>, 11/10 16:48</div></div></div>
+    <div class="item"><div class="tag ">정책</div><div>
+      <div class="t">식약처, 자료제출약 허가 수수료 6.1배 인상</div><ul><li><span class="nb">자료제출의약품<sup class="fn">1</sup></span> 허가 수수료가 261만원에서 <span class="num">1,604만원</span>으로 오른다(2027년, 약 6.1배).</li><li>식약처는 추가 수입 약 192억(2027)을 심사 인력 운영에 쓰고, 미국(35~70억), 일본 PMDA(1.5~2.5억) 대비 낮다고 설명했다.</li><li>다함량 동시 신청 감면을 검토하는 한편 제네릭 수수료 인상도 의견수렴 결과에 따라 검토한다<br><span class="arr">→</span> Pharma사업부 허가 비용 상승 요인.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/344406">데일리팜</a>, 11/11 06:00</div></div></div>
+    <div class="item"><div class="tag ">주주환원</div><div>
+      <div class="t">SD바이오센서, 자사주 130억 매입 후 전량 소각</div><ul><li>보통주 195만4,888주(전일 종가 6,650원 기준 <span class="num">약 130억</span>)를 NH투자증권을 통해 장내 직접 매입한다.</li><li>매입 기간은 11/11~2027-02-10이며, 취득분은 전량 <a class="kw" href="#t-buyback-cancel" title="사들인 자기주식을 없애 발행주식 수를 줄임 - 클릭하면 기본 개념으로 이동">자사주 소각</a> 예정.</li><li>회사는 주주환원 정책 이행과 주주가치 제고를 목적으로 제시<br><span class="arr">→</span> 상장 비교군의 주주환원 수준 참고 사례.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=80670">히트뉴스</a>, 11/10 18:28</div></div></div>
+    <div class="item"><div class="tag ">유통</div><div>
+      <div class="t">현대약품, 월 1억 거래액 기준 도매 선별에 반발</div><ul><li>현대약품이 월 거래액 <span class="num">1억원</span> 이상 의약품 도매상을 우선 선별하는 정책을 추진 중이다.</li><li>약업발전협의회는 11/11 성명에서 "유통 갑질"이라며 철회, 기존 거래처 공급 제한 중단을 요구했다.</li><li>중소 도매 배제 시 지역 약국의 소량, 긴급 주문 공급망이 약해질 수 있다는 지적<br><span class="arr">→</span> 제약사 유통 효율화 vs 거래처 반발의 비용.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/344369">데일리팜</a>, 11/11 06:00</div></div></div>
+<ol class="footnotes"><li><b>자료제출의약품</b> 신약, 제네릭이 아닌 개량신약/새 제형 등 일부 자료를 내 허가받는 약</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-11</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">PAG, Acme 경구제 사업 BDR에 매각 ($250M 보도)</div><ul><li>인도 BDR <span class="nb">Pharma(Multiples PE 투자)</span>가 Acme Formulation의 경구 고형제 사업 <a class="kw" href="#t-controlling" title="경영권 지분 - 클릭하면 기본 개념으로 이동">Controlling Stake</a>를 PAG 등 기존 투자자에게서 인수했다.</li><li>가치는 <span class="num">약 $250M</span>(Live Mint 보도 기준, 공식 미공개), 무균 주사제 CDMO <span class="nb">Immacule<sup class="fn">1</sup></span>는 거래에서 빠져 PAG와 창업자가 계속 보유.</li><li>BDR은 여성건강, 갑상선 품목과 CDMO 역량을 붙이고 미국 <span class="nb">ANDA<sup class="fn">2</sup></span>와 연계한다<br><span class="arr">→</span> 사업부 단위로 나눠 파는 <a class="kw" href="#t-carveout" title="사업부를 떼어 매각 - 클릭하면 기본 개념으로 이동">Carve-out</a>형 부분 Exit.</li></ul>
+      <div class="src"><a href="https://medicaldialogues.in/news/industry/pharma/bdr-pharma-acquires-acme-formulations-oral-solids-business-in-rs-23464-crore-deal-report-183036">Medical Dialogues</a>, 11/10 23:15 IST</div></div></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">시오노기, 美 IntraBio 100% 인수: $2.0B</div><ul><li>시오노기 미국 법인이 희귀 신경질환 바이오텍 IntraBio(텍사스)의 발행주식 전부를 <span class="num">$2.0B</span>(약 2.68조)에 인수한다.</li><li>대상 자산은 니만-피크병 C형 치료제 AQNEURSA(미국, 유럽 허가, 미국 판매 중)와 관련 화합물 글로벌 권리이며, 매도자(개인, 신탁, 법인)는 비공개.</li><li>각국 <a class="kw" href="#t-hsr" title="독점금지 신고 후 대기 기간 - 클릭하면 기본 개념으로 이동">Antitrust Waiting Period</a> 만료 후 11~12월 종결 예정<br><span class="arr">→</span> 판매 중인 희귀질환 단일 품목에 2조대 지불, 품목 확보형 M&A 사례.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=80663">히트뉴스</a>, 11/10 16:31</div></div></div>
+    <div class="item"><div class="tag ">자산매각</div><div>
+      <div class="t">Scholar Rock, 우선심사권 BioNTech에 $205M</div><ul><li>Scholar Rock이 SMA 치료제 허가(9/11)로 받은 희귀 소아질환 <span class="nb">PRV<sup class="fn">3</sup></span>를 BioNTech US에 판다.</li><li>종결 시 현금 <span class="num">$205M</span>을 받는 <a class="kw" href="#t-apa" title="자산(권리)만 사고파는 계약 - 클릭하면 기본 개념으로 이동">Asset Purchase Agreement</a> 구조이며, 미국 HSR 대기기간 만료가 종결 조건.</li><li>회사 지분이 아닌 단일 무형자산을 현금화한 거래<br><span class="arr">→</span> 비핵심 자산을 떼어 파는 자금조달 수단.</li></ul>
+      <div class="src"><a href="https://www.datatooza.com/article/20261110211139308352ef3dce4c_80">Datatooza (공시 기반)</a>, 11/10 21:11</div></div></div>
+<ol class="footnotes"><li><b>Immacule</b> 연 2억 유닛 이상 신규 주사제 공장</li><li><b>ANDA</b> 미국 제네릭 허가 신청</li><li><b>PRV</b> FDA 우선심사권, 심사 기간 10개월→6개월, 양도 가능</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시), 오늘 1건</small></div>
+    <div class="item"><div class="tag ">Jefferies</div><div>
+      <div class="t">Jefferies: 헬스케어 PE, 매도자 우위로 전환 국면</div><ul><li>Jefferies는 수년간 매수자 우위였던 헬스케어 PE 시장의 협상력이 매도자 쪽으로 옮겨가고 있다고 진단했다(발행 2026-11-10).</li><li>2026년 Jefferies 미드마켓 최다 업종은 Pharma <span class="nb">Services(EBITDA $30~60M)</span>, <a class="kw" href="#t-gp-led" title="운용사 주도 세컨더리 거래 - 클릭하면 기본 개념으로 이동">GP-led Secondary</a> 규모는 2025년 <span class="num">$115B</span>(+53%)였다.</li><li>투자자는 Exit 멀티플을 <a class="kw" href="#t-entry-multiple" title="인수 시 지불한 EV/EBITDA 배수 - 클릭하면 기본 개념으로 이동">Entry Multiple</a> 이하로 가정하고 운영 개선에 무게, 2020~21년 고가 인수 자산의 보유기간과 Exit 시점 점검 강화<br><span class="arr">→</span> 2020년 인수된 당사와 같은 빈티지.</li></ul>
+      <div class="src"><a href="https://www.jefferies.com/insights/markets/healthcare-private-equity-nears-a-turning-point/">Jefferies Insights</a>, 발행 2026-11-10</div></div></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-11</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">규제</div><div>
+      <div class="t">美 국방부, WuXi AppTec 1260H 목록 제외</div><ul><li>미 국방부가 WuXi AppTec을 중국 군사기업 <span class="nb">1260H 목록<sup class="fn">1</sup></span>에서 뺐다(연방관보 11/10 정식 게재, 서명 11/5).</li><li>8/7 법원 가처분 인용에 따른 조치로, <span class="nb">BIOSECURE Act<sup class="fn">2</sup></span> 적용 경로가 사실상 닫혔다.</li><li>중국 CDMO 이탈 물량이 비중국 CDMO로 옮겨올 것이라는 전제는 약해졌고, 재지정 가능성과 12월 OMB 우려기업 목록 공개가 남은 변수.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=80644">히트뉴스</a>, 11/10 09:03</div></div></div>
+    <div class="item"><div class="tag ">시장</div><div>
+      <div class="t">펩타이드 치료제 시장 $112B(2026), 제네릭이 성장 견인</div><ul><li>Research and Markets는 2026년 펩타이드 치료제 시장을 <span class="num">$112.2B</span>, 2036년 $229.3B(연 7.4%)로 전망했다(시장조사 보도자료).</li><li>세마글루타이드 특허가 2026년 중국, 인도, 캐나다, 브라질에서 만료되며 원료사, 제네릭사, CDMO에 기회가 열린다고 봤다.</li><li>합성 공정은 고상합성 중심에서 액상, 하이브리드, 연속 공정으로 이동 중<br><span class="arr">→</span> 펩타이드 주사제 <span class="nb">Fill-Finish<sup class="fn">3</sup></span> 수요가 제네릭 쪽에서 커질 수 있음.</li></ul>
+      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/10/3399945/28124/en/peptide-therapeutics-market-global-size-share-trends-and-forecast-to-2036-set-to-reach-229-32-billion-as-glp-1-oral-peptides-radioligands-and-generics-fuel-growth.html">GlobeNewswire</a>, 11/10 11:00 ET</div></div></div>
+    <div class="empty">화장품/건기식: 수집 창 내 해당 없음 (11/6~11/7 발행 Solabia-Ethical Naturals, PAI-Elemis 등은 창 밖이라 제외)</div>
+<ol class="footnotes"><li><b>1260H 목록</b> 미 국방수권법 1260H조에 따른 중국 군사기업 명단</li><li><b>BIOSECURE Act</b> 1260H 기업을 우려 바이오기업으로 보는 미 법률(2025년 12월 NDAA)</li><li><b>Fill-Finish</b> 충전, 포장 공정</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">BDR Pharma ← Acme 경구제 사업 (PAG 부분 Exit)<small>2026-11-10 보도, 가치 약 $250M(보도 기준, 공식 미공개)</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>BDR Pharmaceuticals(인도, Multiples PE 투자) / 매도: PAG 등 Acme 기존 투자자</dd>
+          <dt>무엇을</dt><dd>Acme Formulation 경구 고형제 사업(자회사 포함) 경영권 지분. 무균 주사제 CDMO Immacule은 제외</dd>
+          <dt>왜</dt><dd>BDR: 여성건강, 갑상선 품목과 CDMO 역량 확보, 미국 ANDA와 연계해 자체 제품 비중 확대. PAG: 성숙한 경구제는 회수, 성장 초기 주사제는 계속 보유</dd>
+        </dl>
+        <ol class="steps"><li>자문: BDR 측 O3 Capital, 매도 측 Avendus Capital.</li><li>거래 <span class="nb">범위(Perimeter)</span>를 경구제로 한정해 주사제 신공장은 따로 남겼다.</li><li>매수자는 PE 포트폴리오사라 SI 시너지 + FI 자금을 동시에 쓰는 구조.</li><li>종결 일정, 지분율, 확정 대금은 미공개(보도 기준).</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">PAG 등 기존 투자자 + 창업자<small>Acme 지주</small></div><div class="arrow"><i></i><span>경구제 사업 경영권 지분 매각 (약 $250M 보도)</span></div><div class="node">BDR Pharma<small>Multiples PE 포트폴리오 = 스폰서 보유 전략적 매수자</small></div><div class="arrow"><i></i><span>볼트온: 여성건강/갑상선 품목 + CDMO 라인 편입</span></div><div class="node">Immacule (무균 주사제 CDMO)<small>거래 제외, PAG와 창업자 Viral Shah 계속 보유</small></div></div>
+        <div class="point"><b>포인트</b> 한 회사 안의 "성숙 사업(경구제)"과 "성장 사업(주사제)"을 쪼개 성숙 사업만 먼저 파는 구조. 당사도 CMO/Pharma 사업부, 동결건조 주사제 라인을 매각 범위 설계 변수로 볼 수 있다. 단, 공장, 인허가, 공용 인프라 분리 비용이 커서 범위 설계는 Exit 준비 초기에 정해야 한다.</div>
+        <div class="src"><a href="https://medicaldialogues.in/news/industry/pharma/bdr-pharma-acquires-acme-formulations-oral-solids-business-in-rs-23464-crore-deal-report-183036">Medical Dialogues (Live Mint 인용)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-11</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">증권신고서 <span>Registration Statement</span></div><div class="d">공모(IPO, 증자)로 주식을 팔기 전에 회사가 금융위원회에 내는 법정 공시. 사업, 재무, 위험요인, 공모가 산정 근거, 자금 사용 계획을 담는다. 효력이 생겨야 청약을 받을 수 있다.</div><div class="ex">예: 마더스제약 11/10 제출: 240만주, 밴드 1만1,000~1만4,500원, 공모 264~348억</div></div><div class="term"><div class="k">공모가 밴드 <span>Indicative Price Range (Price Band)</span></div><div class="d">IPO에서 주관사와 회사가 제시하는 희망 공모가의 상하단. 비교군 멀티플로 구한 주당 평가가액에 할인율을 적용해 정하고, 수요예측 결과로 최종 공모가를 밴드 안(또는 밖)에서 확정한다.</div><div class="ex">예: 마더스 하단 1만1,000원 × 240만주 = 264억, 상단 1만4,500원이면 348억(계산치)</div></div><div class="term"><div class="k">컨티뉴에이션 펀드 <span>Continuation Vehicle (GP-led Secondary)</span></div><div class="d">운용사(GP)가 기존 펀드 만기가 왔지만 더 키우고 싶은 회사를 자기가 새로 만든 펀드로 옮기는 거래. 기존 LP는 현금 회수 또는 재투자 중 선택하고, 새 LP(세컨더리 펀드)가 자금을 댄다.</div><div class="ex">예: Jefferies: GP-led 세컨더리 2025년 $115B, 2024년 $75B 대비 +53%</div></div><div class="term"><div class="k">거래 대상 범위 <span>Transaction Perimeter</span></div><div class="d">매각 거래에 포함되는 사업, 자산, 법인, 인력의 경계. 범위 밖 자산은 매도자가 계속 보유하거나 따로 판다. 공용 설비, 인허가, 공유 서비스를 어떻게 나눌지(TSA)가 핵심 협상 항목.</div><div class="ex">예: Acme 거래: 경구제 사업은 범위 안(BDR), 무균 주사제 Immacule은 범위 밖(PAG 보유)</div></div><div class="term"><div class="k">HSR 대기기간 <span>Hart-Scott-Rodino Waiting Period</span></div><div class="d">미국에서 일정 규모 이상 M&A는 FTC, 법무부에 사전 신고하고 보통 30일 대기해야 종결할 수 있다. 당국이 추가 자료를 요구(Second Request)하면 수개월 늘어난다.</div><div class="ex">예: Scholar Rock PRV $205M 매각, 시오노기 IntraBio $2.0B 인수 모두 HSR 만료가 종결 조건</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit / M&A / 수주(CMO)</em></div><ol><li>PAG가 Acme에서 경구제만 팔고 무균 주사제 공장은 남긴 것처럼, 맥쿼리 Exit도 "통매각 vs 사업부/라인 단위 범위 설계"가 선택지다. 동결건조 주사제 라인의 별도 성장 스토리(가동률, 수주잔고)를 숫자로 준비할 필요 [Exit, M&A].</li><li>Jefferies는 2020~21년 인수 자산에 대해 매수자가 Exit 배수를 인수 배수 이하로 잡는다고 짚었다. 당사 가치 상승은 멀티플이 아니라 EBITDA(가동률) 개선으로 증명해야 하며, WuXi 목록 제외로 "탈중국 수주" 기대는 보수적으로 반영 [Exit, 수주].</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-11</span></div>
+<div class="refband">여기부터 참조</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">마더스제약</div><div class="cm">한국, 비상장(코스닥 상장 추진), 제약</div></th><td>2011년 설립. 전문의약품 개발, 생산, 판매 중심에 일반약, 위탁생산(CMO), 신약 개발 병행. 경산, 익산 공장 보유.</td><td class="sz">비공개<div class="szsrc">DART 코드 미등록 (증권신고서 원문 미조회)</div></td><td>1 국내: 증권신고서 제출, IPO 착수</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">SD바이오센서</div><div class="cm">한국, 코스피, 진단기기</div></th><td>체외진단(신속진단 키트 등) 기업. 코로나 진단 키트로 성장 후 해외 유통사 인수로 사업 확장.</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1 국내: 자사주 130억 매입, 전량 소각</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">현대약품</div><div class="cm">한국, 코스피, 제약</div></th><td>전문의약품, 일반의약품 제조, 판매 중견 제약사.</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1 국내: 도매 거래처 선별 정책 논란</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">식품의약품안전처</div><div class="cm">한국, 정부기관</div></th><td>의약품 허가, GMP, 수수료 고시 주관.</td><td class="sz">해당 없음<div class="szsrc"></div></td><td>1 국내: 자료제출약 수수료 인상</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">BDR Pharmaceuticals</div><div class="cm">인도, 비상장, 제약/CDMO</div></th><td>항암, 중환자, 여성건강 의약품과 CDMO. Multiples PE가 투자한 포트폴리오사.</td><td class="sz">비공개<div class="szsrc">회사 공시 수치 미확인</div></td><td>2 PE/Deal, 5 오늘의 딜: Acme 경구제 사업 인수</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">Acme Formulation</div><div class="cm">인도, 비상장, 제약 수탁</div></th><td>경구 고형제(갑상선, 여성호르몬 등) 제조. 무균 주사제 CDMO Immacule은 별도 보유.</td><td class="sz">비공개<div class="szsrc"></div></td><td>2 PE/Deal: 경구제 사업 매각 대상</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">PAG</div><div class="cm">홍콩, 비상장, PE 운용사</div></th><td>아시아 대체투자 운용사. Acme 투자자로 이번에 경구제 사업을 회수.</td><td class="sz">미조회<div class="szsrc">운용사 공식 AUM 미조회</div></td><td>2 PE/Deal: 매도자(부분 Exit)</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Multiples PE</div><div class="cm">인도, 비상장, PE 운용사</div></th><td>인도 성장/바이아웃 PE. BDR Pharma 투자자.</td><td class="sz">미조회<div class="szsrc">운용사 공식 AUM 미조회</div></td><td>2 PE/Deal: 매수자의 재무적 후원자</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Shionogi (시오노기)</div><div class="cm">일본, 도쿄 상장, 제약</div></th><td>감염병(항생제, 항바이러스) 강자. ALS 치료제 미국 판매망을 기반으로 희귀질환 확장 중.</td><td class="sz">미조회<div class="szsrc">회사 IR 미조회</div></td><td>2 PE/Deal: IntraBio $2.0B 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Scholar Rock</div><div class="cm">미국, 나스닥, 바이오</div></th><td>근육 질환 항체 개발사. SMA 치료제 ISEMBYLD 허가(2026-09)로 PRV 획득.</td><td class="sz">미조회<div class="szsrc">SEC EDGAR 조회 실패(권한 대기 만료)</div></td><td>2 PE/Deal: PRV $205M 매각</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Jefferies</div><div class="cm">미국, NYSE, 투자은행</div></th><td>미국 IB. 헬스케어 미드마켓 M&A 자문, 리서치 발간.</td><td class="sz">미조회<div class="szsrc">SEC EDGAR 조회 실패(권한 대기 만료)</div></td><td>3 리포트: 헬스케어 PE 진단</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">WuXi AppTec</div><div class="cm">중국, 상하이/홍콩 상장, CRDMO</div></th><td>저분자, 펩타이드(WuXi TIDES) 중심 글로벌 최대급 CRDMO.</td><td class="sz">미조회<div class="szsrc">회사 IR 미조회</div></td><td>4 글로벌: 1260H 목록 제외</td><td><span class="rel comp">경쟁/비교대상</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-11</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-sec-reg"><div class="k">증권신고서 <span>Registration Statement</span></div><div class="d">공모 전 금융위에 내는 법정 공시로 사업, 재무, 위험, 공모가 산정 근거를 담는다. 오늘 마더스제약 IPO 기사에 등장.</div><div class="u">▸ IPO, 유상증자, 회사채 공모</div><div class="ex">예: 공모 264~348억 규모 IPO → 증권신고서 효력 발생 후 청약</div></div><div class="bt" id="t-price-band"><div class="k">공모가 밴드 <span>Indicative Price Range</span></div><div class="d">희망 공모가 범위. 비교군 배수로 구한 평가가액에 할인율을 적용해 정한다. 마더스 1만1,000~1만4,500원.</div><div class="u">▸ IPO 수요예측, 공모가 확정</div><div class="ex">예: 평가가액 1만6,170원에 할인 10~32% → 밴드 1만1,000~1만4,500원</div></div><div class="bt" id="t-mcap"><div class="k">시가총액 <span>Market Capitalization</span></div><div class="d">주가 × 발행주식 수. 마더스는 상장 후 1,632~2,151억을 제시.</div><div class="u">▸ 상장사 가치 비교, EV 산정의 출발점</div><div class="ex">예: 주가 1만1,000원 × 1,484만주 = 1,632억(계산치)</div></div><div class="bt" id="t-bookbuild"><div class="k">수요예측 <span>Book Building</span></div><div class="d">기관투자자에게 희망 가격과 수량을 받아 공모가를 정하는 절차. 마더스는 11/27 실시.</div><div class="u">▸ IPO 공모가 확정, 배정</div><div class="ex">예: 기관 주문 1,000억 / 공모 300억 = 경쟁률 3.3배</div></div><div class="bt" id="t-buyback-cancel"><div class="k">자사주 소각 <span>Treasury Share Cancellation</span></div><div class="d">사들인 자기주식을 없애 발행주식 수를 줄임. SD바이오센서 130억 매입분 전량 소각 예정.</div><div class="u">▸ 주주환원, 밸류업 공시</div><div class="ex">예: 발행주식 1억주 중 195만주 소각 → 주당이익 약 2% 증가</div></div><div class="bt" id="t-controlling"><div class="k">경영권 지분 <span>Controlling Stake</span></div><div class="d">회사 의사결정을 지배할 수 있는 지분(보통 50% 초과). BDR이 Acme 경구제 사업에서 확보.</div><div class="u">▸ 바이아웃, 경영권 프리미엄 산정</div><div class="ex">예: 지분 51% 인수 시 100% 가치 $250M이면 지분가 $127.5M + 프리미엄</div></div><div class="bt" id="t-carveout"><div class="k">카브아웃 <span>Carve-out</span></div><div class="d">회사의 일부 사업부를 떼어 파는 것. Acme는 경구제만 매각, 주사제는 보유.</div><div class="u">▸ 대기업, PE의 사업 재편, 부분 Exit</div><div class="ex">예: 매출 1,000억 중 경구제 600억 사업만 매각</div></div><div class="bt" id="t-hsr"><div class="k">독점금지 대기기간 <span>Antitrust (HSR) Waiting Period</span></div><div class="d">미국 등에서 M&A 신고 후 종결 전 기다리는 기간(보통 30일). 시오노기, Scholar Rock 거래 종결 조건.</div><div class="u">▸ 해외 M&A 일정 산정</div><div class="ex">예: 서명 11/10 + 30일 = 12/10 이후 종결 가능</div></div><div class="bt" id="t-apa"><div class="k">자산양수도 계약 <span>Asset Purchase Agreement (APA)</span></div><div class="d">회사 주식 대신 특정 자산(설비, 권리)만 사고파는 계약. Scholar Rock은 PRV 1장을 이 방식으로 매각.</div><div class="u">▸ 공장, 품목, 라이선스 매각</div><div class="ex">예: PRV 1장 $205M 현금, 회사 지분 변동 없음</div></div><div class="bt" id="t-gp-led"><div class="k">GP 주도 세컨더리 <span>GP-led Secondary</span></div><div class="d">운용사가 보유 자산을 자기 신규 펀드(컨티뉴에이션 펀드)로 옮기는 거래. Jefferies 리포트 수치 $115B.</div><div class="u">▸ PE 보유기간 연장, LP 유동성 공급</div><div class="ex">예: 기존 LP 70% 현금 회수, 30% 재투자 선택</div></div><div class="bt" id="t-entry-multiple"><div class="k">인수 배수 <span>Entry Multiple</span></div><div class="d">인수 시 지불한 EV / EBITDA 배수. Exit 배수와 비교해 멀티플 확장/축소를 판단. Jefferies는 Exit 배수를 이 수준 이하로 가정하는 추세라고 언급.</div><div class="u">▸ PE 수익 분해, Exit 가치 가정</div><div class="ex">예: EV 3,000억 / EBITDA 250억 = 12배로 인수 → 12배 이하 매각 가정</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concepts"><div class="concept">
+      <div class="ch"><div><b>공모가 밴드 산정<span>IPO Price Range Setting (Relative Valuation)</span></b><div class="quote">"공모주식 수는 240만주, 희망 공모가 밴드는 1만1000~1만4500원" <em>- 히트뉴스, 2026-11-10</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>IPO 공모가는 상장 비교기업의 배수(PER, EV/EBITDA 등)로 회사 가치를 구한 뒤 주식 수로 나눠 "주당 평가가액"을 만들고, 여기에 공모 할인율(통상 10~35%)을 적용해 희망 밴드를 정한다. 최종 가격은 수요예측으로 확정.</p><h5>계산식</h5><div class="formula">주당 평가가액 = (비교군 배수 × 이익) ÷ 상장 후 주식수<br>밴드 = 평가가액 × (1 - 할인율)</div><h5>오늘 수치로</h5><div class="calc">240만주 × 1만1,000~1만4,500원 = 264~348억(공모). 시총 1,632억 ÷ 1만1,000원 ≈ 1,484만주(상장 후 주식수, 계산치)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>IPO 공모가 밴드: 비교군 선정이 가격의 절반을 결정</li><li>맥쿼리 Exit 시 IPO vs 매각 비교: IPO 할인율 10~35%만큼 매각가 대비 불리</li><li>당사 적용: CDMO는 감가상각이 커서 PER보다 EV/EBITDA로 비교군을 맞추는 것이 유리</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 비교군 PER로 마더스형 공모가 밴드 만들기</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델. 실제 평가에서는 항목별 가정을 실사 자료로 대체.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 비교군</td><td>A 14배 / B 16배 / C 18배 (가정)</td><td class="f">(14+16+18)÷3</td><td class="r">PER 16배</td><td>비교 제약사 3곳 평균</td></tr><tr><td class="st">② 이익</td><td>연환산 순이익 150억 (가정)</td><td class="f">—</td><td class="r">150억</td><td>최근 4분기 또는 추정 당기</td></tr><tr><td class="st">③ 평가 시총</td><td>16배 × 150억</td><td class="f">16 × 150</td><td class="r">2,400억</td><td>할인 전 적정 가치</td></tr><tr><td class="st">④ 주식수</td><td>상장 후 1,484만주</td><td class="f">—</td><td class="r">1,484만주</td><td>신주 포함 (오늘 계산치)</td></tr><tr><td class="st">⑤ 주당 평가가액</td><td>2,400억 ÷ 1,484만주</td><td class="f">2,400억/1,484만</td><td class="r">16,173원</td><td>할인 전 주당 가치</td></tr><tr><td class="st">⑥ 할인율</td><td>10.3% ~ 32.0% (가정)</td><td class="f">16,173 × (1-할인율)</td><td class="r">11,000~14,500원</td><td>희망 공모가 밴드</td></tr><tr class="total"><td class="st">⑦ 공모 금액</td><td>240만주 × 밴드</td><td class="f">240만 × 11,000 / 14,500</td><td class="r">264~348억</td><td>최종 확정은 수요예측</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>당사 순이익(또는 EBITDA) 연환산치와 비교군: 국내 CDMO, 제약 상장사 3~5곳</li><li>설비가 많아 PER가 불리하면 EV/EBITDA로 바꾸고 순차입금 차감 후 지분가치로 환산</li><li>공모 주식 중 구주매출(맥쿼리 회수분) 비중과 할인율</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 상대가치 / 절대가치 평가 지표</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>PER</th><td class="f">시총 ÷ 순이익</td><td>이익이 안정적인 상장 비교군</td><td class="lim">감가상각, 이자, 일회성 손익에 흔들림</td></tr><tr><th>EV/EBITDA</th><td class="f">(시총+순차입금) ÷ EBITDA</td><td>설비 많은 CDMO, 차입 다른 회사 비교</td><td class="lim">Capex 부담을 안 보여줌</td></tr><tr><th>PBR</th><td class="f">시총 ÷ 순자산</td><td>자산 중심, 저수익 기업</td><td class="lim">성장성 반영 약함</td></tr><tr><th>DCF</th><td class="f">미래 FCF 현재가치 합</td><td>장기 계획이 명확할 때</td><td class="lim">가정(성장률, WACC)에 민감</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 공모주식 300만주, 밴드 1만~1만3,000원이면 공모 금액 범위는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">300만 × 10,000 = 300억, × 13,000 = 390억. 공모 금액 300~390억.</div></details></div><div class="q"><b>Q2.</b> 계산 예시에서 비교군 평균 PER가 16배 → 20배로 오르면 주당 평가가액과 같은 할인율(10.3~32%)의 밴드는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">시총 = 20 × 150억 = 3,000억, ÷ 1,484만주 = 20,216원. 밴드 = 20,216 × 0.68 ~ 0.897 ≈ 13,750~18,130원. 비교군 배수 4배 차이가 밴드를 약 25% 올린다.</div></details></div><div class="q"><b>Q3.</b> 당사 가정: 순이익 300억, 비교군 PER 15배, 상장 후 주식 3,000만주, 할인율 25%이면 밴드 기준가는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">시총 4,500억 ÷ 3,000만주 = 15,000원, × (1-0.25) = 11,250원. 할인율을 15~35%로 두면 밴드 9,750~12,750원.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [가정, Exit 준비] 맥쿼리가 IPO로 일부 회수하려 한다. 공모 1,000억 중 구주매출을 몇 %로 할지 어떻게 정하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 구주 비중이 높을수록 1차 회수액은 크지만 "대주주 탈출" 신호로 할인율이 커진다. 신주로 증설 자금(동결건조 라인 등)을 함께 조달해 성장 스토리를 붙이면 할인율을 줄일 수 있다. 체크포인트: ① 구주 비중 50% 안팎의 국내 사례 비교 ② 잔여 지분 락업과 오버행 계획 ③ 신주 자금 사용처가 수요예측 설득력을 높이는지</div></details></div><div class="q"><b>P2.</b> [가정, IPO vs 매각] EV/EBITDA 12배 매각 제안과 PER 기반 IPO 밴드 중 무엇이 유리한지 비교하려면?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 같은 기준으로 맞춘다. IPO 평가 시총(할인 후)에 순차입금을 더해 EV로 바꾸고 EBITDA로 나눠 "IPO 내재 EV/EBITDA"를 구한 뒤 12배와 비교. IPO는 일부만 회수되고 잔여 지분은 주가 위험이 남는다. 체크포인트: ① 할인율 반영 여부 ② 회수 시점 차이(IRR 영향) ③ 경영권 프리미엄은 매각에만 있음</div></details></div><div class="q"><b>P3.</b> [가정, M&A 검토] 상장 예정 제약사(밴드 하단 시총 1,632억)를 상장 전 지분 인수로 검토한다. 가격 기준은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 밴드 하단 시총은 이미 할인이 반영된 값이므로 상한 참고치로 쓰고, 상장 무산 리스크, 유동성 부족을 추가 할인한다. 경영권이면 프리미엄, 소수지분이면 풋옵션, 상장 기한 조건을 붙인다. 체크포인트: ① 비교군 배수 재산정 ② 상장 무산 시 회수 장치 ③ 증권신고서 위험요인 검토</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-11
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 증권신고서(Registration Statement) | 공모(IPO, 증자)로 주식을 팔기 전에 회사가 금융위원회에 내는 법정 공시. 사업, 재무, 위험요인, 공모가 산정 근거, 자금 사용 계획을 담는다. 효력이 생겨야 청약을 받을 수 있다. | 당사 IPO 시 실사 자료가 이 문서로 공개됨. 주요 고객 계약, 가동률, 특수관계 거래가 위험요인에 노출 |
+| 공모가 밴드(Indicative Price Range (Price Band)) | IPO에서 주관사와 회사가 제시하는 희망 공모가의 상하단. 비교군 멀티플로 구한 주당 평가가액에 할인율을 적용해 정하고, 수요예측 결과로 최종 공모가를 밴드 안(또는 밖)에서 확정한다. | 맥쿼리 IPO 회수액 = 최종 공모가 × 구주매출 주식수. 밴드 하단과 상단 차이가 곧 회수액 범위 |
+| 컨티뉴에이션 펀드(Continuation Vehicle (GP-led Secondary)) | 운용사(GP)가 기존 펀드 만기가 왔지만 더 키우고 싶은 회사를 자기가 새로 만든 펀드로 옮기는 거래. 기존 LP는 현금 회수 또는 재투자 중 선택하고, 새 LP(세컨더리 펀드)가 자금을 댄다. | 맥쿼리가 당사를 제3자에 팔지 않고 이 구조로 보유 기간을 늘리는 것도 Exit 시나리오 중 하나. 가격 공정성 검증(외부 평가) 필요 |
+| 거래 대상 범위(Transaction Perimeter) | 매각 거래에 포함되는 사업, 자산, 법인, 인력의 경계. 범위 밖 자산은 매도자가 계속 보유하거나 따로 판다. 공용 설비, 인허가, 공유 서비스를 어떻게 나눌지(TSA)가 핵심 협상 항목. | 당사 Exit에서 CMO/Pharma 사업부, 동결건조 라인을 한 덩어리로 팔지 나눌지 결정하는 개념 |
+| HSR 대기기간(Hart-Scott-Rodino Waiting Period) | 미국에서 일정 규모 이상 M&A는 FTC, 법무부에 사전 신고하고 보통 30일 대기해야 종결할 수 있다. 당국이 추가 자료를 요구(Second Request)하면 수개월 늘어난다. | 미국 자산, 매출이 있는 거래에서 서명-종결 기간 산정의 기본 변수. 국내 기업결합 심사와 병행 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
