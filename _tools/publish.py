@@ -15,6 +15,8 @@
   python3 publish.py add  <briefing.json> [--index <index.json>] [--push]   # ArtifactData out_dir로 받은 briefings/<id>.json (+ index/<id>.json: 용어집/시사점)
   python3 publish.py mail <id> [extra_id ...] [--full] [--note 문구] --out mail.html [--zip out.zip]   # 메일 본문(이미지) + 첨부 zip
   python3 publish.py index [--push]                    # 목록만 재생성
+  python3 publish.py deploy                            # Pages 배포 확인, 실패/정체 시 자동 재배포(최대 2회)
+  * --push 뒤에는 자동으로 deploy 확인이 돈다 (최대 약 25분)
 <id> = index 문서 id (일간은 YYYY-MM-DD, 리포트는 weekly-YYYY-MM-DD 등)
 """
 import json, os, re, sys, subprocess, html as H, asyncio, glob, datetime
@@ -361,11 +363,61 @@ def git_push(msg):
     subprocess.run(['git', 'rebase', '-q', 'origin/main'], cwd=ROOT, check=True)
     subprocess.run(['git', 'push', '-q', 'origin', 'HEAD:main'], cwd=ROOT, check=True)
     print('pushed')
+    ensure_deployed()
+
+# ---------------------------------------------------------------- Pages 배포 확인 + 자동 재시도
+# GitHub의 'pages build and deployment' 실행이 가끔 queued에서 멈추거나 cancelled 됨(11-05, 11-12).
+# push 뒤 해당 커밋의 배포 결과를 확인하고, 실패/정체 시 멈춘 실행을 취소하고 빈 커밋으로 재배포한다.
+REPO = 'yhjin1993-art/Briefing-Archive'
+
+def _gh(*args):
+    r = subprocess.run(['gh', *args], cwd=ROOT, capture_output=True, text=True)
+    return r.stdout.strip() if r.returncode == 0 else None
+
+def _run_for(sha):
+    out = _gh('api', f'repos/{REPO}/actions/runs?per_page=10&head_sha={sha}',
+              '--jq', '.workflow_runs[]|select(.name=="pages build and deployment")|[.id,.status,(.conclusion//"")]|@tsv')
+    if out is None: return 'nogh'
+    return out.splitlines()[0].split('\t') if out else None
+
+def _wait(sha, timeout=480):
+    import time
+    t0 = time.time()
+    while time.time() - t0 < timeout:
+        r = _run_for(sha)
+        if r == 'nogh': return 'nogh', None
+        if r and r[1] == 'completed':
+            return ('ok' if r[2] == 'success' else 'fail'), r[0]
+        time.sleep(20)
+    r = _run_for(sha)
+    return 'stuck', (r[0] if r and r != 'nogh' else None)
+
+def ensure_deployed(retries=2):
+    sha = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    for n in range(retries + 1):
+        st, rid = _wait(sha)
+        if st == 'nogh':
+            print('WARN deploy check skipped (gh API 불가)'); return False
+        if st == 'ok':
+            print('deployed', sha[:7]); return True
+        print(f'deploy {st} (run {rid}), retry {n + 1}/{retries}')
+        if n == retries: break
+        if rid: _gh('run', 'cancel', str(rid), '-R', REPO)
+        env = dict(os.environ, GIT_AUTHOR_NAME='Genie', GIT_AUTHOR_EMAIL='yhjin1993@gmail.com',
+                   GIT_COMMITTER_NAME='Genie', GIT_COMMITTER_EMAIL='yhjin1993@gmail.com')
+        subprocess.run(['git', 'commit', '-q', '--allow-empty', '-m', 'Pages 재배포 (자동 재시도)'], cwd=ROOT, env=env, check=True)
+        subprocess.run(['git', 'fetch', '-q', 'origin', 'main'], cwd=ROOT, check=True)
+        subprocess.run(['git', 'rebase', '-q', 'origin/main'], cwd=ROOT, check=True)
+        subprocess.run(['git', 'push', '-q', 'origin', 'HEAD:main'], cwd=ROOT, check=True)
+        sha = subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+    print('ERROR Pages 배포 실패 - 발송 단계에서 fallback 사용'); return False
 
 if __name__ == '__main__':
     a = sys.argv[1:]
-    if not a or a[0] not in ('add', 'mail', 'index'):
+    if not a or a[0] not in ('add', 'mail', 'index', 'deploy'):
         print(__doc__); sys.exit(1)
+    if a[0] == 'deploy':   # 배포 상태 확인만 (실패 시 자동 재배포)
+        sys.exit(0 if ensure_deployed() else 1)
     if a[0] == 'add':
         ij = a[a.index('--index') + 1] if '--index' in a else None
         add(a[1], push='--push' in a, index_json=ij)
