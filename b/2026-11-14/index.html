@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-14</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-14</b><span>토</span></div>
+  </div>
+<div class="note">비영업일(토) 생성분: 다음 영업일 메일에 요약 포함. 수집 창 2026-11-13 06:30 ~ 2026-11-14 06:30 KST. 리포트 해당 없음, 국내 3/PE 2/글로벌 2건으로 수집 부족. 국내 기업 규모는 DART 코드 미등록으로 미조회.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s1"><div class="hl-main"><b>Arcline(PE)</b><span class="act">매각</span><b>Akron Bio → MaxCyte</b></div><div class="hl-cond">$151.8M, EBITDA 약 20배</div><div class="hl-mean">PE가 소형 시약사를 상장 전략적 매수자에 팔면서 현금, 주식, 2~3년 뒤 분할 지급을 섞었다.<br>헤드라인보다 현재가치가 작다</div></div><div class="hl s2"><div class="hl-main"><b>보령</b><span class="act">착공</span><b>항암주사제 2공장</b></div><div class="hl-cond">500억, 1,320만 바이알</div><div class="hl-mean">국내 항암 주사제 생산능력을 2배 넘게 늘리고 수출, CDMO까지 노린다.<br>2028년 하반기 국내 주사제 수탁 공급 증가</div></div><div class="hl s1"><div class="hl-main"><b>Nordic Capital 보유 Inovalon</b><span class="act">인수</span><b>DrFirst(전자처방)</b></div><div class="hl-cond">금액 비공개</div><div class="hl-mean">PE 보유 플랫폼이 인접 기능을 붙여 덩치를 키우는 볼트온. Exit 전 단계의 전형</div></div><div class="hl s4"><div class="hl-main"><b>FDA</b><span class="act">보류</span><b>국가우선심사바우처 시범사업</b></div><div class="hl-cond">1~2개월 심사 약속</div><div class="hl-mean">미국 내 생산, 가격 인하 품목에 주던 초고속 심사가 멈춰 미국향 신규 품목 일정이 불확실해짐(보도 기준)</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">설비</div><div>
+      <div class="t">보령, 500억 항암주사제 2공장 착공</div><ul><li>보령이 예산캠퍼스에 약 500억을 들여 <span class="nb">세포독성 항암제<sup class="fn">1</sup></span> 주사제 제2공장을 11/12 착공했다(완공 2028년 하반기).</li><li>연간 생산능력은 600만 → <span class="num">1,320만 바이알</span>로 2배 이상 늘어나며, 예산캠퍼스는 주사제 <span class="nb">EU-GMP<sup class="fn">2</sup></span>을 2023년 확보했다.</li><li>회사는 국내 공급 안정과 함께 수출, CDMO 기반 구축을 목적으로 밝혔다<br><span class="arr">→</span> 국내 항암 주사제 수탁 시장에 대형 공급자가 하나 더 생기는 셈.</li></ul>
+      <div class="src"><a href="https://www.ebn.co.kr/news/articleView.html?idxno=1731548">EBN</a>, 2026-11-13 10:53</div></div></div>
+    <div class="item"><div class="tag ">실적</div><div>
+      <div class="t">대원제약, 3Q 영업손실 41억으로 축소</div><ul><li>대원제약 3Q 연결 매출은 1,393억(-3.2%), 영업손실은 41억으로 전년 104억에서 줄었다(<a class="kw" href="#t-prelim" title="감사 전 먼저 공개하는 실적 - 클릭하면 기본 개념으로 이동">잠정실적</a> 기준).</li><li>누적 3분기 매출 4,502억(+1.0%), 영업이익 3억으로 흑자 전환했다.</li><li>약가 인하와 호흡기 질환 수요 감소가 매출을 눌렀고 만성질환 처방, <span class="nb">CHC<sup class="fn">3</sup></span> 신제품이 일부 상쇄<br><span class="arr">→</span> 약가 압력이 중견 제약사 손익에 그대로 반영되는 흐름.</li></ul>
+      <div class="src"><a href="https://www.pharmnews.com/news/articleView.html?idxno=307951">팜뉴스</a>, 2026-11-13</div></div></div>
+    <div class="item"><div class="tag ref">참고</div><div>
+      <div class="t">BIO-Europe에 한국 기업 210곳 참가</div><ul><li>11/9~11 독일 쾰른 BIO-Europe 2026에 국내 기업 약 210곳이 참가해 국가별 4위(독일, 미국, 영국 다음)였다.</li><li>전체 참가는 65개국 3,100여 개사이며, 제약바이오협회 주최 코리아 나이트 해외 참석자 비중은 36%로 역대 최고였다.</li><li>기업 IR 발표 4건은 CAR-T, NK세포 등 바이오 신약 위주<br><span class="arr">→</span> 케미컬 CDMO 파트너링 수요는 기사상 확인되지 않음.</li></ul>
+      <div class="src"><a href="https://view.asiae.co.kr/article/2026111308340504792">아시아경제</a>, 2026-11-13 08:34</div></div></div>
+    <div class="empty">수집 창(11/13 06:30 이후) 기준 3건. 휴온스 3Q 적자전환(메디칼업저버 11/13 05:59)은 창 이전 보도라 제외.</div>
+<ol class="footnotes"><li><b>세포독성 항암제</b> 암세포 분열을 직접 막는 전통 항암제. 작업자 노출을 막는 전용 격리 설비가 필요</li><li><b>EU-GMP</b> 유럽 의약품 제조품질기준 인증. 유럽 수출과 글로벌 고객 수탁의 기본 요건</li><li><b>CHC</b> Consumer Healthcare. 일반의약품, 건강기능식품 등 소비자 직접 구매 제품군</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-14 (토)</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">Arcline, Akron Bio를 MaxCyte에 $152M 매각</div><ul><li>PE Arcline이 <span class="nb">세포치료 GMP 시약<sup class="fn">1</sup></span> 업체 Akron Bio를 상장사 MaxCyte에 <a class="kw" href="#t-trade-sale" title="전략적 매수자 매각 - 클릭하면 기본 개념으로 이동">Trade Sale</a>로 넘긴다(총 <span class="num">$151.8M</span>).</li><li>대가는 종결 시 현금 $105.0M + MaxCyte 신주 2,<span class="nb">064만주($26.8M)</span> + 2028, 2029년 각 $10M <a class="kw" href="#t-deferred" title="확정 이연 지급 - 클릭하면 기본 개념으로 이동">guaranteed deferred payments</a>로 나뉜다.</li><li>Akron 2026 예상 매출 약 $28M, EBITDA $7~<span class="nb">8M(MaxCyte 발표치)</span><br><span class="arr">→</span> <a class="kw" href="#t-ev-ebitda" title="기업가치/EBITDA 배수 - 클릭하면 기본 개념으로 이동">EV/EBITDA</a> 약 20배(계산치), 연내 종결 예정.</li></ul>
+      <div class="src"><a href="https://www.privateequityinternational.com/arcline-agrees-akron-bio-sale-to-maxcyte-in-152m-deal/">Private Equity International</a>, 2026-11-12 (발표 11/10, 8-K)</div></div></div>
+    <div class="item"><div class="tag ">볼트온</div><div>
+      <div class="t">Nordic Capital 보유 Inovalon, DrFirst 인수</div><ul><li>Nordic Capital 컨소시엄이 보유한 헬스케어 데이터 기업 Inovalon이 <span class="nb">전자처방(e-Prescribing)<sup class="fn">2</sup></span> 기술 기업 DrFirst를 인수하기로 했다.</li><li>금액, 매도자, 종결 일정은 공개되지 않았다(보도 기준).</li><li>PE가 플랫폼 회사에 인접 기능을 붙이는 전형적인 <a class="kw" href="#t-bolt-on" title="플랫폼에 덧붙이는 인수 - 클릭하면 기본 개념으로 이동">Bolt-on</a><br><span class="arr">→</span> 2021년 인수한 플랫폼의 Exit 전 덩치 키우기 국면.</li></ul>
+      <div class="src"><a href="https://www.privateequityinternational.com/nordic-capital-backed-inovalon-agrees-deal-to-buy-prescription-tech-firm-drfirst/">Private Equity International</a>, 2026-11-12 18:44 UTC</div></div></div>
+    <div class="empty">수집 창 기준 2건(국내 PE 헬스케어 딜 해당 없음, 금지 매체 미검색).</div>
+<ol class="footnotes"><li><b>세포치료 GMP 시약</b> 세포치료제 제조 공정에 쓰는 의약품 등급 배지, 첨가제 등 원부자재</li><li><b>전자처방(e-Prescribing)</b> 의사가 처방을 약국에 전자로 전송하는 시스템. 약물 상호작용 경고, 사전승인 연동 포함</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="empty">해당 없음: 최근 1~2주 신규 발행 헬스케어/PE 리포트를 찾지 못함(MBB/IQVIA Insights 페이지 직접 조회 실패, 검색 결과에 신규분 없음).</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-14 (토)</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">규제</div><div>
+      <div class="t">FDA, 국가우선심사바우처 시범사업 보류</div><ul><li>FDA가 1~2개월 심사를 약속한 <a class="kw" href="#t-cnpv" title="국가우선심사바우처 - 클릭하면 기본 개념으로 이동">CNPV</a> 시범사업을 보류한 것으로 보도됐다(11/12).</li><li>이 제도는 미국 내 생산 <span class="nb">이전(Onshoring)</span>, 가격 인하 등 국가 우선과제에 맞춘 품목에 초고속 심사를 주는 구조였다.</li><li>바우처 일정에 맞춰 CMC, 출시 준비를 짠 개발사는 일정 불확실성이 커졌다<br><span class="arr">→</span> 미국향 수탁 품목의 생산 개시 시점도 늦어질 수 있음(보도 기준).</li></ul>
+      <div class="src"><a href="https://www.pharmtech.com/view/pharmtech-s-weekly-roundup-november-13-2026-ai-accountability-anticounterfeiting-and-fda-approvals">PharmTech Weekly Roundup</a>, 2026-11-13</div></div></div>
+    <div class="item"><div class="tag ">화장품</div><div>
+      <div class="t">HTL, 의약품 등급 PN 전용 공장 가동</div><ul><li>프랑스 HTL Biotechnology가 브르타뉴 자브네에 의약품 등급 <span class="nb">폴리뉴클레오타이드(PN)<sup class="fn">1</sup></span> 정제 전용 설비 HTL8을 11/12 가동했다.</li><li>투자액은 €15M로, 2022~2026년 €100M 투자 계획의 일부다.</li><li>용도는 재생의학, 안과, 피부과(상처 치유)<br><span class="arr">→</span> 피부미용 주사제 원료가 의약품 품질 기준으로 올라가는 흐름, 무균 충전 수요와 연결.</li></ul>
+      <div class="src"><a href="https://www.prnewswire.com/kr/news-releases/u0068u0074u006Cu002DuBC14uC774uC624uD14CuD06CuB180uB85CuC9C0u002Cu002DuC758uC57DuD488u002DuB4F1uAE09u002DuD3F4uB9ACuB274uD074uB808uC624uD0C0-302938944.html">PR Newswire</a>, 2026-11-13</div></div></div>
+    <div class="empty">수집 창 기준 2건. PharmaLogic의 Lantheus CDMO 인수는 11/10 브리핑에 기 반영되어 제외.</div>
+<ol class="footnotes"><li><b>폴리뉴클레오타이드(PN)</b> DNA 조각 성분. 피부 재생, 보습 기능으로 스킨부스터 주사제, 상처 치료에 쓰임</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">Arcline → MaxCyte: Akron Bio $151.8M 매각<small>PE Exit(트레이드 세일), 현금 + 매수자 주식 + 확정 이연 지급, 사모대출로 재원 보강</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>매도: Arcline Investment Management(PE) / 매수: MaxCyte(NASDAQ, 세포 엔지니어링 장비)</dd>
+          <dt>무엇을</dt><dd>세포치료 GMP 시약 업체 Akron Bio 지분 100%. 2026 예상 매출 약 $28M, EBITDA $7~8M(MaxCyte 발표치)</dd>
+          <dt>왜</dt><dd>MaxCyte는 장비 위주 매출에 반복 구매형 소모품(시약)을 붙여 고객당 매출을 늘리려 함. Arcline은 전략적 매수자에게 팔아 시너지 가격을 받음</dd>
+        </dl>
+        <ol class="steps"><li>종결 시 현금 $105.0M 지급(보유 현금 사용, 통상 조정 반영).</li><li>MaxCyte 신주 20,639,733주 <span class="nb">발행($26.8M, 11/9 종가 기준)</span><br><span class="arr">→</span> 매도자가 매수자 주가 위험을 일부 짐.</li><li>2028년 1월, 2029년 1월 각 $10M 확정 이연 지급<br><span class="arr">→</span> 실적 조건 없는 "분할 지급", 어닝아웃과 다름.</li><li>MidCap Financial이 최대 $75M(텀론 $55M + 리볼버 $20M) 제공, 종결 시 $22M 인출 예정.</li><li>금융조달 조건, 주주총회 승인 없음 → 연내 종결 예정.</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">Arcline (PE, 매도자)<small>보유 시작 시점 비공개</small></div><div class="arrow"><i></i><span><b>Akron Bio 지분 100%</b></span></div><div class="node">MaxCyte (매수자)<small>현금 $105M + 주식 $26.8M + 이연 $20M</small></div><div class="arrow"><i></i><span><b>MidCap Financial</b> 텀론/리볼버 최대 $75M</span></div><div class="node">Akron Bio → MaxCyte 자회사<small>연결 편입, 시약 교차 판매</small></div></div>
+        <div class="point"><b>포인트</b> 헤드라인 $151.8M 중 즉시 현금은 69%. 주식(18%)은 매수자 주가에, 이연(13%)은 시간가치와 매수자 신용에 노출된다. 현재가치로 다시 보면 약 $146M(계산치, 할인율 10%/주가 할인 10% 가정, 9번 B 참고). 매출 $28M 소형사에 EBITDA 약 20배(계산치)가 붙은 것은 매수자가 "반복 매출 + 시너지"에 값을 매겼기 때문.</div>
+        <div class="src"><a href="https://www.sec.gov/Archives/edgar/data/0001287098/000110465926124829/tm2629420d1_ex99-2.htm">MaxCyte 8-K 첨부 보도자료(2026-11-10), PEI 2026-11-12</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-14 (토)</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">이연 지급 대가 <span>Deferred Consideration</span></div><div class="d">인수 대금 일부를 종결 후 정해진 날짜에 나눠 주기로 확정한 금액. 실적 조건이 없어 어닝아웃과 다르지만, 늦게 받는 만큼 시간가치가 깎이고 매수자가 망하면 못 받을 위험이 남는다.</div><div class="ex">예: MaxCyte가 Akron 대금 중 $20M을 2028, 2029년 1월 각 $10M으로 지급</div></div><div class="term"><div class="k">회전 신용한도 <span>Revolving Credit Facility (Revolver)</span></div><div class="d">한도 안에서 필요할 때 빌리고 갚고를 반복할 수 있는 대출 약정. 한 번에 받아 정해진 일정으로 갚는 기간대출(Term Loan)과 달리 운전자본, 단기 자금 공백용이며 쓰지 않은 한도에도 약정 수수료가 붙는다.</div><div class="ex">예: MidCap이 MaxCyte에 리볼버 $20M 한도 제공, 종결 시 $2M만 인출</div></div><div class="term"><div class="k">대가의 현재가치 <span>Present Value of Consideration</span></div><div class="d">현금, 주식, 이연 지급이 섞인 인수 대금을 "지금 받는 현금" 기준으로 환산한 금액. 이연분은 할인율로, 주식은 처분 제한과 주가 변동 위험만큼 깎아 합산한다. 헤드라인 금액보다 작다.</div><div class="ex">예: Akron 헤드라인 $151.8M → 현재가치 약 $146M(할인율 10%, 주식 할인 10% 가정, 계산치)</div></div><div class="term"><div class="k">국가우선심사바우처 <span>Commissioner's National Priority Voucher (CNPV)</span></div><div class="d">미국 FDA 국장 재량으로 국가 우선과제(미국 내 생산, 가격 인하, 미충족 수요 등)에 맞는 신청 건의 심사를 1~2개월로 줄여 주는 시범 제도. 희귀질환용 우선심사권(PRV)과 달리 양도 대상이 아니라 정책 목표 연동형이다. 11/12 보류 보도.</div><div class="ex">예: 바우처로 2개월 심사를 예상한 품목이 표준 10개월 심사로 돌아가면 상업 생산 개시가 약 8개월 늦어짐(가정)</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>설비투자 / 동결건조 / Exit</em></div><ol><li>보령이 항암 주사제 생산능력을 600만 → 1,320만 바이알로 늘리며 수출, CDMO를 명시했다 → 2028년 하반기부터 국내 주사제 수탁 공급이 늘어 단가 경쟁 요인이 된다. 당사 동결건조 라인은 인증 이력, 수율, 납기 실적을 숫자로 차별화해 둘 필요(설비투자/동결건조).</li><li>Arcline은 매출 $28M 회사를 EBITDA 약 20배(계산치)에 팔면서 대가의 31%를 주식, 이연 지급으로 받았다 → 맥쿼리 Exit 입찰 비교는 헤드라인이 아니라 현재가치(주가 위험, 지급 시점, 매수자 신용 반영) 기준으로 해야 한다(Exit).</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-14 (토)</span></div>
+<div class="refband">여기부터 참조</div>  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">MaxCyte</div><div class="cm">미국, NASDAQ: MXCT, 세포 엔지니어링</div></th><td>전기천공(Electroporation) 방식 세포 엔지니어링 장비, 소모품, 라이선스. 세포치료 개발사가 주 고객.</td><td class="sz">2026 9M 매출 $27.1M, 9M 순손실 $18.4M<div class="szsrc"><span class="ok">SEC 10-Q, 2026-09-30 기준</span></div></td><td>2번 PE/Deal, 5번 오늘의 딜: Akron Bio 매수자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Akron Bio</div><div class="cm">미국, 비상장, 세포치료 원부자재</div></th><td>세포치료 제조용 GMP 등급 시약, 보조 원료 공급.</td><td class="sz">2026E 매출 약 $28M, EBITDA $7~8M<div class="szsrc">MaxCyte 발표치(8-K 첨부 보도자료, 공시 아님)</div></td><td>2번, 5번: 매각 대상</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Arcline Investment Management</div><div class="cm">미국, PE</div></th><td>산업재, 헬스케어 소재 중심 사모펀드 운용사.</td><td class="sz">미확인<div class="szsrc">운용사 공식 AUM 미조회</div></td><td>2번, 5번: 매도자(Exit)</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">MidCap Financial</div><div class="cm">미국, 사모대출</div></th><td>헬스케어, 중견기업 대상 담보 대출 전문 사모대출 운용사.</td><td class="sz">미확인<div class="szsrc">공식 수치 미조회</div></td><td>5번: MaxCyte에 최대 $75M 제공</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Nordic Capital</div><div class="cm">유럽, PE</div></th><td>헬스케어, 기술 중심 바이아웃 운용사. 2021년 컨소시엄으로 Inovalon 인수.</td><td class="sz">미확인<div class="szsrc">운용사 공식 AUM 미조회</div></td><td>2번: Inovalon 대주주</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Inovalon</div><div class="cm">미국, 비상장(PE 보유), 헬스케어 데이터</div></th><td>병원, 보험사, 약국용 데이터 분석, SaaS.</td><td class="sz">비공개<div class="szsrc">비상장, 공식 수치 없음</div></td><td>2번: DrFirst 인수(볼트온)</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">DrFirst</div><div class="cm">미국, 비상장, 전자처방</div></th><td>전자처방, 약물 이력 조회 소프트웨어.</td><td class="sz">비공개<div class="szsrc">비상장, 공식 수치 없음</div></td><td>2번: 매각 대상</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">보령</div><div class="cm">한국, KOSPI 003850, 제약</div></th><td>항암제, 순환기 등 전문의약품. 예산캠퍼스에 고형제, 항암 주사제 생산(주사제 EU-GMP 2023).</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1번: 항암주사제 2공장 착공, 수출/CDMO 기반</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">대원제약</div><div class="cm">한국, KOSPI 003220, 제약</div></th><td>호흡기, 만성질환 전문의약품, 일반의약품(CHC).</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1번: 3Q 실적(약가 인하 영향)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">HTL Biotechnology</div><div class="cm">프랑스, 비상장, 바이오폴리머 원료</div></th><td>의약품 등급 히알루론산, 폴리뉴클레오타이드 원료 제조.</td><td class="sz">비공개<div class="szsrc">비상장, 공식 수치 없음</div></td><td>4번: PN 전용 공장 가동</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-14 (토)</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-trade-sale"><div class="k">트레이드 세일 <span>Trade Sale</span></div><div class="d">PE가 보유 회사를 같은 업종의 사업회사(전략적 매수자)에 파는 것. 오늘 Arcline이 Akron Bio를 MaxCyte에 판 거래.</div><div class="u">▸ PE Exit 경로 비교(매각/IPO/세컨더리)</div><div class="ex">예: 매출 $28M 회사를 시너지 반영해 EBITDA 20배에 매각</div></div><div class="bt" id="t-deferred"><div class="k">확정 이연 지급 <span>Guaranteed Deferred Payments</span></div><div class="d">종결 후 정해진 날짜에 조건 없이 나눠 주는 인수 대금. 오늘 MaxCyte가 $20M을 2028, 2029년에 나눠 지급.</div><div class="u">▸ 인수 대가 구성 협상, 입찰가 비교</div><div class="ex">예: $10M을 2.1년 뒤 받으면 할인율 10%에서 현재가치 $8.2M</div></div><div class="bt" id="t-ev-ebitda"><div class="k">EV/EBITDA 배수 <span>EV/EBITDA Multiple</span></div><div class="d">기업가치가 EBITDA의 몇 배인지. 오늘 Akron 거래는 $151.8M / EBITDA $7.5M ≈ 20배(계산치).</div><div class="u">▸ 동종 딜 가격 비교, 당사 밸류 참고치</div><div class="ex">예: EV 1,000억, EBITDA 100억이면 10배</div></div><div class="bt" id="t-bolt-on"><div class="k">볼트온 인수 <span>Bolt-on Acquisition</span></div><div class="d">PE가 보유한 플랫폼 회사에 작은 회사를 덧붙이는 인수. 오늘 Nordic Capital 보유 Inovalon의 DrFirst 인수.</div><div class="u">▸ Buy-and-Build 전략, Exit 전 규모 확대</div><div class="ex">예: EBITDA 50억 회사를 8배(400억)에 사서 합친 회사가 12배를 받으면 붙인 이익만큼 600억 가치</div></div><div class="bt" id="t-prelim"><div class="k">잠정실적 <span>Preliminary Earnings</span></div><div class="d">회계감사 전 회사가 먼저 공개하는 분기 실적. 오늘 대원제약 3Q 영업손실 41억이 이 기준.</div><div class="u">▸ 고객사, 경쟁사 실적의 첫 확인 창</div><div class="ex">예: 잠정 영업손실 41억이 감사 후 45억으로 바뀔 수 있음(가정)</div></div><div class="bt" id="t-revolver"><div class="k">리볼버(회전 신용한도) <span>Revolving Credit Facility</span></div><div class="d">한도 안에서 반복해 빌리고 갚는 대출. 오늘 MidCap이 MaxCyte에 $20M 한도 제공.</div><div class="u">▸ 운전자본, 단기 자금 공백 관리</div><div class="ex">예: 한도 100억 중 30억만 쓰면 70억에는 약정 수수료(예: 0.3%)만 부담</div></div><div class="bt" id="t-term-loan"><div class="k">텀론(기간대출) <span>Term Loan</span></div><div class="d">한 번에(또는 정해진 횟수로) 인출해 만기까지 정해진 일정으로 갚는 대출. 오늘 MidCap 텀론 $55M 중 $20M 인출 예정.</div><div class="u">▸ 인수대금, 설비투자 재원</div><div class="ex">예: 300억 5년 균등상환이면 연 60억 원금 + 이자</div></div><div class="bt" id="t-pv"><div class="k">현재가치 <span>Present Value (PV)</span></div><div class="d">미래에 받을 돈을 할인율로 나눠 지금 가치로 바꾼 값. 오늘 Akron 대가를 현재가치로 다시 계산(9번 B).</div><div class="u">▸ 입찰가 비교, DCF, 투자 회수 계산</div><div class="ex">예: 2년 뒤 100억, 할인율 8%면 100/1.08² = 85.7억</div></div><div class="bt" id="t-cnpv"><div class="k">CNPV(국가우선심사바우처) <span>Commissioner's National Priority Voucher</span></div><div class="d">FDA가 국가 우선과제 품목의 심사를 1~2개월로 단축하는 시범 제도. 오늘 보류 보도.</div><div class="u">▸ 미국 허가 일정, 수탁 생산 개시 시점 가정</div><div class="ex">예: 표준 심사 10개월 → 바우처 2개월, 보류 시 8개월 지연(가정)</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+    <div class="concepts"><div class="concept">
+      <div class="ch"><div><b>인수 대가 구성과 현재가치<span>Purchase Consideration Mix & Present Value</span></b><div class="quote">"$105.0 million in cash at closing ... and $20.0 million in guaranteed deferred payments" <em>- MaxCyte 8-K 첨부 보도자료, 2026-11-10</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>인수 대금(대가)은 현금, 매수자 주식, 나중에 주는 돈(이연 지급, 어닝아웃) 등으로 섞어 짤 수 있다. 헤드라인 금액은 이를 명목으로 더한 값이라, 매도자 입장의 실제 가치는 각 부분을 "지금 받는 현금"으로 환산한 현재가치 합계로 봐야 한다.</p><h5>계산식</h5><div class="formula">PV = 현금 + 주식가치 × (1 - 주식 할인) + Σ 이연액 / (1 + r)^t</div><h5>오늘 수치로</h5><div class="calc">105.0 + 26.8×0.9 + 10/1.1^1.1 + 10/1.1^2.1 ≈ 105.0 + 24.1 + 9.0 + 8.2 = <b>$146.3M</b> (헤드라인 $151.8M 대비 -3.6%, 계산치)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>맥쿼리 Exit: 입찰가 비교표에 헤드라인과 현재가치를 나란히 둔다. 주식, 이연 비중이 큰 제안은 할인</li><li>볼트온 인수(당사 매수자): 이연 지급으로 종결 시 현금 부담을 줄이되, 매도자는 보증, 에스크로를 요구할 수 있음</li><li>고객사, 라이선스 협상: 업프론트 vs 마일스톤 구조도 같은 현재가치 논리</li><li>투자 심의: 설비투자 회수 계산(미래 현금흐름의 현재가치)과 같은 도구</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: Akron Bio 대가를 현재가치로 다시 계산</h5><div class="exnote">할인율 10%, 주식 할인 10%는 설명용 가정. 실제로는 매수자 신용등급, 주식 락업 조건, 주가 변동성으로 정한다. 단순화한 모델.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 현금</td><td>종결 시 $105.0M</td><td class="f">그대로</td><td class="r">$105.0M</td><td>즉시 수령, 할인 없음</td></tr><tr><td class="st">② 주식(명목)</td><td>20,639,733주 × $1.30(11/9 종가)</td><td class="f">20.64M × 1.30</td><td class="r">$26.8M</td><td>매수자 주가에 연동</td></tr><tr><td class="st">③ 주식 할인</td><td>처분 제한, 변동성 10%(가정)</td><td class="f">26.8 × (1-0.10)</td><td class="r">$24.1M</td><td>바로 팔 수 없는 위험 반영</td></tr><tr><td class="st">④ 이연 1차</td><td>2028-01 $10M, 약 1.1년, r=10%(가정)</td><td class="f">10 / 1.1^1.1</td><td class="r">$9.0M</td><td>시간가치 차감</td></tr><tr><td class="st">⑤ 이연 2차</td><td>2029-01 $10M, 약 2.1년</td><td class="f">10 / 1.1^2.1</td><td class="r">$8.2M</td><td>더 늦을수록 더 깎임</td></tr><tr class="total"><td class="st">⑥ 현재가치 합계</td><td>①+③+④+⑤</td><td class="f">105.0+24.1+9.0+8.2</td><td class="r">$146.3M</td><td>헤드라인 대비 -$5.5M(-3.6%)</td></tr><tr><td class="st">⑦ 암묵 배수</td><td>EBITDA $7.5M(발표 7~8 중앙)</td><td class="f">146.3 / 7.5</td><td class="r">19.5배</td><td>헤드라인 기준은 20.2배</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>입찰자별 현금/주식/이연 비중과 지급 시점</li><li>할인율(매수자 신용, 당사 자금비용 기준)</li><li>주식 대가의 락업 기간과 매수자 주가 변동성</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 인수 대가의 종류</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>현금</th><td class="f">즉시 지급</td><td>매도자가 확실성 선호, 매수자 자금 충분</td><td class="lim">매수자 차입 부담, 가격이 다소 낮아짐</td></tr><tr><th>매수자 주식</th><td class="f">주식수 × 주가</td><td>상장 매수자, 현금 절약, 매도자도 시너지 공유</td><td class="lim">주가 하락 위험을 매도자가 짐(칼라로 완화)</td></tr><tr><th>확정 이연 지급</th><td class="f">Σ 금액/(1+r)^t</td><td>현금 분산, 실적 조건 없음</td><td class="lim">매수자 신용 위험, 시간가치 손실</td></tr><tr><th>어닝아웃</th><td class="f">조건 충족 시 지급</td><td>실적 전망 차이(밸류 갭) 해소</td><td class="lim">측정 기준 분쟁, 실제 수령 불확실</td></tr><tr><th>에스크로</th><td class="f">대금 일부 제3자 예치</td><td>진술보장 위반 대비</td><td class="lim">매도자 현금 수령 지연</td></tr><tr><th>롤오버 지분</th><td class="f">지분 일부 재투자</td><td>매도 PE/경영진이 업사이드 공유</td><td class="lim">현금 회수 감소, 다음 Exit까지 묶임</td></tr><tr><th>셀러 노트(Seller Note)</th><td class="f">매도자가 매수자에게 빌려줌</td><td>매수자 자금 부족 보완</td><td class="lim">후순위, 매수자 부도 위험</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 예시 표에서 할인율을 10% → 15%로 올리면 이연 2건의 현재가치 합계는? (1.15^1.1≈1.166, 1.15^2.1≈1.341)<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">10/1.166 + 10/1.341 ≈ 8.6 + 7.5 = <b>$16.0M</b>. 10%일 때 $17.2M보다 $1.2M 줄어 총 현재가치는 약 $145.1M. 할인율이 높을수록(매수자 신용이 나쁠수록) 이연분의 가치가 깎인다.</div></details></div><div class="q"><b>Q2.</b> 종결 전 MaxCyte 주가가 30% 떨어지면(주식 할인 10%, 할인율 10% 유지) 대가 현재가치는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">주식 명목 26.8×0.7 = $18.8M → 할인 후 $16.9M. 총 105.0 + 16.9 + 9.0 + 8.2 = <b>$139.1M</b>. 주식 수가 고정이라 하락분 $7.2M을 매도자가 그대로 진다. 칼라(가격 범위) 조항이 있으면 이 손실을 줄일 수 있다.</div></details></div><div class="q"><b>Q3.</b> 당사 매각에 두 제안(가정): A = 현금 1조원, B = 현금 8,000억 + 2년 뒤 이연 2,500억(명목 1.05조). 할인율 8%와 12%에서 각각 어느 쪽이 유리한가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">8%: 2,500/1.08² = 2,143억 → B = 1조 143억, <b>B가 143억 유리</b>. 12%: 2,500/1.12² = 1,993억 → B = 9,993억, <b>A가 7억 유리</b>. 할인율(매수자 신용, 맥쿼리 펀드 만기)에 따라 순위가 뒤집힌다. 명목 500억 차이도 현재가치로는 거의 같다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [Exit 준비, 가정] 맥쿼리의 당사 매각 본입찰에서 상장 전략적 매수자 X가 "총 1.1조 = 현금 7,000억 + X 주식 4,000억(고정 주식수)"을, PE Y가 "현금 1조"를 제시했다. 매각 실무자로서 비교 방법은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: X 주식 4,000억을 락업 기간, X 주가 변동성(예: 연 35%)으로 할인해 현재가치를 구하고(예: 15% 할인 시 3,400억 → 총 1조 400억), Y의 금융조달 확실성(커밋먼트 레터)과 함께 본다. 차이가 400억 수준이면 확실성이 높은 Y가 유리할 수 있다.<br><b>실무 체크포인트</b>: ① 주식 대가에 칼라(주가 범위) 요구 ② 서명-종결 기간 중 X 주가 하락 시 재협상 조항 ③ PE 펀드(LP)는 주식 현물 분배를 꺼리므로 즉시 매도 가능 여부 확인</div></details></div><div class="q"><b>P2.</b> [M&A 검토, 가정] 당사가 EBITDA 40억 소형 주사제 CDMO를 EV 400억(10배)에 인수하려 한다. 매도자는 현금 400억을 원하지만 당사는 현금 300억만 쓰고 싶다. 대가 구성 대안은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 현금 300억 + 확정 이연 100억(1년 후 50억, 2년 후 50억)으로 제안하고, 현재가치(할인율 8% 시 약 89억)만큼 매도자 손실이 생기므로 명목 총액을 약 412억으로 올려 보상한다. 실적 불확실성이 크면 이연 일부를 어닝아웃으로 바꾼다.<br><b>실무 체크포인트</b>: ① 매도자는 이연분 보증(모회사 보증, 에스크로) 요구 ② 이연 지급은 인수금융 약정의 부채로 잡힐 수 있어 대주단 사전 협의 ③ 가동률, 고객 이탈 시 상계(Set-off) 권리 명시</div></details></div><div class="q"><b>P3.</b> [투자 심의, 가정] 위 인수 재원으로 은행이 "텀론 150억 + 리볼버 50억"을 제안했다. 종결 시 인출 구성을 어떻게 짜야 하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: MaxCyte처럼 인수대금은 텀론으로 필요한 만큼(예: 120억)만 인출하고, 리볼버는 거의 쓰지 않고 남겨 램프업, 재고 등 운전자본 완충으로 둔다. 리볼버를 인수대금에 쓰면 단기 자금 공백 대응력이 사라진다.<br><b>실무 체크포인트</b>: ① 순레버리지 약정(예: 4.0배) 대비 인수 후 EBITDA 합산 기준 여유 ② 미사용 한도 약정 수수료 ③ 텀론 상환 일정과 증설 Capex 시점이 겹치지 않는지</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-14
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 이연 지급 대가(Deferred Consideration) | 인수 대금 일부를 종결 후 정해진 날짜에 나눠 주기로 확정한 금액. 실적 조건이 없어 어닝아웃과 다르지만, 늦게 받는 만큼 시간가치가 깎이고 매수자가 망하면 못 받을 위험이 남는다. | 당사 Exit 입찰 비교 시 이연분은 현재가치와 매수자 신용으로 할인해 본다. 당사가 볼트온을 살 때는 현금 부담을 나누는 수단 |
+| 회전 신용한도(Revolving Credit Facility (Revolver)) | 한도 안에서 필요할 때 빌리고 갚고를 반복할 수 있는 대출 약정. 한 번에 받아 정해진 일정으로 갚는 기간대출(Term Loan)과 달리 운전자본, 단기 자금 공백용이며 쓰지 않은 한도에도 약정 수수료가 붙는다. | 당사 증설, 볼트온 재원 설계 시 인수대금은 텀론, 계절적 운전자본은 리볼버로 나누는 것이 기본 |
+| 대가의 현재가치(Present Value of Consideration) | 현금, 주식, 이연 지급이 섞인 인수 대금을 "지금 받는 현금" 기준으로 환산한 금액. 이연분은 할인율로, 주식은 처분 제한과 주가 변동 위험만큼 깎아 합산한다. 헤드라인 금액보다 작다. | 맥쿼리 Exit에서 구성이 다른 입찰가들을 같은 잣대로 비교하는 방법. 입찰 평가표에 헤드라인과 현재가치를 나란히 기재 |
+| 국가우선심사바우처(Commissioner's National Priority Voucher (CNPV)) | 미국 FDA 국장 재량으로 국가 우선과제(미국 내 생산, 가격 인하, 미충족 수요 등)에 맞는 신청 건의 심사를 1~2개월로 줄여 주는 시범 제도. 희귀질환용 우선심사권(PRV)과 달리 양도 대상이 아니라 정책 목표 연동형이다. 11/12 보류 보도. | 미국향 수탁 품목의 허가, 상업 생산 개시 일정 가정에 영향. 고객사가 이 바우처를 전제로 일정을 잡았는지 수주 단계에서 확인 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
