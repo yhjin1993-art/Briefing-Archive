@@ -1,0 +1,95 @@
+{
+ "id": "weekly-2026-11-15",
+ "date": "2026-11-15",
+ "kind": "weekly",
+ "title": "전략기획팀 Weekly Report | 2026-11-15",
+ "pages": [
+  {
+   "file": "p1.png",
+   "w": 720,
+   "h": 682,
+   "ref": false
+  },
+  {
+   "file": "p2.png",
+   "w": 720,
+   "h": 636,
+   "ref": false
+  },
+  {
+   "file": "p3.png",
+   "w": 720,
+   "h": 890,
+   "ref": false
+  }
+ ],
+ "terms": [
+  {
+   "term": "거래 대상 범위(Transaction Perimeter)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "이연 지급 대가(Deferred Consideration)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "대가의 현재가치(Present Value of Consideration)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "어닝아웃(Earn-out)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "고정 주식수 대가(Fixed Share Consideration)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  },
+  {
+   "term": "카브아웃(Carve-out)",
+   "en": "",
+   "def": "",
+   "note": "",
+   "ex": ""
+  }
+ ],
+ "insight": "[Exit] 범위 설계: PAG(Acme), Waud(PromptCare)처럼 매수자 풀이 다른 사업은 나눠 팔 수 있다. 맥쿼리 Exit 시나리오에 통매각, 사업부 분리 매각, IPO(마더스제약 공모 진행 중, 밸류 비교 기준)를 같은 기준(회수 총액/시점/잔여 지분)으로 비교. [Exit] 가격 근거: 멀티플 11.6x로 하락, 대가의 상당 부분이 주식/이연/Earn-out으로 오는 환경. 입찰 비교는 현재가치 기준, 당사 자료는 가동률과 수주 근거로 EBITDA 개선 경로를 보여 멀티플 하락을 방어. [투자/사업] 동결건조 수요처: 식약처 필수 주사제 공공 주문 제조(동결건조 포함)는 가동률 보완 수단, 보령 2공장은 2028년 하반기 경쟁 캐파, PAI(Olympus)처럼 외주 주사제를 모으는 PE 제네릭 플랫폼은 CMO 고객 후보이자 Exit 매수자 유형. 증설 심의에 세 수요처별 물량 시나리오를 넣는다.",
+ "headlines": [
+  {
+   "who": "PAG",
+   "act": "부분 Exit",
+   "target": "Acme 경구제 사업 → BDR (주사제 보유)",
+   "cond": "약 $250M (보도 기준)",
+   "meaning": "통매각 대신 매수자 풀이 다른 사업만 떼어 판 범위 설계 Exit. Waud PromptCare(11/12)도 같은 방식."
+  },
+  {
+   "who": "식약처",
+   "act": "주문 제조",
+   "target": "동결건조 독소루비신 등 필수 주사제",
+   "cond": "올해 4품목, 연내 공급",
+   "meaning": "정부가 생산비를 대고 전량 구매하는 공공 수탁. 당사 동결건조 라인 가동률 보완 창구, 보령 2공장(2028 하반기)은 경쟁 캐파."
+  },
+  {
+   "who": "라이프캐피탈",
+   "act": "100% 인수",
+   "target": "메디안스 (피부과 B2B 화장품)",
+   "cond": "1,500~2,000억 (보도 기준)",
+   "meaning": "국내 미용의료, CRO, CDMO를 겨냥한 해외 헬스케어 PE의 국내 바이아웃. 영업이익 16~22배(산출), 맥쿼리 Exit 매수자 롱리스트 후보."
+  }
+ ],
+ "publishedAt": "2026-11-16T07:07+09:00"
+}
