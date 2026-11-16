@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-17</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-17</b><span>화요일</span></div>
+  </div>
+<div class="note">영업일(화). 수집 창 2026-11-16 06:30 ~ 2026-11-17 06:30 KST. 수집: 국내 4, PE/Deal 3, 리포트 1(최근 2주 MBB/Big 4 신규 발행 미확인), 글로벌 3. [오늘의 딜]은 Exit 직결 국내 건(클래시스)이 매각 검토 단계라 구조가 확정된 Rosemont/Aytu 선정. 언급 기업 규모: OpenDART/SEC EDGAR 직접 호출이 이번 실행에서 권한 대기로 차단되어 대부분 "미조회".</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s1"><div class="hl-main"><b>베인캐피탈</b><span class="act">Exit 검토</span><b>클래시스 잔여 45.9%</b></div><div class="hl-cond">회수 약 6,100억 / 원금 6,700억</div><div class="hl-mean">블록딜 2회와 배당으로 원금 약 91%를 회수, 주가 -69%와 의무공개매수 개정이 남은 지분 매각의 변수</div></div><div class="hl s2"><div class="hl-main"><b>삼성바이오로직스</b><span class="act">유상증자 완판</span><b>폴리펩타이드 인수 재원</b></div><div class="hl-cond">2.67조, 경쟁률 135.6:1</div><div class="hl-mean">11/17 납입, 공개매수 97.98% 응모로 100% 인수 마무리 단계</div></div><div class="hl s3"><div class="hl-main"><b>IQVIA</b><span class="act">ROI 분석</span><b>미국 출시 신약 825개</b></div><div class="hl-cond">2016~20 출시 90% 비용 미회수</div><div class="hl-mean">신약사 수익성 압박이 원가 절감형 외주 <span class="nb">생산(CDMO)</span> 수요와 단가 압력을 함께 키움</div></div><div class="hl s4"><div class="hl-main"><b>유럽/미국 유통사</b><span class="act">PB 생산 위탁</span><b>한국 화장품 ODM</b></div><div class="hl-cond">코스맥스 수출 4,505억(2025)</div><div class="hl-mean">해외 유통사 자체 브랜드가 한국 공장으로, 국내 ODM 증설 이어짐</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">자금조달</div><div>
+      <div class="t">삼성바이오로직스, 유상증자 2.67조 청약 완판</div><ul><li><a class="kw" href="#t-rights" title="주주에게 먼저 신주를 배정하고 남은 물량을 일반에 파는 증자 - 클릭하면 기본 개념으로 이동">주주배정 후 실권주 일반공모</a> 결과 일반공모 경쟁률 <span class="num">135.6:1</span>, 청약증거금 11.44조가 몰렸다.</li><li>구주주/우리사주 청약률 96.8%, 주금 납입일은 11/17, 신주 상장은 11/30이다.</li><li>조달 2.665조는 <span class="nb">폴리펩타이드(CHF 1.46B)</span> 인수 재원이다.<br>→ <a class="kw" href="#t-tender" title="정해진 가격/기간에 모든 주주에게서 주식을 사겠다는 공개 제안 - 클릭하면 기본 개념으로 이동">공개매수</a> 응모율 97.98%, 잔여 지분은 <a class="kw" href="#t-squeeze" title="법정 비율 이상 확보 후 남은 소수주주 지분을 강제로 사들이는 절차 - 클릭하면 기본 개념으로 이동">강제매수</a> 절차로 100% 확보 예정.</li></ul>
+      <div class="src"><a href="https://www.ddaily.co.kr/page/view/2026111617104809721">디지털데일리</a>, 2026-11-16 17:28</div></div></div>
+    <div class="item"><div class="tag ">실적</div><div>
+      <div class="t">휴온스 주사제 본체, 3분기 영업적자 전환</div><ul><li>휴온스글로벌 연결 매출 2,148억(+1.7%), <a class="kw" href="#t-op" title="매출에서 원가, 판관비를 뺀 본업 이익 - 클릭하면 기본 개념으로 이동">영업이익</a>은 94억으로 <span class="num">-53.9%</span>.</li><li>주사제 주력인 휴온스는 매출 1,440억(-6.3%), 영업손실 45억으로 <a class="kw" href="#t-turnloss" title="전년 같은 기간 흑자에서 손실로 바뀜 - 클릭하면 기본 개념으로 이동">적자전환</a>.</li><li>원인은 미국 수출 중단, 미국향 제품 <span class="nb">리콜<sup class="fn">1</sup></span> 비용, CGM 사업 철수, R&D 증가.<br>→ 국내 주사제 경쟁사의 미국향 품질 이슈.</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=421922">메디파나뉴스</a>, 2026-11-16 18:11</div></div></div>
+    <div class="item"><div class="tag ">실적</div><div>
+      <div class="t">동국제약, 누적 매출 7,686억으로 1조 가시권</div><ul><li>3분기 누적 연결 매출 <span class="num">7,686억</span>(+12.4%), 영업이익 772억(+6.9%), 별도 매출은 +17.2%.</li><li>OTC 신제품 20여 종, 전립선비대증 <span class="nb">개량신약<sup class="fn">2</sup></span> 유레스코가 출시 10개월 만에 동일 성분 점유율 70%를 확보했다.</li><li>헬스앤뷰티는 북미, 일본, 유럽 입점을 넓혔다.<br>→ OTC + 화장품 결합 모델의 성장, Pharma사업부 비교군.</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=421900">메디파나뉴스</a>, 2026-11-16 12:03</div></div></div>
+    <div class="item"><div class="tag ">주사제</div><div>
+      <div class="t">비보존 어나프라주 11.3만 바이알 추가 발주</div><ul><li>국산 38호 신약인 비마약성 진통 주사제 어나프라주 수요가 늘어 약 <span class="num">11.3만 바이알</span>을 추가 발주했다.</li><li>생산은 중국 쓰촨 후이위제약이 위탁으로 맡는다.</li><li>300병상 이상 병원 60여 곳에서 <span class="nb">약사위원회(DC)</span>를 통과했다.<br>→ 국산 신약 주사제의 해외 위탁생산 사례, 국내 주사제 CDMO의 이전 생산 영업 대상.</li></ul>
+      <div class="src"><a href="https://www.medipharmhealth.co.kr/news/article.html?no=121337">메디팜헬스뉴스</a>, 2026-11-16 08:39</div></div></div>
+<ol class="footnotes"><li><b>리콜</b> 품질 문제로 출하 제품을 회수하는 조치. 회수, 폐기, 재생산 비용과 고객 신뢰 손실이 함께 발생</li><li><b>개량신약</b> 기존 약의 제형, 함량, 복합 조합을 바꿔 편의성이나 효과를 개선한 의약품</li></ol>
+    <div class="empty">DART: 창 내 당사 상시 모니터 기업의 신규 주요사항/공급계약 공시는 웹 검색으로 확인 못 함(OpenDART 직접 조회는 이번 실행에서 접근 권한 대기로 차단).</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-17 (화)</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">베인캐피탈, 클래시스 Exit 기로: 원금 91% 회수</div><ul><li>베인은 2022년 약 60%를 6,700억에 인수했고, <a class="kw" href="#t-block" title="장 마감 후 대량 지분을 기관에 한꺼번에 파는 거래 - 클릭하면 기본 개념으로 이동">블록딜</a> 2회(5,519억)와 배당(581억)으로 약 <span class="num">6,100억</span>을 회수했다.<br>잔여 지분은 45.9%.</li><li>주가는 연초 고점 77,600원에서 11/13 23,800원으로 69% 하락, 시총은 5조 이상에서 1조 중반으로 줄었다.</li><li>볼뉴머 중국 허가 이후 SI/글로벌 PE에 매각을 검토 중이다(보도 기준).<br>→ <a class="kw" href="#t-mto" title="25% 이상 취득해 최대주주가 되면 50%+1주까지 공개매수해야 하는 제도(개정안) - 클릭하면 기본 개념으로 이동">의무공개매수</a> 개정 시 매수자는 약 4.1%p를 추가로 사야 한다.</li></ul>
+      <div class="src"><a href="https://www.etoday.co.kr/news/view/2648539">이투데이</a>, 2026-11-17 05:00 (INSIGHT+ 11-16 17:00)</div></div></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">Inflexion의 Rosemont, Aytu 주당 $2.70 공개매수</div><ul><li>영국 PE Inflexion이 보유한 Rosemont가 나스닥 상장 Aytu BioPharma를 현금 <span class="num">주당 $2.70</span>에 인수한다.</li><li>30일 <a class="kw" href="#t-vwap" title="거래량가중평균가격 - 클릭하면 기본 개념으로 이동">VWAP</a> 대비 <a class="kw" href="#t-premium" title="인수가가 기준 주가보다 높은 비율 - 클릭하면 기본 개념으로 이동">Premium</a>은 41.1%, 총 거래금액은 미공개.</li><li><a class="kw" href="#t-tender" title="공개매수 - 클릭하면 기본 개념으로 이동">Tender Offer</a> 후 <a class="kw" href="#t-2step" title="공개매수 뒤 잔여 주식을 같은 가격 현금으로 정리하는 합병 - 클릭하면 기본 개념으로 이동">Second-step Merger</a>, 12월 말 종결 목표.<br>→ PE 포트폴리오사의 미국 상장사 <a class="kw" href="#t-bolton" title="플랫폼 회사에 작은 회사를 덧붙이는 인수 - 클릭하면 기본 개념으로 이동">볼트온</a>.</li></ul>
+      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/16/3404140/0/en/rosemont-pharmaceuticals-to-acquire-aytu-biopharma-to-accelerate-us-expansion.html">GlobeNewswire (회사 보도자료)</a>, 2026-11-16 16:11 ET</div></div></div>
+    <div class="item"><div class="tag ">딜/펀딩</div><div>
+      <div class="t">J&J, Ollin $2.2B 인수 + Blackstone $750M 펀딩</div><ul><li>J&J가 안과 신약 개발사 Ollin을 <a class="kw" href="#t-upfront" title="계약 시 먼저 지급하는 금액 - 클릭하면 기본 개념으로 이동">Upfront</a> $2.2B, <a class="kw" href="#t-milestone" title="개발/허가/판매 단계 달성 시 추가 지급 - 클릭하면 기본 개념으로 이동">Milestone</a> 최대 $1.125B에 인수한다.</li><li>Blackstone Life Sciences는 3상 비용 <span class="num">$750M</span>을 전액 대고 마일스톤과 한 자릿수 <a class="kw" href="#t-royalty" title="판매액의 일정 비율 지급 - 클릭하면 기본 개념으로 이동">Royalty</a>를 받는다.</li><li>후보물질은 이중항체(바이오의약품)라 당사 생산 영역 밖.<br>→ PE의 <a class="kw" href="#t-rdfund" title="임상비를 외부 투자자가 대고 성공 시 마일스톤/로열티로 회수 - 클릭하면 기본 개념으로 이동">R&D Funding</a> 구조 참고.</li></ul>
+      <div class="src"><a href="https://www.pharmaceutical-technology.com/news/jj-outlays-up-to-3-3bn-to-buy-ophthalmology-specialist-ollin-biosciences/">Pharmaceutical Technology</a>, 2026-11-16</div></div></div>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="item"><div class="tag ">IQVIA</div><div>
+      <div class="t">IQVIA: 2016~20 출시 신약 90% 비용 미회수</div><ul><li>1991~2020년 미국 출시 신약 825개의 생애 수익을 분석한 ROI 보고서다.</li><li>2016~20년 출시분은 약 <span class="num">90%</span>가 개발비를 회수하지 못하고, 손익분기 매출은 $1.4B에서 $11.9B로 올랐다.</li><li>신약 1개당 자본화 R&D 비용은 1991년 약 $366M에서 2020년 $3.2B.<br>→ 신약사 원가 압박이 외주 <span class="nb">생산(CDMO)</span> 수요와 단가 압력을 같이 키우는 근거.</li></ul>
+      <div class="src"><a href="https://biospace.com/business/rising-costs-leave-9-in-10-new-medicines-unprofitable-iqvia-finds">BioSpace (IQVIA "Measuring returns on investment in biopharmaceutical innovation")</a>, 보도 2026-11-16, 보고서 발행일 미표기</div></div></div>
+    <div class="empty">그 외 최근 1~2주 MBB/Big 4 신규 발행 헬스케어/PE 리포트는 확인 못 함(검색된 McKinsey 생명과학 딜 리포트 2026-02-13, Bain 헬스케어 PE 리포트 2026-01, Deloitte LS M&A 2026은 기간 밖).</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-17 (화)</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">화장품</div><div>
+      <div class="t">유럽/미국 유통사, 한국 ODM에 PB 화장품 위탁</div><ul><li>Kruidvat, Rossmann, Mercadona, Ulta가 한국에서 만든 <a class="kw" href="#t-pb" title="유통사 자체 브랜드(Private Label) - 클릭하면 기본 개념으로 이동">PB</a> 스킨케어를 내놓고 있다.</li><li>코스맥스 수출 매출은 2022년 2,636억에서 2025년 <span class="num">4,505억</span>, 한국콜마 906억(2.2배), 코스메카코리아 730억(2.5배).</li><li>코스메카 오창 신공장 2,000억, 코스맥스 평택 605억 증설.<br>→ 해외 PB 수요가 국내 화장품 위탁 설비투자를 끌어올리는 흐름.</li></ul>
+      <div class="src"><a href="https://en.sedaily.com/business/2026/11/16/global-retailers-and-drugmakers-turn-to-korea-to-make-their">Seoul Economic Daily</a>, 2026-11-16 07:00 KST</div></div></div>
+    <div class="item"><div class="tag ">건기식 규제</div><div>
+      <div class="t">FDA, NAC를 건기식 성분으로 인정하는 규칙안</div><ul><li>FDA가 <span class="nb">NAC<sup class="fn">1</sup></span>를 건기식 정의에서 제외하지 않는 21 CFR 190.1 신설안을 11/16 발표했다.</li><li>"의약품으로 먼저 승인된 성분은 건기식 불가" 조항의 첫 예외이며, 11/17 관보 게재 후 60일 의견 수렴.</li><li>확정되면 2022년 집행 유예 지침을 대체한다.<br>→ 의약품 원료의 건기식 전환 경로, 건기식 OEM 품목 확장 참고.</li></ul>
+      <div class="src"><a href="https://www.nutritionaloutlook.com/view/fda-proposes-rule-allow-nac-dietary-supplement-ingredient">Nutritional Outlook</a>, 2026-11-16</div></div></div>
+    <div class="item"><div class="tag ">제조 QC</div><div>
+      <div class="t">Merck KGaA, 미생물 QC 자동화사 Rapid Micro 인수</div><ul><li>Merck KGaA가 무균 공정용 미생물 검사 자동화 <span class="nb">플랫폼(Growth Direct)</span> 업체 Rapid Micro Biosystems 전 주식을 인수하는 계약을 맺었다.</li><li>Rapid Micro 3분기 매출은 <span class="num">$9.5M</span>(+21.6%), 인수가는 기사 기준 미공개.</li><li>회사는 3분기 컨퍼런스콜 취소, 연간 가이던스를 철회했다.<br>→ 무균 주사제 공장의 QC 자동화 투자 흐름, 당사 설비투자 검토 항목.</li></ul>
+      <div class="src"><a href="https://www.datatooza.com/article/20261117001935348452ef3650a9_80">Datatooza (공시 기반)</a>, 2026-11-16 공시, 기사 11-17 00:19</div></div></div>
+<ol class="footnotes"><li><b>NAC</b> N-아세틸시스테인. 해열/거담 의약품 원료로 먼저 승인돼 2020년 이후 건기식 성분에서 제외 논란이 있던 성분</li></ol>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">Rosemont(Inflexion 보유), Aytu BioPharma 인수<small>PE 포트폴리오사의 미국 상장 제약사 공개매수 + 2단계 합병, 2026-11-16 발표</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>Rosemont Pharmaceuticals(영국 리즈 본사 스페셜티 제약, 미국 그린빌 거점). 대주주는 유럽 미드마켓 PE Inflexion</dd>
+          <dt>무엇을</dt><dd>Aytu BioPharma(Nasdaq: AYTU) 지분 100%. ADHD/소아 CNS 제품군 + 우울증 신약 EXXUA(gepirone)</dd>
+          <dt>왜</dt><dd>미국 시장 진출 가속. 두 회사 포트폴리오와 옴니채널/디지털 영업 역량을 합쳐 미국과 해외로 확장(회사 설명)</dd>
+        </dl>
+        <ol class="steps"><li>11/16 합병계약 서명, Aytu 이사회 만장일치 승인.</li><li>10영업일 안에 공개매수 개시와 Schedule TO 제출.</li><li>종결 조건은 발행주식 과반 응모와 일부 워런트의 행사 또는 해지.</li><li>경영진/이사와 Nantahala, Stonepine 계열 주주가 응모/지지 약정 체결.</li><li>응모하지 않은 주식은 2단계 합병으로 같은 가격 현금 정리, 12월 말 종결 목표.</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">Inflexion<small>유럽 미드마켓 PE (GP)</small></div><div class="arrow"><i></i><span>소유</span></div><div class="node">Rosemont Pharmaceuticals Holdings<small>플랫폼 회사</small></div><div class="arrow"><i></i><span>100% 자회사가 공개매수 실행</span></div><div class="node">Aytu 주주<small>주당 $2.70 현금, 30일 VWAP 대비 +41.1%</small></div><div class="arrow"><i></i><span>과반 응모 + 워런트 정리 → 2단계 합병</span></div><div class="node">Aytu<small>Rosemont 100% 자회사, 상장폐지</small></div></div>
+        <div class="point"><b>포인트</b> PE가 직접 사는 대신 보유 중인 플랫폼 회사(Rosemont)를 매수 주체로 써 미국 상장사를 볼트온한다. 총액은 미공개라 멀티플은 산출 불가. 당사 관점: (1) 맥쿼리 Exit 매수자 풀에 "PE가 보유한 전략적 매수자"를 넣어야 하고, (2) 당사가 볼트온을 할 때 상장 대상이면 공개매수 + 2단계 합병, 응모 약정 확보가 성사 확률을 정한다.</div>
+        <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/16/3404140/0/en/rosemont-pharmaceuticals-to-acquire-aytu-biopharma-to-accelerate-us-expansion.html">GlobeNewswire 회사 보도자료, 2026-11-16 16:11 ET</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-17 (화)</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">거래량가중평균가격 <span>Volume-Weighted Average Price, VWAP</span></div><div class="d">일정 기간 각 체결 가격에 거래량을 가중해 평균 낸 주가. 하루 종가 하나보다 시세 조작이나 일시 급등락의 영향을 덜 받아 인수 프리미엄, 유상증자 발행가의 기준가로 쓴다.</div><div class="ex">예: Aytu 인수가 $2.70은 30일 VWAP 대비 41.1% 프리미엄 → 30일 VWAP 약 $1.91(계산치)</div></div><div class="term"><div class="k">워런트 <span>Warrant (Stock Purchase Warrant)</span></div><div class="d">정해진 가격(행사가)에 회사 신주를 살 수 있는 권리만 떼어낸 증권. BW에서 분리되거나 증자 때 덤으로 붙는다. 행사되면 주식 수가 늘어 인수자는 사야 할 주식이 많아지므로 인수 전에 행사 또는 소멸시켜야 한다.</div><div class="ex">예: Aytu 공개매수 종결 조건에 "일부 워런트의 행사 또는 해지"가 포함</div></div><div class="term"><div class="k">청약증거금 <span>Subscription Deposit</span></div><div class="d">공모주나 유상증자 일반공모에 청약할 때 청약 금액의 일정 비율(보통 50%)을 미리 맡기는 돈. 배정받지 못한 금액은 환불된다. 경쟁률과 함께 투자 수요의 크기를 보여주는 지표.</div><div class="ex">예: 삼성바이오로직스 실권주 일반공모 71,854주에 975만 주 청약, 증거금 11.44조</div></div><div class="term"><div class="k">분배수익 배수 <span>Distributions to Paid-in Capital, DPI</span></div><div class="d">PE가 실제로 현금으로 돌려받은 금액을 투자 원금으로 나눈 값. 아직 팔지 않은 지분 평가액은 빼므로 "이미 손에 쥔 수익"만 보여준다. 1.0배를 넘으면 원금을 다 회수한 것.</div><div class="ex">예: 베인 클래시스: 회수 약 6,100억 ÷ 투자 6,700억 = DPI 약 0.91배(계산치, 보도 기준)</div></div><div class="term"><div class="k">유통사 자체 브랜드 <span>Private Label (PB)</span></div><div class="d">유통사(드럭스토어, 대형마트)가 기획해 자기 상표로 파는 상품. 생산은 ODM/OEM 제조사에 위탁하며, 제조사 브랜드보다 싸게 팔아 마진을 유통사가 가져간다.</div><div class="ex">예: Kruidvat가 한국산 스킨케어 8종으로 "Kruidvat Korean Skincare" PB 출시</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit / M&A / 사업(주사제 수탁)</em></div><ol><li>[Exit] 베인은 블록딜 2회와 배당으로 원금의 약 91%를 먼저 회수한 뒤 잔여 45.9%를 경영권 매각으로 정리하려 한다. 맥쿼리가 IPO 후 부분 매각 경로를 고르면 같은 순서가 되며, 의무공개매수 개정안(25% 이상 취득 시 50%+1주)이 잔여 지분 매수자의 비용을 올려 회수 가격의 할인 요인이 된다.</li><li>[사업/M&A] 휴온스의 미국향 리콜과 수출 중단, 비보존 주사제의 중국 위탁 생산은 국내 주사제 품질/공급 대안 수요의 신호다. 동결건조 주사제 이전 생산(Tech Transfer) 영업 타깃과, Rosemont처럼 플랫폼 회사가 상장사를 볼트온하는 매수자 유형을 함께 추적한다.</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-17 (화)</span></div>
+<div class="refband">여기부터 참조</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">삼성바이오로직스</div><div class="cm">한국, KOSPI 207940, 바이오 CDMO</div></th><td>항체 의약품 위탁개발생산(CDMO) 세계 상위 업체. 2026년 폴리펩타이드 인수로 펩타이드 CDMO 진출</td><td class="sz">DART 조회 실패<div class="szsrc">OpenDART 호출 권한 승인 대기로 차단(이번 실행)</div></td><td>1 국내: 유상증자 2.665조 완판, 폴리펩타이드 인수 재원</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">휴온스글로벌 / 휴온스</div><div class="cm">한국, KOSDAQ 084110 / 243070, 제약 지주/주사제</div></th><td>휴온스는 국소마취제, 주사제 중심 전문의약품 제조사. 지주사 아래 휴메딕스(에스테틱), 휴온스엔(건기식) 등</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1 국내: 3분기 실적, 휴온스 영업적자 전환과 미국향 리콜</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">동국제약</div><div class="cm">한국, KOSDAQ 086450, 제약/헬스앤뷰티</div></th><td>OTC(인사돌, 마데카솔)와 화장품(센텔리안24) 결합 모델. 자회사 동국생명과학(조영제)</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1 국내: 누적 매출 7,686억, 연매출 1조 가시권</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">비보존제약</div><div class="cm">한국, 상장, 제약</div></th><td>비마약성 진통 주사제 어나프라주(국산 38호 신약) 보유. 완제 생산은 중국 위탁</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>1 국내: 어나프라주 11.3만 바이알 추가 발주</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">클래시스</div><div class="cm">한국, KOSDAQ 214150, 미용 의료기기</div></th><td>고강도 집속 초음파(슈링크), RF(볼뉴머) 에스테틱 장비 제조. 2022년 베인캐피탈 인수</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>2 PE/Deal: 베인 Exit 검토, 주가 -69%</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">베인캐피탈</div><div class="cm">미국, 비상장, 글로벌 PE</div></th><td>글로벌 대형 PE. 국내 클래시스, 휴젤 등 헬스케어 투자 이력</td><td class="sz">미조회<div class="szsrc">운용사 공식 AUM 이번 실행 미조회</div></td><td>2 PE/Deal: 클래시스 지분 45.9% 보유, 원금 약 91% 회수</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Inflexion</div><div class="cm">영국, 비상장, 미드마켓 PE</div></th><td>유럽 미드마켓 바이아웃/소수지분 투자 PE. Rosemont 대주주</td><td class="sz">운용자산 c.€16B<div class="szsrc">Inflexion 보도자료 회사 소개란, 2026-11-16 (본문 표기 $21B와 상이)</div></td><td>2 PE/Deal, 5 오늘의 딜: 포트폴리오사 Rosemont 통한 Aytu 인수</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Rosemont Pharmaceuticals</div><div class="cm">영국, 비상장, 스페셜티 제약</div></th><td>영국 리즈 본사 스페셜티 제약사, 미국 사우스캐롤라이나 그린빌 거점</td><td class="sz">비공개<div class="szsrc">보도자료에 매출 미기재</div></td><td>5 오늘의 딜: Aytu 공개매수 주체</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Aytu BioPharma</div><div class="cm">미국, Nasdaq AYTU, 스페셜티 제약</div></th><td>ADHD, 소아 CNS 의약품과 우울증 신약 EXXUA(gepirone) 판매</td><td class="sz">미조회<div class="szsrc">SEC EDGAR 이번 실행 조회 불가(WebFetch 권한 대기)</div></td><td>2 PE/Deal, 5 오늘의 딜: 주당 $2.70 피인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Johnson & Johnson</div><div class="cm">미국, NYSE JNJ, 제약/메드텍</div></th><td>세계 최대 헬스케어 기업 중 하나. 혁신 의약품과 메드텍 2개 부문</td><td class="sz">매출 $94.19B (FY2025)<div class="szsrc">SEC 10-K, 2026-02-11 제출 (us-gaap Revenue, 10/24 조회값 재사용)</div></td><td>2 PE/Deal: Ollin $2.2B 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Blackstone (Life Sciences)</div><div class="cm">미국, NYSE BX, 대체투자 운용사</div></th><td>Blackstone의 생명과학 전략, 임상 개발 펀딩과 로열티 투자</td><td class="sz">미조회<div class="szsrc">SEC EDGAR/운용사 AUM 이번 실행 조회 불가</div></td><td>2 PE/Deal: Ollin 3상 비용 $750M 펀딩</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Merck KGaA / Rapid Micro Biosystems</div><div class="cm">독일, Xetra / 미국, Nasdaq RPID</div></th><td>Merck KGaA는 생명과학(공정 장비, 시약) 포함 독일 제약/화학사. Rapid Micro는 미생물 QC 자동화 Growth Direct 공급</td><td class="sz">미조회<div class="szsrc">회사 IR / SEC 이번 실행 미조회</div></td><td>4 글로벌: Rapid Micro 인수 계약</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">코스맥스</div><div class="cm">한국, KOSPI 192820, 화장품 ODM</div></th><td>세계 최대급 화장품 ODM. 한국, 중국, 미국 생산 거점</td><td class="sz">미조회<div class="szsrc">DART 코드 미등록</div></td><td>4 글로벌: 해외 PB 수요, 수출 매출 4,505억(기사 수치)</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-17 (화)</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-rights"><div class="k">주주배정 후 실권주 일반공모 <span>Rights Offering + Public Offering of Unsubscribed Shares</span></div><div class="d">기존 주주에게 지분율대로 신주를 먼저 배정하고, 청약하지 않은 실권주를 일반 투자자에게 공모로 파는 유상증자 방식. 오늘 삼성바이오로직스 2.665조 증자가 이 방식.</div><div class="u">▸ 상장사 대규모 자금조달, M&A 재원 마련</div><div class="ex">예: 227만 주 중 구주주 청약 96.8%, 남은 71,854주를 일반공모</div></div><div class="bt" id="t-tender"><div class="k">공개매수 / Tender Offer <span>Tender Offer</span></div><div class="d">정해진 가격/기간에 모든 주주에게서 주식을 사겠다고 공개 제안하는 것. 오늘 삼성바이오로직스의 폴리펩타이드, Rosemont의 Aytu 인수에 쓰였다.</div><div class="u">▸ 상장사 경영권 인수, 상장폐지 전 단계</div><div class="ex">예: 응모율 97.98%면 잔여 2.02%만 강제매수로 정리</div></div><div class="bt" id="t-squeeze"><div class="k">강제매수 <span>Squeeze-out</span></div><div class="d">대주주가 법정 비율 이상을 확보한 뒤 남은 소수주주 지분을 같은 가격에 강제로 사들여 100%로 만드는 절차. 폴리펩타이드 잔여 지분 정리 단계.</div><div class="u">▸ 상장사 100% 자회사화, 상장폐지</div><div class="ex">예: 스위스 98% 이상 확보 시 법원 절차로 잔여 지분 취득</div></div><div class="bt" id="t-op"><div class="k">영업이익 <span>Operating Profit</span></div><div class="d">매출에서 매출원가와 판매관리비를 뺀 본업 이익. 오늘 휴온스글로벌 영업이익 94억(-53.9%).</div><div class="u">▸ 실적 비교, EBITDA 산출의 출발점</div><div class="ex">예: 매출 2,148억, 영업이익 94억이면 영업이익률 4.4%</div></div><div class="bt" id="t-turnloss"><div class="k">적자전환 <span>Turn to Loss</span></div><div class="d">전년 같은 기간 이익이었던 항목이 손실로 바뀐 것. 오늘 휴온스 본체 영업손실 45억이 해당.</div><div class="u">▸ 분기 실적 기사, 경쟁사 수익성 점검</div><div class="ex">예: 전년 3분기 +30억 → 올해 -45억이면 적자전환(가정)</div></div><div class="bt" id="t-block"><div class="k">블록딜 <span>Block Deal</span></div><div class="d">대주주가 장 마감 후 대량 지분을 기관에 할인가로 한꺼번에 파는 거래. 베인이 클래시스 지분을 두 번에 나눠 판 방식.</div><div class="u">▸ 상장사 PE의 부분 회수</div><div class="ex">예: 8.25%를 3,243억에 매각(2026년 2월, 보도 기준)</div></div><div class="bt" id="t-mto"><div class="k">의무공개매수 <span>Mandatory Tender Offer</span></div><div class="d">상장사 지분을 일정 비율(개정안 25%) 이상 사서 최대주주가 되면 50%+1주까지 나머지 주주에게서도 같은 조건으로 사야 하는 제도. 국회 개정 논의 중.</div><div class="u">▸ 상장사 경영권 매각 가격, 매수자 자금 규모</div><div class="ex">예: 베인 45.9% 전량 인수 시 약 4.1%p 추가 매수 필요</div></div><div class="bt" id="t-vwap"><div class="k">VWAP <span>Volume-Weighted Average Price</span></div><div class="d">기간 중 체결 가격을 거래량으로 가중 평균한 주가. Aytu 프리미엄의 기준이 30일 VWAP.</div><div class="u">▸ 인수 프리미엄, 증자 발행가 기준</div><div class="ex">예: $2.70 ÷ 1.411 = 30일 VWAP 약 $1.91(계산치)</div></div><div class="bt" id="t-premium"><div class="k">인수 프리미엄 <span>Takeover Premium</span></div><div class="d">인수가가 기준 주가보다 몇 % 높은지. 기준(직전 종가, 30일 VWAP)에 따라 숫자가 달라진다.</div><div class="u">▸ 상장사 인수가 협상, 비교 딜 분석</div><div class="ex">예: 기준가 $1.91, 인수가 $2.70 → 41.1%</div></div><div class="bt" id="t-2step"><div class="k">2단계 합병 <span>Second-step Merger</span></div><div class="d">공개매수로 과반을 확보한 뒤 곧바로 합병해, 응모하지 않은 주주 지분도 같은 가격 현금으로 정리하는 단계. Aytu 인수 구조.</div><div class="u">▸ 미국 상장사 100% 인수</div><div class="ex">예: 과반 응모 → 합병으로 잔여 주식 $2.70 현금 지급</div></div><div class="bt" id="t-bolton"><div class="k">볼트온 <span>Bolt-on Acquisition</span></div><div class="d">이미 가진 플랫폼 회사에 작은 회사를 덧붙이는 인수. Inflexion이 Rosemont를 통해 Aytu를 사는 구조.</div><div class="u">▸ PE 보유 기간 중 가치 증대</div><div class="ex">예: 플랫폼 EBITDA 100억 + 볼트온 20억 = 120억으로 Exit(가정)</div></div><div class="bt" id="t-upfront"><div class="k">업프론트 <span>Upfront Payment</span></div><div class="d">계약 시점에 확정적으로 지급하는 금액. J&J의 Ollin 인수 확정 대금 $2.2B.</div><div class="u">▸ 라이선스, 인수 대가 비교</div><div class="ex">예: 총액 $3.3B 중 확정분 $2.2B = 67%</div></div><div class="bt" id="t-milestone"><div class="k">마일스톤 <span>Milestone Payment</span></div><div class="d">허가, 매출 목표 등 단계 달성 시 추가로 주는 조건부 금액. Ollin 최대 $1.125B.</div><div class="u">▸ 바이오 딜 총액 해석</div><div class="ex">예: 목표 미달 시 $1.125B 전액 미지급 가능</div></div><div class="bt" id="t-royalty"><div class="k">로열티 <span>Royalty</span></div><div class="d">판매액의 일정 비율을 받는 권리. Blackstone은 펀딩 대가로 한 자릿수 로열티를 받는다.</div><div class="u">▸ 라이선스, 개발 펀딩 회수</div><div class="ex">예: 매출 $1B × 5% = 연 $50M(가정)</div></div><div class="bt" id="t-rdfund"><div class="k">R&D 펀딩 <span>R&D Funding Agreement</span></div><div class="d">외부 투자자가 임상비를 대고 성공 시 마일스톤/로열티로 회수하는 계약. Blackstone이 Ollin 3상 비용 $750M을 부담.</div><div class="u">▸ 신약사 자금조달, 고객사 개발 일정</div><div class="ex">예: 실패 시 상환 의무 없음, 성공 시 로열티로 회수</div></div><div class="bt" id="t-pb"><div class="k">PB <span>Private Label</span></div><div class="d">유통사가 기획해 자기 상표로 파는 상품, 생산은 ODM/OEM 위탁. Kruidvat, Mercadona 등이 한국 ODM에 맡김.</div><div class="u">▸ 화장품, 건기식 위탁생산 수요 분석</div><div class="ex">예: 유통사 PB 8종을 한국 ODM이 생산</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+    <div class="concepts"><div class="concept">
+      <div class="ch"><div><b>회수 배수 (DPI / RVPI / TVPI)<span>Distributions / Residual Value / Total Value to Paid-in</span></b><div class="quote">"블록딜 2회(5,519억) + 배당(약 581억) = 약 6,100억 회수, 잔여 지분 45.9% (기사 요지)" <em>- 이투데이 2026-11-17</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>PE 투자 성과를 "이미 현금으로 돌려받은 몫(DPI)"과 "아직 들고 있는 지분의 평가액(RVPI)"으로 나눠 보는 배수. 둘을 더하면 총가치 배수 TVPI(= MOIC). 기간을 반영하지 않으므로 IRR과 함께 본다.</p><h5>계산식</h5><div class="formula">DPI = 누적 분배 현금 ÷ 투자원금 / RVPI = 잔여 지분 평가액 ÷ 투자원금 / TVPI = DPI + RVPI</div><h5>오늘 수치로</h5><div class="calc">베인 클래시스: DPI = 6,100 ÷ 6,700 ≈ 0.91배. 잔여 45.9%를 시총 1.5조(가정, 보도 "1조 중반")로 평가하면 6,885억 → RVPI ≈ 1.03배 → TVPI ≈ 1.94배 (계산치)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>맥쿼리 Exit 시점 판단: 당사 건의 DPI가 낮으면 리캡, 부분 IPO 등 현금 회수 경로 압력이 큼</li><li>Exit 경로 비교: 100% 매각(DPI 즉시 확정) vs IPO 부분 매각(DPI 일부 + RVPI 주가 리스크)</li><li>M&A 검토: 매도 PE가 이미 원금을 회수(DPI ≥ 0.9)했다면 매각 급박성이 낮아 가격 협상 여지 축소</li><li>설비투자 심의: 누적 현금 회수 ÷ 투자액(DPI와 같은 원리)으로 회수 진행 상황 점검</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: PE가 CDMO 지분 100%를 사서 리캡 → IPO 부분 매각 → 잔여 보유 (5년)</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델(세금, 수수료, 인수금융 상환 무시, 모든 현금은 5년 말 발생으로 가정).</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 투자원금</td><td>지분 인수 대금 4,000억(가정)</td><td class="f">-</td><td class="r">4,000억</td><td>PE가 낸 자기자본(인수금융 제외)</td></tr><tr><td class="st">② 중간 회수</td><td>배당 리캡 600억(가정)</td><td class="f">600 ÷ 4,000</td><td class="r">DPI 0.15배</td><td>Exit 전 현금 일부 회수</td></tr><tr><td class="st">③ IPO 구주매출</td><td>상장 시 지분가치 8,000억, 30% 매각(가정)</td><td class="f">8,000 × 30% = 2,400</td><td class="r">누적 3,000억</td><td>공모로 받은 현금</td></tr><tr><td class="st">④ DPI</td><td>누적 분배 3,000억</td><td class="f">3,000 ÷ 4,000</td><td class="r">0.75배</td><td>손에 쥔 현금 기준</td></tr><tr><td class="st">⑤ RVPI</td><td>잔여 70% 평가</td><td class="f">8,000 × 70% = 5,600 → 5,600 ÷ 4,000</td><td class="r">1.40배</td><td>아직 팔지 않은 몫, 주가에 따라 변동</td></tr><tr class="total"><td class="st">⑥ TVPI(MOIC)</td><td>DPI + RVPI</td><td class="f">0.75 + 1.40</td><td class="r">2.15배</td><td>총가치 배수</td></tr><tr><td class="st">⑦ IRR 근사</td><td>5년, 2.15배</td><td class="f">2.15^(1/5) - 1</td><td class="r">약 16.5%</td><td>같은 배수라도 기간이 길면 IRR 하락</td></tr><tr><td class="st">⑧ 민감도</td><td>잔여 지분 주가 -30% 매각</td><td class="f">(3,000 + 5,600 × 0.7) ÷ 4,000</td><td class="r">1.73배</td><td>클래시스처럼 주가 급락 시 TVPI 하락</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>맥쿼리의 당사 지분 투자원금과 인수 시점(2020년 기준 보유기간)</li><li>배당/리캡 등 지금까지의 현금 분배액</li><li>Exit 경로별 1차 회수 비율(매각 100% vs IPO 구주매출 비율)과 예상 지분가치</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: PE 성과 지표 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>DPI</th><td class="f">분배 현금 ÷ 원금</td><td>LP가 "현금 회수"를 확인할 때</td><td class="lim">미실현 가치 무시, 기간 무시</td></tr><tr><th>RVPI</th><td class="f">잔여 평가액 ÷ 원금</td><td>보유 중 지분의 장부상 가치</td><td class="lim">평가 가정(멀티플, 주가)에 민감</td></tr><tr><th>TVPI / MOIC</th><td class="f">(분배 + 잔여) ÷ 원금</td><td>총 성과 배수 비교</td><td class="lim">기간 무시, 미실현 포함</td></tr><tr><th>IRR</th><td class="f">NPV = 0 되는 할인율</td><td>연환산 수익률, 펀드 성과 보수 기준</td><td class="lim">중간 회수가 빠르면 과대, 재투자 가정</td></tr><tr><th>PME</th><td class="f">펀드 현금흐름을 지수 수익률로 비교</td><td>상장 지수 대비 초과성과</td><td class="lim">지수 선택에 따라 결과 상이</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 베인이 클래시스에 6,700억을 투자해 블록딜 5,519억과 배당 581억을 받았다. DPI는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">(5,519 + 581) ÷ 6,700 = 6,100 ÷ 6,700 ≈ <b>0.91배</b>. 원금의 91%를 현금으로 회수, 잔여 45.9%는 RVPI로 남는다.</div></details></div><div class="q"><b>Q2.</b> 잔여 45.9%의 시가가 시총 1조일 때와 2조일 때 TVPI를 각각 구하라(분배 6,100억, 원금 6,700억).<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">1조: 잔여 4,590억 → (6,100 + 4,590) ÷ 6,700 ≈ <b>1.60배</b> / 2조: 9,180억 → (6,100 + 9,180) ÷ 6,700 ≈ <b>2.28배</b>. DPI가 높아도 잔여 지분 가치가 TVPI를 좌우한다.</div></details></div><div class="q"><b>Q3.</b> 계산 예시 표에서 IPO 구주매출 비율을 30%에서 50%로 바꾸면 DPI, RVPI, TVPI는?(나머지 가정 동일)<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">분배 = 600 + 8,000 × 50% = 4,600 → DPI <b>1.15배</b>. RVPI = 8,000 × 50% ÷ 4,000 = <b>1.00배</b>. TVPI = <b>2.15배</b>로 동일. 구주매출을 늘리면 총가치는 그대로, 현금 확정분(DPI)만 커진다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [Exit 준비, 가정] 맥쿼리가 IPO 경로를 검토하며 "1차 회수액 극대화"를 요구한다. 계산 예시 표 기준으로 당사가 준비할 숫자와 설명은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 구주매출 비율별(30/40/50%) DPI와 공모가 할인 영향을 한 표로 제시. 구주 비중이 높을수록 DPI는 오르나 "대주주 탈출" 인식으로 공모가 할인 가능. 초과배정옵션을 구주로 채우는 대안 포함. <br>실무 체크포인트: ① 구주매출 비율 상한(거래소/주관사 관행) ② 잔여 지분 락업 기간과 오버행 일정 ③ 공모가 1,000원 변동당 회수액 민감도</div></details></div><div class="q"><b>P2.</b> [M&A 검토, 가정] 볼트온 대상 회사의 매도 PE가 블록딜/배당으로 원금의 95%를 이미 회수했다. 가격 협상에서 무엇이 달라지나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 매도자는 DPI가 거의 1배라 급히 팔 이유가 작고, 잔여 지분 가격을 높게 부를 여지가 있다. 대신 펀드 만기, 보유기간(IRR 하락)이 압박 요인. 협상은 "만기 전 확실한 회수"와 잔여 가치 공유(어닝아웃) 조합으로. <br>실무 체크포인트: ① 매도 펀드 빈티지와 만기 ② 매도자의 TVPI 목표(보통 2배 이상) ③ 주가/실적 하락기면 밸류 갭 확대 가능성</div></details></div><div class="q"><b>P3.</b> [투자 심의, 가정] 동결건조 라인에 300억을 투자하고 연 FCF 60억을 기대한다. "회수 배수" 관점으로 3년 차, 5년 차 상태를 설명하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 누적 FCF ÷ 투자액으로 3년 차 180 ÷ 300 = 0.6배, 5년 차 300 ÷ 300 = 1.0배(회수 완료). 램프업 1~2년을 반영하면 회수 시점은 6~7년으로 밀린다. Exit 시점에는 회수 안 된 설비도 EBITDA 기여로 지분가치(RVPI 성격)에 반영됨. <br>실무 체크포인트: ① 램프업 기간 가동률 가정 ② 감가상각 vs 현금 회수 구분 ③ 맥쿼리 Exit 시점 대비 회수 완료 시점</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-17
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 거래량가중평균가격(Volume-Weighted Average Price, VWAP) | 일정 기간 각 체결 가격에 거래량을 가중해 평균 낸 주가. 하루 종가 하나보다 시세 조작이나 일시 급등락의 영향을 덜 받아 인수 프리미엄, 유상증자 발행가의 기준가로 쓴다. | 당사 IPO 후 지분 매각이나 상장사 인수 시 프리미엄/할인율은 어느 기간 VWAP 기준인지부터 확인(1일, 1주, 1개월이 다르면 숫자가 달라짐) |
+| 워런트(Warrant (Stock Purchase Warrant)) | 정해진 가격(행사가)에 회사 신주를 살 수 있는 권리만 떼어낸 증권. BW에서 분리되거나 증자 때 덤으로 붙는다. 행사되면 주식 수가 늘어 인수자는 사야 할 주식이 많아지므로 인수 전에 행사 또는 소멸시켜야 한다. | 메자닌/증자 조달 시 붙인 워런트는 나중 Exit 때 매수자가 정리 조건으로 요구. 발행 단계에서 지배권 변동 시 처리 조항을 넣어 둘 것 |
+| 청약증거금(Subscription Deposit) | 공모주나 유상증자 일반공모에 청약할 때 청약 금액의 일정 비율(보통 50%)을 미리 맡기는 돈. 배정받지 못한 금액은 환불된다. 경쟁률과 함께 투자 수요의 크기를 보여주는 지표. | 당사 IPO 시 일반청약 증거금 규모는 흥행 지표로 보도되지만, 공모가를 정하는 것은 기관 수요예측. 두 지표를 구분해서 볼 것 |
+| 분배수익 배수(Distributions to Paid-in Capital, DPI) | PE가 실제로 현금으로 돌려받은 금액을 투자 원금으로 나눈 값. 아직 팔지 않은 지분 평가액은 빼므로 "이미 손에 쥔 수익"만 보여준다. 1.0배를 넘으면 원금을 다 회수한 것. | 맥쿼리 LP 보고에서 당사 투자 건의 DPI가 낮을수록 현금 회수(매각, 리캡, 부분 IPO) 압력이 커진다. Exit 시점 판단의 보조 지표 |
+| 유통사 자체 브랜드(Private Label (PB)) | 유통사(드럭스토어, 대형마트)가 기획해 자기 상표로 파는 상품. 생산은 ODM/OEM 제조사에 위탁하며, 제조사 브랜드보다 싸게 팔아 마진을 유통사가 가져간다. | PB 물량은 브랜드사보다 주문 규모가 크고 꾸준한 대신 단가 압력이 크다. 화장품, 건기식 위탁생산 진출 시 고객 유형별 마진 구조를 따로 산정 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
