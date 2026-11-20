@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-21</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-21</b><span>토요일 (비영업일)</span></div>
+  </div>
+<div class="note">비영업일(토) 생성분: 메일은 다음 영업일(월) 발송분에 묶임. 이번 실행은 웹페이지 열람 권한 승인 대기로 데일리팜, 히트뉴스, 약업신문, Contract Pharma, Fierce Pharma, 컨설팅사 Insights 등 다수 매체를 열지 못해 수집량이 평소보다 적음. 3 리포트, 4 글로벌은 수집 창 내 확인된 기사 없음. OpenDART 재조회도 불가(규모 열 참고).</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s2"><div class="hl-main"><b>제약사 60곳</b><span class="act">설비투자</span><b>1~9월 1조5,663억</b></div><div class="hl-cond">-24.6% / 삼성 제외 +9.1%</div><div class="hl-mean">삼성바이오 1곳의 공사 사이클을 빼면 업계 증설은 오히려 늘었고 셀트리온, 대웅, 유한이 주도</div></div><div class="hl s2"><div class="hl-main"><b>보령</b><span class="act">판권 도입</span><b>당뇨약 6종</b></div><div class="hl-cond">처방 517억</div><div class="hl-mean">ETC 부문 <span class="nb">물적분할(BPS, 2027-01-04)</span> 전에 도입 품목으로 매출 기반을 채우는 순서</div></div><div class="hl s1"><div class="hl-main"><b>Prairie Capital</b><span class="act">인수</span><b>Medefil</b></div><div class="hl-cond">금액 비공개</div><div class="hl-mean">미국 PE가 경영인과 함께 프리필드시린지 제조사를 인수: 주사제 플랫폼 PE의 관심 지속</div></div><div class="hl s1"><div class="hl-main"><b>424 Capital</b><span class="act">Exit</span><b>Reverba</b></div><div class="hl-cond">SI 매각, 금액 비공개</div><div class="hl-mean">제약 서비스 자산을 사업회사에 팔아 회수: 전략적 매각 Exit 비교군</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">설비투자</div><div>
+      <div class="t">제약사 60곳 Capex 24.6% 감소, 삼성 빼면 증가</div><ul><li>60개 상장 제약/바이오의 1~9월 <a class="kw" href="#t-capex" title="현금흐름표상 설비 구입 현금 유출 - 클릭하면 기본 개념으로 이동">유형자산 취득</a>은 <span class="num">1조5,663억</span>으로 전년 대비 5,113억(24.6%) 줄었다.</li><li>삼성바이오로직스가 8,519억에서 2,295억으로 73.1% 줄어든 영향이며, 나머지 59곳은 1조2,257억에서 1조3,368억으로 9.1% 늘었다.</li><li>셀트리온 1,752억(+151.6%), 대웅제약 1,645억(+61.3%), 유한양행 1,239억(+84.4%)이 증가를 이끌었다<br><span class="arr">→</span> <a class="kw" href="#t-cip" title="완공 전 공장 투입액 - 클릭하면 기본 개념으로 이동">건설중인자산</a> 집행 시점에 따라 연도별 증감이 크게 흔들림.</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=422314">메디파나뉴스</a>, 2026-11-21 06:04</div></div></div>
+    <div class="item"><div class="tag ">경쟁사</div><div>
+      <div class="t">보령, 처방 517억 당뇨약 6종 판권 확보</div><ul><li>보령이 11/16 셀트리온제약과 2형 당뇨 치료제 네시나, 액토스 등 6종 <a class="kw" href="#t-copromo" title="두 회사가 한 제품을 함께 영업/유통 - 클릭하면 기본 개념으로 이동">공동판매</a> 계약을 맺었고 내년 1월부터 판매/유통을 독점한다.</li><li>6종의 지난해 원외처방액은 <span class="num">517억</span> 규모이며, 보령의 유통/판매 계약은 누적 23건(올해 7건, 보도 기준)이다.</li><li>3분기 누적 매출 8,494억(+10%), 영업이익 694억(+5.7%)이며, <span class="nb">ETC<sup class="fn">1</sup></span> 영업부문을 <a class="kw" href="#t-split" title="사업부를 100% 자회사로 떼어내는 분할 - 클릭하면 기본 개념으로 이동">물적분할</a>해 2027-01-04 <span class="nb">보령파마솔루션(BPS)</span>을 세운다<br><span class="arr">→</span> 도입 품목으로 분할 법인의 매출 기반을 먼저 채우는 순서.</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=422337">메디파나뉴스</a>, 2026-11-21 06:03</div></div></div>
+    <div class="item"><div class="tag ref">약가</div><div>
+      <div class="t">큐로셀 림카토 1회 2.8억, 12/1 급여</div><ul><li>국산 <span class="nb">CAR-T<sup class="fn">2</sup></span> 림카토의 1회 투여 <a class="kw" href="#t-ceiling" title="건강보험이 인정하는 약 1단위 최고 가격 - 클릭하면 기본 개념으로 이동">상한금액</a>이 <span class="num">2억8,001만원</span>으로 확정됐다.</li><li>약가 협상을 마치고 <span class="nb">건정심<sup class="fn">3</sup></span>에 상정됐으며, 재발성/불응성 성인 거대 B세포 림프종에 12/1부터 급여가 적용된다.</li><li>2차 치료 적응증 확대 3상은 2027년 상반기 본격 개시가 목표다<br><span class="arr">→</span> 세포치료제라 당사 수탁 범위 밖이나, 고가 신약 급여 협상 사례로 참고.</li></ul>
+      <div class="src"><a href="https://www.biotimes.co.kr/news/articleView.html?idxno=36371">바이오타임즈</a>, 2026-11-20 18:07</div></div></div>
+    <div class="item"><div class="tag ref">주가</div><div>
+      <div class="t">11/20 제약/바이오 5% 하락 29곳, 상승 8곳</div><ul><li>212개 제약/바이오/기기 종목 중 5% 이상 오른 곳은 8곳, 5% 이상 내린 곳은 29곳이었다(보도 기준).</li><li>CDMO 경쟁사 에스티팜은 7만5,300원에서 7만1,000원으로 <span class="num">-5.71%</span> 내렸다.</li><li>한미약품은 +7.11%(45만2,000원), 이엔셀은 +26.5%를 기록했다<br><span class="arr">→</span> 단일 일자 변동이라 추세 판단에는 쓰지 않음.</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=422328">메디파나뉴스</a>, 2026-11-20 16:10</div></div></div>
+<ol class="footnotes"><li><b>ETC</b> 전문의약품. 의사 처방이 필요한 약</li><li><b>CAR-T</b> 환자 T세포를 유전자 조작해 다시 넣는 세포치료제</li><li><b>건정심</b> 건강보험정책심의위원회. 급여/약가 최종 의결 기구</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-21</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Buyout</div><div>
+      <div class="t">Prairie Capital, 프리필드시린지 Medefil 인수</div><ul><li>미국 중견 PE Prairie Capital이 업계 출신 경영인 Ankit Aggarwal, Jack Glerum과 함께 <span class="nb">프리필드시린지<sup class="fn">1</sup></span> 제조사 Medefil을 인수한다.</li><li>Medefil은 1998년 설립, 일리노이주 Glendale Heights 소재이며 거래 금액과 매도자 지분 구조는 공개되지 않았다.</li><li>PE가 경영인과 짝을 지어 들어가는 <a class="kw" href="#t-exec" title="PE와 경영인이 함께 인수하는 방식 - 클릭하면 기본 개념으로 이동">Executive Partnership</a> 구조<br><span class="arr">→</span> 중소 무균 주사제 제조사에 PE 자금 유입이 이어짐.</li></ul>
+      <div class="src"><a href="https://hallrender.com/2026/11/19/private-equity-deals-spotlight-http-111926/">Hall Render PE Deal Spotlight (주간 정리)</a>, 2026-11-19 21:58 UTC 게시 (KST 11-20 06:58), 원 발표일 미확인</div></div></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">424 Capital, Reverba 전략적 매각으로 회수</div><ul><li>헬스케어 PE 424 Capital이 제약/바이오사의 환자/의료진 대상 마케팅 서비스 업체 Reverba(시애틀)를 <a class="kw" href="#t-strategic" title="사업회사(전략적 매수자)에 파는 회수 - 클릭하면 기본 개념으로 이동">strategic sale</a>으로 <a class="kw" href="#t-exit" title="PE 투자회수 - 클릭하면 기본 개념으로 이동">Exit</a>했다.</li><li>매수자 이름과 매각 금액은 목록 기사에 공개되지 않았다(보도 기준).</li><li>제약 <span class="nb">서비스(Pharma Services)</span> 자산의 SI 매각 사례<br><span class="arr">→</span> 당사 Exit 경로 중 전략적 매수자 매각 비교군으로 누적.</li></ul>
+      <div class="src"><a href="https://www.privateequityinternational.com/424-capital-exits-health-engagement-firm-reverba-in-strategic-sale/">Private Equity International</a>, 2026-11-19 (현지, 시각 미표기: 수집 창 경계)</div></div></div>
+    <div class="empty">그 외 국내 PE 헬스케어 Exit/인수금융 기사는 수집 창 내 확인 못함(연합인포맥스 등 열람 불가). 11/19 서울경제 "PEF 보유 상장사 Exit 장기화"는 전일 브리핑에 반영됨.</div>
+<ol class="footnotes"><li><b>프리필드시린지</b> 약을 미리 채워 출고하는 주사기. 무균 충전(Fill-Finish) 공정 필요</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="empty">해당 없음: McKinsey, BCG, Bain, IQVIA, PwC, EY, KPMG, L.E.K. Insights 페이지를 이번 실행에서 열지 못해 최근 1~2주 신규 발행분을 확인하지 못함. 11/20 브리핑의 EY-Parthenon 2027 전망, BCG 유럽 약가 리포트 이후 신규분은 다음 실행에서 재확인.</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-21</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="empty">해당 없음: 수집 창(11/20 06:30 ~ 11/21 06:30 KST) 안에서 확인된 케미컬 CDMO/제네릭/주사제, 화장품 ODM, 건기식 OEM 기사 없음. 검색에 걸린 Aurobindo-Lannett, Lotus-Alvogen, BDR-Acme 등은 모두 창 밖의 지난 기사라 제외.</div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">Prairie Capital + 경영인 2인, Medefil 인수<small>미국 프리필드시린지 제조사 / 금액 비공개 / Hall Render 주간 정리 기준, 세부 조건 미공개</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>Prairie Capital(미국 시카고 기반 중견 PE) + 업계 출신 경영인 Ankit Aggarwal, Jack Glerum</dd>
+          <dt>무엇을</dt><dd>Medefil(1998년 설립, 일리노이주 Glendale Heights) 경영권 인수. 지분율, 금액, 매도자 구성은 비공개</dd>
+          <dt>왜</dt><dd>병원용 주사제는 공급 부족과 미국 내 생산 선호(관세/리쇼어링)로 국내 무균 충전 능력의 가치가 커짐. 업력 긴 창업자 소유 제조사는 PE가 경영인을 붙여 키운 뒤 되파는 전형적 대상</dd>
+        </dl>
+        <ol class="steps"><li>PE가 먼저 업계 경영인을 확보하고 함께 매물을 찾아 인수: 인수 직후 CEO/사업 책임자로 투입.</li><li>창업자 소유 기업이면 매도자는 일부 지분을 남기는(롤오버) 경우가 많으나 이번 건은 공개되지 않음.</li><li>보유 기간에 증설, 품목 추가(볼트온)로 규모를 키운 뒤 주사제 플랫폼을 원하는 SI나 대형 PE에 매각하는 것이 일반 경로.</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">Prairie Capital 펀드<small>지분 투자 (Equity)</small></div><div class="arrow"><i></i><span><b>+ 경영인 공동 투자/경영 (Executive Partnership)</b></span></div><div class="node">인수 SPC (추정 구조)<small>Equity + 인수금융 여부 비공개</small></div><div class="arrow"><i></i><span><b>경영권 지분 매입 (금액 비공개)</b></span></div><div class="node">Medefil<small>프리필드시린지 / 무균 충전</small></div><div class="arrow"><i></i><span><b>3~6년 뒤 Exit (일반적 PE 경로)</b></span></div><div class="node">전략적 매수자 또는 다른 PE<small>SI 매각 / 세컨더리</small></div></div>
+        <div class="point"><b>포인트</b> 금액은 모르지만 "누가 사는가"가 정보다. 미국 PE가 무균 충전 중소 제조사를 경영인과 묶어 사는 흐름은 당사 동결건조 주사제 역량을 원하는 잠재 매수자 유형(주사제 플랫폼 PE)과 같다. 다만 원 발표문(Prairie Capital 보도자료)을 이번 실행에서 열지 못해 세부 구조는 확인 필요.</div>
+        <div class="src"><a href="https://hallrender.com/2026/11/19/private-equity-deals-spotlight-http-111926/">Hall Render, Private Equity Deal Spotlight (2026-11-19 게시)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-21</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">유형자산 취득 <span>Purchase of Property, Plant and Equipment</span></div><div class="d">현금흐름표 투자활동에 잡히는 토지, 건물, 기계장치 구입 현금 유출. 흔히 "설비투자(Capex)" 금액으로 인용한다. 손익계산서 비용이 아니라 자산으로 쌓인 뒤 감가상각으로 나눠 비용화된다.</div><div class="ex">예: 60개 제약사 1~9월 1조5,663억, 셀트리온 1,752억(보도 기준)</div></div><div class="term"><div class="k">건설중인자산 <span>Construction in Progress (CIP)</span></div><div class="d">짓고 있는 공장, 설치 중인 설비에 들어간 누적 금액을 담아두는 계정. 완공 전에는 감가상각을 하지 않다가 완공 시 건물/기계장치로 옮겨 상각을 시작한다.</div><div class="ex">예: 500억 라인을 2년간 300억, 200억 집행하면 1년차 말 CIP 300억, 완공 시 500억이 기계장치로 대체</div></div><div class="term"><div class="k">공동판매 <span>Co-promotion</span></div><div class="d">제품 권리를 가진 회사와 영업력을 가진 회사가 한 제품을 함께(또는 한쪽이 대행해) 파는 계약. 판권 이전(라이선스)과 달리 허가권은 원 회사에 남고 매출/수수료를 나눈다.</div><div class="ex">예: 보령-셀트리온제약 네시나/액토스 6종, 지난해 원외처방 517억</div></div><div class="term"><div class="k">원외처방액 <span>Outpatient Prescription Sales (UBIST)</span></div><div class="d">병원 밖 약국에서 조제된 처방을 금액으로 집계한 값(유비스트 등 민간 데이터). 전문의약품 시장 규모와 품목 순위를 보는 업계 표준 지표지만 회사 매출과는 다르다(약가 기준, 병원 내 처방 제외).</div><div class="ex">예: 원외처방 517억 품목군을 출하가 60% 수준으로 공급하면 공급사 매출은 약 310억(가정)</div></div><div class="term"><div class="k">경영인 파트너십 인수 <span>Executive Partnership Buyout</span></div><div class="d">PE가 업계 출신 경영인과 먼저 손잡고 함께 매물을 찾아 인수하는 방식. 경영인은 소액 공동 투자와 함께 CEO 등을 맡고, 성과에 따라 지분 보상을 받는다.</div><div class="ex">예: Prairie Capital + 경영인 2인의 Medefil 인수(금액 비공개)</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>투자(설비투자 판단) / Exit / 사업(동결건조 주사제)</em></div><ol><li>[투자] 60개 제약사 설비투자는 삼성바이오로직스 1곳을 빼면 오히려 9.1% 늘었고 셀트리온, 대웅, 유한이 증설을 주도: 당사 동결건조 라인 증설 심의 시 경쟁사 완공 시점(2027~28 공급 증가)을 함께 놓고 램프업 가동률 가정을 보수적으로 잡을 근거.</li><li>[Exit] 미국에서 프리필드시린지 같은 무균 충전 중소 제조사를 PE가 경영인과 묶어 사는 거래가 이어짐: 맥쿼리 Exit 매수자 풀(주사제 플랫폼 PE) 및 볼트온 비교군으로 추적.</li></ol></div>
+  </section>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-21</span></div>
+<div class="refband">여기부터 참조 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">삼성바이오로직스</div><div class="cm">한국, KOSPI, 바이오 CDMO</div></th><td>항체 의약품 위탁개발생산 세계 최대급. 송도 1~5공장, 2011년 설립.</td><td class="sz">2025 연결 매출 4조5,570억, 영업이익 2조692억<div class="szsrc">DART 사업보고서 rcept 20260515001658 (이전 실행 조회값, 금일 재조회 불가)</div></td><td>1 국내: 1~9월 유형자산 취득 73.1% 감소로 60개사 합계 감소를 주도</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">셀트리온</div><div class="cm">한국, KOSPI, 바이오의약품</div></th><td>바이오시밀러 개발/판매, 최근 CMO 수주도 병행. 2002년 설립.</td><td class="sz">2025 연결 매출 4조1,625억, 영업이익 1조1,685억<div class="szsrc">DART 사업보고서 rcept 20260316001415 (dart_key.md 검증 기록)</div></td><td>1 국내: 유형자산 취득 1,752억(+151.6%), 증가액 1위</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">대웅제약</div><div class="cm">한국, KOSPI, 제약</div></th><td>나보타, 펙수클루 등 전문의약품. 오송/향남 공장.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 유형자산 취득 1,645억(+61.3%)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">유한양행</div><div class="cm">한국, KOSPI, 제약</div></th><td>렉라자 등 신약, 일반의약품, 원료(유한화학). 1926년 설립.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 유형자산 취득 1,239억(+84.4%)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">안국약품</div><div class="cm">한국, KOSDAQ, 제약</div></th><td>호흡기/순환기 전문의약품, 최근 사옥/공장 투자 확대.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 유형자산 취득 53억 → 162억(보도 기준 +204.1%)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">보령</div><div class="cm">한국, KOSPI, 제약</div></th><td>카나브 패밀리, 항암제. 판권 도입(LBA)으로 품목 확대, 예산 공장.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 네시나/액토스 6종 판권, ETC 부문 물적분할(BPS)</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">셀트리온제약</div><div class="cm">한국, KOSDAQ, 제약</div></th><td>셀트리온 그룹 케미컬 의약품/판매 법인, 청주 공장.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 당뇨약 6종을 보령에 공동판매로 넘김</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">큐로셀</div><div class="cm">한국, KOSDAQ, 세포치료제</div></th><td>국산 CAR-T 림카토 개발/상업화.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록</div></td><td>1 국내: 림카토 상한금액 2억8,001만원 확정</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">에스티팜</div><div class="cm">한국, KOSDAQ, 원료 CDMO</div></th><td>올리고뉴클레오타이드 등 합성 원료의약품 CDMO. 동아쏘시오 계열.</td><td class="sz">DART 코드 미등록<div class="szsrc">dart_corpcodes.md 미등록 (종목코드 237690)</div></td><td>1 국내: 11/20 주가 -5.71%</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">Prairie Capital</div><div class="cm">미국, 비상장, PE</div></th><td>시카고 기반 중견 PE. 헬스케어/산업재 중심 바이아웃.</td><td class="sz">미확인<div class="szsrc">운용사 공식 사이트 열람 불가 (AUM 미기재)</div></td><td>2 PE/Deal, 5 오늘의 딜: 경영인 2인과 Medefil 인수</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">Medefil</div><div class="cm">미국, 비상장, 주사제 제조</div></th><td>프리필드시린지 제조사. 1998년 설립, 일리노이주 Glendale Heights.</td><td class="sz">비공개<div class="szsrc">공식 IR 수치 없음</div></td><td>2 PE/Deal, 5 오늘의 딜: 인수 대상</td><td><span class="rel comp">경쟁/비교군</span></td></tr><tr><th><div class="cn">Reverba / 424 Capital</div><div class="cm">미국, 비상장, 제약 서비스 / PE</div></th><td>Reverba: 제약/바이오사의 환자, 의료진 대상 마케팅 서비스(시애틀). 424 Capital: 헬스케어 PE.</td><td class="sz">비공개<div class="szsrc">공식 IR 수치 없음</div></td><td>2 PE/Deal: 424 Capital의 전략적 매각 Exit</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-21</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-capex"><div class="k">유형자산 취득 / 설비투자 <span>Purchase of PP&E / Capex</span></div><div class="d">현금흐름표 투자활동의 설비 구입 현금 유출. 오늘 1번 기사(60개 제약사 1~9월 1조5,663억)에서 나옴.</div><div class="u">▸ 경쟁사 증설 비교, 증설 심의, PE 매수자의 FCF 분석</div><div class="ex">예: 매출 1,000억 회사가 한 해 150억을 쓰면 Capex 집약도 15%</div></div><div class="bt" id="t-cip"><div class="k">건설중인자산 <span>Construction in Progress</span></div><div class="d">완공 전 공장/설비 투입액을 모아두는 계정. 완공 시 건물/기계장치로 대체되고 그때부터 감가상각. 1번 기사의 연도별 증감 설명에서 나옴.</div><div class="u">▸ 증설 중인 회사 실사, 완공 후 이익 변화 예측</div><div class="ex">예: CIP 500억이 15년 상각으로 넘어가면 연 33억 비용 발생</div></div><div class="bt" id="t-depr"><div class="k">감가상각 <span>Depreciation</span></div><div class="d">설비 취득가를 사용 기간에 나눠 매년 비용으로 잡는 것. 현금은 이미 나갔으므로 EBITDA에는 영향이 없고 EBIT를 줄인다. 오늘 심화 예시에서 사용.</div><div class="u">▸ EBITDA vs EBIT 비교, 설비 회사 밸류에이션</div><div class="ex">예: 설비 300억, 10년 정액 = 연 30억</div></div><div class="bt" id="t-payback"><div class="k">회수기간 <span>Payback Period</span></div><div class="d">투자한 돈을 매년 버는 현금(FCF)으로 다 돌려받는 데 걸리는 기간. 단순하지만 시간가치와 회수 이후 현금은 무시. 오늘 심화에서 사용.</div><div class="u">▸ 설비투자 1차 심사, 고객 전용 라인 계약 기간 설정</div><div class="ex">예: 500억 투자, 연 90억 회수면 약 5.6년</div></div><div class="bt" id="t-split"><div class="k">물적분할 <span>Physical Split-off</span></div><div class="d">사업부를 떼어 100% 자회사를 만드는 분할. 2번 기사 보령의 ETC 영업부문(BPS)에서 나옴.</div><div class="u">▸ 사업부 단위 매각, 투자 유치 준비</div><div class="ex">예: 매출 3,000억 사업부를 분할하면 모회사는 자회사 지분 100%를 장부에 보유</div></div><div class="bt" id="t-copromo"><div class="k">공동판매 <span>Co-promotion</span></div><div class="d">두 회사가 한 제품을 함께 또는 대행해 파는 계약. 허가권은 원 회사에 남음. 2번 기사 보령-셀트리온제약 계약.</div><div class="u">▸ 제약사 품목 확충, 영업 효율화</div><div class="ex">예: 원외처방 517억 품목군 공동판매</div></div><div class="bt" id="t-ceiling"><div class="k">상한금액 <span>Maximum Reimbursement Price</span></div><div class="d">건강보험이 인정하는 약 1단위(1정, 1회 투여)의 최고 가격. 3번 기사 림카토 1회 2억8,001만원.</div><div class="u">▸ 약가 협상, 고객사 매출 추정</div><div class="ex">예: 상한금액 1만원 약을 연 100만 단위 처방하면 보험 기준 매출 100억</div></div><div class="bt" id="t-exec"><div class="k">경영인 파트너십 인수 <span>Executive Partnership</span></div><div class="d">PE가 업계 경영인과 함께 회사를 사는 방식. 2번 PE/Deal Medefil 기사.</div><div class="u">▸ 중견 바이아웃, 플랫폼 구축</div><div class="ex">예: 경영인이 지분 2~5%(가정)를 공동 투자하고 성과 시 추가 보상</div></div><div class="bt" id="t-strategic"><div class="k">전략적 매각 <span>Strategic Sale (Trade Sale)</span></div><div class="d">PE가 다른 PE가 아닌 사업회사(SI)에 파는 회수. 2번 PE/Deal Reverba 기사(원문: strategic sale).</div><div class="u">▸ PE Exit 경로 비교</div><div class="ex">예: 같은 EBITDA 100억에 SI 12배, FI 10배를 제시하면 차이 200억(가정)</div></div><div class="bt" id="t-exit"><div class="k">Exit <span>Exit (투자회수)</span></div><div class="d">PE가 보유 회사를 팔아 투자금을 회수하는 것. 2번 PE/Deal에서 나옴.</div><div class="u">▸ 맥쿼리의 당사 회수 시나리오</div><div class="ex">예: 지분가치 3,000억에 100% 매각 시 원금 1,500억이면 MOIC 2.0배(가정)</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+    <div class="concepts"><div class="concept">
+      <div class="ch"><div><b>유형자산 취득(설비투자)<span>Purchase of PP&E (Capex)</span></b><div class="quote">"상장 제약바이오 60곳의 1~9월 유형자산 취득액 합계는 1조5663억원으로 전년 대비 24.6% 감소" <em>- 메디파나뉴스, 2026-11-21 (요지 인용)</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>현금흐름표 투자활동에 표시되는 공장, 설비, 토지 구입 현금 유출. 손익에는 바로 비용으로 나오지 않고 자산(완공 전 건설중인자산, 완공 후 건물/기계장치)으로 쌓였다가 감가상각으로 나뉘어 비용화된다.</p><h5>계산식</h5><div class="formula">FCF = 영업현금흐름 - 유형자산 취득(Capex)<br>Capex 집약도 = Capex ÷ 매출<br>회수기간 = 누적 FCF가 투자액에 도달하는 연수</div><h5>오늘 수치로</h5><div class="calc">60개사 합계 1조5,663억(전년 2조776억, -24.6%). 삼성바이오 제외 59개사 1조2,257억 → 1조3,368억(+9.1%). 셀트리온 696억 → 1,752억(+151.6%) (보도 기준, 비율은 산출 확인)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>투자 심의: 동결건조 라인 증설의 회수기간, NPV를 수주 확약 물량 기준으로 산정</li><li>경쟁 분석: 경쟁 CDMO/제약사의 유형자산 취득과 건설중인자산 잔액으로 2~3년 뒤 공급 증가 시점 추정</li><li>Exit: 매수자는 Exit 직전 대형 Capex를 "아직 이익을 못 내는 투자"로 보고 run-rate EBITDA 근거(수주, 완공 일정)를 요구</li><li>고객 협상: 전용 라인이면 회수기간에 맞춘 최소 물량(Take-or-pay), 계약 기간을 단가와 함께 협상</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 동결건조 라인 증설 500억의 회수기간 (Capex → CIP → 감가상각 → FCF → 회수)</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델(세금, 운전자본, 할인율 무시). 실제 심의에서는 고객 수주 확약, 밸리데이션 일정, 세후 FCF로 대체.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 투자액(Capex)</td><td>라인 1개 500억</td><td class="f">건설 1년차 300 + 2년차 200</td><td class="r">500억</td><td>현금흐름표 유형자산 취득으로 2년에 나눠 유출</td></tr><tr><td class="st">② 건설 중 회계</td><td>완공 전 2년</td><td class="f">CIP 누적 300 → 500</td><td class="r">상각 0</td><td>건설중인자산에 쌓이고 감가상각 없음, 이익 영향 없음</td></tr><tr><td class="st">③ 정상 가동 실적</td><td>가동률 85%, 매출 250억, EBITDA 마진 40%</td><td class="f">250 × 40%</td><td class="r">EBITDA 100억</td><td>완공 후 3년차부터 정상</td></tr><tr><td class="st">④ 램프업</td><td>1년차 25억, 2년차 70억</td><td class="f">고정비가 먼저 들어 낮게 시작</td><td class="r">25 → 70 → 100</td><td>검증/인증 배치 후 상업 생산</td></tr><tr><td class="st">⑤ 연간 FCF</td><td>유지 Capex 연 10억</td><td class="f">EBITDA - 10</td><td class="r">15 / 60 / 90 / 90…</td><td>세금, 운전자본 생략한 단순 FCF</td></tr><tr><td class="st">⑥ 감가상각</td><td>500억, 15년 정액</td><td class="f">500 ÷ 15</td><td class="r">연 33.3억</td><td>완공 시 CIP → 기계장치 대체 후 시작. 정상 EBIT = 100 - 33.3 = 66.7억</td></tr><tr><td class="st">⑦ 누적 회수</td><td>누적 15, 75, 165, 255, 345, 435, 525</td><td class="f">6년차 말 435, 7년차 중 500 도달</td><td class="r">6 + 65/90</td><td>7년차 잔여 65억을 90억으로 나눔</td></tr><tr class="total"><td class="st">⑧ 회수기간</td><td>완공 기준</td><td class="f">6 + 0.72</td><td class="r">약 6.7년</td><td>건설 2년 포함 시 약 8.7년</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>라인 투자액과 연도별 집행액(견적, 발주 일정)</li><li>정상 가동률/매출 단가(수주 확약 물량 기준)와 EBITDA 마진</li><li>램프업 1~2년차 가동률(밸리데이션, 고객 PAI 일정)</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 설비투자 판단 지표 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>Capex</th><td class="f">현금 유출액</td><td>증설 규모, 경쟁사 비교</td><td class="lim">성장 투자와 유지 투자 구분 안 됨</td></tr><tr><th>Capex 집약도</th><td class="f">Capex ÷ 매출</td><td>업종/규모가 다른 회사 비교</td><td class="lim">대형 투자 해에 일시적으로 튐</td></tr><tr><th>감가상각</th><td class="f">취득가 ÷ 내용연수</td><td>EBIT, 순이익 영향 예측</td><td class="lim">현금 흐름과 무관, 내용연수 가정 의존</td></tr><tr><th>FCF</th><td class="f">영업CF - Capex</td><td>배당, 차입 상환, M&A 여력</td><td class="lim">투자 집행 시점에 따라 마이너스</td></tr><tr><th>회수기간</th><td class="f">누적 FCF = 투자액</td><td>1차 심사, 계약 기간 설정</td><td class="lim">시간가치, 회수 후 현금 무시</td></tr><tr><th>NPV / IRR</th><td class="f">할인한 FCF 합 - 투자액</td><td>최종 투자 결정</td><td class="lim">할인율, 잔존가치 가정에 민감</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 셀트리온 유형자산 취득이 696억에서 1,752억이 됐다. 증가율은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">(1,752 - 696) ÷ 696 = 1,056 ÷ 696 = 약 151.7%(기사 151.6%는 원 단위 반올림 차이). 증가액 1,056억은 60개사 중 최대.</div></details></div><div class="q"><b>Q2.</b> 60개사 합계는 24.6% 줄었는데 59개사는 9.1% 늘었다. 업계 설비투자가 위축됐다고 결론 내려도 되나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">안 된다. 감소분 5,113억 중 6,224억(8,519 - 2,295)이 삼성바이오 1곳에서 나왔다. 대형사 1곳의 공사 사이클(건설중인자산 집행 시점)이 합계를 좌우하므로, 대형 이상치를 뺀 값과 기업별 분포(33곳 증가)를 함께 봐야 한다.</div></details></div><div class="q"><b>Q3.</b> 위 계산 예시에서 램프업이 1년 늦어져 FCF가 15 / 15 / 60 / 90 / 90…이 되면 완공 기준 회수기간은?(가정)<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">누적 15, 30, 90, 180, 270, 360, 450, 540. 7년차 말 450, 8년차 중 500 도달 → 7 + 50/90 = 약 7.6년. 램프업 1년 지연이 회수기간을 약 0.9년 늘린다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> 투자 심의(가정): 500억 라인 증설을 올리면서 앵커 고객이 선지급(설비 분담금) 100억을 내겠다고 한다. 회수기간은 어떻게 바뀌고, 심의 자료에 무엇을 붙여야 하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">실투자 400억 기준 누적 15, 75, 165, 255, 345, 435 → 5 + (400 - 345)/90 = 약 5.6년(기존 6.7년). 체크포인트: ① 선지급의 대가(단가 할인, 우선 생산권)가 FCF를 얼마나 깎는지 반영 ② 고객 이탈 시 선지급 반환 조건 ③ 전용 라인이면 다른 고객 전환 가능성(범용성).</div></details></div><div class="q"><b>P2.</b> Exit 준비(가정): 맥쿼리 매각 착수 1년 전에 300억이 집행 중(건설중인자산)이고 완공은 매각 6개월 후다. 매수자는 이 투자를 어떻게 볼까?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">건설 중에는 감가상각이 없어 EBITDA는 그대로지만 FCF는 300억만큼 줄어 있다. 매수자는 아직 이익을 못 내는 자산이라 EV에 그대로 반영하지 않으려 한다. 체크포인트: ① 완공 후 run-rate EBITDA를 수주 확약으로 뒷받침 ② 잔여 투자액을 순차입금 유사 항목(Debt-like)으로 차감하자는 요구 대비 ③ 램프업 지연 시 가격 조정(어닝아웃) 제안 가능성.</div></details></div><div class="q"><b>P3.</b> 고객사 협상(가정): 고객 전용 동결건조 라인 500억을 짓고 연 90억 FCF가 나와야 한다. 수탁 계약 기간과 물량 조건은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">회수기간 약 6.7년(완공 기준)이므로 계약 기간은 최소 7년 이상, 또는 짧다면 최소 구매 물량(Take-or-pay)이나 조기 해지 시 미회수 투자액 보상 조항이 필요. 체크포인트: ① 단가에 설비 상각분 포함 여부 ② 물량 미달 시 보상 산식 ③ 고객 품목의 약가/허가 리스크(급여 삭제, 약가 인하) 반영.</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-21
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 유형자산 취득(Purchase of Property, Plant and Equipment) | 현금흐름표 투자활동에 잡히는 토지, 건물, 기계장치 구입 현금 유출. 흔히 "설비투자(Capex)" 금액으로 인용한다. 손익계산서 비용이 아니라 자산으로 쌓인 뒤 감가상각으로 나눠 비용화된다. | 경쟁사 증설 강도를 공시로 비교하는 1차 지표. 당사 증설 심의 자료에도 같은 기준(현금 유출)으로 제시 |
+| 건설중인자산(Construction in Progress (CIP)) | 짓고 있는 공장, 설치 중인 설비에 들어간 누적 금액을 담아두는 계정. 완공 전에는 감가상각을 하지 않다가 완공 시 건물/기계장치로 옮겨 상각을 시작한다. | 증설 중에는 EBITDA와 감가상각이 그대로라 이익이 좋아 보이고, 완공 후 상각이 시작되면 EBIT가 눌린다. Exit 실사에서 매수자가 완공 일정과 함께 확인 |
+| 공동판매(Co-promotion) | 제품 권리를 가진 회사와 영업력을 가진 회사가 한 제품을 함께(또는 한쪽이 대행해) 파는 계약. 판권 이전(라이선스)과 달리 허가권은 원 회사에 남고 매출/수수료를 나눈다. | 고객사의 판권 이동은 생산 물량의 주인이 바뀌는 신호. 수탁 품목이면 계약 상대방, 물량 계획 재확인 |
+| 원외처방액(Outpatient Prescription Sales (UBIST)) | 병원 밖 약국에서 조제된 처방을 금액으로 집계한 값(유비스트 등 민간 데이터). 전문의약품 시장 규모와 품목 순위를 보는 업계 표준 지표지만 회사 매출과는 다르다(약가 기준, 병원 내 처방 제외). | Pharma사업부 품목/수탁 품목 시장 크기와 점유율 추세를 볼 때 쓰는 기본 숫자 |
+| 경영인 파트너십 인수(Executive Partnership Buyout) | PE가 업계 출신 경영인과 먼저 손잡고 함께 매물을 찾아 인수하는 방식. 경영인은 소액 공동 투자와 함께 CEO 등을 맡고, 성과에 따라 지분 보상을 받는다. | 당사 Exit 후보 매수자 중 "주사제 플랫폼을 만들려는 PE + 경영인" 유형을 식별하는 기준. 반대로 당사가 볼트온을 할 때 인수 대상 경영진 유지 설계 참고 |
+</pre></details>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
