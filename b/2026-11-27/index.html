@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-27</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;
+  --c2:#0f766e; --c2s:#e3f3f1;
+  --c3:#6d28d9; --c3s:#efe9fb;
+  --c4:#b45309; --c4s:#fdf1e0;
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-27</b><span>금요일</span></div>
+  </div>
+<div class="note">수집 창 2026-11-26 06:30 ~ 11-27 06:30 KST. 11/26 미국 추수감사절로 해외 딜, 리포트 기사가 적음. 3 리포트 해당 없음. 칼라일-Piramal은 11/25 체결분(전일 브리핑 수록)의 거래소 확인 후속 보도.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s2"><div class="hl-main"><b>전통제약 50곳</b><span class="act">확대</span><b>시설투자 1조396억</b></div><div class="hl-cond">+5.9%</div><div class="hl-mean">약가 개편 속 주사제 공장 신설이 늘어 국내 주사제 생산능력 경쟁이 커진다는 뜻</div></div><div class="hl s2"><div class="hl-main"><b>바로팜</b><span class="act">인수</span><b>정우신약(회생)</b></div><div class="hl-cond">100억</div><div class="hl-mean">회생 중인 GMP 공장 보유 제약사를 신주 인수로 싸게 사는 구조. 정상화 비용이 실제 가격을 정한다</div></div><div class="hl s1"><div class="hl-main"><b>칼라일</b><span class="act">지분 매각</span><b>Piramal Pharma 7.41%</b></div><div class="hl-cond">₹2,212 crore</div><div class="hl-mean">상장 CDMO에 투자한 PE가 지분을 블록으로 나눠 회수하는 과정. 맥쿼리 IPO 경로의 참고 사례</div></div><div class="hl s4"><div class="hl-main"><b>Lupin</b><span class="act">FDA 승인</span><b>달바반신 액상 주사제</b></div><div class="hl-cond">505(b)(2)</div><div class="hl-mean">동결건조 분말 대신 액상으로 바꾼 개량 주사제. 동결건조 수요가 제형 개량으로 대체될 수 있음</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">설비투자</div><div>
+      <div class="t">전통제약 50곳 시설투자 1조396억, 5년來 최대</div><ul><li>상위 전통제약 50곳의 1~3분기 <a class="kw" href="#t-capex" title="설비 구입 현금 유출(Capex) - 클릭하면 기본 개념으로 이동">유형자산 취득액</a>은 <span class="num">1조396억원</span>으로 전년(9,819억) 대비 5.9% 늘었다.<br>3년 연속 증가, 26곳이 투자를 확대했다.</li><li>대웅제약 1,645억(+61.3%), 유한양행 1,239억, 하나제약 752억(4.9배) 순이며 하나제약 평택(568억), 동국제약 진천(약 600억) 등 주사제 공장 투자가 다수다.</li><li>배경은 2026년 3월 확정된 약가 개편(제네릭 산정률 53.55%→45%)이다.<br>→ 국내 주사제 생산능력이 늘면서 당사 주사제 수탁의 경쟁 공급도 커진다.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/345089">데일리팜</a>, 2026-11-27 06:00</div></div></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">바로팜, 회생 중 정우신약 100억에 인수 추진</div><ul><li>약국 플랫폼 바로팜이 회생절차 중인 정우신약의 <a class="kw" href="#t-rights3p" title="특정인에게 신주 배정 - 클릭하면 기본 개념으로 이동">제3자배정 유상증자</a> 신주 전량을 <span class="num">100억원</span>에 인수해 지분 100%를 확보한다.</li><li><a class="kw" href="#t-deposit" title="서명 시 먼저 내는 돈 - 클릭하면 기본 개념으로 이동">계약금</a> 10억은 납입했고 잔금 90억은 <a class="kw" href="#t-confirm" title="법원의 회생계획 확정 - 클릭하면 기본 개념으로 이동">회생계획 인가</a> 후 낸다.<br>종결 목표는 2027년 상반기다.</li><li>정우신약 1~3분기 매출 94억, 영업손실 42억, 9월 말 자본 -107억으로 <a class="kw" href="#t-deficit" title="부채가 자산보다 많은 상태 - 클릭하면 기본 개념으로 이동">완전자본잠식</a>이다.<br>→ 아산 GMP 공장은 확보하지만 원가율 정상화가 숙제다.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/345091">데일리팜</a>, 2026-11-27 06:00</div></div></div>
+    <div class="item"><div class="tag ">공시</div><div>
+      <div class="t">SK바이오팜 시설자금 1,000억 차입, 알테오젠 538억 수령</div><ul><li>SK바이오팜이 시설자금 목적 <a class="kw" href="#t-stdebt" title="1년 내 갚는 차입 한도 확대 - 클릭하면 기본 개념으로 이동">단기차입금 증가</a>를 결정했다(1,000억, 자기자본 대비 12.1%).<br>한도 포함 단기차입금은 2,020억에서 3,020억으로 늘고 공시일 기준 인출은 없다.</li><li>알테오젠은 MSD 키트루다 피하주사 <a class="kw" href="#t-salesms" title="판매 목표 달성 시 받는 돈 - 클릭하면 기본 개념으로 이동">판매 마일스톤</a> $40M(약 <span class="num">538억원</span>)을 받는다.<br>전년 연결매출의 약 25%다.</li><li>영진약품은 5대1 <a class="kw" href="#t-revsplit" title="여러 주식을 1주로 합침 - 클릭하면 기본 개념으로 이동">액면병합</a>(500원→2,500원)과 CB 발행한도 1,000억 변경을 12/11 임시주총에 올린다.<br>큐로셀은 3회차 CB 전환가액을 33,600원으로 낮췄다.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=81141">히트뉴스(HIT알공)</a>, 2026-11-26 18:12</div></div></div>
+    <div class="item"><div class="tag ">합병</div><div>
+      <div class="t">HLB, HLB생명과학 흡수합병 "사업권 일원화"</div><ul><li>HLB가 11/26 주주 타운홀에서 HLB생명과학 <a class="kw" href="#t-merger" title="한 회사가 다른 회사를 흡수해 소멸시키는 합병 - 클릭하면 기본 개념으로 이동">흡수합병</a> 목적을 리보세라닙 국내 판권, 일본/유럽 수익배분권의 일원화라고 설명했다.</li><li>계약 해제 기준인 <a class="kw" href="#t-appraisal" title="반대 주주가 회사에 주식을 사달라고 청구 - 클릭하면 기본 개념으로 이동">주식매수청구</a> 대금 한도는 <span class="num">200억원</span>(HLB생명과학 시총의 약 5%)이며, 초과해도 자동 무산은 아니라고 밝혔다.</li><li>합병비율은 법정 기준주가에 외부 수익가치 평가와 사외이사 <a class="kw" href="#t-specom" title="이해관계 없는 이사만으로 구성된 위원회 - 클릭하면 기본 개념으로 이동">특별위원회</a> 검토를 거쳤다.<br>→ 지난해 시도는 매수청구 400억 한도에 걸려 무산(보도 기준).</li></ul>
+      <div class="src"><a href="https://www.medipana.com/news/articleView.html?idxno=422751">메디파나뉴스</a>, 2026-11-26 14:21</div></div></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-27</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">칼라일, Piramal Pharma 7.41% 처분 확정</div><ul><li>칼라일 계열 CA Alchemy가 Piramal Pharma 약 9.86 crore주를 평균 ₹224.17에 팔아 총 <span class="num">₹2,212 crore</span>를 회수했다.<br>거래소 <a class="kw" href="#t-bulkdeal" title="인도 거래소의 대량거래 공개 제도 - 클릭하면 기본 개념으로 이동">bulk deal</a> 자료로 확인됐다.</li><li>지분율은 17.93%에서 10.52%로 낮아졌다.<br>매수자는 Aditya Birla Sun Life MF(1.59%), Axis MF(0.54%) 등 국내 기관이다.</li><li>주가는 장중 7% 하락 후 -1.73%로 마감했다.<br>→ 11/25 체결분의 후속 보도로, "not a full exit" 즉 <a class="kw" href="#t-partialexit" title="보유 지분 일부만 현금화 - 클릭하면 기본 개념으로 이동">partial monetisation</a>이다.</li></ul>
+      <div class="src"><a href="https://www.thehansindia.com/business/carlyle-pares-74-stake-in-piramal-for-over-rs-2211-crore-1145837">The Hans India</a>, 2026-11-26 08:36 KST</div></div></div>
+    <div class="item"><div class="tag ">M&A</div><div>
+      <div class="t">현대그린푸드, 메디굿파트너스 51% 1,500억 인수</div><ul><li>현대그린푸드가 아산사회복지재단으로부터 의료소모품 유통사 메디굿파트너스 지분 51%를 <span class="num">1,500억원</span>에 사는 <a class="kw" href="#t-spa" title="주식매매계약(SPA) - 클릭하면 기본 개념으로 이동">본계약</a>을 11/25 체결했다.</li><li>9월 <a class="kw" href="#t-preferred" title="독점 협상권을 받은 1순위 후보 - 클릭하면 기본 개념으로 이동">우선협상대상자</a>로 선정된 뒤 2개월 만의 계약이다.<br>메디굿은 서울아산병원(약 2,450병상) 소모품을 공급한다.</li><li>단체급식 성숙에 대응한 신성장동력 확보가 목적이다.<br>→ 병원 계열 유통사를 SI가 사는 카브아웃형 거래로, 100% 환산 지분가치는 약 2,940억(계산치).</li></ul>
+      <div class="src"><a href="https://www.fnnews.com/news/202611261553197043">파이낸셜뉴스</a>, 2026-11-26 16:01</div></div></div>
+    <div class="item"><div class="tag ">IPO</div><div>
+      <div class="t">아리바이오, 코스피 직상장 추진 공식화</div><ul><li>K-OTC에서 거래 중인 아리바이오가 11/25 주주총회에서 코스피 <a class="kw" href="#t-directlist" title="거래소에 바로 상장 - 클릭하면 기본 개념으로 이동">직상장</a>을 추진한다고 밝혔다.<br>일정, 주관사는 미정이다.</li><li>경구용 치매약 AR1001 글로벌 3상(13개국 1,535명)에서 단독요법군(604명)의 질병 진행이 31% 지연됐으나 전체군은 유의성에 못 미쳤다.</li><li>내년 FDA 허가 신청이 목표다.<br>→ 신약 바이오텍이라 당사 직접 관련은 낮고, 국내 헬스케어 IPO 대기 물량 참고용이다.</li></ul>
+      <div class="src"><a href="https://news.mtn.co.kr/article/2026112609230628056">MTN</a>, 2026-11-26 09:23</div></div></div>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="empty">해당 없음. 최근 2주(11/13~11/27) MBB, Big 4, IQVIA의 헬스케어/PE 신규 리포트 중 본문을 확인한 건 없음. L.E.K. "European Private Equity in 2026: Four Shifts Shaping Investment Strategies"(2026-11-24 발행)는 목록에서 발행만 확인, 본문 접근 실패로 요약 생략 (<a href="https://www.lek.com/insights/private-equity/european-private-equity-2026-four-shifts-shaping-investment-strategies">링크</a>).</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-27</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">주사제</div><div>
+      <div class="t">Lupin, 달바반신 액상 주사제 FDA 승인</div><ul><li>Lupin이 Dalbavancin Injection 500mg/5mL 단회용 바이알에 대해 미국 FDA 승인을 받았다.<br>허가 경로는 <span class="nb">505(b)(2)<sup class="fn">1</sup></span>이다.</li><li>AbbVie Dalvance와 같은 성분을 액상 제형으로 바꾼 제품으로, 30분 정맥 주입한다.</li><li>오리지널은 동결건조 분말 제형으로 알려져 있다(작성자 배경지식, 기사 미기재).<br>→ 동결건조 공정을 액상으로 대체하는 개량 사례로 당사 동결건조 수요 관점에서 참고.</li></ul>
+      <div class="src"><a href="https://medicaldialogues.in/news/industry/pharma/lupin-gets-usfda-nod-for-single-dose-dalbavancin-injection-to-treat-bacterial-skin-infections-184038">Medical Dialogues</a>, 2026-11-26 21:05 KST</div></div></div>
+    <div class="item"><div class="tag ">설비투자</div><div>
+      <div class="t">ACG, 美 노스캐롤라이나 캡슐 공장 $125M 투자</div><ul><li>인도 ACG의 미국 법인이 노스캐롤라이나 Whitsett에 <span class="num">$125M</span>을 들여 경질 캡슐 공장(125,000 sq ft)을 짓는다.<br>일자리 240개, 5년 단계 증설이다.</li><li>2025년 10월 조지아 애틀랜타 $200M 캡슐 투자에 이은 두 번째 미국 투자다.</li><li>발표 시점은 현지 11/25일 수 있어 보도 기준으로 표기.<br>→ 고형제 부자재 공급망의 미국 현지화 흐름으로, 당사 고형제 원부자재 조달 단가에 간접 영향.</li></ul>
+      <div class="src"><a href="https://pharmasource.global/content/news/cdmo-news/acg-invests-125-million-in-north-carolina-capsule-manufacturing-facility/">PharmaSource</a>, 2026-11-26 16:04 KST</div></div></div>
+    <div class="item"><div class="tag ">규제</div><div>
+      <div class="t">Alembic, 생동성시험센터 FDA EIR 2건 수령</div><ul><li>Alembic Pharma가 Vadodara <span class="nb">생동성시험(BE)</span> 시설에 대해 FDA <span class="nb">EIR<sup class="fn">2</sup></span> 2건을 받아 실사를 공식 종결했다.</li><li>실사는 2026-08-31~09-10에 진행됐다.<br>제조 공장이 아닌 BE 시설이다.</li><li>거래소 공시는 11/25 장 마감 후로 보인다(보도 기준).<br>→ 인도 제네릭사의 FDA 실사 통과가 잇따르며 미국향 제네릭 공급 경쟁은 유지.</li></ul>
+      <div class="src"><a href="https://medicaldialogues.in/news/industry/pharma/alembic-pharma-receives-two-usfda-eirs-formally-closes-vadodara-facility-inspection-184035">Medical Dialogues</a>, 2026-11-26 20:46 KST</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">바로팜 → 정우신약: 회생기업 신주 100% 인수, 100억<small>회생 M&A(제3자배정 신주) / 계약금 10억 + 잔금 90억 / 종결 2027년 상반기 목표 (보도 기준)</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>바로팜(약국 의약품 플랫폼, IPO 추진 중)이 매수자. 대상은 회생절차 중인 정우신약(1982년 설립, 아산 GMP 공장, 일반약 약 30종, 한방 보험약 약 60종 허가)</dd>
+          <dt>무엇을</dt><dd>정우신약이 제3자배정 유상증자로 발행하는 신주 전량을 100억원에 인수해 지분 100% 확보. 돈은 기존 주주가 아니라 회사로 들어가 회생채권 변제 재원이 됨</dd>
+          <dt>왜</dt><dd>플랫폼(유통)에 제조소를 붙여 자체 제품 생산까지 수직계열화. 바로팜 IPO 신고서 영업이익 전망(2026년 72억 → 2028년 302억)에는 이 인수가 빠져 있어 적자 자회사 편입이 변수</dd>
+        </dl>
+        <ol class="steps"><li>11/20 대전회생법원이 바로팜을 최종 인수예정자로 허가(팜뉴스 11/24 보도, 수집 창 밖 맥락).</li><li>계약금 10억 납입 완료. 회생계획안에 인수대금 배분과 채권 변제율이 담긴다.</li><li>관계인집회에서 채권자 조별 동의를 받아 법원이 회생계획을 인가하면 잔금 90억 납입, 신주 발행.</li><li>종결 목표 2027년 상반기.<br>정우신약은 9월 말 자본 -107억, 1~3분기 원가율 111%(매출 94억, 매출원가 105억).</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">바로팜<small>매수자, 신주 인수대금 100억</small></div><div class="arrow"><i></i><span>계약금 10억(납입) + 잔금 90억(인가 후)</span></div><div class="node">정우신약<small>회생회사, 신주 발행 → 지분 100%</small></div><div class="arrow"><i></i><span>변제 재원으로 사용</span></div><div class="node">회생채권자<small>회생계획에 따른 변제 (변제율 미공개)</small></div><div class="arrow"><i></i><span>대전회생법원 감독</span></div><div class="node">회생계획 인가<small>관계인집회 가결 → 법원 인가 → 종결</small></div></div>
+        <div class="point"><b>포인트</b> 헤드라인 100억은 지분 값이 아니라 회생채권 변제 재원이다. 매수자는 인가 후 부채가 정리된 회사를 받지만, 원가율 111%를 정상 수준으로 낮추는 데 드는 추가 투자와 시간이 실질 인수가를 정한다. 당사가 볼트온으로 GMP 공장을 찾는다면 회생 M&A는 가격 하한이 낮은 경로지만, 인허가 유지, 품목 수익성, 인력 실사가 핵심이다.</div>
+        <div class="src"><a href="https://dailypharm.com/user/news/345091">데일리팜 2026-11-27 06:00 (정우신약 인수 변수)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-27</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">회생계획 인가 <span>Confirmation of Rehabilitation Plan</span></div><div class="d">법원이 채무 변제 방법, 인수대금 배분, 감자/출자전환 등을 담은 회생계획을 확정해 효력을 주는 결정. 인가가 나야 M&A 잔금 납입과 신주 발행이 진행된다.</div><div class="ex">예: 정우신약 인수 잔금 90억은 인가 후 납입. 인가가 3개월 늦어지면 종결도 3개월 밀림</div></div><div class="term"><div class="k">관계인집회 <span>Meeting of Interested Parties</span></div><div class="d">회생계획안을 채권자, 주주가 조별로 투표하는 법정 집회. 회생담보권자조 3/4, 회생채권자조 2/3 등 법정 비율 이상 동의를 받아야 가결된다.</div><div class="ex">예: 회생채권 200억 중 140억(70%) 동의면 2/3 충족, 130억(65%)이면 부결</div></div><div class="term"><div class="k">액면병합 <span>Reverse Stock Split (Share Consolidation)</span></div><div class="d">여러 주식을 1주로 합쳐 액면가를 높이고 주식 수를 줄이는 것. 시가총액은 그대로이고 주가만 비례해 오른다. 저가주 이미지 개선이나 CB 한도 조정과 함께 쓴다.</div><div class="ex">예: 영진약품 5대1: 500원→2,500원, 1.83억주→3,658만주. 주가 2,000원이면 병합 후 이론가 10,000원</div></div><div class="term"><div class="k">벌크딜 <span>Bulk Deal (India)</span></div><div class="d">인도에서 한 투자자가 하루에 상장주식의 0.5% 이상을 거래하면 거래소가 당일 매수/매도자, 수량, 가격을 공개하는 거래. 별도 창구에서 체결되는 블록딜과 달리 일반 장중 거래로 체결된다.</div><div class="ex">예: 칼라일 9.86 crore주(7.41%) 처분이 bulk deal 자료로 공개, 매수자 Aditya Birla MF 1.59%</div></div><div class="term"><div class="k">505(b)(2) 허가 경로 <span>505(b)(2) Pathway</span></div><div class="d">미국 FDA 허가 경로 중 하나로, 기존 공개 문헌이나 오리지널 허가 자료에 기대면서 제형, 함량, 투여경로 변경에 필요한 자료만 새로 내는 방식. 신약(505(b)(1))과 제네릭(ANDA) 사이.</div><div class="ex">예: Lupin 달바반신 500mg/5mL 액상 바이알이 이 경로로 승인</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit / M&A / 설비투자</em></div><ol><li><b>Exit</b>: 칼라일은 상장 CDMO(Piramal Pharma) 지분을 IPO 후 블록 단위로 나눠 회수 중(17.93% → 10.52%). 맥쿼리가 IPO 경로를 택하면 상장 후 잔여 지분 매각 일정과 할인율이 총 회수액을 좌우한다.</li><li><b>M&A / 설비투자</b>: 전통제약 시설투자가 5년 내 최대이고 주사제 공장 신설이 이어져 국내 주사제 수탁 경쟁 공급이 늘어난다. 바로팜-정우신약처럼 회생 제약사 GMP 공장을 신주로 인수하는 경로는 당사 볼트온의 저가 옵션이지만, 실질 인수가는 정상화 투자까지 넣어 신축안과 비교해야 한다.</li></ol></div>
+  </section>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-27</span></div>
+<div class="refband">여기부터 참조 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">바로팜</div><div class="cm">한국, 비상장(IPO 추진), 의약품 유통 플랫폼</div></th><td>약국 대상 의약품 온라인 주문/유통 플랫폼. 2025년 CHD제약 인수로 제조 진출(보도 기준)</td><td class="sz">DART 코드 미등록<div class="szsrc">증권신고서 제출사, 수치 미수집</div></td><td>1 국내, 5 오늘의 딜: 정우신약 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">정우신약</div><div class="cm">한국, 비상장, 일반약/한방 보험약</div></th><td>1982년 설립. 아산 GMP 공장 보유, 일반약 약 30종, 한방 보험약 약 60종 허가, 국내 CMO 수행(보도 기준). 현재 회생절차</td><td class="sz">비공개<div class="szsrc">공시 원천 없음</div></td><td>1 국내, 5 오늘의 딜: 회생 M&A 대상</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">대웅제약</div><div class="cm">한국, KOSPI 069620, 제약</div></th><td>나보타, 펙수클루 등 전문의약품. 오늘 기사 기준 1~3분기 시설투자 1위</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 추가 예정</div></td><td>1 국내: 전통제약 시설투자</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">SK바이오팜</div><div class="cm">한국, KOSPI 326030, 신약</div></th><td>뇌전증 신약 세노바메이트(미국 XCOPRI) 판매. 시설자금 단기차입 결정</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미수록</div></td><td>1 국내: 단기차입금 1,000억</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">알테오젠</div><div class="cm">한국, KOSDAQ 196170, 바이오 플랫폼</div></th><td>정맥주사를 피하주사로 바꾸는 히알루로니다제(ALT-B4) 플랫폼 기술수출</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미수록</div></td><td>1 국내: MSD 판매 마일스톤</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">HLB</div><div class="cm">한국, KOSDAQ 028300, 신약</div></th><td>항암제 리보세라닙 글로벌 개발. 계열사 HLB생명과학 흡수합병 추진</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 추가 예정(미입력)</div></td><td>1 국내: 흡수합병, 매수청구 한도</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Piramal Pharma</div><div class="cm">인도, NSE PPLPHARMA, CDMO/병원 제네릭</div></th><td>글로벌 CDMO(합성 API, 주사제 필피니시)와 흡입마취제 등 병원 제네릭. 2020년 칼라일 20% 투자</td><td class="sz">FY26 매출 ₹8,869 Cr, EBITDA ₹1,135 Cr<div class="szsrc">회사 IR(NSE 공시 실적 발표) · 2026-04-28</div></td><td>2 PE/Deal: 칼라일 7.41% 매각</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">The Carlyle Group</div><div class="cm">미국, Nasdaq CG, PE 운용사</div></th><td>글로벌 대체투자 운용사. 바이아웃, 크레딧, 투자솔루션 사업</td><td class="sz">미확인<div class="szsrc">SEC EDGAR 조회 실패(접근 거부), 공식 AUM 미수집</div></td><td>2 PE/Deal: Piramal Pharma 부분 회수</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">현대그린푸드</div><div class="cm">한국, KOSPI, 단체급식/식자재</div></th><td>현대백화점그룹 계열 단체급식, 식자재 유통사. 의료 소모품 유통 진출</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미수록</div></td><td>2 PE/Deal: 메디굿파트너스 51% 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">Lupin</div><div class="cm">인도, NSE LUPIN, 제네릭</div></th><td>미국 제네릭 상위 인도 제약사. 주사제, 흡입제, 복합 제네릭 확대</td><td class="sz">FY26 매출 INR 279,580 Mn, EBITDA INR 92,405 Mn<div class="szsrc">회사 IR(FY26 실적 보도자료) · 2026-05-07</div></td><td>4 글로벌: 달바반신 505(b)(2) 승인</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">AbbVie</div><div class="cm">미국, NYSE ABBV, 빅파마</div></th><td>휴미라, 스카이리치, 린버크 등. 달바반신 오리지널(Dalvance) 보유</td><td class="sz">FY25 매출 $61.160B, 영업이익 $15.075B<div class="szsrc">회사 IR(FY25 실적 발표) · 2026-02-04, SEC XBRL 조회 실패</div></td><td>4 글로벌: Lupin 액상 주사제의 오리지널사</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">ACG</div><div class="cm">인도, 비상장, 캡슐/제약 장비</div></th><td>경질 캡슐, 필름, 제약 장비 제조. 미국 캡슐 공장 연속 투자</td><td class="sz">비공개<div class="szsrc">공시 원천 없음</div></td><td>4 글로벌: 노스캐롤라이나 $125M</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-27</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-capex"><div class="k">유형자산 취득액 <span>Purchase of PP&E (Capex)</span></div><div class="d">현금흐름표 투자활동의 토지, 건물, 설비 구입 현금 유출. 오늘 전통제약 50곳 시설투자 기사에서 집계 기준.</div><div class="u">▸ 경쟁사 증설 강도 비교, 증설 심의</div><div class="ex">예: 50곳 합계 1조396억, 대웅제약 1,645억</div></div><div class="bt" id="t-rights3p"><div class="k">제3자배정 유상증자 <span>Third-party Allotment</span></div><div class="d">기존 주주가 아닌 특정인에게 신주를 배정하는 증자. 오늘 바로팜이 정우신약 신주를 이 방식으로 100% 인수.</div><div class="u">▸ 회생 M&A, 전략투자 유치</div><div class="ex">예: 신주 100억 전량 배정 → 바로팜 지분 100%</div></div><div class="bt" id="t-deposit"><div class="k">계약금 / 잔금 <span>Deposit / Closing Payment</span></div><div class="d">서명 시 먼저 내는 돈과 종결 때 내는 나머지. 오늘 정우신약 인수 10억 + 90억.</div><div class="u">▸ M&A 대금 지급 구조</div><div class="ex">예: 총 100억 중 계약금 10%</div></div><div class="bt" id="t-confirm"><div class="k">회생계획 인가 <span>Confirmation of Rehabilitation Plan</span></div><div class="d">법원이 회생계획을 확정하는 결정. 오늘 정우신약 잔금 납입 조건.</div><div class="u">▸ 회생 M&A 종결 일정</div><div class="ex">예: 인가 후 잔금 90억 납입</div></div><div class="bt" id="t-meeting"><div class="k">관계인집회 <span>Meeting of Interested Parties</span></div><div class="d">회생계획안을 채권자, 주주가 조별 투표하는 집회. 오늘 정우신약 회생 절차의 다음 관문.</div><div class="u">▸ 회생 M&A 성사 확률</div><div class="ex">예: 회생채권자조 2/3 이상 동의 필요</div></div><div class="bt" id="t-deficit"><div class="k">완전자본잠식 <span>Total Capital Impairment</span></div><div class="d">부채가 자산보다 많아 자본이 마이너스인 상태. 오늘 정우신약 9월 말 자본 -107억.</div><div class="u">▸ 실사, 상장 유지 요건</div><div class="ex">예: 자산 200억, 부채 307억이면 자본 -107억</div></div><div class="bt" id="t-stdebt"><div class="k">단기차입금 증가 <span>Increase in Short-term Borrowings</span></div><div class="d">1년 안에 갚는 차입을 늘리기로 한 결정. 자기자본 대비 일정 비율 이상이면 공시. 오늘 SK바이오팜 1,000억.</div><div class="u">▸ 설비투자 재원, 유동성 관리</div><div class="ex">예: 자기자본 8,260억 대비 1,000억 = 12.1%</div></div><div class="bt" id="t-salesms"><div class="k">판매 마일스톤 <span>Sales Milestone</span></div><div class="d">파트너 제품 매출이 목표를 넘을 때 받는 일회성 지급. 오늘 알테오젠이 MSD로부터 $40M.</div><div class="u">▸ 라이선스 수익 인식</div><div class="ex">예: 매출 $1B 돌파 시 $40M 지급 조건</div></div><div class="bt" id="t-revsplit"><div class="k">액면병합 <span>Reverse Stock Split</span></div><div class="d">여러 주를 1주로 합쳐 액면가를 높이는 것. 오늘 영진약품 5대1.</div><div class="u">▸ 주식 수, 주가 수준 관리</div><div class="ex">예: 100주 보유 → 20주, 시총 불변</div></div><div class="bt" id="t-merger"><div class="k">흡수합병 <span>Merger by Absorption</span></div><div class="d">한 회사가 다른 회사를 흡수하고 흡수된 회사는 소멸하는 합병. 오늘 HLB가 HLB생명과학 흡수.</div><div class="u">▸ 계열사 정리, 사업권 일원화</div><div class="ex">예: 합병비율 1:0.0857 → 생명과학 1주당 HLB 0.0857주(보도 기준)</div></div><div class="bt" id="t-appraisal"><div class="k">주식매수청구권 <span>Appraisal Right</span></div><div class="d">합병 등에 반대한 주주가 회사에 정해진 가격으로 주식을 사달라고 청구하는 권리. 오늘 HLB 합병의 해제 기준이 이 대금 한도 200억.</div><div class="u">▸ 합병, 분할 성사 조건</div><div class="ex">예: 청구 250억이면 한도 200억 초과 → 해제 검토</div></div><div class="bt" id="t-specom"><div class="k">특별위원회 <span>Special Committee</span></div><div class="d">이해관계 없는 사외이사만으로 구성해 거래 공정성을 검토하는 위원회. 오늘 HLB 합병비율 검토에 활용.</div><div class="u">▸ 계열사 간 거래, 대주주 관련 거래</div><div class="ex">예: 사외이사 3인 위원회가 외부 평가 검토</div></div><div class="bt" id="t-bulkdeal"><div class="k">벌크딜 / 블록딜 <span>Bulk Deal / Block Deal</span></div><div class="d">인도 기준 하루 0.5% 이상 장중 대량거래(bulk)와 별도 창구 대량거래(block). 오늘 칼라일의 Piramal 지분 처분.</div><div class="u">▸ PE 상장 지분 회수</div><div class="ex">예: 7.41%, ₹2,212 crore</div></div><div class="bt" id="t-partialexit"><div class="k">부분 현금화 <span>Partial Monetisation</span></div><div class="d">보유 지분 일부만 팔아 현금을 회수하고 나머지는 보유하는 것. 오늘 칼라일 Piramal "not a full exit".</div><div class="u">▸ PE 단계적 Exit</div><div class="ex">예: 17.93% 중 7.41% 매각, 10.52% 잔여</div></div><div class="bt" id="t-spa"><div class="k">본계약 <span>Definitive Agreement (SPA)</span></div><div class="d">가격, 조건을 확정하는 주식매매계약. 오늘 현대그린푸드-메디굿 1,500억.</div><div class="u">▸ M&A 확정 단계</div><div class="ex">예: 우협 9월 → 본계약 11/25</div></div><div class="bt" id="t-preferred"><div class="k">우선협상대상자 <span>Preferred Bidder</span></div><div class="d">입찰에서 독점 협상권을 받은 1순위 후보. 오늘 현대그린푸드가 9월 선정.</div><div class="u">▸ 경쟁 입찰 매각</div><div class="ex">예: 우협 선정 후 2개월 실사 뒤 본계약</div></div><div class="bt" id="t-directlist"><div class="k">직상장 <span>Direct Listing to KOSPI</span></div><div class="d">코스닥을 거치지 않고 코스피에 바로 상장하는 것. 오늘 아리바이오 추진 발표.</div><div class="u">▸ IPO 시장 선택</div><div class="ex">예: K-OTC 종목 → 코스피 상장 심사</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+<div class="concepts"><div class="concept">
+      <div class="ch"><div><b>회생 M&A의 실질 인수가<span>Effective Purchase Price in Rehabilitation M&A</span></b><div class="quote">"회생절차 중인 정우신약이 제3자배정 유상증자로 발행하는 신주를 100억원에 전부 인수" <em>- 데일리팜 2026-11-27</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>회생 M&A에서 매수자는 신주 인수대금을 내고, 회사는 그 돈으로 회생계획에 따라 채권을 변제한다. 헤드라인 인수대금은 지분 값이 아니라 변제 재원이며, 매수자의 실질 인수가는 인수대금에 인수 후 정상화 투자(GMP 보완, 운전자본)와 잔존 부채를 더한 값이다.</p><h5>계산식</h5><div class="formula">실질 EV = 인수대금 + 정상화 투자 + 인가 후 잔존 부채 - 잔여 현금</div><h5>오늘 수치로</h5><div class="calc">정우신약: 인수대금 100억(기사). 잔존 부채, 추가 투자는 미공개 → 아래 표는 가정치로 산정</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>볼트온 후보 탐색: 회생/구조조정 중인 국내 제약사 GMP 공장(주사제, 고형제)을 저가로 확보하는 경로</li><li>투자 심의: 인수대금이 아니라 정상화 투자를 더한 실질 EV로 신축(그린필드) 대비 비교</li><li>Exit 관점: 맥쿼리 보유 중 볼트온을 하면 정상화 이전 적자가 연결 실적에 섞이므로 Exit 자료에서 분리 제시</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: 정우신약형 회생 M&A 실질 인수가와 정상화 멀티플</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델. 실제 평가에서는 항목별 가정을 실사 자료로 대체.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 연환산 매출</td><td>1~3분기 매출 94억(기사)</td><td class="f">94 × 4/3</td><td class="r">125억</td><td>9개월 실적을 12개월로 단순 환산(계산치)</td></tr><tr><td class="st">② 정상화 EBITDA</td><td>정상화 후 EBITDA 마진 12%(가정)</td><td class="f">125 × 12%</td><td class="r">15억</td><td>현재 원가율 111% → 정상화 가정</td></tr><tr><td class="st">③ 인수대금</td><td>신주 인수 100억(기사)</td><td class="f">계약금 10 + 잔금 90</td><td class="r">100억</td><td>회사로 들어가 회생채권 변제</td></tr><tr><td class="st">④ 변제 배분</td><td>공익채권 10억, 회생담보 50억(가정)</td><td class="f">100 - 10 - 50</td><td class="r">40억</td><td>남은 40억이 회생채권 몫</td></tr><tr><td class="st">⑤ 회생채권 변제율</td><td>회생채권 200억(가정)</td><td class="f">40 ÷ 200</td><td class="r">20%</td><td>나머지는 면제/출자전환 후 감자(가정)</td></tr><tr><td class="st">⑥ 정상화 투자</td><td>GMP 보완 20억 + 운전자본 10억(가정)</td><td class="f">20 + 10</td><td class="r">30억</td><td>인수 후 매수자가 추가 투입</td></tr><tr><td class="st">⑦ 실질 EV</td><td>잔존 부채 0, 잔여 현금 0(가정)</td><td class="f">100 + 30 + 0 - 0</td><td class="r">130억</td><td>매수자가 실제로 쓰는 돈</td></tr><tr class="total"><td class="st">⑧ 정상화 멀티플</td><td>정상 CDMO 비교 10배(가정)</td><td class="f">130 ÷ 15</td><td class="r">8.7배</td><td>정상화 성공 시 할인 매입, 실패 시 비싼 거래</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>대상 공장의 현재 원가율과 정상화 후 목표 EBITDA 마진(당사 수탁 단가, 가동률 기준)</li><li>GMP 보완, 설비 교체 등 추가 투자액과 인허가 유지 기간</li><li>회생계획상 잔존 부채(변제 유예분, 공익채권)와 인가까지 걸리는 기간</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 인수 방식별 대금 흐름 비교</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>구주 인수</th><td class="f">EV = 지분가 + 순차입금</td><td>정상 기업 경영권 인수</td><td class="lim">부채, 우발채무가 그대로 따라옴</td></tr><tr><th>신주 인수(제3자배정)</th><td class="f">지분율 = 신주 ÷ (기존 + 신주)</td><td>회사에 돈이 필요할 때</td><td class="lim">기존 주주 희석, 구주 대가 없음</td></tr><tr><th>자산양수도</th><td class="f">대가 = 자산 평가액</td><td>공장, 설비만 필요할 때</td><td class="lim">인허가, 고용 재취득 부담</td></tr><tr><th>회생 M&A(신주)</th><td class="f">실질 EV = 인수대금 + 정상화 투자 + 잔존 부채</td><td>부실 기업 저가 인수</td><td class="lim">인가 일정, 채권자 동의 리스크</td></tr><tr><th>스토킹호스 입찰</th><td class="f">하한가 = 스토킹호스 제안가</td><td>회생 매각 가격 하한 확정</td><td class="lim">경쟁 입찰로 가격 상승 가능</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 인수대금 100억, 정상화 투자 30억, 잔존 부채 20억, 잔여 현금 10억이면 실질 EV는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">100 + 30 + 20 - 10 = <b>140억</b>. 잔존 부채는 매수자가 떠안는 돈이라 더하고, 잔여 현금은 빼준다.</div></details></div><div class="q"><b>Q2.</b> 같은 공장을 A안(회생 M&A 실질 EV 130억, 정상화 EBITDA 15억), B안(정상 기업 구주 인수 EV 200억, EBITDA 20억)으로 살 수 있다. 멀티플 기준 어느 쪽이 싼가? 다른 고려 요소는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">A 8.7배, B 10배로 A가 싸다. 다만 A의 15억은 정상화 가정치라 달성 불확실, 인가 일정 리스크, 품목 이탈 가능성을 할인해야 한다. 정상화 확률 70%면 기대 EBITDA 10.5억 → 12.4배로 오히려 비쌀 수 있음.</div></details></div><div class="q"><b>Q3.</b> 당사가 주사제 라인 1개를 신축하면 250억(가정), 회생 제약사 공장 인수 시 실질 EV 130억 + 주사제 전환 투자 80억(가정)이다. 단순 투자액 비교와 추가로 따져야 할 것은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">130 + 80 = 210억으로 40억 저렴. 그러나 전환 후 GMP 재승인 기간, 기존 품목 수익성, 인력 유지, 입지(물류) 차이를 넣어야 하며, 램프업 기간이 신축보다 짧은지가 결정 변수.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> M&A 검토(가정): 회생 중인 주사제 제약사 공장 매각 공고가 나왔다. 실사 1주차에 무엇부터 확인하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 회생계획안 초안의 변제 구조(공익채권, 담보채권 규모)로 인수대금 하한을 잡고, 공장 GMP 적합판정 유지 여부와 품목 허가 목록, 최근 3년 원가율을 본다.<br>실무 체크포인트: ① 인가 후 잔존 부채 유무 ② 핵심 품목 허가 승계 가능 여부 ③ 핵심 인력(QA/QC) 이탈 위험</div></details></div><div class="q"><b>P2.</b> 투자 심의(가정): 위 공장을 실질 EV 130억에 사는 안을 올린다. 심의 자료의 회수 계산은 어떻게 구성하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 실질 EV 130억 대비 정상화 EBITDA 15억(가정)으로 단순 회수 8.7년, 램프업 2년 동안 EBITDA 0~5억을 넣은 연도별 FCF로 NPV/IRR 산정. 신축안과 같은 할인율로 비교.<br>실무 체크포인트: ① 정상화 확률 시나리오(Base/Down) ② 인가 지연 6개월 민감도 ③ 매몰비용(실사비)은 판단에서 제외</div></details></div><div class="q"><b>P3.</b> Exit 준비(가정): 맥쿼리 매각 1년 전 이 볼트온을 끝냈다. 매수자에게 실적을 어떻게 보여주나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 기존 사업 EBITDA와 인수 공장 EBITDA를 분리하고, 인수 공장은 정상화 진척(원가율 111% → 현재치)과 남은 투자액을 표로 제시. 적자분은 일회성(인수 비용, 재승인 비용)과 구조적 손실로 나눠 조정 EBITDA 근거를 준비.<br>실무 체크포인트: ① 유기적 성장과 인수 효과 분리 ② 조정 항목 증빙 ③ 정상화 완료 시점의 Pro-forma EBITDA</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-27
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 회생계획 인가(Confirmation of Rehabilitation Plan) | 법원이 채무 변제 방법, 인수대금 배분, 감자/출자전환 등을 담은 회생계획을 확정해 효력을 주는 결정. 인가가 나야 M&A 잔금 납입과 신주 발행이 진행된다. | 회생 제약사 공장을 볼트온으로 살 때 거래 종결 시점을 정하는 관문. 인가 지연이 곧 일정 리스크 |
+| 관계인집회(Meeting of Interested Parties) | 회생계획안을 채권자, 주주가 조별로 투표하는 법정 집회. 회생담보권자조 3/4, 회생채권자조 2/3 등 법정 비율 이상 동의를 받아야 가결된다. | 회생 M&A 성사 확률을 보는 지표. 대형 채권자 동의 여부를 사전에 확인 |
+| 액면병합(Reverse Stock Split (Share Consolidation)) | 여러 주식을 1주로 합쳐 액면가를 높이고 주식 수를 줄이는 것. 시가총액은 그대로이고 주가만 비례해 오른다. 저가주 이미지 개선이나 CB 한도 조정과 함께 쓴다. | 상장 후 주식 수, 주가 수준 관리 수단. 당사 IPO 시 액면가와 발행주식 수 설계와 연결 |
+| 벌크딜(Bulk Deal (India)) | 인도에서 한 투자자가 하루에 상장주식의 0.5% 이상을 거래하면 거래소가 당일 매수/매도자, 수량, 가격을 공개하는 거래. 별도 창구에서 체결되는 블록딜과 달리 일반 장중 거래로 체결된다. | 인도 상장 CDMO 지분 이동을 거래소 데이터로 바로 확인하는 창 |
+| 505(b)(2) 허가 경로(505(b)(2) Pathway) | 미국 FDA 허가 경로 중 하나로, 기존 공개 문헌이나 오리지널 허가 자료에 기대면서 제형, 함량, 투여경로 변경에 필요한 자료만 새로 내는 방식. 신약(505(b)(1))과 제네릭(ANDA) 사이. | Pharma사업부 개량 제형(동결건조→액상 등)을 미국에 낼 때의 경로. 수탁 고객의 허가 일정 산정 기준 |
+</pre></details>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
