@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전략기획팀 Daily Briefing | 2026-11-28</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+:root{
+  --ink:#111827; --sub:#6b7280; --line:#e5e7eb; --bg:#fff; --soft:#f9fafb;
+  --navy:#0f3b66; --navy-soft:#e8f0f8;
+  --c1:#1d4ed8; --c1s:#e8eefc;   /* PE/Deal (섹션 2) */
+  --c2:#0f766e; --c2s:#e3f3f1;   /* 국내 (섹션 1) */
+  --c3:#6d28d9; --c3s:#efe9fb;   /* 리포트 (섹션 3) */
+  --c4:#b45309; --c4s:#fdf1e0;   /* 글로벌 (섹션 4) */
+  --hl:#fff3b0; --warn:#92400e; --warn-soft:#fef3c7;
+}
+*{box-sizing:border-box}
+.nb{white-space:nowrap}
+html,body{margin:0;background:#eef0f3;color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  font-size:10.5pt;line-height:1.5;letter-spacing:-0.01em;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit;text-decoration:none;border-bottom:1px solid #cbd5e1}
+a:hover{border-color:var(--navy)}
+.page{background:var(--bg);width:210mm;margin:14px auto;padding:12mm 14mm 12mm;position:relative}
+.page section+section{margin-top:22px;padding-top:16px;border-top:2px solid var(--line)}
+.mini{display:flex;justify-content:space-between;font-size:8pt;color:var(--sub);border-bottom:1px solid var(--line);padding-bottom:4px;margin-bottom:12px}
+.mini b{color:var(--ink)}
+
+/* 헤더 */
+.hd{display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:12px}
+.hd h1{margin:0;font-size:20pt;font-weight:800;letter-spacing:-0.03em}
+.hd .sub{font-size:9pt;color:var(--sub);margin-top:2px}
+.hd .date{text-align:right}
+.hd .date b{display:block;font-size:16pt;font-weight:800}
+.hd .date span{font-size:9pt;color:var(--sub)}
+.note{font-size:8.5pt;color:var(--warn);background:var(--warn-soft);padding:5px 10px;border-radius:6px;margin-bottom:12px}
+
+/* 오늘 한눈에 - 누가 → 누구를 → 어떻게 */
+.headlines{border:1.5px solid var(--ink);border-radius:10px;padding:8px 12px 6px;margin-bottom:16px}
+.hl-title{font-size:8.5pt;font-weight:800;color:var(--sub);letter-spacing:.02em;margin-bottom:4px}
+.hl{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:6px 0;border-top:1px solid var(--line)}
+.hl:first-of-type{border-top:none}
+.hl-main{font-size:11.5pt;font-weight:800;letter-spacing:-0.02em;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.hl-main .act{font-size:9pt;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:4px}
+.hl.s1 .act{background:var(--c1)} .hl.s2 .act{background:var(--c2)} .hl.s4 .act{background:var(--c4)} .hl.s3 .act{background:var(--c3)}
+.hl-cond{font-size:9.5pt;font-weight:700;color:var(--navy);white-space:nowrap;text-align:right}
+.hl-mean{grid-column:1/-1;font-size:9.5pt;color:#374151;text-wrap:pretty}
+/* 경영/금융 용어 표시 */
+.kw{border-bottom:1.5px dotted var(--navy);cursor:pointer;padding-bottom:0;white-space:nowrap;color:var(--navy);font-weight:600}
+.kw:hover{background:var(--navy-soft)}
+.bt:target{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-soft);background:#fffdf0}
+.fab{position:fixed;right:18px;z-index:50;background:var(--navy);color:#fff;font-size:9.5pt;font-weight:700;padding:8px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer;user-select:none}
+.fab.top{bottom:18px}
+.fab.ret{bottom:60px;display:none;background:#b45309}
+sup.fn{white-space:nowrap}
+/* 각주 */
+sup.fn{font-size:7pt;color:var(--navy);font-weight:800;margin-left:1px}
+.footnotes{margin:6px 0 0;padding:6px 10px 6px 24px;background:var(--soft);border-radius:6px;font-size:8.5pt;color:#4b5563}
+.footnotes li{margin:1px 0}
+.footnotes b{color:var(--ink)}
+
+/* 한눈에 보기 */
+.glance{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.tile{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.tile .k{font-size:8pt;color:var(--sub);font-weight:600;letter-spacing:0}
+.tile .v{font-size:15pt;font-weight:800;letter-spacing:-0.03em;line-height:1.15;margin:2px 0}
+.tile .d{font-size:8pt;color:var(--sub)}
+
+/* 섹션 */
+section{margin-bottom:16px}
+.sh{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.sh .n{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:800;font-size:10pt;display:flex;align-items:center;justify-content:center}
+.sh h2{margin:0;font-size:12.5pt;font-weight:800;letter-spacing:-0.02em}
+.sh small{font-size:8.5pt;color:var(--sub);font-weight:500;margin-left:2px}
+.s1 .n{background:var(--c1)} .s2 .n{background:var(--c2)} .s3 .n{background:var(--c3)} .s4 .n{background:var(--c4)}
+.s1 .tag{background:var(--c1s);color:var(--c1)} .s2 .tag{background:var(--c2s);color:var(--c2)}
+.s3 .tag{background:var(--c3s);color:var(--c3)} .s4 .tag{background:var(--c4s);color:var(--c4)}
+
+/* 기사 카드 */
+.item{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:none}
+.tag{font-size:8pt;font-weight:700;padding:3px 0;border-radius:5px;text-align:center;height:fit-content;letter-spacing:0}
+.tag.manual{background:var(--warn-soft);color:var(--warn)}
+.tag.ref{background:#f3f4f6;color:#6b7280}
+.item .t{font-size:11pt;font-weight:700;line-height:1.35;margin-bottom:3px;letter-spacing:-0.02em;text-wrap:balance}
+.item ul{margin:0 0 4px;padding-left:14px;color:#374151}
+.item li{margin:1px 0;text-wrap:pretty}
+.arr{color:var(--navy);font-weight:800}
+.item .src{font-size:8.5pt;color:var(--sub)}
+.item .src a{border:none;color:var(--navy)}
+.num{background:var(--hl);padding:0 3px;border-radius:3px;font-weight:700;color:var(--ink)}
+.empty{font-size:9pt;color:var(--sub);background:var(--soft);padding:6px 10px;border-radius:6px}
+
+/* 오늘의 딜 */
+.deal{border:1.5px solid var(--navy);border-radius:10px;overflow:hidden}
+.deal .dh{background:var(--navy);color:#fff;padding:8px 12px;font-weight:800;font-size:12pt;letter-spacing:-0.02em}
+.deal .dh small{display:block;font-weight:500;font-size:8.5pt;opacity:.85;margin-top:1px}
+.deal .db{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.deal .facts{padding:10px 12px;border-right:1px solid var(--line)}
+.deal .facts dl{margin:0;display:grid;grid-template-columns:52px 1fr;gap:3px 8px}
+.deal .facts dt{font-weight:800;color:var(--navy);font-size:9.5pt}
+.deal .facts dd{margin:0;font-size:9.5pt}
+.deal .flow{padding:10px 12px;background:var(--soft)}
+.deal .flow h4{margin:0 0 6px;font-size:9pt;color:var(--sub);font-weight:700}
+.node{background:#fff;border:1.5px solid var(--navy);border-radius:7px;padding:5px 8px;font-size:9pt;font-weight:700;text-align:center}
+.node small{display:block;font-weight:500;color:var(--sub);font-size:8pt}
+.arrow{display:flex;align-items:center;gap:6px;margin:4px 0 4px 18px;font-size:8.5pt;color:#374151}
+.arrow i{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:8px solid var(--navy)}
+.arrow b{color:var(--navy)}
+.steps{margin:8px 0 0;padding-left:16px;font-size:9pt}
+.steps li{margin:2px 0}
+.deal .point{grid-column:1/-1;background:var(--navy-soft);padding:8px 12px;font-size:9.5pt;border-top:1px solid var(--line)}
+.deal .point b{color:var(--navy)}
+.deal .src{grid-column:1/-1;font-size:8.5pt;color:var(--sub);padding:4px 12px 8px}
+
+/* 용어 */
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.term{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.term .k{font-weight:800;font-size:10.5pt;letter-spacing:-0.02em}
+.term .k span{font-weight:500;color:var(--sub);font-size:9pt}
+.term .d{font-size:9.5pt;color:#374151;margin-top:2px}
+.term .ex{font-size:9pt;color:var(--navy);margin-top:3px;background:#fff;border-left:3px solid var(--navy);padding:2px 6px}
+
+/* 시사점 */
+.insight{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;border-left:4px solid var(--navy);background:var(--navy-soft);padding:10px 12px;border-radius:0 8px 8px 0}
+.insight .link{font-size:8.5pt;font-weight:800;color:var(--navy);white-space:nowrap;padding-top:2px}
+.insight .link em{display:block;font-style:normal;font-weight:500;color:var(--sub)}
+.insight ol{margin:0;padding-left:16px}
+.insight li{margin:2px 0}
+
+.refband{font-size:8.5pt;font-weight:700;color:#6b7280;background:#f3f4f6;border-radius:6px;padding:4px 10px;margin-bottom:12px;letter-spacing:.02em}
+/* 오늘 등장한 회사 */
+.cotab{border-collapse:collapse;width:100%;font-size:9pt;table-layout:fixed}
+.cotab col.c1{width:17%}.cotab col.c2{width:37%}.cotab col.c3{width:15%}.cotab col.c4{width:16%}.cotab col.c5{width:15%}
+.cotab th,.cotab td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+.cotab tr:first-child th{background:var(--soft);color:var(--sub);font-size:8.5pt;font-weight:700}
+.cotab th .cn{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.cotab th .cm{font-weight:500;color:var(--sub);font-size:8pt;margin-top:1px}
+.cotab td.sz{color:#374151}
+.cotab .szsrc{font-size:7.5pt;color:var(--sub);margin-top:2px}
+.cotab .szsrc.ok{color:var(--c2)}
+.rel{display:inline-block;font-size:8pt;font-weight:700;padding:2px 7px;border-radius:999px}
+.rel.cust{background:var(--c2s);color:var(--c2)} .rel.comp{background:var(--c4s);color:var(--c4)} .rel.pe{background:var(--c1s);color:var(--c1)} .rel.ref{background:#f3f4f6;color:#6b7280}
+.colegend{font-size:8pt;color:var(--sub);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+
+/* 기본 개념 - 용어 정리 */
+.bh{margin:10px 0 6px;font-size:10pt;color:#4b5563;font-weight:800}
+.bterms{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.bt{background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 9px}
+.bt .k{font-weight:800;font-size:10pt;letter-spacing:-0.02em}
+.bt .k span{font-weight:500;color:var(--sub);font-size:8.5pt}
+.bt .d{font-size:9pt;color:#374151;margin-top:1px;text-wrap:pretty}
+.bt .u{font-size:8.5pt;color:var(--navy);margin-top:2px}
+.bt .ex{font-size:8.5pt;color:#374151;margin-top:2px;background:var(--soft);padding:2px 6px;border-radius:4px}
+
+/* 경영 기초 - 의도적으로 톤 다운(회색) */
+.sh.basic .n{background:#9ca3af}
+.sh.basic h2{color:#4b5563;font-weight:700}
+.sh.basic .skip{margin-left:auto;font-size:8pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:1px 8px}
+.basic-intro{font-size:9pt;color:#6b7280;margin:-2px 0 8px;padding-left:30px}
+.concept{border-color:#e5e7eb;background:#fcfcfd}
+.concept .ch{background:#f3f4f6}
+.concept .ch b{color:#374151}
+.concept h5{color:#4b5563}
+.concept .fam tr:first-child th{background:#f3f4f6;color:#4b5563}
+/* 오늘의 개념 */
+.concepts{display:grid;grid-template-columns:1fr;gap:10px}
+.concept{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.concept .ch{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:8px 12px;border-bottom:1px solid var(--line)}
+.concept .time{flex:none;font-size:8.5pt;color:#6b7280;border:1px solid #d1d5db;border-radius:999px;padding:2px 9px}
+.concept .quote{font-size:8.5pt;color:#4b5563;margin-top:2px;font-style:italic}
+.concept .quote em{color:var(--sub);font-style:normal}
+.concept .quiz summary{list-style:none;cursor:pointer;display:inline-block;margin-top:3px}
+.concept .quiz summary::-webkit-details-marker{display:none}
+.concept .btn{font-size:8.5pt;font-weight:700;color:#fff;background:#4b5563;border-radius:999px;padding:3px 11px}
+.concept details[open] .btn{background:#9ca3af}
+.concept .ch b{font-size:11.5pt;letter-spacing:-0.02em}
+.concept .ch b span{font-weight:500;color:var(--sub);font-size:9pt;margin-left:4px}
+.concept .cb{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.concept .col{padding:8px 12px;font-size:9.5pt}
+.concept .col+.col{border-left:1px solid var(--line)}
+.concept h5{margin:0 0 2px;font-size:8.5pt;color:var(--navy);font-weight:800;letter-spacing:0}
+.concept p{margin:0 0 6px}
+.concept .formula{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:9pt;background:#f3f4f6;padding:4px 8px;border-radius:5px;margin:2px 0 6px;display:inline-block}
+.concept .calc{background:var(--hl);padding:4px 8px;border-radius:5px;margin:2px 0 6px;font-size:9pt}
+.concept .uses{margin:0;padding-left:14px}
+.concept .fam{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px}
+.concept .fam table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .fam th,.concept .fam td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .fam tr:first-child th{background:var(--navy-soft);color:var(--navy);font-size:8.5pt}
+.concept .fam th{background:var(--soft);white-space:nowrap;font-weight:800}
+.concept .fam td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt;white-space:nowrap}
+.concept .fam td.lim{color:var(--sub)}
+/* ①-1 계산 예시 (Worked Example) */
+.concept .example{grid-column:1/-1;border-top:1px solid var(--line);padding:8px 12px;background:#f7fbf9}
+.concept .example h5{color:var(--c2)}
+.concept .example .exnote{font-size:8.5pt;color:var(--sub);margin:0 0 4px}
+.concept .example table{border-collapse:collapse;width:100%;font-size:9pt}
+.concept .example th,.concept .example td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+.concept .example tr:first-child th{background:var(--c2s);color:var(--c2);font-size:8.5pt;white-space:nowrap}
+.concept .example td.st{font-weight:800;white-space:nowrap}
+.concept .example td.f{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:8.5pt}
+.concept .example td.r{font-weight:800;color:var(--navy);white-space:nowrap;background:#fff}
+.concept .example tr.total td{background:var(--hl)}
+.concept .example .inputs{margin:6px 0 0;padding:5px 8px;background:#fff;border:1px dashed #cbd5e1;border-radius:5px;font-size:9pt}
+.concept .example .inputs b{color:var(--c2)}
+.concept .example .inputs ul{margin:2px 0 0;padding-left:14px}
+.concept .quiz{grid-column:1/-1;border-top:1px dashed var(--line);padding:7px 12px;font-size:9.5pt;background:#fffdf5}
+.concept .quiz.q2{background:#f4f8fb}
+.concept .quiz.q2 b{color:var(--acc,#1f5f8b)}
+.concept .quiz .q{margin:4px 0 8px}
+.concept .quiz b{color:var(--warn)}
+.concept .quiz details{margin-top:3px}
+.concept .quiz .ans{margin-top:3px;padding:5px 8px;background:#fff;border:1px solid var(--line);border-radius:5px}
+
+/* 용어집 복붙 */
+.glossary-add{margin-top:14px;padding:8px 10px;background:#fafafa;border:1px dashed #d1d5db;border-radius:6px}
+.glossary-add summary{font-size:8.5pt;color:var(--sub);cursor:pointer;font-weight:600}
+.glossary-add pre{margin-top:6px}
+.glossary-add pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:7.5pt;color:#4b5563;line-height:1.35}
+.ft{margin-top:12px;padding-top:6px;border-top:1px solid var(--line);font-size:8pt;color:var(--sub)}
+
+/* 별지 */
+.theme{padding:8px 0;border-top:1px solid var(--line)}
+.theme .t{font-weight:800;font-size:11pt}
+.theme .ours{margin-top:3px;font-size:9.5pt;background:var(--navy-soft);padding:4px 8px;border-radius:5px}
+
+@media print{
+  details{display:block} details summary{list-style:none} details pre{display:block}
+  html,body{background:#fff;font-size:9.5pt;line-height:1.4}
+  .page{width:auto;min-height:auto;margin:0;padding:0 6mm;break-before:page}
+  .page:first-child{break-before:auto}
+  section{margin-bottom:12px}
+  .item,.deal,.term,.insight,.tile,.glossary-add,.concept,.bt,.hl,.cotab tr,.concept .example tr{break-inside:avoid}
+  section{break-inside:avoid}  /* 섹션이 한 페이지에 안 들어가면 통째로 다음 페이지. 8·9처럼 한 페이지 넘는 섹션만 내부 분할 */
+  section.co,section.long{break-inside:auto}
+  .sh,.bh,.hl-title,.cotab tr:first-child{break-after:avoid}
+  .headlines{break-inside:avoid}
+  .cotab{font-size:8.5pt} .cotab th,.cotab td{padding:4px 6px}
+  .colegend{break-before:avoid}
+  .concept .quiz details{display:block} .concept .quiz summary{display:none} .concept .quiz .ans{display:block}
+  .concept .btn{display:none}
+  .fab{display:none!important}
+  .kw{color:inherit;font-weight:inherit}
+  a{border:none}
+}
+</style></head><body><!--bnav--><style>.bnav{position:sticky;top:0;z-index:50;display:flex;gap:4px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:#fff;border-bottom:1px solid #e5e7eb;font-family:"Pretendard Variable",Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:13px}.bnav a{padding:5px 12px;border-radius:999px;border:none!important;box-shadow:none!important;background:none;text-decoration:none;color:#374151;font-weight:700}.bnav a:hover{background:#f3f4f6}.bnav a.on{background:#0f3b66!important;color:#fff!important}.bnav .home{color:#111827;font-weight:800;margin-right:6px}.bnav .sp{flex:1}.bnav .td{color:#0f3b66}.bnav form{margin:0 4px 0 8px}.bnav input{font:inherit;font-size:13px;width:220px;max-width:46vw;padding:6px 12px;border:1px solid #d1d5db;border-radius:999px;background:#f9fafb;color:#111827;outline:none}.bnav input:focus{border-color:#0f3b66;background:#fff}@media print{.bnav{display:none!important}}</style><nav class="bnav"><a class="home" href="../../">Briefing Archive</a><a class="on" href="../../#daily">일간</a><a class="" href="../../#weekly">주간</a><a class="" href="../../#monthly">월간</a><a class="" href="../../#quarterly">분기</a><a class="" href="../../#annual">연간</a><a class="" href="../../glossary.html">용어집</a><form action="../../search.html" method="get"><input name="q" type="search" placeholder="지난 브리핑 검색" autocomplete="off"></form><span class="sp"></span><a class="td" href="../../latest/">오늘 브리핑</a></nav><!--/bnav-->
+<div class="page">
+  <div class="hd">
+    <div><h1>전략기획팀 Daily Briefing</h1><div class="sub">수집 범위: 최근 24시간, 전략기획팀</div></div>
+    <div class="date"><b>2026-11-28</b><span>토요일 (비영업일)</span></div>
+  </div>
+<div class="note">비영업일(토) 생성분. 수집 창 2026-11-27 06:30 ~ 11-28 06:30 KST. 미국 추수감사절 연휴로 해외 의약품 기사 적음: 4 글로벌의 케미컬 의약품/건기식 해당 없음, 3 리포트는 MBB/Big 4/IQVIA 신규 발행 미확인(시장조사 보도자료 1건으로 대체). PAI Pharma-Nexus 인수(11/12 발표)는 창 밖이라 제외.</div>
+<div class="headlines"><div class="hl-title">오늘 한눈에</div><div class="hl s1"><div class="hl-main"><b>맥쿼리자산운용</b><span class="act">100% 인수 완료</span><b>화성코스메틱 / 나우코스</b></div><div class="hl-cond">3,000억대 중반(보도)</div><div class="hl-mean">당사 대주주가 당사 운용 경험을 근거로 뷰티 ODM 플랫폼을 샀고, 같은 날 SK팜테코 매각 후보로도 거론됨</div></div><div class="hl s2"><div class="hl-main"><b>펜믹스</b><span class="act">첫 68% 가산 등재</span><b>타이제사이클린 주사제</b></div><div class="hl-cond">2만6,794원</div><div class="hl-mean">약가 개편 후 "직접 생산" 주사제에 약가 우대가 실제로 적용된 첫 사례</div></div><div class="hl s3"><div class="hl-main"><b>Research and Markets</b><span class="act">시장 전망</span><b>CDMO+CRO 서비스 시장</b></div><div class="hl-cond">$444B (2032, 추정)</div><div class="hl-mean">6년간 연 약 11% 성장 전망이나 CRO 포함 수치라 CDMO 규모로 바로 쓰면 안 됨</div></div><div class="hl s4"><div class="hl-main"><b>코스맥스</b><span class="act">월 생산 1억 개 돌파</span><b>화성/평택 공장</b></div><div class="hl-cond">10월 1억11만 개</div><div class="hl-mean">K-뷰티 수출 호조로 ODM 1위가 증설과 원료 선구매에 나섬</div></div></div>
+  <section class="s2">
+    <div class="sh"><div class="n">1</div><h2>국내 제약, 바이오</h2><small>경쟁사, 고객사, 약가, DART 공시</small></div>
+    <div class="item"><div class="tag ">공시</div><div>
+      <div class="t">경남제약, 40억 3자배정 증자로 최대주주 교체</div><ul><li>경남제약이 ㈜엑스를 대상으로 주당 1,264원, 316만4,556주 규모의 <a class="kw" href="#t-rights3" title="특정인에게 신주를 배정하는 증자 - 클릭하면 기본 개념으로 이동">제3자배정 유상증자</a>를 27일 공시.<br>조달액 <span class="num">약 40억</span>.</li><li>12/7 납입이 끝나면 <a class="kw" href="#t-majchg" title="지분이 가장 많은 주주 - 클릭하면 기본 개념으로 이동">최대주주</a>가 빌리언스 외 1인에서 엑스로 바뀌고, 신주는 12/29 상장 후 1년 <a class="kw" href="#t-lockup" title="일정 기간 매도 금지 - 클릭하면 기본 개념으로 이동">보호예수</a>.</li><li>→ 40억 소규모 증자로 경영권이 넘어가는 구조.<br>국내 일반약 업체의 지배구조 변화는 고객사, 경쟁사 모니터링 항목.</li></ul>
+      <div class="src"><a href="https://biz.sbs.co.kr/article/20000349446">SBS Biz / 히트뉴스</a>, 2026-11-27 16:53</div></div></div>
+    <div class="item"><div class="tag ">약가</div><div>
+      <div class="t">펜믹스 항생주사제, 개편 후 첫 68% 가산</div><ul><li>펜믹스 <span class="nb">타이제사이클린<sup class="fn">1</sup></span>주50mg이 12/1 <span class="num">2만6,794원</span>에 급여 등재, 항생주사제 68% <a class="kw" href="#t-addon" title="요건 충족 품목 약가 우대 - 클릭하면 기본 개념으로 이동">가산</a> 첫 적용(데일리팜 27일 취재 기준).</li><li>요건은 직접 생산 + 동일제제 3개사 이하.<br>최초 5년 후 요건 유지 시 연장되고, 요건이 깨지면 1만7,731원으로 약 34% 하락(보도 기준).</li><li>→ 주사제는 "직접 생산"이 약가 요건.<br>위탁생산 품목은 가산 대상에서 빠질 수 있어 수탁 구조 설계에 영향.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/345138">데일리팜</a>, 2026-11-28 06:00</div></div></div>
+    <div class="item"><div class="tag ">약가</div><div>
+      <div class="t">프리렙톨 50mg, 용량 2배인데 약가 37% 저렴</div><ul><li>환인제약 프리렙톨캡슐(<span class="nb">프레가발린<sup class="fn">2</sup></span>) 50mg이 12/1 171원에 등재.<br>기등재 25mg(270원)보다 <span class="num">약 37%</span> 낮다.</li><li><a class="kw" href="#t-calcrate" title="오리지널 대비 제네릭 상한가 비율 - 클릭하면 기본 개념으로 이동">산정률</a>이 53.55%에서 45%로 내려갔고 <a class="kw" href="#t-tiered" title="후발 등재일수록 최저가의 85% - 클릭하면 기본 개념으로 이동">계단식 인하</a> 기준이 적용됨.</li><li>→ 저함량이 고함량보다 비쌀 수 없다는 규정으로 25mg도 171원으로 동반 인하.<br>약가개편의 연쇄 효과 사례.</li></ul>
+      <div class="src"><a href="https://dailypharm.com/user/news/345121">데일리팜</a>, 2026-11-27 12:03</div></div></div>
+    <div class="item"><div class="tag ">공시</div><div>
+      <div class="t">SD바이오센서 990억 배상 1심, HLB 합병 일정 확정</div><ul><li>서울중앙지법이 래피젠 <span class="nb">실용신안<sup class="fn">3</sup></span> 소송에서 SD바이오센서에 <span class="num">990억</span>, 바이오노트에 10억 배상 판결.<br><a class="kw" href="#t-default" title="늦게 갚는 기간의 법정 이자 - 클릭하면 기본 개념으로 이동">지연손해금</a>은 판결일까지 연 5%, 이후 연 12%.</li><li>HLB는 HLB생명과학 1주당 0.0857532주의 <a class="kw" href="#t-mratio" title="소멸회사 1주당 존속회사 주식 수 - 클릭하면 기본 개념으로 이동">합병비율</a>로 신주 867만주(약 2,608억)를 발행, <a class="kw" href="#t-mdate" title="합병 효력 발생일 - 클릭하면 기본 개념으로 이동">합병기일</a>은 2027-07-01.</li><li>→ 판결 금액과 이자율 상향은 항소 기간 중 우발부채로 잡힐 규모.<br>상장사 계열 합병은 주총(2027-03-30)부터 7개월 일정.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=81190">히트뉴스 HIT알공 / 서울경제 기업 공시</a>, 2026-11-27 18:22</div></div></div>
+<ol class="footnotes"><li><b>타이제사이클린</b> 광범위 항생제 성분, 정맥 주사제</li><li><b>프레가발린</b> 신경병증성 통증/뇌전증 치료 성분</li><li><b>실용신안</b> 특허보다 요건이 낮은 소발명 보호 권리</li></ol>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-28</span></div>
+  <section class="s1">
+    <div class="sh"><div class="n">2</div><h2>PE / Deal</h2><small>헬스케어 PE 투자, 회수, 인수금융 (Exit 최우선)</small></div>
+    <div class="item"><div class="tag ">Exit</div><div>
+      <div class="t">SK팜테코 지분 매각, 맥쿼리 등 후보 거론</div><ul><li>SK그룹이 <span class="nb">CDMO<sup class="fn">1</sup></span> 통합법인 SK팜테코의 <a class="kw" href="#t-minority" title="경영권 없는 지분 - 클릭하면 기본 개념으로 이동">소수지분</a> 매각을 추진, 맥쿼리자산운용, 베인캐피탈, 한앤컴퍼니가 후보로 거론(보도 기준).</li><li>후보가 <a class="kw" href="#t-control" title="과반 지분과 지배권 - 클릭하면 기본 개념으로 이동">경영권</a>, 소수지분, <a class="kw" href="#t-assettr" title="사업부/자산 단위 양도 - 클릭하면 기본 개념으로 이동">사업양수도</a> 중 원하는 구조를 자유 제안하는 <a class="kw" href="#t-openproc" title="거래 형태를 정하지 않은 입찰 - 클릭하면 기본 개념으로 이동">열린 구조</a>로 <a class="kw" href="#t-loi" title="구속력 약한 인수 의사 표명 - 클릭하면 기본 개념으로 이동">인수의향서</a> 접수 중.</li><li>SK 희망가는 2023년 말 <a class="kw" href="#t-preipo" title="상장 전 소수지분 투자 - 클릭하면 기본 개념으로 이동">프리IPO</a> 기준 <span class="num">4조원+</span>, 지난해 매출 9,320억에 <a class="kw" href="#t-oploss" title="본업 적자 - 클릭하면 기본 개념으로 이동">영업손실</a> 1,540억(3년 연속 적자, 보도 기준).<br>일부 후보는 <a class="kw" href="#t-acqfin" title="인수용 차입 - 클릭하면 기본 개념으로 이동">인수금융</a> 논의.</li></ul>
+      <div class="src"><a href="https://www.alphabiz.co.kr/news/articleView.html?idxno=200494">알파경제</a>, 2026-11-27 08:57</div></div></div>
+    <div class="item"><div class="tag ">PE</div><div>
+      <div class="t">맥쿼리, 화성코스메틱/나우코스 100% 인수 완료</div><ul><li>맥쿼리자산운용이 PEF를 통해 색조 <span class="nb">ODM<sup class="fn">2</sup></span> 화성코스메틱과 기초 ODM 나우코스 지분 100% 인수 완료.<br>가격은 <span class="num">3,000억대 중반</span>(보도 기준).</li><li>두 회사는 약 390개 고객사에 3,200개 이상 제품 공급, 매출의 약 60%가 해외 고객(아시아경제 보도).</li><li>→ 맥쿼리는 "대표 글로벌 ODM <a class="kw" href="#t-platform" title="볼트온의 중심 회사 - 클릭하면 기본 개념으로 이동">플랫폼</a>"을 목표로 제시했고, 기사는 제뉴원사이언스 운용 경험 활용을 명시.</li></ul>
+      <div class="src"><a href="https://www.asiae.co.kr/article/2026112714490449563">아시아경제 / 마이데일리</a>, 2026-11-27 14:49</div></div></div>
+    <div class="item"><div class="tag ">메자닌</div><div>
+      <div class="t">큐리옥스, 229억 사모 CB 발행</div><ul><li>큐리옥스바이오시스템즈가 229억 규모 <a class="kw" href="#t-cb" title="소수 투자자 대상 전환사채 - 클릭하면 기본 개념으로 이동">사모 CB</a>를 결정.<br><a class="kw" href="#t-coupon" title="매년 받는 이자율 - 클릭하면 기본 개념으로 이동">표면이자율</a> 0%, 만기이자율 2%.</li><li><a class="kw" href="#t-convprice" title="CB를 주식으로 바꿀 때 1주 가격 - 클릭하면 기본 개념으로 이동">전환가액</a>은 4만9,904원, 전환 시 약 45.9만주(계산치), 납입일 12/11.</li><li>→ 같은 날 코오롱티슈진, 큐로셀은 CB 전환가 하향(리픽싱) 공시.<br>바이오 메자닌 조달이 이어지는 흐름.</li></ul>
+      <div class="src"><a href="https://www.hitnews.co.kr/news/articleView.html?idxno=81190">히트뉴스 HIT알공</a>, 2026-11-27 18:22</div></div></div>
+<ol class="footnotes"><li><b>CDMO</b> 위탁개발생산</li><li><b>ODM</b> 제조자개발생산: 제조사가 개발까지 맡아 브랜드사에 공급</li></ol>
+  </section>
+  <section class="s3">
+    <div class="sh"><div class="n">3</div><h2>컨설팅 / IB 리포트</h2><small>MBB, Big 4, IQVIA 등 (발행일 명시)</small></div>
+    <div class="item"><div class="tag ref">시장조사</div><div>
+      <div class="t">CDMO+CRO 시장, 2032년 $444B 전망</div><ul><li>Research and Markets가 위탁개발생산/연구 서비스 시장을 2026년 $237.2B에서 2032년 <span class="num">$444.03B</span>로 전망, <a class="kw" href="#t-cagr" title="연평균성장률 - 클릭하면 기본 개념으로 이동">CAGR</a> 10.92%(발행사 추정).</li><li>CDMO와 CRO(임상시험, 시험 서비스)를 합친 수치라 순수 CDMO 규모가 아님.<br>성장 동인으로 바이오로직스, AI, 무균 주사제를 제시.</li><li>→ MBB/Big 4/IQVIA 신규 발행분은 이번 창에서 미확인.<br>판매용 보고서 보도자료라 인용 시 "추정" 표기.</li></ul>
+      <div class="src"><a href="https://www.globenewswire.com/news-release/2026/11/27/3411233/28124/en/pharmaceutical-contract-manufacturing-and-research-services-cdmo-and-cro-market-2026-2032-biologics-and-ai-drive-10-92-cagr-toward-usd-444-03-billion.html">GlobeNewswire (Research and Markets), 발행 2026-11-27</a>, 2026-11-27 14:11 UTC</div></div></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-28</span></div>
+  <section class="s4">
+    <div class="sh"><div class="n">4</div><h2>글로벌 트렌드</h2><small>케미컬 CDMO, 제네릭, 주사제 / 화장품 / 건기식</small></div>
+    <div class="item"><div class="tag ">화장품</div><div>
+      <div class="t">코스맥스, 국내 월 생산 1억 개 첫 돌파</div><ul><li>코스맥스 화성/평택 공장의 10월 생산량이 1억11만 개로 처음 월 1억 개를 넘겼다(코스인 보도).</li><li>11/26 원료/포장재 협력사 약 40곳과 2027년 생산계획, 원료 선구매, 리드타임 단축을 논의하고 증설, 전용 라인 투자를 예고.</li><li>→ ODM 1위의 물량 확대는 원료/포장재 수급 경쟁으로 이어짐.<br>가동률 관리와 공급망 사전 계약의 벤치마크.</li></ul>
+      <div class="src"><a href="https://www.cosinkorea.com/news/article.html?no=58815">코스인코리아</a>, 2026-11-27 11:32</div></div></div>
+    <div class="item"><div class="tag ">화장품</div><div>
+      <div class="t">K-뷰티 수출 $12.6B, 1,000억 넘는 제조사는 0.14%</div><ul><li>1~10월 화장품 수출이 <span class="num">$12.569B</span>(+33.6%)로 2025년 <span class="nb">연간($11.418B)</span>을 이미 넘어섰다.</li><li>생산실적을 보고한 1만5,342곳 중 연 생산 1,000억 초과는 21곳뿐, 식품/패션/제약사가 M&A와 펀드로 뷰티 제조에 진입 중.</li><li>→ 수요는 커지는데 대형 제조사는 소수.<br>맥쿼리의 ODM 인수 논리와 같은 축.</li></ul>
+      <div class="src"><a href="https://www.mydaily.co.kr/page/view/2026112719374398115">마이데일리</a>, 2026-11-27 19:39</div></div></div>
+    <div class="empty">케미컬 의약품 CDMO/제네릭/주사제, 건기식: 해당 없음 (미국 추수감사절 연휴로 창 내 신규 기사 미확인)</div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">5</div><h2>오늘의 딜</h2><small>누가, 무엇을, 왜, 어떤 구조로</small></div>
+    <div class="deal">
+      <div class="dh">SK팜테코 지분 매각: "열린 구조"로 전환<small>SK그룹 리밸런싱, 희망가 4조원+(보도 기준), 맥쿼리/베인/한앤컴 거론</small></div>
+      <div class="db">
+        <div class="facts"><dl>
+          <dt>누가</dt><dd>SK그룹(매도) / 맥쿼리자산운용, 베인캐피탈, 한앤컴퍼니(후보, 보도 기준)</dd>
+          <dt>무엇을</dt><dd>미국/유럽/한국 생산거점을 가진 CDMO 통합법인 SK팜테코의 지분(비율 미공개). 경영권, 소수지분, 사업부 양수도 모두 제안 가능</dd>
+          <dt>왜</dt><dd>그룹 재무구조 개선 + 3년 연속 적자. 지난해 경영권 매각은 가격 눈높이 차이로 정체 → 구조를 열어 매수자 풀을 넓힘</dd>
+        </dl>
+        <ol class="steps"><li>2025년 말: 경영권 매각 추진 → 가격 차이로 정체(보도 기준).</li><li>최근: 사업부 분리 vs 소수지분 저울질 끝에 열린 구조로 LOI 접수.<br>우선협상대상자, 입찰 일정 미정.</li><li>희망가 4조원 / 지난해 매출 9,320억 = 약 4.3배(계산치, 순차입금 미반영).<br>영업손실 1,540억이라 EBITDA 배수는 쓰기 어렵다.</li><li>후보별 구조가 다르면 매도자는 대가를 현재가치, 지배권, 잔여 지분 회수 경로로 환산해 비교해야 한다.</li></ol></div>
+        <div class="flow"><h4>거래 구조</h4><div class="node">SK그룹 (SK㈜)<small>매도자, 리밸런싱</small></div><div class="arrow"><i></i><span>LOI 접수: 구조 자유 제안</span></div><div class="node">FI 후보 3곳+<small>맥쿼리 / 베인 / 한앤컴 (보도)</small></div><div class="arrow"><i></i><span>일부 인수금융 논의</span></div><div class="node">SK팜테코<small>합성 + 세포/유전자치료제 CDMO</small></div><div class="arrow"><i></i><span>희망 EV/Sales 약 4.3배 (계산치)</span></div><div class="node">거래 형태 미정<small>경영권 / 소수지분 / 사업양수도</small></div></div>
+        <div class="point"><b>포인트</b> 적자 CDMO도 매출 배수와 과거 프리IPO 가격으로 4조원을 부른다. 반대로 매수자는 흑자 전환 시점을 가격에 넣으려 해 갭이 생긴다. 당사 대주주 맥쿼리가 후보로 거론되고 같은 날 뷰티 ODM 플랫폼을 인수해, 맥쿼리의 국내 제조 플랫폼 확장 의지를 읽을 수 있는 건.</div>
+        <div class="src"><a href="https://www.alphabiz.co.kr/news/articleView.html?idxno=200494">알파경제 2026-11-27 08:57 (보도 기준, 회사 공식 확인 아님)</a></div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-28</span></div>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">6</div><h2>오늘의 용어</h2><small>glossary.md 미수록 용어만, 예시 1줄 포함</small></div>
+    <div class="terms"><div class="term"><div class="k">열린 구조 입찰 <span>Structure-agnostic Sale Process</span></div><div class="d">매도자가 거래 형태(경영권/소수지분/사업양수도)를 정하지 않고 후보들이 원하는 구조와 가격을 자유 제안하게 하는 매각 방식. 매수자 풀이 넓어지지만, 제안끼리 비교하려면 대가를 같은 잣대(현재가치, 지배권, 잔여지분 회수)로 환산해야 한다.</div><div class="ex">예: SK팜테코: 후보 A 경영권 51%, B 소수지분 30%, C 미국 공장만 양수도 제안 → 매도자는 세 안을 지분가치 기준으로 다시 계산해 비교</div></div><div class="term"><div class="k">지연손해금 <span>Default Interest (Late Payment Damages)</span></div><div class="d">돈을 줘야 할 날부터 실제로 갚는 날까지 붙는 법정 이자 성격의 손해배상. 국내 민사는 연 5%, 소송 판결 선고 다음 날부터는 소송촉진법상 연 12%가 적용되는 것이 일반적이다.</div><div class="ex">예: SD바이오센서 990억 × 12% = 연 약 119억(계산치). 판결 후 1년 지연되면 이자만 119억 추가</div></div><div class="term"><div class="k">합병기일 <span>Merger Effective Date</span></div><div class="d">합병 효력이 생기는 날. 이 날 소멸회사의 자산/부채와 주주가 존속회사로 넘어가고, 합병신주는 보통 그 뒤 2주 내외에 상장된다. 주총 승인과 채권자 보호 절차가 이 날보다 먼저 끝나야 한다.</div><div class="ex">예: HLB: 주총 2027-03-30 → 합병기일 2027-07-01 → 신주 상장 7/15. 주총부터 효력까지 약 3개월</div></div><div class="term"><div class="k">표면이자율 <span>Coupon Rate</span></div><div class="d">채권 액면에 적힌, 매년 지급하는 이자율. 만기에 원금보다 더 갚기로 한 만기이자율(만기보장수익률)과 다르며, CB는 주식 전환 가능성 때문에 0%로 정하는 경우가 많다.</div><div class="ex">예: 큐리옥스 CB 229억: 표면 0%라 매년 이자 0원, 전환 안 되면 만기이자율 2% 기준으로 원금 + 할증 상환</div></div><div class="term"><div class="k">연평균성장률 <span>CAGR, Compound Annual Growth Rate</span></div><div class="d">시작값에서 끝값까지 매년 같은 비율로 복리 성장했다고 볼 때의 연 성장률. (끝값 ÷ 시작값)^(1/년수) - 1. 중간 연도의 등락은 보여주지 않는다.</div><div class="ex">예: 시장 $237.2B → 6년 뒤 $444.03B: (444.03/237.2)^(1/6) - 1 = 약 11%</div></div></div>
+  </section>
+  <section>
+    <div class="sh"><div class="n" style="background:var(--navy)">7</div><h2>제뉴원 시사점</h2></div>
+    <div class="insight"><div class="link">연결 항목<em>Exit / M&A / 사업(주사제)</em></div><ol><li>맥쿼리가 당사 운용 경험을 근거로 뷰티 ODM 플랫폼을 100% 인수하고 SK팜테코 후보로도 거론됨 → 국내 제조 플랫폼 확장 국면. 당사 Exit 시나리오(단독 매각 vs 플랫폼 간 결합, 보유 연장)를 다시 점검 [Exit].</li><li>SK팜테코처럼 적자 CDMO는 매출 배수로 가격을 다툰다. 당사는 흑자 EBITDA 기반 배수 방어 자료(가동률, 수주잔고)를 준비하고, 펜믹스 사례처럼 "직접 생산" 요건이 주사제 약가를 좌우하므로 Pharma사업부 주사제 품목의 요건을 점검 [Exit / 사업].</li></ol></div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-28</span></div>
+<div class="refband">여기부터 참조 (8 언급 기업, 9 기본 개념)</div>
+  <section class="co">
+    <div class="sh"><div class="n" style="background:#6b7280">8</div><h2>언급 기업</h2><small>참조</small></div>
+    <table class="cotab"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"></colgroup><tr><th>회사명</th><th>사업군</th><th>규모</th><th>출현 배경</th><th>당사 관계</th></tr><tr><th><div class="cn">SK팜테코</div><div class="cm">한국/미국, 비상장, CDMO</div></th><td>SK㈜ 산하 글로벌 CDMO 통합법인. 합성의약품(원료) + 세포/유전자치료제 생산 거점을 미국, 유럽, 한국에 보유.</td><td class="sz">비공개<div class="szsrc">공식 IR 수치 미확인 (기사 매출 9,320억은 규모 열 미사용)</div></td><td>2 PE/Deal, 5 오늘의 딜: 지분 매각 열린 구조 LOI</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">SK㈜</div><div class="cm">한국, KOSPI(034730), 지주</div></th><td>SK그룹 지주회사. 사업 리밸런싱으로 바이오 자산 유동화 진행(2026년 SK바이오팜 블록딜 등).</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미기재</div></td><td>2 PE/Deal: SK팜테코 매도 주체</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">맥쿼리자산운용</div><div class="cm">한국/호주, 맥쿼리그룹 계열, PE/인프라 운용</div></th><td>당사 대주주. 이번에 화성코스메틱/나우코스를 PEF로 100% 인수, SK팜테코 후보로도 거론.</td><td class="sz">공식 AUM 미확인<div class="szsrc">운용사 공식 사이트 이번 실행 미조회</div></td><td>2 PE/Deal 2건, 5 오늘의 딜</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">베인캐피탈</div><div class="cm">미국, 비상장, PE</div></th><td>글로벌 PE. 헬스케어, 소비재 바이아웃 경험이 많은 운용사.</td><td class="sz">공식 AUM 미확인<div class="szsrc">운용사 공식 사이트 이번 실행 미조회</div></td><td>2 PE/Deal: SK팜테코 후보(보도)</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">한앤컴퍼니</div><div class="cm">한국, 비상장, PE</div></th><td>국내 대형 바이아웃 PE. 제조업, 소비재 경영권 인수 위주.</td><td class="sz">공식 AUM 미확인<div class="szsrc">운용사 공식 사이트 이번 실행 미조회</div></td><td>2 PE/Deal: SK팜테코 후보(보도)</td><td><span class="rel pe">PE/투자자</span></td></tr><tr><th><div class="cn">화성코스메틱 / 나우코스</div><div class="cm">한국, 비상장, 화장품 ODM</div></th><td>색조(화성코스메틱), 기초(나우코스) ODM. 원료 소싱부터 제형 R&D, 생산, 패키징까지 수행, 해외 고객 매출 비중 약 60%(보도).</td><td class="sz">비공개<div class="szsrc">공식 IR 없음</div></td><td>2 PE/Deal: 맥쿼리 100% 인수</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">경남제약 / ㈜엑스</div><div class="cm">한국, KOSDAQ(053950), 일반의약품</div></th><td>비타민/일반약 중심 제약사. ㈜엑스가 3자배정 증자로 새 최대주주가 될 예정.</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 "추가 예정"</div></td><td>1 국내: 40억 3자배정 증자</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">펜믹스</div><div class="cm">한국, 비상장, 제약(주사제)</div></th><td>항생제 원료/완제 제약사. 타이제사이클린 주사제로 개편 후 첫 68% 가산 등재.</td><td class="sz">비공개<div class="szsrc">공시 원천 미확인</div></td><td>1 국내: 항생주사제 가산</td><td><span class="rel comp">경쟁/비교대상</span></td></tr><tr><th><div class="cn">환인제약</div><div class="cm">한국, KOSPI, 중추신경계 전문 제약</div></th><td>정신/신경계 전문의약품 제약사. 프리렙톨(프레가발린) 저함량 출시.</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미기재</div></td><td>1 국내: 약가 연쇄 인하</td><td><span class="rel cust">고객/잠재고객</span></td></tr><tr><th><div class="cn">에스디바이오센서 / HLB</div><div class="cm">한국, 상장, 진단 / 바이오</div></th><td>SD바이오센서는 체외진단 기업(래피젠 소송 1심 패소), HLB는 HLB생명과학 흡수합병 결정.</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미기재</div></td><td>1 국내: 판결, 합병 공시</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">큐리옥스바이오시스템즈</div><div class="cm">한국, KOSDAQ, 바이오 장비</div></th><td>세포 분석 전처리 자동화 장비 기업. 229억 사모 CB 발행.</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 미기재</div></td><td>2 PE/Deal: 메자닌 조달</td><td><span class="rel ref">참고</span></td></tr><tr><th><div class="cn">코스맥스</div><div class="cm">한국, KOSPI(192820), 화장품 ODM</div></th><td>국내 1위 화장품 ODM. 화성/평택 공장 월 생산 1억 개 돌파.</td><td class="sz">DART 코드 미등록<div class="szsrc">corp_code 표 "추가 예정"</div></td><td>4 글로벌: 생산량, 증설 예고</td><td><span class="rel ref">참고</span></td></tr></table>
+    <div class="colegend"><span class="rel cust">고객/잠재고객</span><span class="rel comp">경쟁/비교대상</span><span class="rel pe">PE/투자자</span><span class="rel ref">참고</span>, 규모는 공시 원천(DART 사업/분기보고서 / SEC 10-K/10-Q / 회사 IR)에서만 수집. 원천 없으면 "비공개". 기사/증권사 수치 사용 안 함</div>
+  </section>
+</div>
+<div class="page">
+<div class="mini"><span><b>전략기획팀 Daily Briefing</b></span><span>2026-11-28</span></div>
+    <section class="long">
+    <div class="sh basic"><div class="n">9</div><h2>기본 개념</h2><small>금일 브리핑에 사용된 경영/금융 용어 · 선택</small></div>
+    <div class="basic-intro">A. 금일 용어 정리(정의, 주요 용례, 예시) → B. 심화(정의, 계산 예시 표, 동일 계열 개념 비교, 적용, 문제 - 정답은 버튼). 업계/기술 용어는 각 섹션 하단 각주.</div>
+    <h4 class="bh">A. 용어 정리 <small style="font-weight:500;color:var(--sub)">본문 용어 클릭 시 이동</small></h4>
+    <div class="bterms"><div class="bt" id="t-minority"><div class="k">소수지분 <span>Minority Stake</span></div><div class="d">경영권(과반)이 없는 지분. 오늘 SK팜테코 매각 대상으로 거론.</div><div class="u">▸ 부분 Exit, 성장 자금 유치</div><div class="ex">예: 30% 소수지분은 지분가치 1조원이면 단순 3,000억, 할인 15% 적용 시 2,550억</div></div><div class="bt" id="t-control"><div class="k">경영권 <span>Control (Controlling Stake)</span></div><div class="d">과반 지분 등으로 이사회와 주요 결정을 지배하는 권리. 오늘 SK팜테코 후보 제안 구조 중 하나.</div><div class="u">▸ 바이아웃, 경영권 프리미엄 산정</div><div class="ex">예: 지분가치 1조원 회사 51% 인수에 프리미엄 20%면 6,120억</div></div><div class="bt" id="t-loi"><div class="k">인수의향서 <span>LOI, Letter of Intent</span></div><div class="d">인수 의사와 대략의 가격/구조를 밝히는 구속력 약한 문서. 오늘 SK팜테코가 접수 중.</div><div class="u">▸ 매각 1단계 예비 제안</div><div class="ex">예: 후보 3곳이 LOI 제출 → 2곳 숏리스트 → 실사</div></div><div class="bt" id="t-preipo"><div class="k">프리IPO <span>Pre-IPO Investment</span></div><div class="d">상장 전 소수지분 투자. 오늘 SK팜테코 희망가의 기준점(2023년 말).</div><div class="u">▸ 상장 전 가치 기준점, 투자 유치</div><div class="ex">예: 프리IPO 때 4조 평가 → 이후 실적 악화면 매수자는 이 기준을 인정 안 함</div></div><div class="bt" id="t-acqfin"><div class="k">인수금융 <span>Acquisition Financing</span></div><div class="d">인수 대금 일부를 빌리는 대출. 오늘 SK팜테코 일부 후보가 국내 금융권과 논의(보도).</div><div class="u">▸ LBO, PE 인수</div><div class="ex">예: 인수가 1조 중 5,000억 차입 = 레버리지 50%</div></div><div class="bt" id="t-openproc"><div class="k">열린 구조 입찰 <span>Structure-agnostic Sale Process</span></div><div class="d">거래 형태를 정하지 않고 후보가 구조를 자유 제안. 오늘 SK팜테코.</div><div class="u">▸ 경영권 매각 정체 시 대안</div><div class="ex">예: 경영권/소수지분/사업양수도 3안을 지분가치로 환산 비교</div></div><div class="bt" id="t-assettr"><div class="k">사업양수도 <span>Business Transfer</span></div><div class="d">회사 주식이 아니라 사업부 단위로 자산, 인력, 계약을 넘기는 거래. 오늘 SK팜테코 제안 가능 구조.</div><div class="u">▸ 사업부 카브아웃, 공장 인수</div><div class="ex">예: 미국 공장 1곳만 2,000억에 양수도</div></div><div class="bt" id="t-evsales"><div class="k">EV/Sales 멀티플 <span>EV/Sales Multiple</span></div><div class="d">기업가치 ÷ 매출. 오늘 SK팜테코 희망가로 역산 약 4.3배(계산치).</div><div class="u">▸ 적자, 초기 성장 기업 밸류</div><div class="ex">예: EV 4조 / 매출 9,320억 = 4.3배</div></div><div class="bt" id="t-oploss"><div class="k">영업손실 <span>Operating Loss</span></div><div class="d">매출에서 원가와 판관비를 뺀 값이 마이너스. 오늘 SK팜테코 1,540억(보도).</div><div class="u">▸ 실적 공시, 흑자전환 판단</div><div class="ex">예: 매출 9,320억, 영업손실 1,540억 → 영업이익률 -16.5%</div></div><div class="bt" id="t-platform"><div class="k">플랫폼 <span>Platform Company</span></div><div class="d">볼트온 인수의 중심이 되는 회사. 오늘 맥쿼리 "글로벌 ODM 플랫폼".</div><div class="u">▸ PE 바이앤빌드 전략</div><div class="ex">예: 플랫폼 EBITDA 300억 + 볼트온 100억 = 400억, 배수 10배면 EV 4,000억</div></div><div class="bt" id="t-rights3"><div class="k">제3자배정 유상증자 <span>Third-party Allotment Rights Issue</span></div><div class="d">특정인에게 신주를 배정하는 증자. 오늘 경남제약 40억.</div><div class="u">▸ 경영권 이전, 전략 투자 유치</div><div class="ex">예: 316만4,556주 × 1,264원 = 40억</div></div><div class="bt" id="t-majchg"><div class="k">최대주주 변경 <span>Change of Largest Shareholder</span></div><div class="d">지분 1위 주주가 바뀌는 것. 상장사는 즉시 공시. 오늘 경남제약(빌리언스 외 → 엑스).</div><div class="u">▸ 지배구조 변화 추적</div><div class="ex">예: 신주 316만주로 기존 1위 지분을 넘어서면 최대주주 교체</div></div><div class="bt" id="t-lockup"><div class="k">보호예수 <span>Lock-up (Mandatory Holding)</span></div><div class="d">신주 등을 일정 기간 팔지 못하게 예탁하는 것. 오늘 경남제약 신주 1년.</div><div class="u">▸ 3자배정, IPO</div><div class="ex">예: 12/29 상장 신주는 2027-12월까지 매도 불가</div></div><div class="bt" id="t-default"><div class="k">지연손해금 <span>Default Interest</span></div><div class="d">늦게 갚는 기간의 법정 이자. 오늘 SD바이오센서 판결(연 5% → 12%).</div><div class="u">▸ 소송 우발부채 산정</div><div class="ex">예: 990억 × 12% = 연 약 119억</div></div><div class="bt" id="t-mratio"><div class="k">합병비율 <span>Merger Ratio</span></div><div class="d">소멸회사 1주당 존속회사 주식 수. 오늘 HLB 0.0857532.</div><div class="u">▸ 합병 지분 희석 계산</div><div class="ex">예: HLB생명과학 1,000주 → HLB 약 85주</div></div><div class="bt" id="t-mdate"><div class="k">합병기일 <span>Merger Effective Date</span></div><div class="d">합병 효력 발생일. 오늘 HLB 2027-07-01.</div><div class="u">▸ 합병 일정, 연결 시점</div><div class="ex">예: 주총 3/30 → 합병기일 7/1 → 신주 상장 7/15</div></div><div class="bt" id="t-cb"><div class="k">사모 CB <span>Private Convertible Bond</span></div><div class="d">소수 투자자 대상 전환사채. 오늘 큐리옥스 229억.</div><div class="u">▸ 바이오 메자닌 조달</div><div class="ex">예: 229억 / 전환가 4만9,904원 = 약 45.9만주</div></div><div class="bt" id="t-coupon"><div class="k">표면이자율 / 만기이자율 <span>Coupon Rate / Yield to Maturity</span></div><div class="d">매년 이자율 / 만기까지 보장 수익률. 오늘 큐리옥스 0% / 2%.</div><div class="u">▸ CB 조달 비용 비교</div><div class="ex">예: 표면 0%라도 만기 2%면 전환 안 될 때 원금 + 할증 상환</div></div><div class="bt" id="t-convprice"><div class="k">전환가액 <span>Conversion Price</span></div><div class="d">CB를 주식으로 바꿀 때 1주 가격. 오늘 큐리옥스 4만9,904원, 코오롱티슈진/큐로셀은 하향(리픽싱).</div><div class="u">▸ 희석 주식 수 계산</div><div class="ex">예: 전환가 21만8,090원 → 18만5,380원 하향 시 전환 주식 수 약 18% 증가</div></div><div class="bt" id="t-cagr"><div class="k">연평균성장률 <span>CAGR</span></div><div class="d">복리 기준 연 성장률. 오늘 CDMO+CRO 시장 10.92%(발행사 추정).</div><div class="u">▸ 시장 전망, 실적 비교</div><div class="ex">예: 237.2 → 444.03 (6년) = 약 11%</div></div><div class="bt" id="t-addon"><div class="k">약가 가산 <span>Price Add-on</span></div><div class="d">요건 충족 품목 약가를 더 얹어 주는 우대. 오늘 펜믹스 항생주사제 68%.</div><div class="u">▸ 약가 정책, 품목 수익성</div><div class="ex">예: 가산가 2만6,794원 → 요건 이탈 시 1만7,731원(-34%)</div></div><div class="bt" id="t-calcrate"><div class="k">산정률 <span>Price Calculation Rate</span></div><div class="d">오리지널 대비 제네릭 상한가 비율. 오늘 53.55% → 45%.</div><div class="u">▸ 제네릭 약가 산정</div><div class="ex">예: 오리지널 1,000원 × 45% = 450원</div></div><div class="bt" id="t-tiered"><div class="k">계단식 인하 <span>Tiered Generic Pricing</span></div><div class="d">늦게 등재할수록 최저가의 85% 등으로 깎는 기준. 오늘 프리렙톨.</div><div class="u">▸ 후발 제네릭 약가</div><div class="ex">예: 최저가 200원이면 후발 등재가 170원</div></div></div>
+    <h4 class="bh">B. 심화</h4>
+    <div class="concepts"><div class="concept">
+      <div class="ch"><div><b>EV/Sales로 적자 기업 가격 매기기<span>EV/Sales Valuation for Loss-making Companies</span></b><div class="quote">"SK 측은 2023년 말 프리IPO 단계에서 인정받은 4조원 이상의 기업가치를 희망하는 것으로 알려졌다" <em>- 알파경제 2026-11-27 (요약 인용)</em></div></div><span class="time">약 15분</span></div>
+      <div class="cb">
+        <div class="col"><h5>① 정의</h5><p>이익이 마이너스라 EV/EBITDA, PER을 쓸 수 없을 때 기업가치(EV)를 매출의 몇 배로 매기는 방법. 비교 회사들의 EV/Sales 중앙값을 대상 매출에 곱해 EV를 구하고, 순차입금을 빼 지분가치를 낸다. 소수지분이면 지배권이 없는 만큼 할인을 더한다.</p><h5>계산식</h5><div class="formula">EV = 매출 × 비교군 EV/Sales 지분가치 = EV - 순차입금</div><h5>오늘 수치로</h5><div class="calc">희망 4조 / 지난해 매출 9,320억 = 약 4.3배 (계산치, 순차입금 미반영, 보도 기준 수치)</div></div>
+        <div class="col"><h5>③ 많이 쓰는 곳, 당사 적용</h5><ul class="uses"><li>M&A 검토: 적자 CDMO, 신생 공장 인수가를 매출 배수로 1차 점검</li><li>Exit 준비: 당사는 흑자 EBITDA가 있어 EV/EBITDA로 평가받는 것이 유리 → 매출 배수 논리에 끌려가지 않게 자료 구성</li><li>투자 심의: 증설 라인의 램프업 전 가치를 매출 기준으로 가늠</li><li>고객/경쟁사 동향: SK팜테코 같은 매물의 가격 기대치 추적</li></ul></div>
+        <div class="example"><h5>①-1 계산 예시: SK팜테코형 적자 CDMO 소수지분 30% 가격 산정</h5><div class="exnote">수치는 전부 가정이며 설명용으로 단순화한 모델. 실제 평가에서는 항목별 가정을 실사 자료로 대체.</div>
+          <table><tr><th>단계</th><th>입력값(가정)</th><th>계산</th><th>결과</th><th>설명</th></tr><tr><td class="st">① 매출</td><td>지난해 매출 9,320억 (보도 기준)</td><td class="f">-</td><td class="r">9,320억</td><td>적자라 이익 배수 대신 매출을 기준으로</td></tr><tr><td class="st">② 비교군 배수</td><td>A 3.5배, B 4.5배, C 5.5배 (가정)</td><td class="f">중앙값</td><td class="r">4.5배</td><td>합성/세포치료 CDMO 상장사 3곳을 가정</td></tr><tr><td class="st">③ EV</td><td>9,320억 × 4.5</td><td class="f">곱셈</td><td class="r">4조1,940억</td><td>회사 전체 가치</td></tr><tr><td class="st">④ 순차입금</td><td>1조원 (가정)</td><td class="f">4조1,940억 - 1조</td><td class="r">3조1,940억</td><td>주주 몫 = 지분가치</td></tr><tr><td class="st">⑤ 소수지분 30%</td><td>지분가치 × 30%</td><td class="f">3조1,940억 × 0.3</td><td class="r">9,582억</td><td>지배권 없는 몫, 할인 전</td></tr><tr><td class="st">⑥ 소수지분 할인</td><td>15% (가정)</td><td class="f">9,582억 × 0.85</td><td class="r">8,145억</td><td>이사 지명권, 회수 조항이 약할수록 할인 확대</td></tr><tr class="total"><td class="st">⑦ 매도자 희망과 비교</td><td>희망 지분가치 4조 가정 → 30% = 1조2,000억</td><td class="f">1조2,000억 - 8,145억</td><td class="r">갭 3,855억</td><td>이 갭이 경영권 매각 정체의 원인. 열린 구조로 구조별 가격을 다시 받는 이유</td></tr></table><div class="inputs"><b>당사에 적용할 때 바꿔 넣을 입력값</b><ul><li>당사 매출과 EBITDA(흑자이므로 EV/EBITDA를 주 지표, EV/Sales는 보조)</li><li>비교군: 합성/주사제 CDMO 상장사 배수(바이오로직스 전용사는 제외)</li><li>순차입금: 맥쿼리 인수금융 포함 실제 잔액</li></ul></div></div>
+        <div class="fam"><h5>② 개념 맵: 상대가치 배수 패밀리</h5>
+          <table><tr><th>지표</th><th>공식</th><th>언제 쓰나</th><th>한계</th></tr><tr><th>EV/Sales</th><td class="f">EV ÷ 매출</td><td>적자, 초기 성장 기업</td><td class="lim">마진 차이를 반영 못함. 매출이 커도 손실이면 과대평가</td></tr><tr><th>EV/EBITDA</th><td class="f">EV ÷ EBITDA</td><td>설비가 많은 흑자 기업(CDMO 표준)</td><td class="lim">적자면 사용 불가. Capex 부담 미반영</td></tr><tr><th>EV/EBIT</th><td class="f">EV ÷ 영업이익</td><td>감가상각까지 반영한 비교</td><td class="lim">설비 투자 시기별 왜곡</td></tr><tr><th>PER</th><td class="f">시가총액 ÷ 순이익</td><td>상장사 공모가, 주가 비교</td><td class="lim">부채, 일회성 손익에 흔들림</td></tr><tr><th>PBR</th><td class="f">시가총액 ÷ 순자산</td><td>자산 많은 회사, 하방 판단</td><td class="lim">이익 창출력 미반영</td></tr><tr><th>DCF</th><td class="f">미래 FCF 현재가치 합</td><td>흑자전환 경로가 명확할 때</td><td class="lim">가정(성장률, 할인율)에 민감</td></tr></table></div>
+        <div class="quiz"><h5>④ 개념 확인 (기초 → 응용 → 당사 적용), 풀어본 뒤 정답 확인</h5><div class="q"><b>Q1.</b> 매출 9,320억, 비교군 EV/Sales 4.0배면 EV는? 순차입금 1조를 빼면 지분가치는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">EV = 9,320억 × 4.0 = 3조7,280억. 지분가치 = 3조7,280억 - 1조 = 2조7,280억.</div></details></div><div class="q"><b>Q2.</b> 매출이 같은 9,320억인 두 CDMO가 있다. A는 영업이익률 -16%, B는 +15%. 같은 EV/Sales 4.5배를 주는 것이 타당한가?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">타당하지 않다. EV/Sales는 마진을 반영하지 못한다. B는 EBITDA가 있어 EV/EBITDA로 평가하는 것이 맞고, A는 흑자전환 시점과 추가 투자(손실 보전)를 할인해야 한다. 같은 배수면 A가 과대평가된다.</div></details></div><div class="q"><b>Q3.</b> 당사 매출 4,000억, EBITDA 800억(모두 가정), 순차입금 3,000억. EV/Sales 3.0배와 EV/EBITDA 13배로 각각 지분가치를 구하고 어느 쪽이 유리한지 말하라.<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">EV/Sales: EV 1조2,000억 → 지분 9,000억. EV/EBITDA: EV 1조400억 → 지분 7,400억. 이 가정에서는 매출 배수가 높게 나오지만, 매수자는 흑자 기업에 EV/EBITDA를 쓰므로 실제 협상 기준은 7,400억 쪽. 매출 배수는 "상단 참고치"로만 쓴다.</div></details></div></div><div class="quiz q2"><h5>⑤ 실무 적용 (당사 업무 상황에서 이 개념을 쓰는 법), 모범답안 + 체크포인트</h5><div class="q"><b>P1.</b> [M&A 검토, 가정] 매출 600억, 영업손실 80억인 국내 주사제 CDMO가 EV/Sales 3배(1,800억)를 요구한다. 당사가 볼트온으로 검토할 때 어떻게 대응하나?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 매출 배수 대신 "정상화 EBITDA × 배수 - 정상화까지 필요한 손실 보전/투자"로 재산정한다. 예: 2년 후 EBITDA 90억 × 12배 = 1,080억, 손실 보전 100억과 Capex 150억을 빼면 830억 수준.<br>실무 체크포인트: ① 적자 원인(가동률 vs 단가) ② 당사 고객 이관 시 가동률 상승 폭 ③ 어닝아웃으로 갭 메우기</div></details></div><div class="q"><b>P2.</b> [Exit 준비, 가정] 맥쿼리가 당사 매각 시 매수자가 "적자 CDMO도 4배를 받는데"라는 매출 배수 논리 대신 EBITDA 배수를 고집한다. 당사가 준비할 자료는?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 흑자 기업은 EV/EBITDA가 표준이므로 거부하기보다 EBITDA 자체를 키워 보이게 준비한다. 조정 EBITDA(일회성 제거), 가동률 상승에 따른 영업레버리지, 수주잔고 기반 다음 해 EBITDA를 제시.<br>실무 체크포인트: ① QoE 근거 서류 ② 라인별 가동률/수율 추이 ③ 비교군에서 바이오로직스 전용사 제외 논리</div></details></div><div class="q"><b>P3.</b> [Exit 구조, 가정] 맥쿼리가 경영권 매각 가격이 맞지 않아 당사 지분 30%만 FI에 파는 부분 Exit을 검토한다. 지분가치 1조원, 소수지분 할인 15%면 회수액은? 할인을 줄이는 방법은?<details><summary><span class="btn">정답/해설 보기</span></summary><div class="ans">모범답안: 1조원 × 30% × 0.85 = 2,550억. 할인을 줄이려면 매수자에게 이사 지명권, 주요 결정 동의권, 동반매도참여권(Tag-along), IPO 기한 미달 시 풋옵션 등을 줘 지배권 부족을 보완한다.<br>실무 체크포인트: ① 잔여 70% 매각 시 드래그얼롱 확보 ② 소수지분 투자자 권리가 향후 경영권 매각 가격을 깎지 않는지 ③ 인수금융 약정상 지분 이동 제한</div></details></div></div>
+      </div></div></div>
+  </section>
+  <details class="glossary-add"><summary>■ 오늘 추가된 용어 (glossary.md 누적 형식, 생성 작업이 자동 반영)</summary>
+<pre>### 2026-11-28
+| 용어 | 풀이 | 당사 관점 |
+|---|---|---|
+| 열린 구조 입찰(Structure-agnostic Sale Process) | 매도자가 거래 형태(경영권/소수지분/사업양수도)를 정하지 않고 후보들이 원하는 구조와 가격을 자유 제안하게 하는 매각 방식. 매수자 풀이 넓어지지만, 제안끼리 비교하려면 대가를 같은 잣대(현재가치, 지배권, 잔여지분 회수)로 환산해야 한다. | 경영권 매각이 가격 차이로 정체될 때 쓰는 대안. 맥쿼리가 당사 Exit을 단일 구조로 못 풀면 소수지분/부분 매각을 함께 받는 경로 |
+| 지연손해금(Default Interest (Late Payment Damages)) | 돈을 줘야 할 날부터 실제로 갚는 날까지 붙는 법정 이자 성격의 손해배상. 국내 민사는 연 5%, 소송 판결 선고 다음 날부터는 소송촉진법상 연 12%가 적용되는 것이 일반적이다. | 소송, 대금 분쟁의 실제 부담은 원금 + 지연손해금. 실사에서 진행 중 소송의 이자 누적액을 우발부채로 산정 |
+| 합병기일(Merger Effective Date) | 합병 효력이 생기는 날. 이 날 소멸회사의 자산/부채와 주주가 존속회사로 넘어가고, 합병신주는 보통 그 뒤 2주 내외에 상장된다. 주총 승인과 채권자 보호 절차가 이 날보다 먼저 끝나야 한다. | 상장사 계열 합병, 볼트온 흡수 합병의 일정표 기준일. 연결 실적 반영 시점과 직결 |
+| 표면이자율(Coupon Rate) | 채권 액면에 적힌, 매년 지급하는 이자율. 만기에 원금보다 더 갚기로 한 만기이자율(만기보장수익률)과 다르며, CB는 주식 전환 가능성 때문에 0%로 정하는 경우가 많다. | 당사가 CB로 조달하면 매년 현금 이자는 표면이자율, 전환 안 될 때 만기 부담은 만기이자율로 계산 |
+| 연평균성장률(CAGR, Compound Annual Growth Rate) | 시작값에서 끝값까지 매년 같은 비율로 복리 성장했다고 볼 때의 연 성장률. (끝값 ÷ 시작값)^(1/년수) - 1. 중간 연도의 등락은 보여주지 않는다. | 당사 매출, 수주 성장률을 비교군과 맞춰 볼 때와 시장 전망 인용 시 기본 지표 |
+</pre></details>
+  <div class="ft">※ 요약/링크만 제공, 원문 복사 없음. <b>계산치</b>=기사 수치로 작성자가 산출, <b>추정/보도 기준</b>=미확인. 더벨/인베스트조선/마켓인사이트/링크드인은 사용자 수동 입력분만 반영. 별지(주간 글로벌 트렌드)는 월요일에만 포함.</div>
+</div>
+<div class="fab ret" id="retbtn" onclick="goBack()">↩ 원문으로</div><div class="fab top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ 맨 위</div>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('a.kw');if(!a)return;sessionStorage.setItem('retY',String(window.scrollY));document.getElementById('retbtn').style.display='block';});
+function goBack(){var y=sessionStorage.getItem('retY');if(y!==null){history.replaceState(null,'',location.pathname);window.scrollTo({top:parseInt(y,10),behavior:'smooth'});}document.getElementById('retbtn').style.display='none';}
+</script>
+</body></html>
